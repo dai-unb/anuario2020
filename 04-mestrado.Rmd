@@ -2,11 +2,28 @@
 
 ```{r}
 mest <- rio::import("dados_mestrado/EvoForM.csv", header = TRUE)
+# arruma a tabela
+mest <- mest %>% 
+  modify_at(2:ncol(mest), as.double) %>%
+  filter(rowSums(is.na(.[, 2:ncol(mest)])) != (ncol(mest)-1)) %>%
+  map_df(~replace_na(., 0))
+
+# acha as linhas que devem ser coloridas
+unidades <- label_unidade %>% 
+  select(Unidade) %>% 
+  deframe() %>% 
+  paste(., collapse = "|")
+
+colorir <- mest %>% 
+  mutate(n = row_number()) %>% 
+  filter(str_detect(`Unidade Acadêmica/Curso`, unidades)) %>% 
+  select(n) %>% 
+  deframe()
 ```
 
 ```{r tab-mest-evo-for}
 mest %>% 
-  map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Evolução do número de formados da UnB", negrito = TRUE)
+  tabela_geral("Evolução do número de formados no mestrado da UnB", negrito = TRUE, fundo = "#007751") %>% 
+  row_spec(row = colorir, background = alpha("#007715", 0.2))
 ```
 

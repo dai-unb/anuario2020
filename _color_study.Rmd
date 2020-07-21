@@ -1,0 +1,67 @@
+---
+title: "Cores da UnB"
+author: "GVF"
+date: "21/07/2020"
+output: html_document
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Cores da UnB
+
+## Verde
+
+Cores consultadas em: https://www.sessions.edu/color-calculator/
+
+```{r}
+
+cores_unb_verde <- tribble(
+  
+  ~cor_unb, ~categoria,       ~cor_alternativa, ~codigo,
+  "verde",  "original",       "verde-unb",      "#007715",
+  "verde",  "complementar",   "roxo-c-tet",     "#770061",
+  "verde",  "monocromatica",  "verde-m",        "#1d9132",
+  "verde",  "analoga",        "verde-a1",       "#007751",
+  "verde",  "analoga",        "verde-a2",       "#267700",
+  "verde",  "complementar-p", "vermelho-cp",    "#770026",
+  "verde",  "complementar-p", "roxo-cp",        "#510077",
+  "verde",  "triade",         "vermelho-tt",    "#771600",
+  "verde",  "triade",         "azul-tri",       "#160077",
+  "verde",  "tetrade",        "roxo-c-tet",     "#770061",
+  "verde",  "tetrade",        "vermelho-tt",    "#771600",
+  "verde",  "tetrade",        "azul-tet",       "#006177"
+  
+)
+
+```
+
+## Azul
+
+azul-unb: #00376f
+
+```{r}
+
+cores_unb_azul <- tribble(
+  
+  ~cor_unb, ~categoria,       ~cor_alternativa, ~codigo,
+  "azul",   "original",       "azul-unb",       "#00376f",
+  "azul",   "complementar",   "marrom-c-tet",   "#6f3800",
+  "azul",   "monocromatica",  "azul-m",         "#1b5289",
+  "azul",   "analoga",        "azul-a1",        "#00006f",
+  "azul",   "analoga",        "azul-a2",        "#006f6f",
+  "azul",   "complementar-p", "marrom-cp",      "#6f6f00",
+  "azul",   "complementar-p", "vermelho-cp",    "#6f0000",
+  "azul",   "triade",         "verde-tt",       "#386f00",
+  "azul",   "triade",         "roxo-tri",       "#6f0038",
+  "azul",   "tetrade",        "marrom-c-tet",   "#6f3800",
+  "azul",   "tetrade",        "verde-tt",       "#386f00",
+  "azul",   "tetrade",        "azul-tet",       "#38006f"
+  
+)
+
+```
+
+TODO: fazer um gráfico mostrando cada uma das cores
+

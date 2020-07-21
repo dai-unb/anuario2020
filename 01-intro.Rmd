@@ -1,32 +1,49 @@
 # Introdução {#intro}
 
-```{r setup}
-knitr::opts_chunk$set(echo = FALSE,
-                      message = FALSE,
-                      error = FALSE,
-                      warning = FALSE)
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  error = FALSE,
+  warning = FALSE
+)
 library(tidyverse)
 library(knitr)
 library(kableExtra)
+
+load("labels/Label_Unidades_pos.RData")
 ```
 
 ```{r functions}
-tabela_geral <- function(dados, titulo, negrito = TRUE, fontsize = 16, colunas = colnames(dados)){
-  
+tabela_geral <- function(dados, titulo, negrito = TRUE, tamfonte = 16, colunas = colnames(dados), fundo = NULL, digitos = 0) {
   colnames(dados) <- str_to_upper(colunas)
-  
-  dados %>% 
-    kable(caption = titulo, 
-          # escape = FALSE,   # considera o <br> uma quebra de linha, 
-          align = c("l", rep("r", ncol(dados)-1)),
-          format.args = list(big.mark = ".")) %>% 
-    kable_styling(bootstrap_options = c("striped", "hover", "responsive"), 
-                full_width = F,
-                font_size = fontsize) %>% 
-  row_spec(nrow(dados), bold = negrito) %>% 
-  row_spec(0, align = "c", color = "#84898C", # pantone monument
-           font_size = fontsize - 2, extra_css = 'vertical-align: middle')
-  
+
+  dados %>%
+    kable(
+      caption = titulo,
+      digits = digitos,
+      escape = FALSE, # considera o <br> uma quebra de linha,
+      align = c("l", rep("r", ncol(dados) - 1)),
+      booktabs = TRUE,
+      format.args = list(big.mark = ".")
+    ) %>%
+    kable_styling(
+      bootstrap_options = c("striped", "hover", "responsive"),
+      full_width = F,
+      font_size = tamfonte
+    ) %>%
+    row_spec(
+      row = nrow(dados),
+      bold = negrito,
+      background = fundo,
+      color = ifelse(is.null(fundo), "#84898C", "white")
+    ) %>%
+    row_spec(
+      row = 0,
+      align = "c", color = ifelse(is.null(fundo), "#84898C", "white"), # pantone monument
+      background = fundo,
+      font_size = tamfonte - 2, extra_css = "vertical-align: middle"
+    )
 }
 ```
 

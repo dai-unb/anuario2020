@@ -1,13 +1,28 @@
 # Graduação {#grad}
 
 ```{r}
-evo_formados <- rio::import("dados_graduacao/EvoFor.csv", header = TRUE)
+grad_formados <- rio::import("dados_graduacao/EvoFor.csv", header = TRUE)
+grad_formados <- grad_formados %>% 
+  modify_at(2:ncol(grad_formados), as.double) %>%
+  filter(rowSums(is.na(.[, 2:ncol(grad_formados)])) != (ncol(grad_formados)-1)) %>%
+  map_df(~replace_na(., 0))
+
+# acha as linhas que devem ser coloridas
+unidades <- label_unidade %>% 
+  select(Unidade) %>% 
+  deframe() %>% 
+  paste(., collapse = "|")
+
+colorir <- grad_formados %>% 
+  mutate(n = row_number()) %>% 
+  filter(str_detect(`Unidade Acadêmica / Curso / Habilitação`, unidades)) %>% 
+  select(n) %>% 
+  deframe()
 ```
 
 ```{r tab-grad-evo-for}
-evo_formados %>% 
-  map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Evolução do número de formados da UnB", negrito = TRUE)
+grad_formados %>% 
+  tabela_geral("Evolução do número de formados da UnB", negrito = TRUE, fundo = alpha("#1b5289", 0.8)) %>% 
+  row_spec(row = colorir, background = alpha("#1b5289", 0.2))
 ```
 
-Falta colorir as tabelas, vou trabalhar nisso.

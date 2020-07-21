@@ -21,3 +21,7 @@ pre {
 pre code {
   white-space: inherit;
 }
+.table-striped>tbody>tr:nth-child(even)>td, 
+.table-striped>tbody>tr:nth-child(even)>th {
+   background-color: white;
+ }
