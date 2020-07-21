@@ -1,6 +1,7 @@
 ### script para tratar os dados do censo
 
 library(tidyverse)
+library(janitor)
 
 ### carrega arquivos de label
 load("labels/Label.RData")
