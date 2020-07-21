@@ -1,5 +1,5 @@
-# anuario2020
-Arquivos para gerar o Anuário Estatístico 2020
+# Anuário Estatístico 2020
+Arquivos para gerar o Anuário Estatístico da unB 2020
 
 # How To Create a Pull Request
 https://www.digitalocean.com/community/tutorials/como-criar-um-pull-request-no-github-pt
