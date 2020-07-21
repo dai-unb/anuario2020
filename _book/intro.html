@@ -157,28 +157,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="intro" class="section level1">
 <h1><span class="header-section-number">Capítulo 2</span> Introdução</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="intro.html#cb1-1"></a>knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">message =</span> <span class="ot">FALSE</span>,</span>
-<span id="cb1-2"><a href="intro.html#cb1-2"></a>                      <span class="dt">error =</span> <span class="ot">FALSE</span>,</span>
-<span id="cb1-3"><a href="intro.html#cb1-3"></a>                      <span class="dt">warning =</span> <span class="ot">FALSE</span>)</span>
-<span id="cb1-4"><a href="intro.html#cb1-4"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb1-5"><a href="intro.html#cb1-5"></a><span class="kw">library</span>(knitr)</span>
-<span id="cb1-6"><a href="intro.html#cb1-6"></a><span class="kw">library</span>(kableExtra)</span></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="intro.html#cb2-1"></a>tabela_geral &lt;-<span class="st"> </span><span class="cf">function</span>(dados, titulo, <span class="dt">negrito =</span> <span class="ot">TRUE</span>, <span class="dt">fontsize =</span> <span class="dv">16</span>){</span>
-<span id="cb2-2"><a href="intro.html#cb2-2"></a>  </span>
-<span id="cb2-3"><a href="intro.html#cb2-3"></a>  <span class="kw">colnames</span>(dados) &lt;-<span class="st"> </span><span class="kw">str_to_upper</span>(<span class="kw">colnames</span>(dados))</span>
-<span id="cb2-4"><a href="intro.html#cb2-4"></a>  </span>
-<span id="cb2-5"><a href="intro.html#cb2-5"></a>  dados <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb2-6"><a href="intro.html#cb2-6"></a><span class="st">    </span><span class="kw">kable</span>(<span class="dt">caption =</span> titulo,</span>
-<span id="cb2-7"><a href="intro.html#cb2-7"></a>          <span class="co"># escape = FALSE,   # considera o &lt;br&gt; uma quebra de linha, </span></span>
-<span id="cb2-8"><a href="intro.html#cb2-8"></a>          <span class="dt">align =</span> <span class="kw">c</span>(<span class="st">&quot;l&quot;</span>, <span class="kw">rep</span>(<span class="st">&quot;r&quot;</span>, <span class="kw">ncol</span>(dados)<span class="op">-</span><span class="dv">1</span>)),</span>
-<span id="cb2-9"><a href="intro.html#cb2-9"></a>          <span class="dt">format.args =</span> <span class="kw">list</span>(<span class="dt">big.mark =</span> <span class="st">&quot;.&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb2-10"><a href="intro.html#cb2-10"></a><span class="st">    </span><span class="kw">kable_styling</span>(<span class="dt">bootstrap_options =</span> <span class="kw">c</span>(<span class="st">&quot;striped&quot;</span>, <span class="st">&quot;hover&quot;</span>, <span class="st">&quot;responsive&quot;</span>), </span>
-<span id="cb2-11"><a href="intro.html#cb2-11"></a>                <span class="dt">full_width =</span> F,</span>
-<span id="cb2-12"><a href="intro.html#cb2-12"></a>                <span class="dt">font_size =</span> fontsize) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb2-13"><a href="intro.html#cb2-13"></a><span class="st">  </span><span class="kw">row_spec</span>(<span class="kw">nrow</span>(dados), <span class="dt">bold =</span> negrito) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb2-14"><a href="intro.html#cb2-14"></a><span class="st">  </span><span class="kw">row_spec</span>(<span class="dv">0</span>, <span class="dt">align =</span> <span class="st">&quot;c&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;#84898C&quot;</span>, <span class="dt">font_size =</span> fontsize <span class="op">-</span><span class="st"> </span><span class="dv">2</span>)   <span class="co"># pantone monument</span></span>
-<span id="cb2-15"><a href="intro.html#cb2-15"></a>  </span>
-<span id="cb2-16"><a href="intro.html#cb2-16"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="intro.html#cb1-1"></a>knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">echo =</span> <span class="ot">FALSE</span>,</span>
+<span id="cb1-2"><a href="intro.html#cb1-2"></a>                      <span class="dt">message =</span> <span class="ot">FALSE</span>,</span>
+<span id="cb1-3"><a href="intro.html#cb1-3"></a>                      <span class="dt">error =</span> <span class="ot">FALSE</span>,</span>
+<span id="cb1-4"><a href="intro.html#cb1-4"></a>                      <span class="dt">warning =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb1-5"><a href="intro.html#cb1-5"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
+<pre><code>## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --</code></pre>
+<pre><code>## v ggplot2 3.3.2     v purrr   0.3.4
+## v tibble  3.0.3     v dplyr   1.0.0
+## v tidyr   1.1.0     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.5.0</code></pre>
+<pre><code>## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="intro.html#cb5-1"></a><span class="kw">library</span>(knitr)</span>
+<span id="cb5-2"><a href="intro.html#cb5-2"></a><span class="kw">library</span>(kableExtra)</span></code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;kableExtra&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     group_rows</code></pre>
 <p>Esse é um capítulo de introdução.</p>
 
 </div>

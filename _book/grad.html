@@ -157,29 +157,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="grad" class="section level1">
 <h1><span class="header-section-number">Capítulo 4</span> Graduação</h1>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="grad.html#cb6-1"></a>evo_formados &lt;-<span class="st"> </span>rio<span class="op">::</span><span class="kw">import</span>(<span class="st">&quot;dados_graduacao/EvoFor.csv&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="grad.html#cb7-1"></a>evo_formados <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb7-2"><a href="grad.html#cb7-2"></a><span class="st">  </span><span class="kw">map_df</span>(<span class="op">~</span><span class="kw">replace_na</span>(., <span class="dv">0</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb7-3"><a href="grad.html#cb7-3"></a><span class="st">  </span><span class="kw">tabela_geral</span>(<span class="st">&quot;Evolução do número de formados da UnB&quot;</span>, <span class="dt">negrito =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <table class="table table-striped table-hover table-responsive" style="font-size: 16px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
 <span id="tab:tab-grad-evo-for">Tabela 4.1: </span>Evolução do número de formados da UnB
 </caption>
 <thead>
 <tr>
-<th style="text-align:left;color: #84898C !important;text-align: center;font-size: 14px;">
+<th style="text-align:left;color: #84898C !important;text-align: center;font-size: 14px;vertical-align: middle">
 UNIDADE ACADÊMICA / CURSO / HABILITAÇÃO
 </th>
-<th style="text-align:right;color: #84898C !important;text-align: center;font-size: 14px;">
+<th style="text-align:right;color: #84898C !important;text-align: center;font-size: 14px;vertical-align: middle">
 2014
 </th>
-<th style="text-align:right;color: #84898C !important;text-align: center;font-size: 14px;">
+<th style="text-align:right;color: #84898C !important;text-align: center;font-size: 14px;vertical-align: middle">
 2015
 </th>
-<th style="text-align:right;color: #84898C !important;text-align: center;font-size: 14px;">
+<th style="text-align:right;color: #84898C !important;text-align: center;font-size: 14px;vertical-align: middle">
 2016
 </th>
-<th style="text-align:right;color: #84898C !important;text-align: center;font-size: 14px;">
+<th style="text-align:right;color: #84898C !important;text-align: center;font-size: 14px;vertical-align: middle">
 2017
 </th>
 </tr>

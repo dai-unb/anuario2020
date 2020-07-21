@@ -9,7 +9,15 @@ xfun::embed_file("dados_gerais/Tabela_1.03.xlsx")
 
 geral %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Dados gerais da UnB", negrito = TRUE)
+  tabela_geral("Dados gerais da UnB", negrito = TRUE, fontsize = 14,
+               colunas = c("Unidades", "Graduação", "Pós-graduação\nMest./Dout.", 
+                           "Grad.", "Mestr.", "Dout.", 
+                           "Graduação", "Mestrado", "Doutorado")) %>% 
+  add_header_above(c("", 
+                   "ALUNOS REGISTRADOS\n(DADOS DO 2º SEMESTRE)" = 2,
+                   "CURSOS\nMINISTRADOS" = 3,
+                   "TÍTULOS\nOUTORGADOS" = 3),
+                   color = "#84898C", extra_css = 'vertical-align: middle')
 ```
 
 Podemos fazer referência à tabela \@ref(tab:tab-geral). Vamos precisar? Acho que não.

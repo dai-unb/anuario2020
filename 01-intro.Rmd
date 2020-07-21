@@ -1,7 +1,8 @@
 # Introdução {#intro}
 
 ```{r setup}
-knitr::opts_chunk$set(message = FALSE,
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
                       error = FALSE,
                       warning = FALSE)
 library(tidyverse)
@@ -10,12 +11,12 @@ library(kableExtra)
 ```
 
 ```{r functions}
-tabela_geral <- function(dados, titulo, negrito = TRUE, fontsize = 16){
+tabela_geral <- function(dados, titulo, negrito = TRUE, fontsize = 16, colunas = colnames(dados)){
   
-  colnames(dados) <- str_to_upper(colnames(dados))
+  colnames(dados) <- str_to_upper(colunas)
   
   dados %>% 
-    kable(caption = titulo,
+    kable(caption = titulo, 
           # escape = FALSE,   # considera o <br> uma quebra de linha, 
           align = c("l", rep("r", ncol(dados)-1)),
           format.args = list(big.mark = ".")) %>% 
@@ -23,7 +24,8 @@ tabela_geral <- function(dados, titulo, negrito = TRUE, fontsize = 16){
                 full_width = F,
                 font_size = fontsize) %>% 
   row_spec(nrow(dados), bold = negrito) %>% 
-  row_spec(0, align = "c", color = "#84898C", font_size = fontsize - 2)   # pantone monument
+  row_spec(0, align = "c", color = "#84898C", # pantone monument
+           font_size = fontsize - 2, extra_css = 'vertical-align: middle')
   
 }
 ```
