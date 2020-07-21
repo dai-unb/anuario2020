@@ -1,0 +1,12 @@
+# Doutorado {#dout}
+
+```{r}
+dout <- rio::import("dados_doutorado/EvoForD.csv", header = TRUE)
+```
+
+```{r tab-dout-evo-for}
+dout %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução do número de formados da UnB", negrito = TRUE)
+```
+

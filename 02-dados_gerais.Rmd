@@ -1,0 +1,15 @@
+# Dados gerais {#geral}
+
+```{r}
+geral <- rio::import("dados_gerais/Tabela_1.03.xlsx")
+```
+
+```{r tab-geral}
+xfun::embed_file("dados_gerais/Tabela_1.03.xlsx")
+
+geral %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Dados gerais da UnB", negrito = TRUE)
+```
+
+Podemos fazer referência à tabela \@ref(tab:tab-geral). Vamos precisar? Acho que não.

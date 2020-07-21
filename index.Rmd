@@ -1,0 +1,14 @@
+--- 
+title: "Anuário Estatístico 2020"
+author: "Diretoria de Avaliação e Informações Gerenciais"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+github-repo: dai-unb/anuario2019
+description: "Esse é, por enquanto, um teste."
+---
+
+# Prefácio
+
+Algumas palavras iniciais aqui.

@@ -1,0 +1,8 @@
+book_filename: 'anuario_2020'
+language:
+  label:
+    fig: 'Figura '
+    tab: 'Tabela '
+  ui:
+    chapter_name: 'Capítulo '
+delete_merged_file: true

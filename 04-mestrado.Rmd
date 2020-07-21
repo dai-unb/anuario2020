@@ -1,0 +1,12 @@
+# Mestrado {#mest}
+
+```{r}
+mest <- rio::import("dados_mestrado/EvoForM.csv", header = TRUE)
+```
+
+```{r tab-mest-evo-for}
+mest %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução do número de formados da UnB", negrito = TRUE)
+```
+

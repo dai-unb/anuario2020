@@ -1,0 +1,13 @@
+# Graduação {#grad}
+
+```{r}
+evo_formados <- rio::import("dados_graduacao/EvoFor.csv", header = TRUE)
+```
+
+```{r tab-grad-evo-for}
+evo_formados %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução do número de formados da UnB", negrito = TRUE)
+```
+
+Falta colorir as tabelas, vou trabalhar nisso.

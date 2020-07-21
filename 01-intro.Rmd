@@ -1,0 +1,31 @@
+# Introdução {#intro}
+
+```{r setup}
+knitr::opts_chunk$set(message = FALSE,
+                      error = FALSE,
+                      warning = FALSE)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+```{r functions}
+tabela_geral <- function(dados, titulo, negrito = TRUE, fontsize = 16){
+  
+  colnames(dados) <- str_to_upper(colnames(dados))
+  
+  dados %>% 
+    kable(caption = titulo,
+          # escape = FALSE,   # considera o <br> uma quebra de linha, 
+          align = c("l", rep("r", ncol(dados)-1)),
+          format.args = list(big.mark = ".")) %>% 
+    kable_styling(bootstrap_options = c("striped", "hover", "responsive"), 
+                full_width = F,
+                font_size = fontsize) %>% 
+  row_spec(nrow(dados), bold = negrito) %>% 
+  row_spec(0, align = "c", color = "#84898C", font_size = fontsize - 2)   # pantone monument
+  
+}
+```
+
+Esse é um capítulo de introdução.
