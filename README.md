@@ -10,4 +10,8 @@ https://desktop.github.com/
 # Contributing and collaborating using GitHub Desktop
 https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop
 
+<<<<<<< HEAD
 Geisa - testando
+=======
+Geisa
+>>>>>>> 71ea20d83ddb8d740d305e9d88a2da0b9bd8daa3
