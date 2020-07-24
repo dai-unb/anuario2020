@@ -22,6 +22,8 @@ colorir <- mest %>%
 ```
 
 ```{r tab-mest-evo-for}
+xfun::embed_file("dados_mestrado/EvoForM.csv")
+
 mest %>% 
   tabela_geral("Evolução do número de formados no mestrado da UnB", negrito = TRUE, fundo = "#007751") %>% 
   row_spec(row = colorir, background = alpha("#007715", 0.2))

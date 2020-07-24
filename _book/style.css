@@ -1,6 +1,10 @@
 body {
   font-family: Charter;
 }
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
 .book.font-family-0 {
   font-family: Charter, serif;
 }

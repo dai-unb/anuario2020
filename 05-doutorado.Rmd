@@ -22,6 +22,8 @@ colorir <- dout %>%
 ```
 
 ```{r tab-dout-evo-for}
+xfun::embed_file("dados_doutorado/EvoForD.csv")
+
  dout %>% 
   tabela_geral("Evolução do número de formados no doutorado da UnB", negrito = TRUE, fundo = "#267700") %>% 
   row_spec(row = colorir, background = alpha("#267700", 0.2))

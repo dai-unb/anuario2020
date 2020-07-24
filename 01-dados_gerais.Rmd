@@ -20,4 +20,3 @@ geral %>%
                    color = "white", extra_css = 'vertical-align: middle', background = "#00376f")
 ```
 
-Podemos fazer referência à tabela \@ref(tab:tab-geral). Vamos precisar? Acho que não.

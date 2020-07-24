@@ -21,6 +21,8 @@ colorir <- grad_formados %>%
 ```
 
 ```{r tab-grad-evo-for}
+xfun::embed_file("dados_graduacao/EvoFor.csv")
+
 grad_formados %>% 
   tabela_geral("Evolução do número de formados da UnB", negrito = TRUE, fundo = alpha("#1b5289", 0.8)) %>% 
   row_spec(row = colorir, background = alpha("#1b5289", 0.2))
