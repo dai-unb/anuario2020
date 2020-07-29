@@ -134,6 +134,14 @@ Arquivo42 <- inner_join(Arquivo42, Label, "Cod_Enade") %>%
 Arquivo42 <- Arquivo42 %>%
   select(ID_Inep:Cod_Enade, Curso:Local, Cod_Polo_Inep:CH_Integral)
 
+### correções
+Arquivo42 <- Arquivo42 %>% 
+  mutate(Sem_Ref = as.integer(Sem_Ref),
+         Ing_Vest = as.integer(Ing_Vest))
+
+Arquivo41 <- Arquivo41 %>% 
+  mutate(Super_Dot = as.integer(Super_Dot))
+
 ### exporta RDS
 saveRDS(Arquivo41, file = "dados_identificados/Arquivo41.RDS")
 saveRDS(Arquivo42, file = "dados_identificados/Arquivo42.RDS")

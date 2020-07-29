@@ -1,6 +1,10 @@
 body {
   font-family: Charter;
 }
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
 .book.font-family-0 {
   font-family: Charter, serif;
 }
@@ -21,3 +25,7 @@ pre {
 pre code {
   white-space: inherit;
 }
+.table-striped>tbody>tr:nth-child(even)>td, 
+.table-striped>tbody>tr:nth-child(even)>th {
+   background-color: white;
+ }

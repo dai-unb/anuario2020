@@ -15,3 +15,4 @@ source("scripts/03_gera_tabela_geral.R")
 ### compila o livro
 ### vou deixar comentado para só ser usado quando necessário
 # bookdown::render_book("anuario2020.Rmd", encoding = "UTF-8")
+# rstudioapi::viewer("_book/index.html")
