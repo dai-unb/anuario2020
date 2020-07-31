@@ -140,7 +140,9 @@ Arquivo42 <- Arquivo42 %>%
          Ing_Vest = as.integer(Ing_Vest))
 
 Arquivo41 <- Arquivo41 %>% 
-  mutate(Super_Dot = as.integer(Super_Dot))
+  mutate(Super_Dot = as.integer(Super_Dot),
+         CPF = as.double(CPF),
+         ID_Inep = as.double(ID_Inep))
 
 ### exporta RDS
 saveRDS(Arquivo41, file = "dados_identificados/Arquivo41.RDS")
