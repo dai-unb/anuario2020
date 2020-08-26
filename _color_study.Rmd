@@ -65,3 +65,6 @@ cores_unb_azul <- tribble(
 
 TODO: fazer um gráfico mostrando cada uma das cores
 
+inserir seção de tipografia também:
+https://www.behance.net/gallery/79724387/DrWhy-Explainers-for-ML-models-data-visualization
+
