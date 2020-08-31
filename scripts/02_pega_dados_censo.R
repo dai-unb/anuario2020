@@ -1,6 +1,7 @@
 ### script para tratar os dados do censo
 
 if (!require("bit64")) install.packages("bit64")
+library(bit64)
 library(tidyverse)
 library(janitor)
 

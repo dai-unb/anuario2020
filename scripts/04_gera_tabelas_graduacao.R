@@ -1,7 +1,10 @@
-
-# Setup -------------------------------------------------------------------
-
-options(OutDec = ",")
+#-------------------------------------------------------------------------------------------
+#------------------------------ S E T U P --------------------------------------------------
+#-------------------------------------------------------------------------------------------
+setwd("C:/anuario2020")
+source("C:/anuario2020/scripts/00_execute-me.R")
+library(dplyr)
+library(tidyr)
 library(tidyverse)
 
 Arquivo41 <- readRDS("dados_identificados/Arquivo41.RDS")
@@ -14,11 +17,16 @@ Nomes <- Arquivo42 %>%
   select(-n)
 
 ### define o ano do CENSO
+ano_base <- 2019
 sem1 <- 12019
 sem2 <- 22019
 
-# Tabela 2.03 Forma de Ingresso ------------------------------------------------------------
-
+#*******************************************************************************************
+#************************************* T A B E L A S ***************************************
+#*******************************************************************************************
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.03 Forma de Ingresso ------------------------------
+#-------------------------------------------------------------------------------------------
 ### ingressantes do 1o semestre
 Ing1 <- Arquivo42 %>% 
   filter(Sem_Ingresso==sem1 & Sem_Ref==1) %>% 
@@ -43,10 +51,11 @@ Ing2 <- Arquivo42 %>%
             `Transferência Facultativa 2 Sem`=sum(Ing_Rem),
             `Transferência Obrigatória 2 Sem`=sum(Ing_Trans))
 
-### junta as informações numa tabela só
+### junta as informações numa tabela só (Adicionar a Unidade à tabela)
 t1 <- right_join(Nomes, Ing1)
 t2 <- right_join(Nomes, Ing2)
 Tabela2.03 <- full_join(t1, t2)
+Tabela2.03[is.na(Tabela2.03)] <- 0
 rm(Ing1, Ing2, t1, t2)
 
 ### cria tabela de totais
@@ -67,7 +76,7 @@ Tabela2.03 <- bind_rows(Tabela2.03,totais) %>%
 row.names(Tabela2.03) <- Tabela2.03$Curso; Tabela2.03$Curso <- NULL; Tabela2.03$Unidade <- NULL
 
 Tabela2.03$`Total Geral` <- rowSums(Tabela2.03, na.rm=T)
-# Tabela2.03$Total <- rowSums(Tabela2.03[,c("Vestibular 1 Sem", "Vestibular 2 Sem")])
+#Tabela2.03$Total <- rowSums(Tabela2.03[,c("Vestibular 1 Sem", "Vestibular 2 Sem")])
 
 ### arruma as colunas e insere a linha de total
 Tabela2.03 <- Tabela2.03 %>% 
@@ -82,7 +91,7 @@ Tabela2.03 <- Tabela2.03 %>%
          `Total Geral`)
 
 Tabela2.03["Total Geral",] <- colSums(Tabela2.03, na.rm=T)/2
-Tabela2.03[is.na(Tabela2.03)] <- 0
+#Tabela2.03[is.na(Tabela2.03)] <- 0
 nomes <- rownames(Tabela2.03)
 
 Tabela2.03 <- Tabela2.03 %>% 
@@ -90,10 +99,13 @@ Tabela2.03 <- Tabela2.03 %>%
 
 rownames(Tabela2.03) <- nomes
 
-rm(totais, nomes)
+save(Tabela2.03, file = "dados_graduacao/Tabela2.03.RData")
 
-# Tabela 2.04 Ingressantes e Formados -------------------------------------
+rm(totais, nomes, Tabela2.03)
 
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.04 Ingressantes e Formados ------------------------
+#-------------------------------------------------------------------------------------------
 ### ingressantes do 1o e 2o semestres
 Ing1 <- Arquivo42 %>% 
   filter(Sem_Ingresso == sem1 & Sem_Ref==1) %>%
@@ -144,6 +156,8 @@ t4 <- right_join(Nomes, For2)
 Tabela2.04 <- full_join(t1, t2) %>% 
   full_join(t3) %>% 
   full_join(t4)
+#Transforma NA em 0
+Tabela2.04[is.na(Tabela2.04)] <- 0
 
 rm(t1, t2, t3, t4)
 
@@ -174,7 +188,7 @@ Tabela2.04 <- Tabela2.04 %>%
   select(`Ingressantes 1° Sem`,`Ingressantes 2° Sem`,`Total Ingressantes`,
          `Formados 1° Sem`,`Formados 2° Sem`,`Total Formados`); rm(For1,For2,Ing1,Ing2, totais)
 
-Tabela2.04[is.na(Tabela2.04)] <- 0
+#Tabela2.04[is.na(Tabela2.04)] <- 0
 
 nomes <- rownames(Tabela2.04)
 
@@ -183,12 +197,12 @@ Tabela2.04 <- map_df(Tabela2.04, ~ format(., big.mark = "."))
 rownames(Tabela2.04) <- nomes
 
 ### cria tabela por unidade
-For2017 <- Arquivo42 %>% 
+For2019 <- Arquivo42 %>% 
   filter((Sem_Ref==1 | Sem_Ref==2) & Vinculo=="Formado") %>%
   group_by(Unidade) %>% 
   summarise(`Formados`=n())
 
-Ing2017 <- Arquivo42 %>% 
+Ing2019 <- Arquivo42 %>% 
   group_by(Unidade) %>% 
   filter((Sem_Ingresso==sem1 & Sem_Ref==1) | (Sem_Ingresso==sem2 & Sem_Ref==2)) %>% 
   summarise(`Ingressantes`=sum(Ing_Vest, 
@@ -200,11 +214,16 @@ Ing2017 <- Arquivo42 %>%
                                Ing_Trans, 
                                na.rm=T))
 
-Tabela2.04.2 <- full_join(Ing2017, For2017)
+Tabela2.04.2 <- full_join(Ing2019, For2019)
 
-rm(Ing2017, For2017, nomes)
+save(Tabela2.04, file = "dados_graduacao/Tabela2.04.RData")
+save(Tabela2.04.2, file = "dados_graduacao/Tabela2.04.2.RData")
 
-# Tabela 2.05 Ingressantes por Sexo e Faixa Etária ------------------------------------------------
+rm(Ing2019, For2019, nomes, Tabela2.04, Tabela2.04.2)
+
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.05 Ingressantes por Sexo e Faixa Etária -----------
+#-------------------------------------------------------------------------------------------
 
 Ing1 <- Arquivo42 %>% 
   filter(Sem_Ingresso==sem1 & Sem_Ref==1)
@@ -222,7 +241,6 @@ Tabela2.05$Nascimento <- sapply(Tabela2.05$Nascimento,
                                 function(x) ifelse(nchar(x)<8, paste0(paste0(rep(0,8-nchar(x)),collapse=""), x), x))
 
 ### a idade deve ser do ANO DE REFERÊNCIA
-ano_base <- 2018
 Tabela2.05$Idade <- ano_base - as.numeric(substr(Tabela2.05$Nascimento, 5, 8)) - as.numeric(substr(Tabela2.05$Nascimento, 3, 4))/12
 
 Tabela2.05$`Faixa Etária`[Tabela2.05$Idade<=18] <- "Até 18 anos"
@@ -232,7 +250,6 @@ Tabela2.05$`Faixa Etária`[Tabela2.05$Idade>29 & Tabela2.05$Idade<=34] <- "De 30
 Tabela2.05$`Faixa Etária`[Tabela2.05$Idade>34 & Tabela2.05$Idade<=39] <- "De 35 a 39 anos"
 Tabela2.05$`Faixa Etária`[Tabela2.05$Idade>39 & Tabela2.05$Idade<=44] <- "De 40 a 44 anos"
 Tabela2.05$`Faixa Etária`[Tabela2.05$Idade>44] <- "De 45 anos ou mais"
-
 
 Tabela2.05 <- Tabela2.05 %>% 
   group_by(`Faixa Etária`, Sexo) %>% 
@@ -257,10 +274,13 @@ Tabela2.05 <- Tabela2.05 %>%
 
 rownames(Tabela2.05) <- nomes
 
-rm(nomes)
+save(Tabela2.05, file = "dados_graduacao/Tabela2.05.RData")
 
-# Tabela 2.06 Alunos Regulares por Turno - EXCLUI EAD -------------------------------------------------------
+rm(nomes, Tabela2.05)
 
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.06 Alunos Regulares por Turno - EXCLUI EAD --------
+#-------------------------------------------------------------------------------------------
 ### Alunos regulares: exclui transferidos e falecidos
 M1 <- Arquivo42 %>% 
   filter(Turno!="" & Sem_Ref==1 & Vinculo!="Transferido" & Vinculo != "Falecido") %>%  # EAD está como vazio ""
@@ -268,6 +288,7 @@ M1 <- Arquivo42 %>%
   tally() %>% 
   spread(Turno, n)
 
+M1[is.na(M1)] <- 0
 M1$Total <- rowSums(M1[,c("Integral", "Noturno")], na.rm=T)
 
 M2 <- Arquivo42 %>% 
@@ -276,22 +297,31 @@ M2 <- Arquivo42 %>%
   tally() %>% 
   spread(Turno, n)
 
+M2[is.na(M2)] <- 0
 M2$Total <- rowSums(M2[,c("Integral", "Noturno")], na.rm=T)
 
 Tabela2.06 <- left_join(M1, M2, by = "Unidade") %>% 
   janitor::adorn_totals()
 
+rownames(Tabela2.06) <- Tabela2.06$Unidade
+
 nomes <- rownames(Tabela2.06)
 
-Tabela2.06[is.na(Tabela2.06)] <- 0
+#Tabela2.06[is.na(Tabela2.06)] <- 0
 
 Tabela2.06 <- map_df(Tabela2.06, ~ format(., big.mark = "."))
 
 rownames(Tabela2.06) <- nomes
 
-rm(M1,M2, nomes)
+Tabela2.06 <- select(Tabela2.06, -Unidade)
 
-# Tabela 2.07 Alunos Regulares Ativos por Sexo -------------------------------------------
+save(Tabela2.06, file = "dados_graduacao/Tabela2.06.RData")
+
+rm(M1,M2, nomes, Tabela2.06)
+
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.07 Alunos Regulares Ativos por Sexo ---------------
+#-------------------------------------------------------------------------------------------
 
 ### alunos ativos: apenas CURSANDO e FORMADO
 matriculados1 <- Arquivo42 %>% 
@@ -314,13 +344,22 @@ M2 <- inner_join(Arquivo41, matriculados2, "ID_Inep") %>%
 
 Tabela2.07 <- left_join(M1, M2, by = "Unidade")
 
+rownames(Tabela2.07) <- Tabela2.07$Unidade
+
 nomes <- rownames(Tabela2.07)
+
 Tabela2.07 <- map_df(Tabela2.07, ~ format(., big.mark = "."))
 rownames(Tabela2.07) <- nomes
 
-rm(M1, M2, matriculados1, matriculados2, nomes)
+Tabela2.07 <- select(Tabela2.07, -Unidade)
 
-# Tabela 2.08 Alunos Regulares Ativos e Trancados ------------------------------------------
+save(Tabela2.07, file = "dados_graduacao/Tabela2.07.RData")
+
+rm(M1, M2, matriculados1, matriculados2, nomes, Tabela2.07)
+
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.08 Alunos Regulares Ativos e Trancados ------------
+#-------------------------------------------------------------------------------------------
 
 matriculados1 <- Arquivo42 %>% 
   filter(Sem_Ref==1 & Vinculo %in% c("Cursando", "Formado"))
@@ -369,6 +408,8 @@ t4 <- left_join(Nomes, T2)
 
 Tabela2.08 <- cbind.data.frame(t1, t2[c(3, 4)], t3[c(3, 4)], t4[c(3, 4)])
 
+Tabela2.08[is.na(Tabela2.08)] <- 0
+
 totais <- Tabela2.08 %>% 
   group_by(Unidade) %>%
   select(-Curso) %>% 
@@ -388,15 +429,19 @@ Tabela2.08$`Total Fem 2 Sem` <- rowSums(Tabela2.08[,c("Fem Ativo 2 Sem", "Fem Tr
 Tabela2.08$`Total Masc 2 Sem` <- rowSums(Tabela2.08[,c("Masc Ativo 2 Sem", "Masc Tranc 2 Sem")], na.rm = TRUE)
 Tabela2.08["Total Geral", ] <- colSums(Tabela2.08, na.rm = TRUE)/2
 
-Tabela2.08[is.na(Tabela2.08)] <- 0
+#Tabela2.08[is.na(Tabela2.08)] <- 0
 
 nomes <- rownames(Tabela2.08)
 Tabela2.08 <- map_df(Tabela2.08, ~ format(., big.mark = "."))
 rownames(Tabela2.08) <- nomes
 
-rm(t1, t2, t3, t4, T1, T2, M1, M2, matriculados1, matriculados2, trancados1, trancados2, totais, nomes)
+save(Tabela2.08, file = "dados_graduacao/Tabela2.08.RData")
 
-# Tabela 2.09 Alunos Regulares por Sexo e Faixa Etária -----------------------------------------
+rm(t1, t2, t3, t4, T1, T2, M1, M2, matriculados1, matriculados2, trancados1, trancados2, totais, nomes, Tabela2.08)
+
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.09 Alunos Regulares por Sexo e Faixa Etária -------
+#-------------------------------------------------------------------------------------------
 
 matriculados2 <- Arquivo42 %>% 
   filter(Sem_Ref == 2 & Vinculo != "Transferido" & Vinculo != "Falecido")
@@ -441,7 +486,9 @@ rownames(Tabela2.09) <- nomes
 
 rm(matriculados2, nomes)
 
-# Tabela 2.11 Forma de saida dos alunos -------------------------------------------------------------
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.11 Forma de saida dos alunos ----------------------
+#-------------------------------------------------------------------------------------------
 
 # load("O:/DAI/SIGRA/Extracao 12062019/Completo.RData")
 load("dados_identificados/Completo14042020.RData")
@@ -593,7 +640,9 @@ rownames(Tabela2.11) <- nomes
 
 rm(totais, nomes)
 
-# Tabela 2.XX Raça Cor ----------------------------------------------------
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.XX Raça Cor ---------------------------------------
+#-------------------------------------------------------------------------------------------
 
 M2 <- Arquivo42 %>% 
   filter(Sem_Ref==2 & Vinculo != "Transferido" & Vinculo != "Falecido")
@@ -631,7 +680,9 @@ rownames(Tabela2.XX) <- nomes
 
 rm(M2, totais, nomes)
 
-# Tabela 2.XX2 Raça/Cor e Sexo --------------------------------------------
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.XX2 Raça/Cor e Sexo -------------------------------
+#-------------------------------------------------------------------------------------------
 
 Tabela2.XX2 <- Arquivo42 %>% 
   filter(Sem_Ref==2 & Vinculo != "Transferido" & Vinculo != "Falecido")
@@ -660,7 +711,9 @@ rownames(Tabela2.XX2) <- nomes
 
 rm(nomes)
 
-# Tabela 2.10 Alunos Regulares Ativos, Matrículas e Aprovados em Disciplinas --------
+#----------------------------------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.10 Alunos Regulares Ativos, Matrículas e Aprovados em Disciplinas ------------
+#----------------------------------------------------------------------------------------------------------------------
 ### mudar o arquivo do HE - Histórico Escolar
 
 HE0 <- read_fwf("dados_identificados/HE20190.txt", 
@@ -778,7 +831,9 @@ rownames(Tabela2.10) <- nomes
 
 rm(AA1, AA2, AP1, AP2, HE1, HE2, M1, M2, MD1, MD2, totais, nomes)
 
-# Tabela 2.12 Alunos Regulares Portadores de Necessidades -----------------
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.12 Alunos Regulares Portadores de Necessidades ----
+#-------------------------------------------------------------------------------------------
 
 Tabela2.12 <- Arquivo42 %>% filter(Sem_Ref==2 & Vinculo != "Transferido" & Vinculo != "Falecido")
 Tabela2.12 <- inner_join(Arquivo41, Tabela2.12, "ID_Inep")
@@ -810,7 +865,9 @@ rownames(Tabela2.12) <- Tabela2.12$Curso
 Tabela2.12$Curso <- NULL
 Tabela2.12$Unidade <- NULL
 
-# Tabela 2.14 Países ------------------------------------------------------
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.14 Países -----------------------------------------
+#-------------------------------------------------------------------------------------------
 
 Label_Pais <- rio::import("Tabela_Pais.xlsx", skip = 1) %>% 
   rename(Pais = Código, Pais_Nome = Nome)
@@ -890,7 +947,9 @@ Tabela2.14.2 <- as.data.frame(Tabela2.14.2)
 
 rm(Label_Pais, totais)
 
-# Tabela 2.21 Evolução Ingressantes -------------------------------------------------------------
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.21 Evolução Ingressantes --------------------------
+#-------------------------------------------------------------------------------------------
 
 # Atualizar o CSV que está na pasta
 # com os dados do último anuário
@@ -936,7 +995,9 @@ rownames(Tabela2.21) <- nomes
 
 rm(Ing, totais, nomes)
 
-# Tabela 2.22 Evolução Alunos Registrados ---------------------------------
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.22 Evolução Alunos Registrados --------------------
+#-------------------------------------------------------------------------------------------
 
 # Atualizar o CSV que está na pasta
 # com os dados do último anuário
@@ -979,7 +1040,9 @@ rownames(Tabela2.22) <- nomes
 
 rm(Reg, totais, nomes)
 
-# Tabela 2.23 Evolução Formados -------------------------------------------
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.23 Evolução Formados ------------------------------
+#-------------------------------------------------------------------------------------------
 
 # Atualizar o CSV que está na pasta
 # com os dados do último anuário
@@ -1022,7 +1085,9 @@ rownames(Tabela2.23) <- nomes
 
 rm(For, totais)
 
-# Tabela 2.27 Pesquisa -------------------------------------------------------------
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.27 Pesquisa ---------------------------------------
+#-------------------------------------------------------------------------------------------
 
 Pesquisa_1 <- Arquivo42 %>% 
   filter(Sem_Ref==1 & Pesquisa==1) %>% 
@@ -1068,7 +1133,9 @@ rownames(Tabela2.27) <- cursos
 
 rm(Pesquisa_1, Pesquisa_2, totais)
 
-# Tabela 2.28 Extensão -------------------------------------------------------------
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.28 Extensão ---------------------------------------
+#-------------------------------------------------------------------------------------------
 
 Extensao_1 <- Arquivo42 %>% 
   filter(Sem_Ref==1 & Extensao==1) %>% 
@@ -1112,7 +1179,9 @@ rownames(Tabela2.28) <- cursos
 
 rm(Extensao_1, Extensao_2, totais)
 
-# Tabela 2.29 Monitoria -------------------------------------------------------------
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.29 Monitoria --------------------------------------
+#-------------------------------------------------------------------------------------------
 
 Monitoria_1 <- Arquivo42 %>% 
   filter(Sem_Ref==1 & Monitoria==1) %>% 
@@ -1156,7 +1225,9 @@ rownames(Tabela2.29) <- cursos
 
 rm(Monitoria_1, Monitoria_2, totais)
 
-# Tabela 2.30 EnO - Estágio não obrigatório ---------------------------------------------------------
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela 2.30 EnO - Estágio não obrigatório ------------------
+#-------------------------------------------------------------------------------------------
 
 EnO_1 <- Arquivo42 %>% 
   filter(Sem_Ref==1 & EnO==1) %>% 
@@ -1198,8 +1269,9 @@ rownames(Tabela2.30) <- cursos
 
 rm(EnO_1, EnO_2, totais)
 
-
-# Tabela COTA ingresso ----------------------------------------------------
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela COTA ingresso ---------------------------------------
+#-------------------------------------------------------------------------------------------
 
 M2 <- Arquivo42 %>% 
   filter(Sem_Ref==2 & Vinculo != "Transferido" & Vinculo != "Falecido")
@@ -1243,7 +1315,9 @@ rownames(Tabela2.COTA) <- nomes
 
 rm(M2, totais)
 
-# Tabela COTA ingresso e Sexo --------------------------------------------
+#-------------------------------------------------------------------------------------------
+#------------------------------ Tabela COTA ingresso e Sexo --------------------------------
+#-------------------------------------------------------------------------------------------
 
 Tabela2.COTA2 <- Arquivo42 %>% 
   filter(Sem_Ref==2 & Vinculo != "Transferido" & Vinculo != "Falecido")
@@ -1285,8 +1359,12 @@ Tabela2.COTA2$Cotas <- NULL
 
 rm(Cotas)
 
-# Excel -------------------------------------------------------------------
-
+#*******************************************************************************************
+#************************************* E X C E L *******************************************
+#*******************************************************************************************
+#-------------------------------------------------------------------------------------------
+#------------------------------ S E T U P --------------------------------------------------
+#-------------------------------------------------------------------------------------------
 # REVER TODA ESSA PARTE
 # ACHO QUE NÃO PRECISAMOS MAIS
 
@@ -1295,7 +1373,29 @@ library(xlsx)
 
 wb <- createWorkbook()
 
-#Tabela 2.03
+# Carregar dados das Tabelas
+# Forma de Ingresso
+load("dados_graduacao/Tabela2.03.RData")
+
+# Ingressantes e Formados
+# Tabela por Curso
+load("dados_graduacao/Tabela2.04.RData")
+# Tabela por Unidade
+load("dados_graduacao/Tabela2.04.2.RData")
+
+# Ingressantes por Sexo e Faixa Etária
+load("dados_graduacao/Tabela2.05.RData")
+
+# Alunos Regulares por Turno - EXCLUI EAD
+load("dados_graduacao/Tabela2.06.RData")
+
+# Alunos Regulares Ativos por Sexo
+load("dados_graduacao/Tabela2.07.RData")
+
+# Alunos Regulares Ativos e Trancados
+load("dados_graduacao/Tabela2.08.RData")
+
+#------------------------------ Tabela 2.03 --------------------------------
 sheet <- createSheet(wb, sheetName="Tabela 2.03")
 addDataFrame(Tabela2.03, sheet, row.names = T, startRow=6, startColumn = 4)
 cb <- CellBlock(sheet, 2, 4, 3, 1, create=TRUE) 
