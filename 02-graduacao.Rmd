@@ -1,30 +1,97 @@
 # Graduação {#grad}
 
+```{r fundo}
+# define o fundo desta seção
+fundo <- cores_anuario[2]
+```
+
+```{r}
+# tabela 12 - Dados e características dos cursos de graduação oferecidos pela UnB
+```
+
+<br>
+
+```{r}
+# tabela 13
+load("dados_graduacao/Tabela2.03.RData")
+Tabela2.03 <- insere_descricao(Tabela2.03, "UNIDADE ACADÊMICA / CURSO / HABILITAÇÃO")
+
+Tabela2.03 %>% 
+  tabela_geral(titulo = "Ingresso nos cursos de graduação pelo vestibular, PAS, ENEM e outras vias, por unidade acadêmica, curso e habilitação, UnB, 2019", 
+               colunas = c("UNIDADE ACADÊMICA / CURSO / HABILITAÇÃO",
+                           "1º SEM", "2º SEM",
+                           "1º SEM", "2º SEM",
+                           "1º SEM", "2º SEM",
+                           "1º SEM", "2º SEM",
+                           "1º SEM", "2º SEM",
+                           "1º SEM", "2º SEM",
+                           "1º SEM", "2º SEM",
+                           "TOTAL GERAL"),
+               fundo = fundo) %>% 
+  colorir(dados = Tabela2.03) %>% 
+  add_header_above(c("_\n", 
+                     "VESTIBULAR" = 2,
+                     "PAS" = 2,
+                     "ENEM" = 2,
+                     "TRANSF. OBRIG." = 2,
+                     "TRANSF. OPT." = 2,
+                     "PROG. ESP." = 2,
+                     "CONV. PEC" = 2,
+                     "_\n"),
+                   color = "white", extra_css = 'vertical-align: middle', background = fundo)
+```
+
+<br><br>
+
+```{r}
+# tabela 14
+load("dados_graduacao/Tabela2.04.RData")
+Tabela2.04 <- insere_descricao(Tabela2.04, "UNIDADE ACADÊMICA / CURSO / HABILITAÇÃO")
+
+Tabela2.04 %>% 
+  tabela_geral(
+    titulo = "Ingresso de alunos e número de formados nos cursos de graduação, por unidade acadêmica, curso e habilitação, UnB, 2019",
+    fundo = fundo
+  ) %>% 
+  colorir(dados = Tabela2.04)
+```
+
+<br><br>
+
+```{r}
+# tabela 15
+load("dados_graduacao/Tabela2.05.RData")
+Tabela2.05 <- insere_descricao(Tabela2.05, "Faixa etária")
+
+Tabela2.05 %>% 
+  tabela_geral(
+    titulo = "Ingresso de alunos nos cursos de graduação, por sexo e faixa etária, UnB, 2019",
+    fundo = fundo
+  )
+```
+
+<br><br>
+
+```{r}
+# tabela 16
+load("dados_graduacao/Tabela2.06.RData")
+```
+
+<br><br>
+
 ```{r}
 grad_formados <- rio::import("dados_graduacao/EvoFor.csv", header = TRUE)
 grad_formados <- grad_formados %>% 
   modify_at(2:ncol(grad_formados), as.double) %>%
   filter(rowSums(is.na(.[, 2:ncol(grad_formados)])) != (ncol(grad_formados)-1)) %>%
   map_df(~replace_na(., 0))
-
-# acha as linhas que devem ser coloridas
-unidades <- label_unidade %>% 
-  select(Unidade) %>% 
-  deframe() %>% 
-  paste(., collapse = "|")
-
-colorir <- grad_formados %>% 
-  mutate(n = row_number()) %>% 
-  filter(str_detect(`Unidade Acadêmica / Curso / Habilitação`, unidades)) %>% 
-  select(n) %>% 
-  deframe()
 ```
 
 ```{r tab-grad-evo-for}
 xfun::embed_file("dados_graduacao/EvoFor.csv")
 
 grad_formados %>% 
-  tabela_geral("Evolução do número de formados da UnB", negrito = TRUE, fundo = alpha("#1b5289", 0.8)) %>% 
-  row_spec(row = colorir, background = alpha("#1b5289", 0.2))
+  tabela_geral("Evolução do número de formados da UnB", negrito = TRUE, fundo = fundo) %>% 
+  colorir(dados = grad_formados)
 ```
 

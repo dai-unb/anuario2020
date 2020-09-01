@@ -3,8 +3,6 @@
 #-------------------------------------------------------------------------------------------
 # setwd("C:/anuario2020") -  inserir apenas caminhos relativos
 source("scripts/00_execute-me.R")
-library(dplyr)
-library(tidyr)
 library(tidyverse)
 
 Arquivo41 <- readRDS("dados_identificados/Arquivo41.RDS")
