@@ -1,8 +1,8 @@
 #-------------------------------------------------------------------------------------------
 #------------------------------ S E T U P --------------------------------------------------
 #-------------------------------------------------------------------------------------------
-setwd("C:/anuario2020")
-source("C:/anuario2020/scripts/00_execute-me.R")
+# setwd("C:/anuario2020") -  inserir apenas caminhos relativos
+source("scripts/00_execute-me.R")
 library(dplyr)
 library(tidyr)
 library(tidyverse)
