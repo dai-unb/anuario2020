@@ -27,16 +27,17 @@ Tabela2.03 %>%
                            "1º SEM", "2º SEM",
                            "1º SEM", "2º SEM",
                            "TOTAL GERAL"),
-               fundo = fundo) %>% 
+               fundo = fundo,
+               tamfonte = 12) %>% 
   colorir(dados = Tabela2.03) %>% 
   add_header_above(c("_\n", 
                      "VESTIBULAR" = 2,
                      "PAS" = 2,
                      "ENEM" = 2,
-                     "TRANSF. OBRIG." = 2,
-                     "TRANSF. OPT." = 2,
-                     "PROG. ESP." = 2,
-                     "CONV. PEC" = 2,
+                     "TR.OB." = 2,
+                     "TR.OPT." = 2,
+                     "P.ESP." = 2,
+                     "C.PEC" = 2,
                      "_\n"),
                    color = "white", extra_css = 'vertical-align: middle', background = fundo)
 ```
@@ -51,7 +52,8 @@ Tabela2.04 <- insere_descricao(Tabela2.04, "UNIDADE ACADÊMICA / CURSO / HABILIT
 Tabela2.04 %>% 
   tabela_geral(
     titulo = "Ingresso de alunos e número de formados nos cursos de graduação, por unidade acadêmica, curso e habilitação, UnB, 2019",
-    fundo = fundo
+    fundo = fundo,
+    tamfonte = 14
   ) %>% 
   colorir(dados = Tabela2.04)
 ```

@@ -50,7 +50,6 @@ scales::show_col(cores_unb$codigo)
 Foram utilizadas nove cores principais na confecção deste relatório, de acordo com o [manual de identidade visual da UnB](http://www.marca.unb.br/manual1.php), uma por capítulo.
 
 ```{r paleta-cores}
-
 cores_anuario <- c("geral" = "#00427E",
                    "grad"  = "#0071BB",
                    "pos"   = "#008D46",
@@ -62,7 +61,6 @@ cores_anuario <- c("geral" = "#00427E",
                    "comu"  = "#00ADEE",
                    "org"   = "#A8A791",
                    "dpo"   = "#00AAAD")
-
 ```
 
 

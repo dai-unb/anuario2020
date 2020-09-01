@@ -86,6 +86,20 @@
       "Repository": "CRAN",
       "Hash": "543776ae6848fde2f48ff3816d0628bc"
     },
+    "bit": {
+      "Package": "bit",
+      "Version": "4.0.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "668b25d2f8ea222446f0017479f03238"
+    },
+    "bit64": {
+      "Package": "bit64",
+      "Version": "4.0.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "7eed8e263a2287b3dd51b2ea307a28b2"
+    },
     "blob": {
       "Package": "blob",
       "Version": "1.2.1",

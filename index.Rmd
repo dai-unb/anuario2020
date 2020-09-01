@@ -27,6 +27,20 @@ library(kableExtra)
 load("labels/Label_Unidades_pos.RData")
 ```
 
+```{r paleta-cores}
+cores_anuario <- c("geral" = "#00427E",
+                   "grad"  = "#0071BB",
+                   "pos"   = "#008D46",
+                   "mest"  = "#8EC63F",
+                   "dout"  = "#00652E",
+                   "pip"   = "#303192",
+                   "ext"   = "#828065",
+                   "rh"    = "#FFCB06",
+                   "comu"  = "#00ADEE",
+                   "org"   = "#A8A791",
+                   "dpo"   = "#00AAAD")
+```
+
 ```{r functions}
 
 # insere a coluna de unidade etc nas tabelas que não têm
