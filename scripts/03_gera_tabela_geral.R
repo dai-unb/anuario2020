@@ -16,16 +16,8 @@ anobase <- 2019
 sem1 <- 12019
 sem2 <- 22019
 
-# Componentes institucionais ----
-comp_inst <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=1)
 
 # Números da UnB ----
-
-vagas_oferecidas <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=2)
-
-inscritos <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=3)
-
-demanda <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=4)
 
 
 ### Ingressantes
@@ -50,12 +42,12 @@ Arquivo42$forma_ingresso <- ifelse(Arquivo42$Ing_Enem==1,"Sisu/Enem",
    filter(INGRESSANTES!=0)
 
  # adcionando uma linha de total 
- ingressantes <- adorn_totals(ingressantes, where = "row", fill = "-", na.rm = TRUE, name = "Total")
+ ingressantes$Total <- ingressantes$`1º Sem.`+ingressantes$`2º Sem.`
  
  # exportando a tabela
  rio::export(ingressantes, "dados_gerais/Tabela_ingressantes.xlsx")  
 
-### Cursos 
+### Cursos {FALTA}
  
 ### Diplomados  
  
@@ -114,19 +106,17 @@ Arquivo42$forma_ingresso <- ifelse(Arquivo42$Ing_Enem==1,"Sisu/Enem",
  formados <- rbind(formado_grad,formado_mest,formado_doc)
  rm(formado_grad,formado_mest,formado_doc)
  
- formados <- adorn_totals(formados, where = "row", fill = "-", na.rm = TRUE, name = "Total")
+ formados$Total <- formados$`1º Sem.`+formados$`2º Sem.`
+ 
+ # exportando a tabela
+ rio::export(formados, "dados_gerais/Tabela_formados.xlsx")  
  
  
  
- escolaridade_docente <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=5)
- escolaridade_tecnico <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=6)
- area_fisica <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=7)
- bce <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=8)
- edu <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=9)
+# Indicadores por Unidade ----
 
+ # Graduação
  
-# Graduação ---------------------------------------------------------------
-
 Grad_Reg <- Arquivo42 %>% 
   filter(Sem_Ref==2 & Vinculo!="Transferido" & Vinculo != "Falecido") %>% 
   group_by(Unidade) %>% 
@@ -145,7 +135,7 @@ Grad_For <- Arquivo42 %>%
   mutate_if(is.factor, as.character)
 
 
-# Pós-graduação -----------------------------------------------------------
+  # Pós-graduação
 
 Mest <- Completo %>% 
   filter(`Ano Ingresso Opcao`<=anobase & `Ano Saida Opcao`>=anobase, `Nivel`=="Mestrado")
@@ -201,3 +191,4 @@ Tabela1.03 <- full_join(Grad_Reg, Pos_Reg, by = "Unidade") %>%
 rm(Completo, Grad_Reg, Pos_Reg, Grad_Cur, Mest_Cur, Doc_Cur, Grad_For, Mest_For, Doc_For, Arquivo42, Mest, Doc, Doc_Reg, Mest_Reg)
 
 rio::export(Tabela1.03, "dados_gerais/Tabela_1.03.xlsx")
+
