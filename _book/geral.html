@@ -51,6 +51,9 @@
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 
@@ -99,29 +102,2752 @@
             <section class="normal" id="section-">
 <div id="geral" class="section level1">
 <h1><span class="header-section-number">Capítulo 1</span> Dados gerais</h1>
-<a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,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" download="Tabela_1.03.xlsx">Download Tabela_1.03.xlsx</a>
-<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<ol style="list-style-type: decimal">
+<li>Informações e Dados Gerais
+<br>
+<em>Fundação Universidade de Brasília</em><br />
+Criação: Lei n. 3998/1961, de 15/12/1961, homologada pelo Decreto n. 500, de 15/1/1962.<br />
+Estatuto da FUB: publicado no Diário Oficial da União de 16/1/1962.<br />
+Edificação da Pedra Fundamental em 15/12/1961.<br />
+<br>
+<em>Universidade de Brasília</em><br />
+Criação: prevista no art. 3º da Lei n. 3998/1961, de 15/12/1961.<br />
+Estatuto em vigor: aprovado pela Resolução do Conselho Diretor n. 13/1993, de 19/10/1993, e publicado no Diário Oficial da União n. 7 de 11/1/1994.<br />
+<br>
+<em>Missão da UnB</em><br />
+Ser uma instituição inovadora, comprometida com a excelência acadêmica, científica e tecnológica
+formando cidadãos conscientes do seu papel transformador na sociedade, respeitadas a ética e a
+valorização de identidades e culturas com responsabilidade social.
+<br>
+<em>Visão de Futuro</em><br />
+Estar entre as melhores universidades do Brasil, inserida internacionalmente, com excelência em gestão de processos que fortaleça o ensino, pesquisa e extensão.
+<br></li>
+</ol>
+<table class="table table-striped table-hover table-responsive" style="font-size: 16px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:tab-geral">Tabela 1.1: </span>Dados gerais da UnB
+(#tab:comp_inst)Componentes Institucionais
 </caption>
 <thead>
 <tr>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; color: white !important;padding-right: 4px; padding-left: 4px; background-color: #00376f !important;vertical-align: middle" colspan="1">
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 14px;vertical-align: middle">
+Componentes Institucionais
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 14px;vertical-align: middle">
+Total
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Decanatos
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Institutos
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Faculdades
+</td>
+<td style="text-align:right;">
+14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Departamentos
+</td>
+<td style="text-align:right;">
+53
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Centros de Pesquisa
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Centros de Ensino e Pesquisa
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Núcleos
+</td>
+<td style="text-align:right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Secretarias
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Órgãos Complementares
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Órgãos Diversos
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hospital Universitário
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hospital Veterinário
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bibliotecas
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Fazenda Água Limpa
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;color: white !important;background-color: #00376f !important;">
+Campi
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+4
+</td>
+</tr>
+</tbody>
+</table>
+<p><br><br></p>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+(#tab:vagas_oferecidas)Números da Universidade de Brasília, 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+VAGAS OFERECIDAS
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+1º Semestre
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+2º Semestre
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Total Anual
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Sisu/Enem
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PAS
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vestibular
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #00376f !important;">
+Total
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+0
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+0
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+0
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:inscritos">Tabela 1.1: </span>Números da Universidade de Brasília, 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+INSCRITOS
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+1º Semestre
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+2º Semestre
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Total Anual
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Sisu/Enem
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PAS
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vestibular
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #00376f !important;">
+Total
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+0
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+0
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+0
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:demanda">Tabela 1.2: </span>Números da Universidade de Brasília, 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+RELAÇÃO CANDIDATO/VAGA
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+1º Semestre
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+2º Semestre
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Total Anual
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Sisu/Enem
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PAS
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;color: white !important;background-color: #00376f !important;">
+Vestibular
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+0
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+0
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+0
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:ingressantes">Tabela 1.3: </span>Números da Universidade de Brasília, 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+INGRESSANTES
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+1º Semestre
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+2º Semestre
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Total Anual
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+PAS
+</td>
+<td style="text-align:right;">
+1.991
+</td>
+<td style="text-align:right;">
+3.657
+</td>
+<td style="text-align:right;">
+5.648
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Por outras vias
+</td>
+<td style="text-align:right;">
+773
+</td>
+<td style="text-align:right;">
+1.544
+</td>
+<td style="text-align:right;">
+2.317
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sisu/Enem
+</td>
+<td style="text-align:right;">
+2.002
+</td>
+<td style="text-align:right;">
+1.878
+</td>
+<td style="text-align:right;">
+3.880
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vestibular
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2.205
+</td>
+<td style="text-align:right;">
+2.208
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #00376f !important;">
+Total
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+4.769
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+9.284
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+14.053
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:formados">Tabela 1.4: </span>Números da Universidade de Brasília, 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+DIPLOMADOS
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+1º Semestre
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+2º Semestre
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Total Anual
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Graduação
+</td>
+<td style="text-align:right;">
+2.710
+</td>
+<td style="text-align:right;">
+2.415
+</td>
+<td style="text-align:right;">
+5.125
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mestrado
+</td>
+<td style="text-align:right;">
+866
+</td>
+<td style="text-align:right;">
+634
+</td>
+<td style="text-align:right;">
+1.500
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Doutorado
+</td>
+<td style="text-align:right;">
+351
+</td>
+<td style="text-align:right;">
+287
+</td>
+<td style="text-align:right;">
+638
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #00376f !important;">
+Total
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+3.927
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+3.336
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+7.263
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+(#tab:escolaridade_docente)Números da Universidade de Brasília, 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+CORPO DOCENTE ATIVO
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+DEDICAÇÃO EXCLUSIVA
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+40 HORAS
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+20 HORAS
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+TOTAL
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Graduação
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Especialização
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mestrado
+</td>
+<td style="text-align:right;">
+132
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+164
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Doutorado
+</td>
+<td style="text-align:right;">
+2.336
+</td>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:right;">
+59
+</td>
+<td style="text-align:right;">
+2.412
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #00376f !important;">
+Total
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+2.477
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+27
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+90
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+2.594
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+(#tab:escolaridade_tecnico)Números da Universidade de Brasília, 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+ESCOLARIDADE DO CORPO TÉCNICO-ADMINISTRATIVO DO QUADRO
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Nível Sperior - NS
+</td>
+<td style="text-align:right;">
+1.323
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nível Intermediário - NI
+</td>
+<td style="text-align:right;">
+1.807
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nível de Apoio - NA
+</td>
+<td style="text-align:right;">
+103
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #00376f !important;">
+Total
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+3.233
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+(#tab:area_fisica)Números da Universidade de Brasília, 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+ÁREA FÍSICA
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+M²
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Campus Universitário Darcy Ribeiro
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ul>
+<li>Área total
+</td>
+<td style="text-align:right;">
+3950579.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ul>
+<li>Área construída
+</td>
+<td style="text-align:right;">
+599468.35
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Campus UnB/Planaltina
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ul>
+<li>Área total
+</td>
+<td style="text-align:right;">
+301847.06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ul>
+<li>Área construída
+</td>
+<td style="text-align:right;">
+12247.18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Campus UnB/Gama
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ul>
+<li>Área total
+</td>
+<td style="text-align:right;">
+335534
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ul>
+<li>Área construída
+</td>
+<td style="text-align:right;">
+14521.03
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Campus UnB/Ceilândia
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ul>
+<li>Área total
+</td>
+<td style="text-align:right;">
+199499
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ul>
+<li>Área construída
+</td>
+<td style="text-align:right;">
+11476.03
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hospital Universitário de Brasília – HUB
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ul>
+<li>Área total
+</td>
+<td style="text-align:right;">
+89538.23
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ul>
+<li>Área construída
+</td>
+<td style="text-align:right;">
+53666.59
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Fazenda Água Limpa – FAL
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ul>
+<li>Área total
+</td>
+<td style="text-align:right;">
+4.5e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<ul>
+<li>Área construída
+</td>
+<td style="text-align:right;">
+10409
+</td>
+</tr>
+<tr>
+<td style="text-align:left;color: white !important;background-color: #00376f !important;">
+<ul>
+<li>Área de laboratório
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+5284200
+</td>
+</tr>
+</tbody>
+</table></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:bce">Tabela 1.5: </span>Números da Universidade de Brasília, 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+EDITORA UNIVERSIDADE DE BRASÍLIA- EDU
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Discos
+</td>
+<td style="text-align:right;">
+3.916
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Folhetos
+</td>
+<td style="text-align:right;">
+8.547
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mapas
+</td>
+<td style="text-align:right;">
+1.601
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Teses
+</td>
+<td style="text-align:right;">
+11.179
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Títulos de livros
+</td>
+<td style="text-align:right;">
+337.363
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Títulos de periódicos
+</td>
+<td style="text-align:right;">
+10.855
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Exemplares de livros
+</td>
+<td style="text-align:right;">
+561.442
+</td>
+</tr>
+<tr>
+<td style="text-align:left;color: white !important;background-color: #00376f !important;">
+Exemplares de periódicos
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+916.956
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:edu">Tabela 1.6: </span>Números da Universidade de Brasília, 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+BIBLIOTECA CENTRAL - BCE
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Exemplares vendidos
+</td>
+<td style="text-align:right;">
+21.928
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Pontos de vendas instalados
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;color: white !important;background-color: #00376f !important;">
+Títulos publicados
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+34
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:extensao">Tabela 1.7: </span>Números da Universidade de Brasília, 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+EXTENSÃO
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Cursos
+</td>
+<td style="text-align:right;">
+456
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Minicursos
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;color: white !important;background-color: #00376f !important;">
+Projeto
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+0
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:ru">Tabela 1.8: </span>Números da Universidade de Brasília, 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+RESTAURANTE UNIVERSITÁRIO – RU
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Custo médio / Refeições
+</td>
+<td style="text-align:right;">
+9.4499999999999993
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Dias de funcionamento/ano
+</td>
+<td style="text-align:right;">
+362
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Média refeições/dia (almoço/jantar)
+</td>
+<td style="text-align:right;">
+5038
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Refeições servidas/ano
+</td>
+<td style="text-align:right;">
+1823850
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Valor Unitário / Refeições: Aluno do Grupo I*
+</td>
+<td style="text-align:right;">
+isento
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Valor Unitário / Refeições: Aluno do Grupo II*
+</td>
+<td style="text-align:right;">
+Café R$ 2,35 / Almoço e jantar R$ 5,20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;color: white !important;background-color: #00376f !important;">
+Valor Unitário / Refeições: Aluno do Grupo III Servidores e visitantes*
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+Café R$ 5,80 / Almoço e jantar R$ 13,00
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+(#tab:indicadores_gerais)Indicadores gerais de desempenho, 2009 a 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+2009
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+2010
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+2011
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+2012
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+2013
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+2014
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+2015
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+2016
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+2017
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+2018
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+2019
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+2009 a 2019
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+ATIVIDADES DE ENSINO
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GRADUAÇÃO
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nº de Cursos (total)
+</td>
+<td style="text-align:right;">
+91
+</td>
+<td style="text-align:right;">
+103
+</td>
+<td style="text-align:right;">
+136
+</td>
+<td style="text-align:right;">
+138
+</td>
+<td style="text-align:right;">
+161
+</td>
+<td style="text-align:right;">
+154
+</td>
+<td style="text-align:right;">
+155
+</td>
+<td style="text-align:right;">
+155
+</td>
+<td style="text-align:right;">
+153
+</td>
+<td style="text-align:right;">
+150
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vagas oferecidas no ano (Sisu/Enem + PAS + Vestibular)
+</td>
+<td style="text-align:right;">
+8069
+</td>
+<td style="text-align:right;">
+8090
+</td>
+<td style="text-align:right;">
+8014
+</td>
+<td style="text-align:right;">
+8368
+</td>
+<td style="text-align:right;">
+8403
+</td>
+<td style="text-align:right;">
+8419
+</td>
+<td style="text-align:right;">
+8424
+</td>
+<td style="text-align:right;">
+8424
+</td>
+<td style="text-align:right;">
+8439
+</td>
+<td style="text-align:right;">
+8439
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ingressantes – PAS
+</td>
+<td style="text-align:right;">
+1302
+</td>
+<td style="text-align:right;">
+1590
+</td>
+<td style="text-align:right;">
+1441
+</td>
+<td style="text-align:right;">
+1815
+</td>
+<td style="text-align:right;">
+1421
+</td>
+<td style="text-align:right;">
+1945
+</td>
+<td style="text-align:right;">
+1957
+</td>
+<td style="text-align:right;">
+1953
+</td>
+<td style="text-align:right;">
+1978
+</td>
+<td style="text-align:right;">
+3762
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ingressantes – Vestibular
+</td>
+<td style="text-align:right;">
+6075
+</td>
+<td style="text-align:right;">
+6201
+</td>
+<td style="text-align:right;">
+7545
+</td>
+<td style="text-align:right;">
+4737
+</td>
+<td style="text-align:right;">
+6066
+</td>
+<td style="text-align:right;">
+5516
+</td>
+<td style="text-align:right;">
+3936
+</td>
+<td style="text-align:right;">
+4082
+</td>
+<td style="text-align:right;">
+2526
+</td>
+<td style="text-align:right;">
+2234
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sisu/Enem
+</td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+2336
+</td>
+<td style="text-align:right;">
+2331
+</td>
+<td style="text-align:right;">
+2080
+</td>
+<td style="text-align:right;">
+2182
+</td>
+<td style="text-align:right;">
+2076
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Subtotal de Ingressantes (Sisu/Enem(1) + Vestibular + PAS)
+</td>
+<td style="text-align:right;">
+7377
+</td>
+<td style="text-align:right;">
+7791
+</td>
+<td style="text-align:right;">
+8986
+</td>
+<td style="text-align:right;">
+6552
+</td>
+<td style="text-align:right;">
+7487
+</td>
+<td style="text-align:right;">
+9797
+</td>
+<td style="text-align:right;">
+8224
+</td>
+<td style="text-align:right;">
+8115
+</td>
+<td style="text-align:right;">
+6686
+</td>
+<td style="text-align:right;">
+8072
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ingressantes – Outras Vias
+</td>
+<td style="text-align:right;">
+640
+</td>
+<td style="text-align:right;">
+575
+</td>
+<td style="text-align:right;">
+906
+</td>
+<td style="text-align:right;">
+1978
+</td>
+<td style="text-align:right;">
+1277
+</td>
+<td style="text-align:right;">
+892
+</td>
+<td style="text-align:right;">
+1624
+</td>
+<td style="text-align:right;">
+1735
+</td>
+<td style="text-align:right;">
+3192
+</td>
+<td style="text-align:right;">
+1880
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total de Ingressantes (Sisu/Enem + Vestibular + PAS + Outras Vias)
+</td>
+<td style="text-align:right;">
+8017
+</td>
+<td style="text-align:right;">
+8366
+</td>
+<td style="text-align:right;">
+9892
+</td>
+<td style="text-align:right;">
+8530
+</td>
+<td style="text-align:right;">
+8764
+</td>
+<td style="text-align:right;">
+10689
+</td>
+<td style="text-align:right;">
+9848
+</td>
+<td style="text-align:right;">
+9850
+</td>
+<td style="text-align:right;">
+9878
+</td>
+<td style="text-align:right;">
+9952
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alunos regulares registrados (2º semestre)
+</td>
+<td style="text-align:right;">
+27929
+</td>
+<td style="text-align:right;">
+29775
+</td>
+<td style="text-align:right;">
+38387
+</td>
+<td style="text-align:right;">
+36135
+</td>
+<td style="text-align:right;">
+39979
+</td>
+<td style="text-align:right;">
+36372
+</td>
+<td style="text-align:right;">
+37982
+</td>
+<td style="text-align:right;">
+37724
+</td>
+<td style="text-align:right;">
+38730
+</td>
+<td style="text-align:right;">
+39610
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alunos formados
+</td>
+<td style="text-align:right;">
+4319
+</td>
+<td style="text-align:right;">
+4202
+</td>
+<td style="text-align:right;">
+3843
+</td>
+<td style="text-align:right;">
+3789
+</td>
+<td style="text-align:right;">
+3616
+</td>
+<td style="text-align:right;">
+4022
+</td>
+<td style="text-align:right;">
+4554
+</td>
+<td style="text-align:right;">
+4736
+</td>
+<td style="text-align:right;">
+5048
+</td>
+<td style="text-align:right;">
+5246
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PÓS-GRADUAÇÃO
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Número de cursos
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Especialização
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mestrado
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+82
+</td>
+<td style="text-align:right;">
+85
+</td>
+<td style="text-align:right;">
+86
+</td>
+<td style="text-align:right;">
+85
+</td>
+<td style="text-align:right;">
+86
+</td>
+<td style="text-align:right;">
+89
+</td>
+<td style="text-align:right;">
+91
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Doutorado
+</td>
+<td style="text-align:right;">
+53
+</td>
+<td style="text-align:right;">
+56
+</td>
+<td style="text-align:right;">
+59
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+66
+</td>
+<td style="text-align:right;">
+66
+</td>
+<td style="text-align:right;">
+69
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+69
+</td>
+<td style="text-align:right;">
+69
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alunos registrados (2º semestre)
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mestrado
+</td>
+<td style="text-align:right;">
+3065
+</td>
+<td style="text-align:right;">
+3309
+</td>
+<td style="text-align:right;">
+4442
+</td>
+<td style="text-align:right;">
+5026
+</td>
+<td style="text-align:right;">
+4982
+</td>
+<td style="text-align:right;">
+4358
+</td>
+<td style="text-align:right;">
+4428
+</td>
+<td style="text-align:right;">
+4103
+</td>
+<td style="text-align:right;">
+4336
+</td>
+<td style="text-align:right;">
+4576
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Doutorado
+</td>
+<td style="text-align:right;">
+1941
+</td>
+<td style="text-align:right;">
+2174
+</td>
+<td style="text-align:right;">
+2668
+</td>
+<td style="text-align:right;">
+3047
+</td>
+<td style="text-align:right;">
+3165
+</td>
+<td style="text-align:right;">
+3218
+</td>
+<td style="text-align:right;">
+3372
+</td>
+<td style="text-align:right;">
+3503
+</td>
+<td style="text-align:right;">
+3712
+</td>
+<td style="text-align:right;">
+3859
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Residência Médica
+</td>
+<td style="text-align:right;">
+143
+</td>
+<td style="text-align:right;">
+152
+</td>
+<td style="text-align:right;">
+297
+</td>
+<td style="text-align:right;">
+311
+</td>
+<td style="text-align:right;">
+329
+</td>
+<td style="text-align:right;">
+350
+</td>
+<td style="text-align:right;">
+353
+</td>
+<td style="text-align:right;">
+187
+</td>
+<td style="text-align:right;">
+253
+</td>
+<td style="text-align:right;">
+272
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Títulos outorgados
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mestrado
+</td>
+<td style="text-align:right;">
+975
+</td>
+<td style="text-align:right;">
+874
+</td>
+<td style="text-align:right;">
+1446
+</td>
+<td style="text-align:right;">
+1726
+</td>
+<td style="text-align:right;">
+1063
+</td>
+<td style="text-align:right;">
+1228
+</td>
+<td style="text-align:right;">
+1327
+</td>
+<td style="text-align:right;">
+1526
+</td>
+<td style="text-align:right;">
+1549
+</td>
+<td style="text-align:right;">
+1549
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Doutorado
+</td>
+<td style="text-align:right;">
+313
+</td>
+<td style="text-align:right;">
+258
+</td>
+<td style="text-align:right;">
+469
+</td>
+<td style="text-align:right;">
+561
+</td>
+<td style="text-align:right;">
+383
+</td>
+<td style="text-align:right;">
+411
+</td>
+<td style="text-align:right;">
+536
+</td>
+<td style="text-align:right;">
+582
+</td>
+<td style="text-align:right;">
+571
+</td>
+<td style="text-align:right;">
+646
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SERVIÇOS À COMUNIDADE
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+EDITORA UnB
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Títulos publicados pela EDU
+</td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+46
+</td>
+<td style="text-align:right;">
+59
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Exemplares vendidos
+</td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+64738
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+44592
+</td>
+<td style="text-align:right;">
+25237
+</td>
+<td style="text-align:right;">
+36341
+</td>
+<td style="text-align:right;">
+24365
+</td>
+<td style="text-align:right;">
+89803
+</td>
+<td style="text-align:right;">
+22601
+</td>
+<td style="text-align:right;">
+22601
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BIBLIOTECA
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Acervo da Biblioteca da UnB
+</td>
+<td style="text-align:right;">
+59332
+</td>
+<td style="text-align:right;">
+1482513
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+1517512
+</td>
+<td style="text-align:right;">
+1552371
+</td>
+<td style="text-align:right;">
+1502024
+</td>
+<td style="text-align:right;">
+1527956
+</td>
+<td style="text-align:right;">
+1535650
+</td>
+<td style="text-align:right;">
+1542738
+</td>
+<td style="text-align:right;">
+1557114
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Média de usuários por dia na BCE
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+2500
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+4000
+</td>
+<td style="text-align:right;">
+4500
+</td>
+<td style="text-align:right;">
+3000
+</td>
+<td style="text-align:right;">
+3200
+</td>
+<td style="text-align:right;">
+2000
+</td>
+<td style="text-align:right;">
+2000
+</td>
+<td style="text-align:right;">
+2000
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+QUADRO DE PESSOAL
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Docentes Ativos (exclui Substitutos e Visitantes)
+</td>
+<td style="text-align:right;">
+1736
+</td>
+<td style="text-align:right;">
+2074
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+2485
+</td>
+<td style="text-align:right;">
+2364
+</td>
+<td style="text-align:right;">
+2234
+</td>
+<td style="text-align:right;">
+2404
+</td>
+<td style="text-align:right;">
+2492
+</td>
+<td style="text-align:right;">
+2557
+</td>
+<td style="text-align:right;">
+2573
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Técnico-Administrativos Ativos
+</td>
+<td style="text-align:right;">
+2205
+</td>
+<td style="text-align:right;">
+2448
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+2731
+</td>
+<td style="text-align:right;">
+2637
+</td>
+<td style="text-align:right;">
+2623
+</td>
+<td style="text-align:right;">
+2863
+</td>
+<td style="text-align:right;">
+3159
+</td>
+<td style="text-align:right;">
+3198
+</td>
+<td style="text-align:right;">
+3171
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total de Pessoal Ativo
+</td>
+<td style="text-align:right;">
+3941
+</td>
+<td style="text-align:right;">
+4522
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+5216
+</td>
+<td style="text-align:right;">
+5001
+</td>
+<td style="text-align:right;">
+4857
+</td>
+<td style="text-align:right;">
+5267
+</td>
+<td style="text-align:right;">
+5651
+</td>
+<td style="text-align:right;">
+5755
+</td>
+<td style="text-align:right;">
+5744
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Docentes Inativos
+</td>
+<td style="text-align:right;">
+902
+</td>
+<td style="text-align:right;">
+942
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+879
+</td>
+<td style="text-align:right;">
+854
+</td>
+<td style="text-align:right;">
+879
+</td>
+<td style="text-align:right;">
+837
+</td>
+<td style="text-align:right;">
+885
+</td>
+<td style="text-align:right;">
+905
+</td>
+<td style="text-align:right;">
+932
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Técnico-Administrativos Inativos
+</td>
+<td style="text-align:right;">
+1092
+</td>
+<td style="text-align:right;">
+1149
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+1079
+</td>
+<td style="text-align:right;">
+1113
+</td>
+<td style="text-align:right;">
+1155
+</td>
+<td style="text-align:right;">
+1211
+</td>
+<td style="text-align:right;">
+1305
+</td>
+<td style="text-align:right;">
+1334
+</td>
+<td style="text-align:right;">
+1379
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total de Pessoal Inativo
+</td>
+<td style="text-align:right;">
+1994
+</td>
+<td style="text-align:right;">
+2091
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+1958
+</td>
+<td style="text-align:right;">
+1967
+</td>
+<td style="text-align:right;">
+2034
+</td>
+<td style="text-align:right;">
+2048
+</td>
+<td style="text-align:right;">
+2190
+</td>
+<td style="text-align:right;">
+2239
+</td>
+<td style="text-align:right;">
+2311
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+COOPERAÇÃO NACIONAL E INTERNACIONAL
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Número de convênios assinados no ano
+</td>
+<td style="text-align:right;">
+334
+</td>
+<td style="text-align:right;">
+384
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+348
+</td>
+<td style="text-align:right;">
+495
+</td>
+<td style="text-align:right;">
+433
+</td>
+<td style="text-align:right;">
+236
+</td>
+<td style="text-align:right;">
+224
+</td>
+<td style="text-align:right;">
+272
+</td>
+<td style="text-align:right;">
+337
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Convênios Nacionais
+</td>
+<td style="text-align:right;">
+311
+</td>
+<td style="text-align:right;">
+352
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+299
+</td>
+<td style="text-align:right;">
+419
+</td>
+<td style="text-align:right;">
+364
+</td>
+<td style="text-align:right;">
+172
+</td>
+<td style="text-align:right;">
+176
+</td>
+<td style="text-align:right;">
+225
+</td>
+<td style="text-align:right;">
+264
+</td>
+<td style="text-align:right;">
+</td>
+<td style="text-align:right;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #00376f !important;">
+Convênios Internacionais
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+23
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+32
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+ND
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+49
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+76
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+69
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+64
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+48
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+47
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+73
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+</td>
+</tr>
+</tbody>
+</table></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,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" download="Tabela_1.03.xlsx">Download Tabela_1.03.xlsx</a>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:geral">Tabela 1.9: </span>Dados gerais da UnB
+</caption>
+<thead>
+<tr>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; color: white !important;padding-right: 4px; padding-left: 4px; background-color: #00376f !important;vertical-align: middle" colspan="1">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 <em><br></em><br>
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; color: white !important;padding-right: 4px; padding-left: 4px; background-color: #00376f !important;vertical-align: middle" colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; color: white !important;padding-right: 4px; padding-left: 4px; background-color: #00376f !important;vertical-align: middle" colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 ALUNOS REGISTRADOS<br>(DADOS DO 2º SEMESTRE)
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; color: white !important;padding-right: 4px; padding-left: 4px; background-color: #00376f !important;vertical-align: middle" colspan="3">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; color: white !important;padding-right: 4px; padding-left: 4px; background-color: #00376f !important;vertical-align: middle" colspan="3">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 CURSOS<br>MINISTRADOS
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; color: white !important;padding-right: 4px; padding-left: 4px; background-color: #00376f !important;vertical-align: middle" colspan="3">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; color: white !important;padding-right: 4px; padding-left: 4px; background-color: #00376f !important;vertical-align: middle" colspan="3">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 TÍTULOS<br>OUTORGADOS
 </div>
@@ -129,32 +2855,32 @@ TÍTULOS<br>OUTORGADOS
 </tr>
 <tr>
 <th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
-UNIDADES
+Unidades
 </th>
 <th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
-GRADUAÇÃO
+Graduação
 </th>
 <th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
-PÓS-GRADUAÇÃO
-MEST./DOUT.
+Pós-graduação
+Mest./Dout.
 </th>
 <th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
-GRAD.
+Grad.
 </th>
 <th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
-MESTR.
+Mestr.
 </th>
 <th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
-DOUT.
+Dout.
 </th>
 <th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
-GRADUAÇÃO
+Graduação
 </th>
 <th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
-MESTRADO
+Mestrado
 </th>
 <th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
-DOUTORADO
+Doutorado
 </th>
 </tr>
 </thead>
@@ -1060,6 +3786,2702 @@ Total
 </tr>
 </tbody>
 </table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+(#tab:evo_pop)Evolução da população universitária da UnB, 2015 a 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Ano
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Alunos de Graduação ¹
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Alunos de Pós-Graduação ¹
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Docentes ²
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Técnicos-Administrativos
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Total
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+2.015
+</td>
+<td style="text-align:right;">
+37.982
+</td>
+<td style="text-align:right;">
+8.153
+</td>
+<td style="text-align:right;">
+2.749
+</td>
+<td style="text-align:right;">
+3.024
+</td>
+<td style="text-align:right;">
+51.908
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.016
+</td>
+<td style="text-align:right;">
+37.724
+</td>
+<td style="text-align:right;">
+7.599
+</td>
+<td style="text-align:right;">
+2.744
+</td>
+<td style="text-align:right;">
+3.159
+</td>
+<td style="text-align:right;">
+51.226
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.017
+</td>
+<td style="text-align:right;">
+38.730
+</td>
+<td style="text-align:right;">
+8.048
+</td>
+<td style="text-align:right;">
+2.787
+</td>
+<td style="text-align:right;">
+3.198
+</td>
+<td style="text-align:right;">
+53.657
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.018
+</td>
+<td style="text-align:right;">
+39.610
+</td>
+<td style="text-align:right;">
+8.435
+</td>
+<td style="text-align:right;">
+2.818
+</td>
+<td style="text-align:right;">
+3.171
+</td>
+<td style="text-align:right;">
+54.034
+</td>
+</tr>
+<tr>
+<td style="text-align:left;color: white !important;background-color: #00376f !important;">
+2.019
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+0
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+0
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+0
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+0
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+0
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+(#tab:evo_alunos)Evolução do número de alunos registrados na graduação e na pós-graduação Stricto
+Sensu, 2015 a 2019 (2º semestre)
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Ano
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Graduação
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Mestrado
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Doutorado
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Residência Médica
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Total da Pós-Graduação
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Total Geral
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+2.015
+</td>
+<td style="text-align:right;">
+37.982
+</td>
+<td style="text-align:right;">
+4.428
+</td>
+<td style="text-align:right;">
+3.372
+</td>
+<td style="text-align:right;">
+353
+</td>
+<td style="text-align:right;">
+8.153
+</td>
+<td style="text-align:right;">
+46.135
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.016
+</td>
+<td style="text-align:right;">
+37.724
+</td>
+<td style="text-align:right;">
+4.103
+</td>
+<td style="text-align:right;">
+3.503
+</td>
+<td style="text-align:right;">
+187
+</td>
+<td style="text-align:right;">
+7.793
+</td>
+<td style="text-align:right;">
+45.517
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.017
+</td>
+<td style="text-align:right;">
+38.730
+</td>
+<td style="text-align:right;">
+4.336
+</td>
+<td style="text-align:right;">
+3.712
+</td>
+<td style="text-align:right;">
+253
+</td>
+<td style="text-align:right;">
+8.301
+</td>
+<td style="text-align:right;">
+47.031
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.018
+</td>
+<td style="text-align:right;">
+39.610
+</td>
+<td style="text-align:right;">
+4.576
+</td>
+<td style="text-align:right;">
+3.859
+</td>
+<td style="text-align:right;">
+272
+</td>
+<td style="text-align:right;">
+8.707
+</td>
+<td style="text-align:right;">
+48.317
+</td>
+</tr>
+<tr>
+<td style="text-align:left;color: white !important;background-color: #00376f !important;">
+2.019
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+0
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+0
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+0
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+0
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+0
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+0
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+(#tab:evo_formados)Evolução do número de alunos formados na graduação, na especialização no mestrado e
+no doutorado, 1966 a 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Ano
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Graduação
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Especialização¹
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Formados com Especialização²
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Mestrado
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Doutorado
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+Total
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Total 1966 – 1977
+</td>
+<td style="text-align:right;">
+8.283
+</td>
+<td style="text-align:right;">
+414
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+8.700
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total 1978 – 1987
+</td>
+<td style="text-align:right;">
+12.567
+</td>
+<td style="text-align:right;">
+810
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+42
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+13.424
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1988
+</td>
+<td style="text-align:right;">
+1.166
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+1.255
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1989
+</td>
+<td style="text-align:right;">
+1.114
+</td>
+<td style="text-align:right;">
+177
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1.305
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1990
+</td>
+<td style="text-align:right;">
+1.051
+</td>
+<td style="text-align:right;">
+88
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+1.169
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1991
+</td>
+<td style="text-align:right;">
+1.029
+</td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+168
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+1.233
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1992
+</td>
+<td style="text-align:right;">
+1.003
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+199
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+1.312
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1993
+</td>
+<td style="text-align:right;">
+1.020
+</td>
+<td style="text-align:right;">
+50
+</td>
+<td style="text-align:right;">
+31
+</td>
+<td style="text-align:right;">
+197
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+1.316
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1994
+</td>
+<td style="text-align:right;">
+1.144
+</td>
+<td style="text-align:right;">
+71
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:right;">
+196
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+1.480
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1995
+</td>
+<td style="text-align:right;">
+1.464
+</td>
+<td style="text-align:right;">
+132
+</td>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:right;">
+244
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+1.902
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1996
+</td>
+<td style="text-align:right;">
+1.724
+</td>
+<td style="text-align:right;">
+65
+</td>
+<td style="text-align:right;">
+42
+</td>
+<td style="text-align:right;">
+287
+</td>
+<td style="text-align:right;">
+43
+</td>
+<td style="text-align:right;">
+2.161
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1997
+</td>
+<td style="text-align:right;">
+1.798
+</td>
+<td style="text-align:right;">
+105
+</td>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:right;">
+354
+</td>
+<td style="text-align:right;">
+43
+</td>
+<td style="text-align:right;">
+2.329
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total 1988 – 1997
+</td>
+<td style="text-align:right;">
+12.513
+</td>
+<td style="text-align:right;">
+839
+</td>
+<td style="text-align:right;">
+258
+</td>
+<td style="text-align:right;">
+1.684
+</td>
+<td style="text-align:right;">
+168
+</td>
+<td style="text-align:right;">
+15.462
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1998
+</td>
+<td style="text-align:right;">
+2.052
+</td>
+<td style="text-align:right;">
+592
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+364
+</td>
+<td style="text-align:right;">
+57
+</td>
+<td style="text-align:right;">
+3.079
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1999
+</td>
+<td style="text-align:right;">
+2.205
+</td>
+<td style="text-align:right;">
+1093
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+393
+</td>
+<td style="text-align:right;">
+78
+</td>
+<td style="text-align:right;">
+3.784
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2000
+</td>
+<td style="text-align:right;">
+2.332
+</td>
+<td style="text-align:right;">
+1044
+</td>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:right;">
+515
+</td>
+<td style="text-align:right;">
+111
+</td>
+<td style="text-align:right;">
+4.019
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2001
+</td>
+<td style="text-align:right;">
+2.591
+</td>
+<td style="text-align:right;">
+1936
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+526
+</td>
+<td style="text-align:right;">
+116
+</td>
+<td style="text-align:right;">
+5.174
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2002
+</td>
+<td style="text-align:right;">
+2.609
+</td>
+<td style="text-align:right;">
+1513
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+818
+</td>
+<td style="text-align:right;">
+151
+</td>
+<td style="text-align:right;">
+5.094
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2003
+</td>
+<td style="text-align:right;">
+3.935
+</td>
+<td style="text-align:right;">
+878
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+668
+</td>
+<td style="text-align:right;">
+150
+</td>
+<td style="text-align:right;">
+5.632
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2004
+</td>
+<td style="text-align:right;">
+4.133
+</td>
+<td style="text-align:right;">
+1326
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+800
+</td>
+<td style="text-align:right;">
+203
+</td>
+<td style="text-align:right;">
+6.465
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2005
+</td>
+<td style="text-align:right;">
+3.089
+</td>
+<td style="text-align:right;">
+1231
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+877
+</td>
+<td style="text-align:right;">
+207
+</td>
+<td style="text-align:right;">
+5.405
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2006
+</td>
+<td style="text-align:right;">
+3.276
+</td>
+<td style="text-align:right;">
+105
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+918
+</td>
+<td style="text-align:right;">
+226
+</td>
+<td style="text-align:right;">
+4.526
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2007
+</td>
+<td style="text-align:right;">
+3.420
+</td>
+<td style="text-align:right;">
+1806
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+962
+</td>
+<td style="text-align:right;">
+274
+</td>
+<td style="text-align:right;">
+6.470
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total 1998 – 2007
+</td>
+<td style="text-align:right;">
+29.642
+</td>
+<td style="text-align:right;">
+11524
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+6.841
+</td>
+<td style="text-align:right;">
+1573
+</td>
+<td style="text-align:right;">
+49.648
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2008
+</td>
+<td style="text-align:right;">
+3.513
+</td>
+<td style="text-align:right;">
+537
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+1.022
+</td>
+<td style="text-align:right;">
+318
+</td>
+<td style="text-align:right;">
+5.395
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2009
+</td>
+<td style="text-align:right;">
+4.319
+</td>
+<td style="text-align:right;">
+383
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+975
+</td>
+<td style="text-align:right;">
+313
+</td>
+<td style="text-align:right;">
+5.999
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2010
+</td>
+<td style="text-align:right;">
+4.086
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+874
+</td>
+<td style="text-align:right;">
+258
+</td>
+<td style="text-align:right;">
+5.229
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2011
+</td>
+<td style="text-align:right;">
+4.319
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+859
+</td>
+<td style="text-align:right;">
+268
+</td>
+<td style="text-align:right;">
+5.448
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2012
+</td>
+<td style="text-align:right;">
+3.629
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1.212
+</td>
+<td style="text-align:right;">
+417
+</td>
+<td style="text-align:right;">
+5.259
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2013
+</td>
+<td style="text-align:right;">
+3.547
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1.063
+</td>
+<td style="text-align:right;">
+383
+</td>
+<td style="text-align:right;">
+4.996
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2014
+</td>
+<td style="text-align:right;">
+4.022
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1.228
+</td>
+<td style="text-align:right;">
+411
+</td>
+<td style="text-align:right;">
+5.663
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2015
+</td>
+<td style="text-align:right;">
+4.554
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1.327
+</td>
+<td style="text-align:right;">
+536
+</td>
+<td style="text-align:right;">
+6.419
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016
+</td>
+<td style="text-align:right;">
+4.906
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+1.526
+</td>
+<td style="text-align:right;">
+582
+</td>
+<td style="text-align:right;">
+7.014
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017
+</td>
+<td style="text-align:right;">
+5.048
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+1.551
+</td>
+<td style="text-align:right;">
+571
+</td>
+<td style="text-align:right;">
+7.170
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total 2008 – 2017
+</td>
+<td style="text-align:right;">
+41.943
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+11.637
+</td>
+<td style="text-align:right;">
+4057
+</td>
+<td style="text-align:right;">
+58.592
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018
+</td>
+<td style="text-align:right;">
+5.246
+</td>
+<td style="text-align:right;">
+ND
+</td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+1.549
+</td>
+<td style="text-align:right;">
+646
+</td>
+<td style="text-align:right;">
+7.441
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total 2018 – 2019
+</td>
+<td style="text-align:right;">
+5.246
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1.549
+</td>
+<td style="text-align:right;">
+646
+</td>
+<td style="text-align:right;">
+7.441
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #00376f !important;">
+TOTAL GERAL
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+110.194
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+13587
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+366
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+21.756
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+6444
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+153.267
+</td>
+</tr>
+</tbody>
+</table></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+(#tab:area_darcy)Campus Universitário Darcy Ribeiro, 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+DENOMINAÇÃO
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+M²
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Área Total
+</td>
+<td style="text-align:right;">
+3.950.579
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Área Construída Completa
+</td>
+<td style="text-align:right;">
+484.347
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Área Construída Descoberta
+</td>
+<td style="text-align:right;">
+115.122
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Área Total Construída
+</td>
+<td style="text-align:right;">
+599.468
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Área Não Construída
+</td>
+<td style="text-align:right;">
+3.351.111
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Urbanizada
+</td>
+<td style="text-align:right;">
+1.818.854
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Não Urbanizada
+</td>
+<td style="text-align:right;">
+1.760.750
+</td>
+</tr>
+<tr>
+<td style="text-align:left;color: white !important;background-color: #00376f !important;">
+Área de Ocupação
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+370.975
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+(#tab:area_outros)Campi UnB Planaltina, UnB Gama e UnB Ceilândia, 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+DENOMINAÇÃO
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+PLANALTINA (M²)
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+GAMA (M²)
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+CEILÂNDIA (M²)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Área Total
+</td>
+<td style="text-align:right;">
+301.847
+</td>
+<td style="text-align:right;">
+335.534
+</td>
+<td style="text-align:right;">
+199.499
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Área Construída Completa
+</td>
+<td style="text-align:right;">
+12.080
+</td>
+<td style="text-align:right;">
+12.905
+</td>
+<td style="text-align:right;">
+9.860
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Área Construída Descoberta
+</td>
+<td style="text-align:right;">
+167
+</td>
+<td style="text-align:right;">
+1.616
+</td>
+<td style="text-align:right;">
+1.616
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Área Total Construída
+</td>
+<td style="text-align:right;">
+12.247
+</td>
+<td style="text-align:right;">
+14.521
+</td>
+<td style="text-align:right;">
+11.476
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Área Não Construída
+</td>
+<td style="text-align:right;">
+289.600
+</td>
+<td style="text-align:right;">
+321.013
+</td>
+<td style="text-align:right;">
+188.023
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Urbanizada
+</td>
+<td style="text-align:right;">
+9.055
+</td>
+<td style="text-align:right;">
+4.292
+</td>
+<td style="text-align:right;">
+7.800
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Não Urbanizada
+</td>
+<td style="text-align:right;">
+280.712
+</td>
+<td style="text-align:right;">
+318.337
+</td>
+<td style="text-align:right;">
+181.839
+</td>
+</tr>
+<tr>
+<td style="text-align:left;color: white !important;background-color: #00376f !important;">
+Área de Ocupação
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+15.100
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+16.131
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+12.325
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+(#tab:area_fal)FAL/Fazenda Água Limpa, 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+DENOMINAÇÃO
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+M²
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Área Total
+</td>
+<td style="text-align:right;">
+45.000.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Área Construída Coberta
+</td>
+<td style="text-align:right;">
+10.409
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Área Construída Descoberta
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Urbanizada
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Não Urbanizada
+</td>
+<td style="text-align:right;">
+45.000.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Não Urbanizada Cultivada
+</td>
+<td style="text-align:right;">
+5.120.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Não Urbanizada não Cultiva
+</td>
+<td style="text-align:right;">
+39.880.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Com Preservação Natural
+</td>
+<td style="text-align:right;">
+23.538.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Número de Edificações
+</td>
+<td style="text-align:right;">
+50
+</td>
+</tr>
+<tr>
+<td style="text-align:left;color: white !important;background-color: #00376f !important;">
+Área de Laboratório
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+5.284.200
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+(#tab:area_hub)Hospital Universitário de Brasília (HUB), 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+DENOMINAÇÃO
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+M²
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Área Total
+</td>
+<td style="text-align:right;">
+89.538
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Área Construída
+</td>
+<td style="text-align:right;">
+53.667
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Urbanizada
+</td>
+<td style="text-align:right;">
+35.872
+</td>
+</tr>
+<tr>
+<td style="text-align:left;color: white !important;background-color: #00376f !important;">
+Número de Edificações
+</td>
+<td style="text-align:right;color: white !important;background-color: #00376f !important;">
+14
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:hvetao">Tabela 1.10: </span>Atividades realizadas pelo HVET - Setor de Grandes Animais, 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+MÊS
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+CONSULTAS - EQUINO
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+CONSULTAS - RUMINANTE
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+CONSULTAS - SUÍNO
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+CIRURGIAS
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+EXAMES
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Janeiro
+</td>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+229
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Fevereiro
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+647
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Março
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:right;">
+341
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Abril
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:right;">
+710
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Maio
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+333
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Junho
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+377
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Julho
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+372
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Agosto
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+440
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Setembro
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+509
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Outubro
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+404
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Novembro
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+429
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Dezembro
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+134
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+242
+</td>
+<td style="text-align:right;">
+138
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+160
+</td>
+<td style="text-align:right;">
+4.925
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #00376f !important;">
+Média Mensal
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+16
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+12
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+0
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+12
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+390
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-responsive" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:hvetinho">Tabela 1.11: </span>Atividades realizadas pelo HVET - Setor de Pequenos Animais, 2019
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+MÊS
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+CONSULTAS - CCM
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+CONSULTAS -CCF
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+CONSULTAS -CCC
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+CONSULTAS -COFT
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+CONSULTAS -CCS
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+TOTAL…7
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+RETORNOS - RCM
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+RETORNOS - RCF
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+RETORNOS - RCC
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+RETORNOS - ROFT
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+RETORNOS - RCS
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+TOTAL…13
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+CIRURGIAS
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+INTERNAÇÕES
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+FISIOTERAPIA
+</th>
+<th style="text-align:right;color: white !important;background-color: #00376f !important;text-align: center;font-size: 12px;vertical-align: middle">
+EXAMES
+LABORATORIAIS
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Janeiro
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+129
+</td>
+<td style="text-align:right;">
+147
+</td>
+<td style="text-align:right;">
+67
+</td>
+<td style="text-align:right;">
+46
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+270
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+69
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Fevereiro
+</td>
+<td style="text-align:right;">
+90
+</td>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+158
+</td>
+<td style="text-align:right;">
+142
+</td>
+<td style="text-align:right;">
+62
+</td>
+<td style="text-align:right;">
+80
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+299
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+68
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Março
+</td>
+<td style="text-align:right;">
+53
+</td>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+138
+</td>
+<td style="text-align:right;">
+121
+</td>
+<td style="text-align:right;">
+56
+</td>
+<td style="text-align:right;">
+77
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+271
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+74
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Abril
+</td>
+<td style="text-align:right;">
+65
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+168
+</td>
+<td style="text-align:right;">
+177
+</td>
+<td style="text-align:right;">
+89
+</td>
+<td style="text-align:right;">
+136
+</td>
+<td style="text-align:right;">
+44
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+471
+</td>
+<td style="text-align:right;">
+63
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+107
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Maio
+</td>
+<td style="text-align:right;">
+69
+</td>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+170
+</td>
+<td style="text-align:right;">
+179
+</td>
+<td style="text-align:right;">
+86
+</td>
+<td style="text-align:right;">
+135
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+464
+</td>
+<td style="text-align:right;">
+52
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+104
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Junho
+</td>
+<td style="text-align:right;">
+78
+</td>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:right;">
+43
+</td>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:right;">
+195
+</td>
+<td style="text-align:right;">
+123
+</td>
+<td style="text-align:right;">
+85
+</td>
+<td style="text-align:right;">
+113
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:right;">
+375
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+90
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Julho
+</td>
+<td style="text-align:right;">
+82
+</td>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+192
+</td>
+<td style="text-align:right;">
+198
+</td>
+<td style="text-align:right;">
+101
+</td>
+<td style="text-align:right;">
+138
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+509
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+<ul>
+<li></td>
+<td style="text-align:right;">
+82
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Agosto
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:right;">
+182
+</td>
+<td style="text-align:right;">
+196
+</td>
+<td style="text-align:right;">
+66
+</td>
+<td style="text-align:right;">
+106
+</td>
+<td style="text-align:right;">
+57
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+449
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Setembro
+</td>
+<td style="text-align:right;">
+50
+</td>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+125
+</td>
+<td style="text-align:right;">
+90
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+115
+</td>
+<td style="text-align:right;">
+43
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+295
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+75
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Outubro
+</td>
+<td style="text-align:right;">
+71
+</td>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:right;">
+168
+</td>
+<td style="text-align:right;">
+122
+</td>
+<td style="text-align:right;">
+70
+</td>
+<td style="text-align:right;">
+111
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:right;">
+369
+</td>
+<td style="text-align:right;">
+62
+</td>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:right;">
+95
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Novembro
+</td>
+<td style="text-align:right;">
+56
+</td>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+159
+</td>
+<td style="text-align:right;">
+132
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+85
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+348
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+39
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Dezembro
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+116
+</td>
+<td style="text-align:right;">
+123
+</td>
+<td style="text-align:right;">
+69
+</td>
+<td style="text-align:right;">
+114
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+358
+</td>
+<td style="text-align:right;">
+39
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+796
+</td>
+<td style="text-align:right;">
+362
+</td>
+<td style="text-align:right;">
+313
+</td>
+<td style="text-align:right;">
+224
+</td>
+<td style="text-align:right;">
+205
+</td>
+<td style="text-align:right;">
+1.900
+</td>
+<td style="text-align:right;">
+1.750
+</td>
+<td style="text-align:right;">
+854
+</td>
+<td style="text-align:right;">
+1.256
+</td>
+<td style="text-align:right;">
+410
+</td>
+<td style="text-align:right;">
+208
+</td>
+<td style="text-align:right;">
+4.478
+</td>
+<td style="text-align:right;">
+465
+</td>
+<td style="text-align:right;">
+278
+</td>
+<td style="text-align:right;">
+81
+</td>
+<td style="text-align:right;">
+874
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;color: white !important;background-color: #00376f !important;">
+Média mensal
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+66
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+30
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+26
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+19
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+17
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+158
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+146
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+71
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+105
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+34
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+17
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+373
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+39
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+23
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+16.2
+</td>
+<td style="text-align:right;font-weight: bold;color: white !important;background-color: #00376f !important;">
+73
+</td>
+</tr>
+</tbody>
+</table></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
 
 </div>
             </section>
