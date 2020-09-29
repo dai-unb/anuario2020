@@ -211,231 +211,270 @@ SCD	Secretaria do Conselho Diretor
 **UNIVERSIDADE DE BRASÍLIA (UnB)**  
 
 **CONSELHOS SUPERIORES**  
-CONSUNI	Conselho Universitário  
 
-CEPE		Conselho de Ensino, Pesquisa e Extensão  
-	CAC		Câmara de Assuntos Comunitários  
-	CAD		Conselho de Administração  
-	CAPRO	Câmara de Projetos, Convênios, Contratos e Instrumentos Correlatos  
-	CCD		Câmara da Carreira Docente  
-	CEG		Câmara de Ensino de Graduação  
-	CEX		Câmara de Extensão  
-CGP		Câmara de Gestão de Pessoas  
-CPLAD	Câmara de Planejamento e Administração  
-	CPP		Câmara de Pesquisa e Pós-Graduação  
+CONSUNI	  Conselho Universitário  
 
+CEPE      Conselho de Ensino, Pesquisa e Extensão
+CEG       Câmara de Ensino de Graduação 
+CEX       Câmara de Extensão 
+CPP       Câmara de Pesquisa e Pós-Graduação 
+CCD       Câmara da Carreira Docente 
+CAD       Conselho de Administração 
+CAC       Câmara de Assuntos Comunitários 
+CGP       Câmara de Gestão de Pessoas
+CPLAD     Câmara de Planejamento e Administração
+
+	
 **CONSELHO COMUNITÁRIO**  
-REITORIA  
-VRT	Vice-Reitoria  
-GRE	Gabinete do Reitor  
-	SCA	Subsecretaria de Comunicação Administrativa  
-	SOC	Subsecretaria de Órgãos Colegiados  
-PRC	Prefeitura do Campus  
-	DAL	Diretoria de Administração e Logística  
-	DSG	Diretoria de Serviços Gerais  
-	DENA	Diretoria de Engenharia e Arquitetura  
-INFRA	Secretaria de Infraestrutura  
-PJU	Procuradoria Jurídica  
-AUD	Auditoria  
-OUV	Ouvidoria  
 
-**DECANATOS**  
-DEG	Decanato de Ensino de Graduação  
-	DTG	Diretoria Técnica de Graduação  
-	DAIA	Diretoria de Acompanhamento e Integração Acadêmica  
-	DEGD	Diretoria de Ensino de Graduação a Distância  
-	DIEG	Diretoria de Inovação e Estratégias para o Ensino de Graduação  
+CAPRO	Câmara de Projetos, Convênios, Contratos e Instrumentos Correlatos  
+	
+**REITORIA**
 
-DEX	Decanato de Extensão  
-	DTE	Diretoria Técnica de Extensão  
-	DDIR	Diretoria de Desenvolvimento e Integração Regional   
-	INTERFOCO	Diretoria de Capacitação e Formação Continuada  
+VRT        Vice-Reitoria
+OUV        Ouvidoria
+PJU        Procuradoria Jurídica
+AUD        Auditoria 
+  
+**ÓRGÃOS AUXILIARES**
 
-DPG	Decanato de Pós-Graduação  
-	DIRPG	Diretoria de Pós-Graduação  
-DIRIC	Diretoria de Fomento à Iniciação Científica  
+GRE        Gabinete da Reitora
+PRC        Prefeitura da UnB
+INFRA      Secretaria de Infraestrutura
+SEMA       Secretaria de Meio Ambiente da Universidade de Brasília
+SPI        Secretaria do Patrimônio Imobiliário
 
-DPI 	Decanato de Pesquisa e Inovação  
-	DIRPE Diretoria de Pesquisa   
-DPA Diretoria de Apoio a Projetos Acadêmicos   
-CDT Centro de Desenvolvimento Tecnológico 	 
+**DECANATOS**
 
-DAC	Decanato de Assuntos Comunitários   
-	DDS	Diretoria de Desenvolvimento Social   
-	DEL	Diretoria de Esporte e Lazer  
-DIV	Diretoria da Diversidade  
-DRU	Diretoria do Restaurante Universitário  
-DOCCA	Diretoria de Organizações Comunitárias, Cultura e Arte  
+**DEG**       **Decanato de Ensino de Graduação**
 
-DAF	Decanato de Administração  
-DTER	Diretoria de Terceirização  
-DIMEX	Diretoria de Importação e Exportação  
-DGM	Diretoria de Gestão de Materiais  
-DCF	Diretoria de Contabilidade e Finanças  
-DCO	Diretoria de Compras  
+DAIA       Diretoria de Acompanhamento e Integração Acadêmica
+DIEG       Diretoria de Inovação e Estratégias para o Ensino de Graduação
+DTG        Diretoria Técnica de Graduação
+DEX        Decanato de Extensão
+DTE        Diretoria Técnica de Extensão
+DDIR       Diretoria de Integração Social e Desenvolvimento Regional
+DDC        Diretoria de Difusão Cultural
 
-DGP	Decanato de Gestão de Pessoas  
-	DCADE	Diretoria de Capacitação, Desenvolvimento e Educação  
-	DAP	Diretoria de Administração de Pessoas  
-	DSQVT	Diretoria de Saúde, Segurança e Qualidade de Vida no Trabalho  
-	DPAM	Diretoria de Provimento, Acompanhamento e Movimentação  
+**DPG**       **Decanato de Pós-Graduação**
 
-DPO	Decanato de Planejamento, Orçamento e Avaliação Institucional  
-	DPL	Diretoria de Planejamento  
-	DOR	Diretoria de Orçamento  
-	DAI	Diretoria de Avaliação e Informações Gerenciais   
-	DPR	Diretoria de Processos Organizacionais  
+DIRIC      Diretoria de Fomento à Iniciação Científica
+DIRPG      Diretoria de Pós-Graduação
 
-**ASSESSORIAS E SECRETARIAS**  
-	SAA	Secretaria de Administração Acadêmica  
-	SECOM	Secretaria de Comunicação  
-	SGP	Secretaria de Gestão Patrimonial  
-	INT	Assessoria de Assuntos Internacionais  
-	CERI	Coordenação do Cerimonial  
+**DPI**       **Decanato de Pesquisa e Inovação**
 
-**ÓRGÃOS COMPLEMENTARES**  
-	ACE	Arquivo Central  
-BCE	Biblioteca Central  
-	CPD	Centro de Informática  
-	EDU	Editora Universidade de Brasília  
-	FAL	Fazenda Água Limpa  
-HUB	Hospital Universitário  
-PCTec	Parque Científico e Tecnológico da UnB  
-	CPCE (UnBTV)	Centro de Produção Cultural e Educativa  
+DIRPE      Diretoria de Pesquisa
+DPA        Diretoria de Apoio a Projetos Acadêmicos
+CDT        Centro de Apoio ao Desenvolvimento Tecnológico
+
+**DAC**       **Decanato de Assuntos Comunitários**
+
+DDS        Diretoria de Desenvolvimento Social
+DEAC       Diretoria de Esporte e Atividades Comunitárias
+DIV        Diretoria da Diversidade
+DASU       Diretoria de Atenção à Saúde da Comunidade Universitária
+DRU        Diretoria do Restaurante Universitário
+DACES 	   Diretoria de Acessibilidade
+
+**DGP**       **Decanato de Gestão de Pessoas**
+
+DCADE      Diretoria de Capacitação, Desenvolvimento e Educação
+DAP        Diretoria de Administração de Pessoas
+DSQVT      Diretoria de Saúde, Segurança e Qualidade de Vida no Trabalho
+DPAM       Diretoria de Provimento, Acompanhamento e Movimentação
+
+**DAF**       **Decanato de Administração**
+
+DIMEX      Diretoria de Importação e Exportação
+DTER       Diretoria de Terceirização
+DGM        Diretoria de Gestão de Materiais
+DCF        Diretoria de Contabilidade e Finanças
+DCO        Diretoria de Compras
+DCA        Diretoria de Contratos Administrativos
+
+**DPO**       **Decanato de Planejamento, Orçamento e Avaliação Institucional**
+
+DPL        Diretoria de Planejamento
+DOR        Diretoria de Orçamento
+DPR        Diretoria de Processos Organizacionais
+DAI        Diretoria de Avaliação e Informações Gerenciais 
+
+**ÓRGÃOS COMPLEMENTARES**
+
+BCE       Biblioteca Central
+STI       Centro de Informática
+EDU       Editora Universidade de Brasília
+FAL       Fazenda Água Limpa 
+HUB       Hospital Universitário
+ACE       Arquivo Central
+PCTec     Parque Científico e Tecnológico da Universidade de Brasília
+CPCE      Centro de Produção Cultural e Educativa (UnB-TV) 
+
+**ASSESSORIAS E SECRETARIAS**
+
+SAA        Secretaria de Administração Acadêmica 
+SECOM      Secretaria de Comunicação 
+INT        Secretaria de Assuntos Internacionais 
+CERI       Coordenação do Cerimonial
+
+**CENTROS (GRE)**
+
+CRAD       Centro de Referência em Conservação da Natureza e Recuperação de Áreas Degradadas
+CEAD       Centro de Educação a Distância
+CEAM       Centro de Estudos Avançados Multidisciplinares
+CET        Centro de Excelência em Turismo
+CER        UnB Cerrado
+CESPE      Centro de Seleção e de Promoção de Eventos
+CIBH       Centro Internacional de Bioética e Humanidades.
+CIFMC      Centro Internacional de Física da Matéria Condensada
+CDS        Centro de Desenvolvimento Sustentável
+CCOM       Centro de Políticas, Direito, Economia e Tecnologias das Comunicações
+CPAB       Centro de Pesquisa e Aplicação de Bambu e Fibras Naturais
+
 
 **CENTROS**   
-CCOM	 Centro de Políticas, Direito, Economia e Tecnologias das Comunicações  
-CDS	Centro de Desenvolvimento Sustentável  
-CEAD	Centro de Educação a Distância  
-CEPLAN	Centro de Planejamento  
-CET	Centro de Excelência em Turismo  
-CER	Centro de Estudos do Cerrado  
-CESPE	Centro de Seleção e de Promoção de Eventos  
-CIFMC	 Centro Internacional de Física da Matéria Condensada  
-CIORD	 Centro Integrado de Ordenamento Territorial (FACE)  
-CME	Centro de Manutenção de Equipamentos Científicos  
-CPAB	Centro de Pesquisa e Aplicação de Bambu e Fibras Naturais  
-CPCE	Centro de Produção Cultural e Educativa  
-CRAD	Centro de Referência em Conservação da Natureza e Recuperação de Áreas Degradadas  
-DATAUnB	Centro de Pesquisas de Opinião Pública  
-CEAM	Centro de Estudos Avançados Multidisciplinares  
 
-**UNIDADES ACADÊMICAS**  
-FACE	Faculdade de Economia, Administração, Contabilidade e Gestão de Políticas Públicas  
-	ADM	Departamento de Administração  
-	CCA	Departamento de Ciências Contábeis e Atuariais  
-	ECO	Departamento de Economia  
-	CIORD	Centro Integrado de Ordenamento Territorial  
-	GPP	Gestão de Políticas Públicas  
+CCOM	    Centro de Políticas, Direito, Economia e Tecnologias das Comunicações  
+CDS	      Centro de Desenvolvimento Sustentável  
+CEAD	    Centro de Educação a Distância  
+CEPLAN	  Centro de Planejamento  
+CET	      Centro de Excelência em Turismo  
+CER	      Centro de Estudos do Cerrado  
+CESPE	    Centro de Seleção e de Promoção de Eventos  
+CIFMC	    Centro Internacional de Física da Matéria Condensada  
+CIORD	    Centro Integrado de Ordenamento Territorial (FACE)  
+CME	      Centro de Manutenção de Equipamentos Científicos  
+CPAB	    Centro de Pesquisa e Aplicação de Bambu e Fibras Naturais  
+CPCE	    Centro de Produção Cultural e Educativa  
+CRAD	    Centro de Referência em Conservação da Natureza e Recuperação de Áreas Degradadas  
+DATAUnB	  Centro de Pesquisas de Opinião Pública  
+CEAM	    Centro de Estudos Avançados Multidisciplinares  
 
-FAC	Faculdade de Comunicação  
-	DAP	Departamento de Audiovisuais e Publicidade  
-	JOR	Departamento de Jornalismo  
-	COM	Departamento de Comunicação Organizacional  
+**UNIDADES ACADÊMICAS**
 
-FAU	Faculdade de Arquitetura e Urbanismo  
-PRO	Departamento de Projeto, Expressão e Representação em Arquitetura e Urbanismo  
-TEC	Departamento de Tecnologia em Arquitetura e Urbanismo  
-THAU	Departamento de Teoria e História em Arquitetura e Urbanismo  
+**FGA     Faculdade do Gama**
 
-FAV	Faculdade de Agronomia e Medicina Veterinária  
+**FACE**     **Direção da Faculdade de Economia, Administração, Contabilidade e Gestão de                   Políticas Públicas**
 
-FCE	Faculdade UnB-Ceilândia  
+GPP        Departamento de Gestão de Políticas Públicas
+ADM        Departamento de Administração
+CCA        Departamento de Ciências Contábeis e Atuariais
+ECO        Departamento de Economia
+CIORD      Centro Integrado de Ordenamento Territorial
 
-FCI	Faculdade de Ciência da Informação  
+**FCE**    **Faculdade de Ceilândia**
 
-FD	Faculdade de Direito  
+**FAU**    **Faculdade de Arquitetura e Urbanismo**
 
-FE	Faculdade de Educação  
-MTC	Departamento de Métodos e Técnicas  
-PAD	Departamento de Planejamento e Administração  
-TEF	Departamento de Teoria e Fundamentos  
+PRO        Departamento de Projeto, Expressão e Representação em Arquitetura e Urbanismo
+TEC        Departamento de Tecnologia em Arquitetura e Urbanismo
+THAU      Departamento de Teoria e História em Arquitetura e Urbanismo
 
-FEF	Faculdade de Educação Física  
-CO	Centro Olímpico  
+**FAV**    **Faculdade de Agronomia e Medicina Veterinária**
 
-FGA	Faculdade UnB-Gama  
+**FAC**    **Faculdade de Comunicação**
 
-FM	Faculdade de Medicina  
-NMT	Núcleo de Medicina Tropical  
+DAP        Departamento de Audiovisuais e Publicidade
+JOR        Departamento de Jornalismo
+COM        Departamento de Comunicação Organizacional
 
-FS	Faculdade de Ciências da Saúde   
-FAR	Departamento de Farmácia  
-DSC	Departamento de Saúde Coletiva   
-ENF	Departamento de Enfermagem   
-NUT	Departamento de Nutrição  
-ODT	Departamento de Odontologia  
+**FCI**    **Faculdade de Ciência da Informação**
 
-FT	Faculdade de Tecnologia  
-EFL	Departamento de Engenharia Florestal  
-ENC	Departamento de Engenharia Civil e Ambiental  
-ENE	Departamento de Engenharia Elétrica  
-ENM	Departamento de Engenharia Mecânica  
-EPR	Departamento de Engenharia de Produção  
-CEFTRU	Centro de Formação de Recursos Humanos em Transportes  
+**FD**     **Faculdade de Direito**
 
-FUP	Faculdade UnB-Planaltina  
-CETEC	Centro Transdisciplinar de Educação do Campo    
+**FE**     **Faculdade de Educação**
 
-IB	Instituto de Ciências Biológicas  
-BOT	Departamento de Botânica  
-CEL	Departamento de Biologia Celular  
-CFS	Departamento de Ciências Fisiológicas  
-ECL	Departamento de Ecologia  
-FIT	Departamento de Fitopatologia  
-GEM	Departamento de Genética e Morfologia  
-ZOO	Departamento de Zoologia  
-CNANO	Centro de Nano Ciência e Nanotecnologia  
-CP	Centro de Primatologia  
+MTC        Departamento de Métodos e Técnicas
+PAD        Departamento de Planejamento e Administração
+TEF        Departamento de Teoria e Fundamentos
 
-ICS	Instituto de Ciências Sociais  
-CEPPAC	Centro de Pesquisa e Pós-Graduação sobre as Américas  
-DAN	Departamento de Antropologia  
-SOL	Departamento de Sociologia  
-ELA	Departamento de Estudos Latino Americanos  
+**FEF**    **Faculdade de Educação Física**
 
-IdA	Instituto de Artes  
-CEN	Departamento de Artes Cênicas  
-DIN	Departamento de Desenho Industrial  
-MUS	Departamento de Música  
-VIS	Departamento de Artes Visuais  
+CO         Centro Olímpico
 
-IE	Instituto de Ciências Exatas  
-CIC	Departamento de Ciência da Computação   
-EST	Departamento de Estatística   
-MAT	Departamento de Matemática  
+**FUP**    **Faculdade de Planaltina**
 
-IF	Instituto de Física  
+**FM**     **Faculdade de Medicina**
 
-IG	Instituto de Geociências   
-GEO	Departamento de Geologia Geral e Aplicada  
-GMP	Departamento de Mineralogia e Petrologia  
-GRM	Departamento de Geoquímica e Recursos Minerais  
-SIS	Observatório Sismológico  
+**FS**     **Faculdade de Ciências da Saúde**
 
-IH	Instituto de Ciências Humanas  
-FIL	Departamento de Filosofia  
-GEA	Departamento de Geografia  
-HIS	Departamento de História  
-SER	Departamento de Serviço Social  
+FAR        Departamento de Farmácia
+ODT        Departamento de Odontologia
+DSC        Departamento de Saúde Coletiva
+ENF        Departamento de Enfermagem
+NUT        Departamento de Nutrição
 
-IL	Instituto de Letras  
-LET	Departamento de Línguas Estrangeiras e Tradução  
-LIP	Departamento de Linguística, Português e Línguas Clássicas  
-TEL	Departamento de Teoria Literária e Literaturas  
+**FT**    **Faculdade de Tecnologia**
 
-IP	Instituto de Psicologia  
-CAEP	Centro de Atendimento e Estudos Psicológicos  
-PCL	Departamento de Psicologia Clínica  
-PED	Departamento de Psicologia Escolar e do Desenvolvimento  
-PPB	Departamento de Processos Psicológicos Básicos  
-PST	Departamento de Psicologia Social e do Trabalho  
+EPR        Departamento de Engenharia de Produção
+EFL        Departamento de Engenharia Florestal
+ENC        Departamento de Engenharia Civil e Ambiental
+ENE        Departamento de Engenharia Elétrica
+ENM        Departamento de Engenharia Mecânica
+CEFTRU     Centro de Formação de Recursos Humanos em Transportes
 
-IPOL	Instituto de Ciência Política  
+**IB**     **Instituto de Ciências Biológicas**
 
-IQ	Instituto de Química  
+BOT        Departamento de Botânica
+CEL        Departamento de Biologia Celular
+CFS        Departamento de Ciências Fisiológicas
+ECL        Departamento de Ecologia
+FIT        Departamento de Fitopatologia
+GEM        Departamento de Genética e Morfologia
+ZOO        Departamento de Zoologia
+CNANO      Centro de Nano Ciência e Nanobiotecnologia
+CP         Centro de Primatologia
 
-IREL	Instituto de Relações Internacionais  
+**ICS**    **Instituto de Ciências Sociais**
+
+ELA        Departamento de Estudos Latino-Americanos
+DAN        Departamento de Antropologia
+SOL        Departamento de Sociologia
+
+**IdA**    **Instituto de Artes**
+
+CEN        Departamento de Artes Cênicas
+DIN        Departamento de Desenho Industrial
+MUS        Departamento de Música
+VIS        Departamento de Artes Visuais
+
+**IE**     **Instituto de Ciências Exatas**
+
+CIC        Departamento de Ciência da Computação
+EST        Departamento de Estatística
+MAT        Departamento de Matemática
+
+**IF**     **Instituto de Física**
+
+IG         Instituto de Geociências
+SIS        Observatório Sismológico
+
+**IH**     **Instituto de Ciências Humanas**
+
+FIL        Departamento de Filosofia
+GEA        Departamento de Geografia
+HIS        Departamento de História
+SER        Departamento de Serviço Social
+
+**IL**     **Instituto de Letras**
+
+LET        Departamento de Línguas Estrangeiras e Tradução
+LIP        Departamento de Linguística, Português e Línguas Clássicas
+TEL        Departamento de Teoria Literária e Literatura
+
+**IP**     **Instituto de Psicologia**
+
+PST        Departamento de Psicologia Social e do Trabalho
+PCL        Departamento de Psicologia Clínica
+PED        Departamento de Psicologia Escolar e do Desenvolvimento
+PPB        Departamento de Processos Psicológicos Básicos
+CAEP       Centro de Atendimento e Estudos Psicológicos
+
+**IPOL**   **Instituto de Ciência Política**
+
+**IQ**     **Instituto de Química**
+
+**IREL**   **Instituto de Relações Internacionais**
 
 <br><br>
 
