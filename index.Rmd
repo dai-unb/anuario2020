@@ -216,267 +216,267 @@ SCD	Secretaria do Conselho Diretor
 
 CONSUNI	  Conselho Universitário  
 
-CEPE      Conselho de Ensino, Pesquisa e Extensão  
-CEG       Câmara de Ensino de Graduação   
-CEX       Câmara de Extensão   
-CPP       Câmara de Pesquisa e Pós-Graduação   
-CCD       Câmara da Carreira Docente   
-CAD       Conselho de Administração   
-CAC       Câmara de Assuntos Comunitários   
-CGP       Câmara de Gestão de Pessoas  
-CPLAD     Câmara de Planejamento e Administração  
+CEPE      Conselho de Ensino, Pesquisa e Extensão
+CEG       Câmara de Ensino de Graduação 
+CEX       Câmara de Extensão 
+CPP       Câmara de Pesquisa e Pós-Graduação 
+CCD       Câmara da Carreira Docente 
+CAD       Conselho de Administração 
+CAC       Câmara de Assuntos Comunitários 
+CGP       Câmara de Gestão de Pessoas
+CPLAD     Câmara de Planejamento e Administração
 
 	
 **CONSELHO COMUNITÁRIO**  
 
-CAPRO	Câmara de Projetos, Convênios, Contratos e Instrumentos Correlatos    
+CAPRO	Câmara de Projetos, Convênios, Contratos e Instrumentos Correlatos  
 	
-**REITORIA**  
+**REITORIA**
 
-VRT        Vice-Reitoria  
-OUV        Ouvidoria  
-PJU        Procuradoria Jurídica  
-AUD        Auditoria   
+VRT        Vice-Reitoria
+OUV        Ouvidoria
+PJU        Procuradoria Jurídica
+AUD        Auditoria 
   
-**ÓRGÃOS AUXILIARES**  
+**ÓRGÃOS AUXILIARES**
 
-GRE        Gabinete da Reitora  
-PRC        Prefeitura da UnB  
-INFRA      Secretaria de Infraestrutura  
-SEMA       Secretaria de Meio Ambiente da Universidade de Brasília  
-SPI        Secretaria do Patrimônio Imobiliário  
+GRE        Gabinete da Reitora
+PRC        Prefeitura da UnB
+INFRA      Secretaria de Infraestrutura
+SEMA       Secretaria de Meio Ambiente da Universidade de Brasília
+SPI        Secretaria do Patrimônio Imobiliário
 
-**DECANATOS**  
+**DECANATOS**
 
-**DEG**       **Decanato de Ensino de Graduação**  
+**DEG**       **Decanato de Ensino de Graduação**
 
-DAIA       Diretoria de Acompanhamento e Integração Acadêmica  
-DIEG       Diretoria de Inovação e Estratégias para o Ensino de Graduação  
-DTG        Diretoria Técnica de Graduação  
-DEX        Decanato de Extensão  
-DTE        Diretoria Técnica de Extensão  
-DDIR       Diretoria de Integração Social e Desenvolvimento Regional  
-DDC        Diretoria de Difusão Cultural  
+DAIA       Diretoria de Acompanhamento e Integração Acadêmica
+DIEG       Diretoria de Inovação e Estratégias para o Ensino de Graduação
+DTG        Diretoria Técnica de Graduação
+DEX        Decanato de Extensão
+DTE        Diretoria Técnica de Extensão
+DDIR       Diretoria de Integração Social e Desenvolvimento Regional
+DDC        Diretoria de Difusão Cultural
 
-**DPG**       **Decanato de Pós-Graduação**  
+**DPG**       **Decanato de Pós-Graduação**
 
-DIRIC      Diretoria de Fomento à Iniciação Científica  
-DIRPG      Diretoria de Pós-Graduação  
+DIRIC      Diretoria de Fomento à Iniciação Científica
+DIRPG      Diretoria de Pós-Graduação
 
-**DPI**       **Decanato de Pesquisa e Inovação**  
+**DPI**       **Decanato de Pesquisa e Inovação**
 
-DIRPE      Diretoria de Pesquisa  
-DPA        Diretoria de Apoio a Projetos Acadêmicos  
-CDT        Centro de Apoio ao Desenvolvimento Tecnológico  
+DIRPE      Diretoria de Pesquisa
+DPA        Diretoria de Apoio a Projetos Acadêmicos
+CDT        Centro de Apoio ao Desenvolvimento Tecnológico
 
-**DAC**       **Decanato de Assuntos Comunitários**  
+**DAC**       **Decanato de Assuntos Comunitários**
 
-DDS        Diretoria de Desenvolvimento Social  
-DEAC       Diretoria de Esporte e Atividades Comunitárias  
-DIV        Diretoria da Diversidade  
-DASU       Diretoria de Atenção à Saúde da Comunidade Universitária  
-DRU        Diretoria do Restaurante Universitário  
-DACES 	   Diretoria de Acessibilidade  
+DDS        Diretoria de Desenvolvimento Social
+DEAC       Diretoria de Esporte e Atividades Comunitárias
+DIV        Diretoria da Diversidade
+DASU       Diretoria de Atenção à Saúde da Comunidade Universitária
+DRU        Diretoria do Restaurante Universitário
+DACES 	   Diretoria de Acessibilidade
 
-**DGP**       **Decanato de Gestão de Pessoas**  
+**DGP**       **Decanato de Gestão de Pessoas**
 
-DCADE      Diretoria de Capacitação, Desenvolvimento e Educação  
-DAP        Diretoria de Administração de Pessoas  
-DSQVT      Diretoria de Saúde, Segurança e Qualidade de Vida no Trabalho  
-DPAM       Diretoria de Provimento, Acompanhamento e Movimentação  
+DCADE      Diretoria de Capacitação, Desenvolvimento e Educação
+DAP        Diretoria de Administração de Pessoas
+DSQVT      Diretoria de Saúde, Segurança e Qualidade de Vida no Trabalho
+DPAM       Diretoria de Provimento, Acompanhamento e Movimentação
 
-**DAF**       **Decanato de Administração**  
+**DAF**       **Decanato de Administração**
 
-DIMEX      Diretoria de Importação e Exportação  
-DTER       Diretoria de Terceirização  
-DGM        Diretoria de Gestão de Materiais  
-DCF        Diretoria de Contabilidade e Finanças  
-DCO        Diretoria de Compras  
-DCA        Diretoria de Contratos Administrativos  
+DIMEX      Diretoria de Importação e Exportação
+DTER       Diretoria de Terceirização
+DGM        Diretoria de Gestão de Materiais
+DCF        Diretoria de Contabilidade e Finanças
+DCO        Diretoria de Compras
+DCA        Diretoria de Contratos Administrativos
 
-**DPO**       **Decanato de Planejamento, Orçamento e Avaliação Institucional**  
+**DPO**       **Decanato de Planejamento, Orçamento e Avaliação Institucional**
 
-DPL        Diretoria de Planejamento  
-DOR        Diretoria de Orçamento  
-DPR        Diretoria de Processos Organizacionais  
-DAI        Diretoria de Avaliação e Informações Gerenciais   
+DPL        Diretoria de Planejamento
+DOR        Diretoria de Orçamento
+DPR        Diretoria de Processos Organizacionais
+DAI        Diretoria de Avaliação e Informações Gerenciais 
 
-**ÓRGÃOS COMPLEMENTARES**  
+**ÓRGÃOS COMPLEMENTARES**
 
-BCE       Biblioteca Central  
-STI       Centro de Informática  
-EDU       Editora Universidade de Brasília  
-FAL       Fazenda Água Limpa    
-HUB       Hospital Universitário  
-ACE       Arquivo Central  
-PCTec     Parque Científico e Tecnológico da Universidade de Brasília  
-CPCE      Centro de Produção Cultural e Educativa (UnB-TV)   
+BCE       Biblioteca Central
+STI       Centro de Informática
+EDU       Editora Universidade de Brasília
+FAL       Fazenda Água Limpa 
+HUB       Hospital Universitário
+ACE       Arquivo Central
+PCTec     Parque Científico e Tecnológico da Universidade de Brasília
+CPCE      Centro de Produção Cultural e Educativa (UnB-TV) 
 
-**ASSESSORIAS E SECRETARIAS**  
+**ASSESSORIAS E SECRETARIAS**
 
-SAA        Secretaria de Administração Acadêmica   
-SECOM      Secretaria de Comunicação   
-INT        Secretaria de Assuntos Internacionais   
-CERI       Coordenação do Cerimonial  
+SAA        Secretaria de Administração Acadêmica 
+SECOM      Secretaria de Comunicação 
+INT        Secretaria de Assuntos Internacionais 
+CERI       Coordenação do Cerimonial
 
-**CENTROS (GRE)**  
+**CENTROS (GRE)**
 
-CRAD       Centro de Referência em Conservação da Natureza e Recuperação de Áreas Degradadas  
-CEAD       Centro de Educação a Distância  
-CEAM       Centro de Estudos Avançados Multidisciplinares  
-CET        Centro de Excelência em Turismo  
-CER        UnB Cerrado  
-CESPE      Centro de Seleção e de Promoção de Eventos  
-CIBH       Centro Internacional de Bioética e Humanidades.  
-CIFMC      Centro Internacional de Física da Matéria Condensada  
-CDS        Centro de Desenvolvimento Sustentável  
-CCOM       Centro de Políticas, Direito, Economia e Tecnologias das Comunicações  
-CPAB       Centro de Pesquisa e Aplicação de Bambu e Fibras Naturais  
+CRAD       Centro de Referência em Conservação da Natureza e Recuperação de Áreas Degradadas
+CEAD       Centro de Educação a Distância
+CEAM       Centro de Estudos Avançados Multidisciplinares
+CET        Centro de Excelência em Turismo
+CER        UnB Cerrado
+CESPE      Centro de Seleção e de Promoção de Eventos
+CIBH       Centro Internacional de Bioética e Humanidades.
+CIFMC      Centro Internacional de Física da Matéria Condensada
+CDS        Centro de Desenvolvimento Sustentável
+CCOM       Centro de Políticas, Direito, Economia e Tecnologias das Comunicações
+CPAB       Centro de Pesquisa e Aplicação de Bambu e Fibras Naturais
 
 
-**CENTROS**     
+**CENTROS**   
 
-CCOM	    Centro de Políticas, Direito, Economia e Tecnologias das Comunicações    
-CDS	      Centro de Desenvolvimento Sustentável    
+CCOM	    Centro de Políticas, Direito, Economia e Tecnologias das Comunicações  
+CDS	      Centro de Desenvolvimento Sustentável  
 CEAD	    Centro de Educação a Distância  
-CEPLAN	  Centro de Planejamento    
+CEPLAN	  Centro de Planejamento  
 CET	      Centro de Excelência em Turismo  
 CER	      Centro de Estudos do Cerrado  
-CESPE	    Centro de Seleção e de Promoção de Eventos    
-CIFMC	    Centro Internacional de Física da Matéria Condensada    
-CIORD	    Centro Integrado de Ordenamento Territorial (FACE)    
-CME	      Centro de Manutenção de Equipamentos Científicos    
-CPAB	    Centro de Pesquisa e Aplicação de Bambu e Fibras Naturais    
-CPCE	    Centro de Produção Cultural e Educativa    
+CESPE	    Centro de Seleção e de Promoção de Eventos  
+CIFMC	    Centro Internacional de Física da Matéria Condensada  
+CIORD	    Centro Integrado de Ordenamento Territorial (FACE)  
+CME	      Centro de Manutenção de Equipamentos Científicos  
+CPAB	    Centro de Pesquisa e Aplicação de Bambu e Fibras Naturais  
+CPCE	    Centro de Produção Cultural e Educativa  
 CRAD	    Centro de Referência em Conservação da Natureza e Recuperação de Áreas Degradadas  
-DATAUnB	  Centro de Pesquisas de Opinião Pública    
-CEAM	    Centro de Estudos Avançados Multidisciplinares    
+DATAUnB	  Centro de Pesquisas de Opinião Pública  
+CEAM	    Centro de Estudos Avançados Multidisciplinares  
 
 **UNIDADES ACADÊMICAS**
 
-**FGA     Faculdade do Gama**  
+**FGA     Faculdade do Gama**
 
-**FACE**     **Direção da Faculdade de Economia, Administração, Contabilidade e Gestão de                   Políticas Públicas**  
+**FACE**     **Direção da Faculdade de Economia, Administração, Contabilidade e Gestão de                   Políticas Públicas**
 
-GPP        Departamento de Gestão de Políticas Públicas  
-ADM        Departamento de Administração  
-CCA        Departamento de Ciências Contábeis e Atuariais  
-ECO        Departamento de Economia  
-CIORD      Centro Integrado de Ordenamento Territorial  
+GPP        Departamento de Gestão de Políticas Públicas
+ADM        Departamento de Administração
+CCA        Departamento de Ciências Contábeis e Atuariais
+ECO        Departamento de Economia
+CIORD      Centro Integrado de Ordenamento Territorial
 
-**FCE**    **Faculdade de Ceilândia**  
+**FCE**    **Faculdade de Ceilândia**
 
-**FAU**    **Faculdade de Arquitetura e Urbanismo**  
+**FAU**    **Faculdade de Arquitetura e Urbanismo**
 
-PRO        Departamento de Projeto, Expressão e Representação em Arquitetura e Urbanismo  
-TEC        Departamento de Tecnologia em Arquitetura e Urbanismo  
-THAU      Departamento de Teoria e História em Arquitetura e Urbanismo  
+PRO        Departamento de Projeto, Expressão e Representação em Arquitetura e Urbanismo
+TEC        Departamento de Tecnologia em Arquitetura e Urbanismo
+THAU      Departamento de Teoria e História em Arquitetura e Urbanismo
 
-**FAV**    **Faculdade de Agronomia e Medicina Veterinária**  
+**FAV**    **Faculdade de Agronomia e Medicina Veterinária**
 
-**FAC**    **Faculdade de Comunicação**  
+**FAC**    **Faculdade de Comunicação**
 
-DAP        Departamento de Audiovisuais e Publicidade  
-JOR        Departamento de Jornalismo  
-COM        Departamento de Comunicação Organizacional  
+DAP        Departamento de Audiovisuais e Publicidade
+JOR        Departamento de Jornalismo
+COM        Departamento de Comunicação Organizacional
 
-**FCI**    **Faculdade de Ciência da Informação**  
+**FCI**    **Faculdade de Ciência da Informação**
 
-**FD**     **Faculdade de Direito**  
+**FD**     **Faculdade de Direito**
 
-**FE**     **Faculdade de Educação**  
+**FE**     **Faculdade de Educação**
 
-MTC        Departamento de Métodos e Técnicas  
-PAD        Departamento de Planejamento e Administração  
-TEF        Departamento de Teoria e Fundamentos    
+MTC        Departamento de Métodos e Técnicas
+PAD        Departamento de Planejamento e Administração
+TEF        Departamento de Teoria e Fundamentos
 
-**FEF**    **Faculdade de Educação Física**  
+**FEF**    **Faculdade de Educação Física**
 
-CO         Centro Olímpico  
+CO         Centro Olímpico
 
-**FUP**    **Faculdade de Planaltina**  
+**FUP**    **Faculdade de Planaltina**
 
-**FM**     **Faculdade de Medicina**  
+**FM**     **Faculdade de Medicina**
 
-**FS**     **Faculdade de Ciências da Saúde**  
+**FS**     **Faculdade de Ciências da Saúde**
 
-FAR        Departamento de Farmácia  
-ODT        Departamento de Odontologia  
-DSC        Departamento de Saúde Coletiva  
-ENF        Departamento de Enfermagem  
-NUT        Departamento de Nutrição  
+FAR        Departamento de Farmácia
+ODT        Departamento de Odontologia
+DSC        Departamento de Saúde Coletiva
+ENF        Departamento de Enfermagem
+NUT        Departamento de Nutrição
 
-**FT**    **Faculdade de Tecnologia**  
+**FT**    **Faculdade de Tecnologia**
 
-EPR        Departamento de Engenharia de Produção  
-EFL        Departamento de Engenharia Florestal  
-ENC        Departamento de Engenharia Civil e Ambiental  
-ENE        Departamento de Engenharia Elétrica  
-ENM        Departamento de Engenharia Mecânica  
-CEFTRU     Centro de Formação de Recursos Humanos em Transportes  
+EPR        Departamento de Engenharia de Produção
+EFL        Departamento de Engenharia Florestal
+ENC        Departamento de Engenharia Civil e Ambiental
+ENE        Departamento de Engenharia Elétrica
+ENM        Departamento de Engenharia Mecânica
+CEFTRU     Centro de Formação de Recursos Humanos em Transportes
 
-**IB**     **Instituto de Ciências Biológicas**  
+**IB**     **Instituto de Ciências Biológicas**
 
-BOT        Departamento de Botânica  
-CEL        Departamento de Biologia Celular  
-CFS        Departamento de Ciências Fisiológicas  
-ECL        Departamento de Ecologia  
-FIT        Departamento de Fitopatologia  
-GEM        Departamento de Genética e Morfologia  
-ZOO        Departamento de Zoologia  
-CNANO      Centro de Nano Ciência e Nanobiotecnologia  
-CP         Centro de Primatologia  
+BOT        Departamento de Botânica
+CEL        Departamento de Biologia Celular
+CFS        Departamento de Ciências Fisiológicas
+ECL        Departamento de Ecologia
+FIT        Departamento de Fitopatologia
+GEM        Departamento de Genética e Morfologia
+ZOO        Departamento de Zoologia
+CNANO      Centro de Nano Ciência e Nanobiotecnologia
+CP         Centro de Primatologia
 
-**ICS**    **Instituto de Ciências Sociais**  
+**ICS**    **Instituto de Ciências Sociais**
 
-ELA        Departamento de Estudos Latino-Americanos  
-DAN        Departamento de Antropologia  
-SOL        Departamento de Sociologia  
+ELA        Departamento de Estudos Latino-Americanos
+DAN        Departamento de Antropologia
+SOL        Departamento de Sociologia
 
-**IdA**    **Instituto de Artes**  
+**IdA**    **Instituto de Artes**
 
-CEN        Departamento de Artes Cênicas  
-DIN        Departamento de Desenho Industrial  
-MUS        Departamento de Música  
-VIS        Departamento de Artes Visuais  
+CEN        Departamento de Artes Cênicas
+DIN        Departamento de Desenho Industrial
+MUS        Departamento de Música
+VIS        Departamento de Artes Visuais
 
-**IE**     **Instituto de Ciências Exatas**  
+**IE**     **Instituto de Ciências Exatas**
 
-CIC        Departamento de Ciência da Computação  
-EST        Departamento de Estatística  
-MAT        Departamento de Matemática  
+CIC        Departamento de Ciência da Computação
+EST        Departamento de Estatística
+MAT        Departamento de Matemática
 
-**IF**     **Instituto de Física**  
+**IF**     **Instituto de Física**
 
-IG         Instituto de Geociências  
-SIS        Observatório Sismológico  
+IG         Instituto de Geociências
+SIS        Observatório Sismológico
 
-**IH**     **Instituto de Ciências Humanas**  
+**IH**     **Instituto de Ciências Humanas**
 
-FIL        Departamento de Filosofia  
-GEA        Departamento de Geografia  
-HIS        Departamento de História  
-SER        Departamento de Serviço Social  
+FIL        Departamento de Filosofia
+GEA        Departamento de Geografia
+HIS        Departamento de História
+SER        Departamento de Serviço Social
 
-**IL**     **Instituto de Letras**  
+**IL**     **Instituto de Letras**
 
-LET        Departamento de Línguas Estrangeiras e Tradução  
-LIP        Departamento de Linguística, Português e Línguas Clássicas  
-TEL        Departamento de Teoria Literária e Literatura    
+LET        Departamento de Línguas Estrangeiras e Tradução
+LIP        Departamento de Linguística, Português e Línguas Clássicas
+TEL        Departamento de Teoria Literária e Literatura
 
-**IP**     **Instituto de Psicologia**  
+**IP**     **Instituto de Psicologia**
 
-PST        Departamento de Psicologia Social e do Trabalho  
-PCL        Departamento de Psicologia Clínica  
-PED        Departamento de Psicologia Escolar e do Desenvolvimento  
-PPB        Departamento de Processos Psicológicos Básicos  
-CAEP       Centro de Atendimento e Estudos Psicológicos  
+PST        Departamento de Psicologia Social e do Trabalho
+PCL        Departamento de Psicologia Clínica
+PED        Departamento de Psicologia Escolar e do Desenvolvimento
+PPB        Departamento de Processos Psicológicos Básicos
+CAEP       Centro de Atendimento e Estudos Psicológicos
 
-**IPOL**   **Instituto de Ciência Política**  
+**IPOL**   **Instituto de Ciência Política**
 
-**IQ**     **Instituto de Química**  
+**IQ**     **Instituto de Química**
 
-**IREL**   **Instituto de Relações Internacionais**  
+**IREL**   **Instituto de Relações Internacionais**
 
 <br><br>
 
