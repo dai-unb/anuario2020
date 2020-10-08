@@ -90,10 +90,16 @@ grad_formados <- grad_formados %>%
 ```
 
 ```{r tab-grad-evo-for}
-xfun::embed_file("dados_graduacao/EvoFor.csv")
+load("dados_graduacao/Tabela2.21.RData")
 
-grad_formados %>% 
-  tabela_geral("Evolução do número de formados da UnB", negrito = TRUE, fundo = fundo) %>% 
-  colorir(dados = grad_formados)
+Tabela2.21 <- Tabela2.21 %>% 
+  rownames_to_column(var = "Unidade acadêmica / curso / habilitação")
+
+# tem que converter em excel...
+# xfun::embed_file("dados_graduacao/EvoFor.csv")
+
+Tabela2.21  %>% 
+  tabela_geral("Evolução do número de ingressantes da UnB", negrito = TRUE, fundo = fundo) %>% 
+  colorir(dados = Tabela2.21)
 ```
 

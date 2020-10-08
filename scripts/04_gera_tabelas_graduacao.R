@@ -1067,7 +1067,10 @@ rm(Label_Pais, totais, Tabela2.14, Tabela2.14.2, nomes)
 
 # Atualizar o CSV que está na pasta
 # com os dados do último anuário
-Tabela2.21 <- read.csv2("dados_graduacao/EvoIng.csv", check.names=F, stringsAsFactors = FALSE)
+Tabela2.21 <- rio::import("dados_graduacao/evo_ing.xlsx", skip = 1) %>% 
+  filter(!is.na(`2014`), !is.na(`2015`), !is.na(`2016`), !is.na(`2017`), !is.na(`2018`)) %>% 
+  # retira o ano mais antigo
+  select(-`2014`)
 Tabela2.21 <- cbind(Tabela2.21[1], 
                     map_df(Tabela2.21[-1], ~ as.double(str_remove(string = .x, pattern = "\\."))))
 
@@ -1115,7 +1118,7 @@ Ing <- Ing %>% select("Unidade Acadêmica / Curso / Habilitação" = Curso, `201
 Tabela2.21 <- left_join(Tabela2.21, Ing)
 
 # Adicionar o Total de 2019
-Tabela2.21$`2019`[185] <- total_geral
+Tabela2.21$`2019`[nrow(Tabela2.21)] <- total_geral
 
 ### formatação
 nomes <- Tabela2.21$`Unidade Acadêmica / Curso / Habilitação`
@@ -1137,7 +1140,10 @@ rm(Ing, totais, nomes, total_geral, Tabela2.21)
 
 # Atualizar o CSV que está na pasta
 # com os dados do último anuário
-Tabela2.22 <- read.csv2("dados_graduacao/EvoReg.csv", check.names=F, stringsAsFactors = FALSE)
+Tabela2.22 <- rio::import("dados_graduacao/evo_matric.xlsx", skip = 1) %>% 
+  filter(!is.na(`2014`), !is.na(`2015`), !is.na(`2016`), !is.na(`2017`), !is.na(`2018`)) %>% 
+  # retira o ano mais antigo
+  select(-`2014`)
 Tabela2.22 <- cbind(Tabela2.22[1], 
                     map_df(Tabela2.22[-1], ~ as.double(str_remove(string = .x, pattern = "\\."))))
 
@@ -1173,7 +1179,7 @@ Reg <- Reg %>% select("Unidade Acadêmica / Curso / Habilitação" = Curso, `201
 Tabela2.22 <- left_join(Tabela2.22, Reg)
 
 # Adicionar o Total de 2019
-Tabela2.22$`2019`[185] <- total_geral
+Tabela2.22$`2019`[nrow(Tabela2.22)] <- total_geral
 
 ### formatação
 nomes <- Tabela2.22$`Unidade Acadêmica / Curso / Habilitação`
@@ -1195,7 +1201,10 @@ rm(Reg, totais, nomes, total_geral, Tabela2.22)
 
 # Atualizar o CSV que está na pasta
 # com os dados do último anuário
-Tabela2.23 <- read.csv2("dados_graduacao/EvoFor.csv", check.names=F)
+Tabela2.23 <- rio::import("dados_graduacao/evo_form.xlsx", skip = 1) %>% 
+  filter(!is.na(`2014`), !is.na(`2015`), !is.na(`2016`), !is.na(`2017`), !is.na(`2018`)) %>% 
+  # retira o ano mais antigo
+  select(-`2014`)
 Tabela2.23 <- cbind(Tabela2.23[1], 
                     map_df(Tabela2.23[-1], ~ as.double(str_remove(string = .x, pattern = "\\."))))
 
@@ -1231,7 +1240,7 @@ For <- For %>% select("Unidade Acadêmica / Curso / Habilitação" = Curso, `201
 Tabela2.23 <- left_join(Tabela2.23, For)
 
 # Adicionar o Total de 2019
-Tabela2.23$`2019`[185] <- total_geral
+Tabela2.23$`2019`[nrow(Tabela2.23)] <- total_geral
 
 ### formatação
 nomes <- Tabela2.23$`Unidade Acadêmica / Curso / Habilitação`
