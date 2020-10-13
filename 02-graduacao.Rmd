@@ -13,12 +13,14 @@ fundo <- cores_anuario[2]
 
 ```{r}
 # tabela 13
-load("dados_graduacao/Tabela2.03.RData")
-Tabela2.03 <- insere_descricao(Tabela2.03, "UNIDADE ACADÊMICA / CURSO / HABILITAÇÃO")
+Tabela2.03 <- rio::import("dados_graduacao/Tabela2.03.xlsx")
 
-Tabela2.03 %>% 
+
+bind_cols("Unidade acadêmica / curso / habilitação" = Tabela2.03$`Unidade acadêmica / curso / habilitação`, 
+                   map_df(Tabela2.03[-1], ~ format(.x, big.mark = "."))) %>% 
   tabela_geral(titulo = "Ingresso nos cursos de graduação pelo vestibular, PAS, ENEM e outras vias, por unidade acadêmica, curso e habilitação, UnB, 2019", 
                colunas = c("UNIDADE ACADÊMICA / CURSO / HABILITAÇÃO",
+                           "1º SEM", "2º SEM",
                            "1º SEM", "2º SEM",
                            "1º SEM", "2º SEM",
                            "1º SEM", "2º SEM",
@@ -38,6 +40,7 @@ Tabela2.03 %>%
                      "TR.OPT." = 2,
                      "P.ESP." = 2,
                      "C.PEC" = 2,
+                     "JUD." = 2,
                      "_\n"),
                    color = "white", extra_css = 'vertical-align: middle', background = fundo)
 ```

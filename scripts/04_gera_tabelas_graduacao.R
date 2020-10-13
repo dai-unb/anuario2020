@@ -4,6 +4,8 @@
 # setwd("C:/anuario2020") -  inserir apenas caminhos relativos
 # source("scripts/00_execute-me.R")
 library(tidyverse)
+# library(openxlsx)
+# library(xlsx)
 
 Arquivo41 <- readRDS("dados_identificados/Arquivo41.RDS")
 Arquivo42 <- readRDS("dados_identificados/Arquivo42.RDS")
@@ -21,6 +23,15 @@ Nomes <- Arquivo42 %>%
 ano_base <- 2019
 sem1 <- 12019
 sem2 <- 22019
+
+### função para exportar as tabelas
+salva_tabela_grad <- function(tabela, nome){
+  
+  tabela %>% 
+    rownames_to_column(var = "Unidade acadêmica / curso / habilitação") %>% 
+    rio::export(glue::glue("dados_graduacao/{nome}.xlsx"))
+  
+}
 
 #*******************************************************************************************
 #************************************* T A B E L A S ***************************************
@@ -92,21 +103,13 @@ Tabela2.03 <- Tabela2.03 %>%
          `Convênio PEC 1 Sem`, `Convênio PEC 2 Sem`, 
          `Judicial 1`, `Judicial 2`,
          `Total Geral`)
-#str(Tabela2.03)
+
 Tabela2.03["Total Geral",] <- colSums(Tabela2.03, na.rm=T)/2
-#Tabela2.03[is.na(Tabela2.03)] <- 0
-nomes <- rownames(Tabela2.03)
 
-# adicionar "." nos mil. Não tava funcionando
-#Tabela2.03 <- Tabela2.03 %>% 
-#  mutate_each(list(format(., big.mark = ".")))
-Tabela2.03 <- map_df(Tabela2.03[-1], ~ format(.x, big.mark = "."))
+# exporta o excel numa aba específica
+salva_tabela_grad(Tabela2.03, "Tabela2.03")
 
-rownames(Tabela2.03) <- nomes
-
-save(Tabela2.03, file = "dados_graduacao/Tabela2.03.RData")
-
-rm(totais, nomes, Tabela2.03)
+rm(totais, Tabela2.03)
 
 #-------------------------------------------------------------------------------------------
 #------------------------------ Tabela 2.04 Ingressantes e Formados ------------------------
@@ -209,9 +212,10 @@ Tabela2.04 <- Tabela2.04 %>%
   select(`Ingressantes 1° Sem`,`Ingressantes 2° Sem`,`Total Ingressantes`,
          `Formados 1° Sem`,`Formados 2° Sem`,`Total Formados`); rm(For1,For2,Ing1,Ing2, totais)
 
-Tabela2.04 <- map_df(Tabela2.04, ~ format(., big.mark = "."))
-
 rownames(Tabela2.04) <- nomes
+
+# salva tabela
+salva_tabela_grad(Tabela2.04, "Tabela2.04")
 
 ### cria tabela por unidade
 For2019 <- Arquivo42 %>% 
@@ -234,8 +238,7 @@ Ing2019 <- Arquivo42 %>%
 
 Tabela2.04.2 <- full_join(Ing2019, For2019)
 
-save(Tabela2.04, file = "dados_graduacao/Tabela2.04.RData")
-save(Tabela2.04.2, file = "dados_graduacao/Tabela2.04.2.RData")
+rio::export(Tabela2.04.2, "dados_graduacao/Tabela2.04.2.xlsx")
 
 rm(Ing2019, For2019, nomes, Tabela2.04, Tabela2.04.2)
 
