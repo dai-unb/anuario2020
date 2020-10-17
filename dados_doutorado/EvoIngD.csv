@@ -1,100 +1,100 @@
-Unidade Acadêmica/Curso;2014;2015;2016;2017
-Centro de Desenvolvimento Sustentável - CDS;8;14;25;10
-Desenvolvimento Sustentável;8;14;25;10
-Centro de Estudos Avançados e Multidisciplinares - CEAM;11;9;10;12
-Desenvolvimento, Sociedade e Cooperação Internacional;11;9;10;12
-Faculdade de Comunicação - FAC;18;13;11;21
-Comunicação;18;13;11;21
-Faculdade de Economia, Administração e Contabilidade - FACE;63;52;78;56
-Administração;25;17;47;27
-Ciências Contábeis;16;13;10;11
-Economia;22;22;21;18
-Faculdade de Arquitetura e Urbanismo - FAU;14;18;17;28
-Arquitetura e Urbanismo;14;18;17;28
-Faculdade de Agronomia e Medicina Veterinária - FAV;31;24;28;21
-Agronomia;15;15;16;10
-Ciências Animais;11;2;11;7
-Saúde Animal;5;7;1;4
-Faculdade UnB Ceilândia - FCE;10;11;20;4
-Ciências e Tecnologias em Saúde;10;11;20;4
-Faculdade de Ciência da Informação - FCI;13;8;11;10
-Ciência da Informação;13;8;11;10
-Faculdade de Direito - FD;25;43;23;29
-Direito;25;43;23;29
-Faculdade de Educação - FE;37;34;42;45
-Educação;37;34;42;45
-Faculdade de Educação Física - FEF;12;15;25;21
-Educação Física;12;15;25;21
-Faculdade de Medicina - FM;45;24;25;18
-Ciências Médicas;19;16;15;10
-Medicina Tropical;6;8;10;8
-Patologia Molecular;20;6;11;16
-Faculdade de Ciências da Saúde - FS;79;64;100;87
-Bioética;9;8;10;9
-Ciências da Saúde;34;22;52;23
-Ciências Farmacêuticas;13;7;6;6
-Enfermagem;5;2;4;8
-Nutrição Humana;6;8;10;4
-Odontologia;-;-;-;7
-Saúde Coletiva;12;11;7;14
-Faculdade de Tecnologia - FT;126;94;126;119
-Ciências Florestais;17;10;6;8
-Ciências Mecânicas;26;16;22;17
-Engenharia de Sistemas Eletrônicos e de Automação;19;9;21;9
-Engenharia Elétrica;7;10;14;14
-Estruturas e Construção Civil;16;15;22;16
-Geotecnia;13;12;17;16
-Sistemas Mecatrônicos;10;8;9;29
-Tecnologia Ambiental e Recursos Hídricos;8;5;3;4
-Transportes;10;9;12;6
-Faculdade UnB Planaltina - FUP;-;7;6;8
-Ciências Ambientais;-;7;6;8
-Instituto de Ciências Biológicas - IB;81;77;84;66
-Biologia Animal;9;6;10;4
-Biologia Microbiana;5;5;4;8
-Biotecnologia e Biodiversidade;6;5;6;3
-Botânica;9;13;11;9
-Ciências Biológicas;21;20;20;14
-Ecologia;11;10;5;15
-Fitopatologia;9;5;11;4
-Nanociência e Nanobiotecnologia;5;10;12;4
-Zoologia;6;3;5;5
-Instituto de Ciências Sociais - ICS;35;48;47;46
-Antropologia;13;13;13;16
-Ciências Sociais;6;18;14;14
-Sociologia;16;17;20;16
-Instituto de Artes - IdA;14;17;25;24
-Artes;14;17;25;24
+Unidade Acadêmica/Curso;2015;2016;2017;2018
+Centro de Desenvolvimento Sustentável - CDS;14;25;10;14
+Desenvolvimento Sustentável;14;25;10;14
+Centro de Estudos Avançados e Multidisciplinares - CEAM;9;10;12;8
+Desenvolvimento, Sociedade e Cooperação Internacional;9;10;12;8
+Faculdade de Comunicação - FAC;13;11;21;14
+Comunicação;13;11;21;14
+Faculdade de Economia, Administração e Contabilidade - FACE;52;78;56;62
+Administração;17;47;27;31
+Ciências Contábeis;13;10;11;8
+Economia;22;21;18;23
+Faculdade de Arquitetura e Urbanismo - FAU;18;17;28;26
+Arquitetura e Urbanismo;18;17;28;26
+Faculdade de Agronomia e Medicina Veterinária - FAV;24;28;21;30
+Agronomia;15;16;10;14
+Ciências Animais;2;11;7;7
+Saúde Animal;7;1;4;9
+Faculdade UnB Ceilândia - FCE;11;20;4;17
+Ciências e Tecnologias em Saúde;11;20;4;17
+Faculdade de Ciência da Informação - FCI;8;11;10;16
+Ciência da Informação;8;11;10;16
+Faculdade de Direito - FD;43;23;29;30
+Direito;43;23;29;30
+Faculdade de Educação - FE;34;42;45;31
+Educação;34;42;45;31
+Faculdade de Educação Física - FEF;15;25;21;20
+Educação Física;15;25;21;20
+Faculdade de Medicina - FM;24;25;18;21
+Ciências Médicas;16;15;10;11
+Medicina Tropical;8;10;8;10
+Patologia Molecular;6;11;16;10
+Faculdade de Ciências da Saúde - FS;64;100;87;96
+Bioética;8;10;9;8
+Ciências da Saúde;22;52;23;32
+Ciências Farmacêuticas;7;6;6;5
+Enfermagem;2;4;8;13
+Nutrição Humana;8;10;4;6
+Odontologia;-;-;7;6
+Saúde Coletiva;11;7;14;16
+Faculdade de Tecnologia - FT;94;126;119;88
+Ciências Florestais;10;6;8;11
+Ciências Mecânicas;16;22;17;15
+Engenharia de Sistemas Eletrônicos e de Automação;9;21;9;9
+Engenharia Elétrica;10;14;14;13
+Estruturas e Construção Civil;15;22;16;15
+Geotecnia;12;17;16;17
+Sistemas Mecatrônicos;8;9;29;1
+Tecnologia Ambiental e Recursos Hídricos;5;3;4;7
+Transportes;9;12;6;-
+Faculdade UnB Planaltina - FUP;7;6;8;16
+Ciências Ambientais;7;6;8;16
+Instituto de Ciências Biológicas - IB;77;84;66;65
+Biologia Animal;6;10;4;7
+Biologia Microbiana;5;4;8;3
+Biotecnologia e Biodiversidade;5;6;3;2
+Botânica;13;11;9;1
+Ciências Biológicas;20;20;14;22
+Ecologia;10;5;15;11
+Fitopatologia;5;11;4;8
+Nanociência e Nanobiotecnologia;10;12;4;8
+Zoologia;3;5;5;3
+Instituto de Ciências Sociais - ICS;48;47;46;42
+Antropologia;13;13;16;17
+Ciências Sociais;18;14;14;8
+Sociologia;17;20;16;17
+Instituto de Artes - IdA;17;25;24;4
+Artes;17;25;24;-
 Artes Visuais;-;-;-;-
-Instituto de Ciências Exatas - IE;35;18;38;40
-Informática;15;5;15;11
-Matemática;20;13;23;29
-Instituto de Física - IF;16;18;24;19
-Física;16;18;24;19
-Instituto de Geociências - IG;22;32;29;30
-Geociências Aplicadas;8;14;11;-
-Geociências Aplicadas e Geodinâmica;-;-;-;15
-Geologia;14;18;18;15
-Instituto de Ciências Humanas - IH;33;27;59;73
-Filosofia;-;-;-;12
-Geografia;20;13;24;33
-História;7;7;27;9
-Política Social;6;7;8;19
-Instituto de Letras - IL;35;67;61;57
-Linguística;27;26;23;17
-Literatura;8;41;38;40
-Instituto de Psicologia - IP;48;35;40;51
-Ciências do Comportamento;11;5;6;10
-Processos de Desenvolvimento Humano e Saúde;10;7;12;18
-Psicologia Clínica e Cultura;20;13;12;16
-Psicologia Social do Trabalho e das Organizações;7;10;10;7
-Instituto de Ciência Política - IPOL;12;10;17;17
-Ciência Política;12;10;17;17
-Instituto de Química - IQ;32;41;56;46
-Educação em Ciências;-;11;11;9
-Química;22;16;34;27
-Tecnologias Química e Biológica;10;14;11;10
-Instituto de Relações Internacionais - IREL;6;24;7;5
-Relações Internacionais;6;10;7;5
-Relações Internacionais - Interinstitucional;-;14;-;-
-Total Geral;861;844;1034;963
+Instituto de Ciências Exatas - IE;18;38;40;34
+Informática;5;15;11;18
+Matemática;13;23;29;16
+Instituto de Física - IF;18;24;19;14
+Física;18;24;19;14
+Instituto de Geociências - IG;32;29;30;27
+Geociências Aplicadas;14;11;-;-
+Geociências Aplicadas e Geodinâmica;-;-;15;8
+Geologia;18;18;15;19
+Instituto de Ciências Humanas - IH;27;59;73;83
+Filosofia;-;-;12;22
+Geografia;13;24;33;40
+História;7;27;9;10
+Política Social;7;8;19;10
+Instituto de Letras - IL;67;61;57;75
+Linguística;26;23;17;25
+Literatura;41;38;40;50
+Instituto de Psicologia - IP;35;40;51;45
+Ciências do Comportamento;5;6;10;11
+Processos de Desenvolvimento Humano e Saúde;7;12;18;3
+Psicologia Clínica e Cultura;13;12;16;14
+Psicologia Social do Trabalho e das Organizações;10;10;7;17
+Instituto de Ciência Política - IPOL;10;17;17;19
+Ciência Política;10;17;17;19
+Instituto de Química - IQ;41;56;46;24
+Educação em Ciências;11;11;9;8
+Química;16;34;27;16
+Tecnologias Química e Biológica;14;11;10;-
+Instituto de Relações Internacionais - IREL;24;7;5;12
+Relações Internacionais;10;7;5;12
+Relações Internacionais - Interinstitucional;14;-;-;-
+Total Geral;844;1034;963;930
