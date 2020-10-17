@@ -6,6 +6,8 @@ library(tidyverse)
 library(lubridate)
 library(data.table)
 library(dataframes2xls)
+library(openxlsx)
+library(readxl)
 
 load("dados_identificados/Completo14042020.RData")
 load("labels/Label_Unidades_pos.RData")
@@ -62,14 +64,31 @@ totais <- Tabela3.23 %>%
   group_by(Unidade) %>% 
   select(-`Nome Curso`) %>% 
   summarise_all(sum, na.rm = TRUE) %>% 
-  left_join(Label_Unidades)
+  left_join(label_unidade) 
+
+#_______________________________
+#adicionei (Roberto - 15/10/2020) => o comando da linha 78 não estava rodando porque estávamos criando 2 colunas separadas: curso e Nome curso.
+
+totais <- totais %>% select(10,(1:9))
+colnames(totais)[colnames(totais) == "Curso"] <- "Nome Curso"
+#_______________________________
 
 Tabela3.23$Unidade <- sapply(Tabela3.23$Unidade, function(x) paste(x, "-", collapse=""))
 
-Tabela3.23 <- rbind(Tabela3.23, totais) %>% 
-  arrange(Unidade, `Nome Curso`)      
+Tabela3.23 <- bind_rows(Tabela3.23, totais) %>% arrange(Unidade, `Nome Curso`)      
 
-row.names(Tabela3.23) <- Tabela3.23$`Nome Curso`; Tabela3.23$`Nome Curso` <- NULL; Tabela3.23$Unidade <- NULL
+
+#____________________________________________________
+# Adicionei (Roberto - 15/10/2020 - os comandos abaixo estavam apagando o nome das colunas, inutilizando o comando anterior. Alterei para apenas deletar as colunas
+
+#row.names(Tabela3.23) <- Tabela3.23$`Nome Curso` 
+#Tabela3.23$`Nome Curso` <- NULL 
+#Tabela3.23$Unidade <- NULL
+
+Tabela3.23_rownames <- Tabela3.23$`Nome Curso`
+Tabela3.23 <- Tabela3.23 %>% select(- `Nome Curso`, - Unidade)
+
+#_____________________________________________________
 
 Tabela3.23$`Total Ing 1` <- rowSums(Tabela3.23[,c("Ing Feminino 1","Ing Masculino 1")])
 Tabela3.23$`Total Ing 2` <- rowSums(Tabela3.23[,c("Ing Feminino 2","Ing Masculino 2")])
@@ -83,7 +102,16 @@ Tabela3.23 <- Tabela3.23 %>% select(`Ing Feminino 1`, `Ing Masculino 1`, `Total 
                                     `Total Ing`, `For. Feminino 1`, `For. Masculino 1`, `Total For. 1`, `For. Feminino 2`, `For. Masculino 2`,
                                     `Total For. 2`, `Total For.`)
 
-Tabela3.23["Total Geral",] <- colSums(Tabela3.23, na.rm = TRUE)/2
+
+#____________________________________________________
+# Adicionei (Roberto - 15/10/2020) 
+
+Tabela3.23_Total_Geral <- (colSums(Tabela3.23, na.rm = TRUE))/2
+Tabela3.23 <- rbind(Tabela3.23, Tabela3.23_Total_Geral)
+Tabela3.23_rownames <- c(Tabela3.23_rownames, "Total Geral")
+
+row.names(Tabela3.23) <- Tabela3.23_rownames
+#____________________________________________________
 
 Ing <- Doc %>% filter(`Ano Ingresso Opcao`== anobase) %>% 
   group_by(Unidade) %>% 
@@ -97,8 +125,11 @@ For <- Doc %>% filter(`Ano Saida Opcao`== anobase & `For. Saida Opcao` == "Forma
 Tabela3.23.2 <- full_join(Ing, For)
 Tabela3.23.2[is.na(Tabela3.23.2)] <- 0
 
+Tabela3.23.2_rownames <- Tabela3.23.2$Unidade
+Tabela3.23.2$Unidade <- NULL
+rownames(Tabela3.23.2) <- Tabela3.23.2_rownames 
 
-rm(Ing, Ing1, Ing2, For, For1, For2, totais)
+rm(Ing, Ing1, Ing2, For, For1, For2, totais, Tabela3.23_rownames, Tabela3.23_Total_Geral, Tabela3.23.2_rownames)
 
 # Tabela 3.24 Ingressantes e concluintes por sexo e faixa etária -------------------------------------------------------------
 
@@ -121,7 +152,7 @@ Ing$`% Masculino` <- paste(round(Ing$Masculino/Ing$Total*100,1), "%", sep = "")
 
 For <-  Doc %>%  filter(`Ano Saida Opcao` == anobase & `For. Saida Opcao` == "Formatura Pos-Graduacao")
 
-For$Idade <- difftime(as.Date("2018-01-01"), For$Nascimento)/365
+For$Idade <- difftime(as.Date("2019-01-01"), For$Nascimento)/365
 
 For <- For %>% mutate(`Faixa Etária` = ifelse(Idade > 18 & Idade <= 24, "De 19 a 24 anos",
                                               ifelse(Idade > 24 & Idade <= 29, "De 25 a 29 anos",
@@ -138,84 +169,103 @@ For$`% Masculino` <- paste(round(For$Masculino/For$Total*100,1), "%", sep = "")
 
 Tabela3.24 <- full_join(Ing, For, by = "Faixa Etária")
 
-Tabela3.24[is.na(Tabela3.24)] <- 0
 Tabela3.24$`% Masculino.x`[Tabela3.24$`% Masculino.x` == "NA%"] <- 0
 Tabela3.24$`% Feminino.x`[Tabela3.24$`% Feminino.x` == "NA%"] <- 0
-Tabela3.24$`% Masculino.y`[Tabela3.24$`% Masculino.y` == "NA%"] <- 0
-Tabela3.24$`% Feminino.y`[Tabela3.24$`% Feminino.y` == "NA%"] <- 0
+Tabela3.24$`% Masculino.y`[is.na(Tabela3.24$`% Masculino.y`) == T] <- 0
+Tabela3.24$`% Feminino.y`[is.na(Tabela3.24$`% Feminino.y`) == T] <- 0
+Tabela3.24$Feminino.x[is.na(Tabela3.24$Feminino.x) == T] <- 0
+Tabela3.24$Feminino.y[is.na(Tabela3.24$Feminino.y) == T] <- 0
+Tabela3.24$Masculino.x[is.na(Tabela3.24$Masculino.x) == T] <- 0
+Tabela3.24$Masculino.y[is.na(Tabela3.24$Masculino.y) == T] <- 0
+Tabela3.24$Total.x[is.na(Tabela3.24$Total.x) == T] <- 0
+Tabela3.24$Total.y[is.na(Tabela3.24$Total.y) == T] <- 0
+
+
 
 Tabela3.24 <- Tabela3.24 %>% select("Faixa Etária","Feminino.x","% Feminino.x","Masculino.x","% Masculino.x","Total.x","Feminino.y","% Feminino.y","Masculino.y","% Masculino.y", "Total.y")
 
-rownames(Tabela3.24) <- Tabela3.24$`Faixa Etária`
-Tabela3.24$`Faixa Etária` <-  NULL
+#________________________________________________________
+# Adicionei (Roberto - 15/10/2020)
 
-rm(For, Ing)
+tabela3.24_rownames <- Tabela3.24$`Faixa Etária`
+Tabela3.24$`Faixa Etária` <-  NULL
+rownames(Tabela3.24) <- tabela3.24_rownames
+
+#rownames(Tabela3.24) <- Tabela3.24$`Faixa Etária`
+#Tabela3.24$`Faixa Etária` <-  NULL
+
+#________________________________________________________
+rm(For, Ing, tabela3.24_rownames)
 
 
 # Tabela 3.25 Alunos Regulares Ativos, Matrículas e Aprovados em Disc --------
 
 # MUDAR NOME DAS VARIAVEIS PARA HE0 HE1 HE2
 
-HE20180 <- read_fwf("dados_identificados/he20190.txt", fwf_widths(c(9,5,6,2,3,2,3), 
-                                                                    col_names = c("MatricAluno", "Periodo", "CodDisciplina", "Turma", "Credits", "Mencao_20181", "Frequencias")), 
+HE0 <- read_fwf("dados_identificados/he20190.txt", fwf_widths(c(9,5,6,2,3,2,3), 
+                                                                    col_names = c("MatricAluno", "Periodo", "CodDisciplina", "Turma", "Credits", "Mencao_20191", "Frequencias")), 
                     locale = locale(encoding = "latin1")) %>% distinct(MatricAluno, .keep_all = T)
 
-HE20181 <- read_fwf("dados_identificados/he20191.txt", fwf_widths(c(9,5,6,2,3,2,3), 
-                                                                    col_names = c("MatricAluno", "Periodo", "CodDisciplina", "Turma", "Credits", "Mencao_20181", "Frequencias")), 
+HE1 <- read_fwf("dados_identificados/he20191.txt", fwf_widths(c(9,5,6,2,3,2,3), 
+                                                                    col_names = c("MatricAluno", "Periodo", "CodDisciplina", "Turma", "Credits", "Mencao_20191", "Frequencias")), 
                     locale = locale(encoding = "latin1")) %>% distinct(MatricAluno, .keep_all = T)
 
-HE20182 <- read_fwf("dados_identificados/he20192.txt", fwf_widths(c(9,5,6,2,3,2,3), 
-                                                                    col_names = c("MatricAluno", "Periodo", "CodDisciplina", "Turma", "Credits", "Mencao_20182", "Frequencias")), 
+HE2 <- read_fwf("dados_identificados/he20192.txt", fwf_widths(c(9,5,6,2,3,2,3), 
+                                                                    col_names = c("MatricAluno", "Periodo", "CodDisciplina", "Turma", "Credits", "Mencao_20192", "Frequencias")), 
                     locale = locale(encoding = "latin1")) %>% distinct(MatricAluno, .keep_all = T)
 
 
-HE20181 <- rbind(HE20181, HE20180)
+HE1 <- rbind(HE1, HE0)
 
-HE20181 <- within(HE20181, {
+HE1 <- within(HE1, {
   
-  Mencao_20181[Mencao_20181=="AP"] <- "AP 1"
-  Mencao_20181[Mencao_20181=="CC"] <- "AP 1"
-  Mencao_20181[Mencao_20181=="MM"] <- "AP 1"
-  Mencao_20181[Mencao_20181=="MS"] <- "AP 1"
-  Mencao_20181[Mencao_20181=="SS"] <- "AP 1"
+  Mencao_20191[Mencao_20191=="AP"] <- "AP 1"
+  Mencao_20191[Mencao_20191=="CC"] <- "AP 1"
+  Mencao_20191[Mencao_20191=="MM"] <- "AP 1"
+  Mencao_20191[Mencao_20191=="MS"] <- "AP 1"
+  Mencao_20191[Mencao_20191=="SS"] <- "AP 1"
   
-  Mencao_20181[Mencao_20181=="SR"] <- "RP 1"
-  Mencao_20181[Mencao_20181=="II"] <- "RP 1"
-  Mencao_20181[Mencao_20181=="MI"] <- "RP 1"
-  Mencao_20181[Mencao_20181=="TR"] <- "RP 1"
-  Mencao_20181[Mencao_20181=="TJ"] <- "RP 1"
-  Mencao_20181[Mencao_20181=="DP"] <- "RP 1"
-  Mencao_20181[Mencao_20181=="RP"] <- "RP 1"
+  Mencao_20191[Mencao_20191=="SR"] <- "RP 1"
+  Mencao_20191[Mencao_20191=="II"] <- "RP 1"
+  Mencao_20191[Mencao_20191=="MI"] <- "RP 1"
+  Mencao_20191[Mencao_20191=="TR"] <- "RP 1"
+  Mencao_20191[Mencao_20191=="TJ"] <- "RP 1"
+  Mencao_20191[Mencao_20191=="DP"] <- "RP 1"
+  Mencao_20191[Mencao_20191=="RP"] <- "RP 1"
 })
 
-HE20182 <- within(HE20182, {
+HE2 <- within(HE2, {
   
-  Mencao_20182[Mencao_20182=="AP"] <- "AP 2"
-  Mencao_20182[Mencao_20182=="CC"] <- "AP 2"
-  Mencao_20182[Mencao_20182=="MM"] <- "AP 2"
-  Mencao_20182[Mencao_20182=="MS"] <- "AP 2"
-  Mencao_20182[Mencao_20182=="SS"] <- "AP 2"
+  Mencao_20192[Mencao_20192=="AP"] <- "AP 2"
+  Mencao_20192[Mencao_20192=="CC"] <- "AP 2"
+  Mencao_20192[Mencao_20192=="MM"] <- "AP 2"
+  Mencao_20192[Mencao_20192=="MS"] <- "AP 2"
+  Mencao_20192[Mencao_20192=="SS"] <- "AP 2"
   
-  Mencao_20182[Mencao_20182=="SR"] <- "RP 2"
-  Mencao_20182[Mencao_20182=="II"] <- "RP 2"
-  Mencao_20182[Mencao_20182=="MI"] <- "RP 2"
-  Mencao_20182[Mencao_20182=="TR"] <- "RP 2"
-  Mencao_20182[Mencao_20182=="TJ"] <- "RP 2"
-  Mencao_20182[Mencao_20182=="DP"] <- "RP 2"
-  Mencao_20182[Mencao_20182=="RP"] <- "RP 2"
+  Mencao_20192[Mencao_20192=="SR"] <- "RP 2"
+  Mencao_20192[Mencao_20192=="II"] <- "RP 2"
+  Mencao_20192[Mencao_20192=="MI"] <- "RP 2"
+  Mencao_20192[Mencao_20192=="TR"] <- "RP 2"
+  Mencao_20192[Mencao_20192=="TJ"] <- "RP 2"
+  Mencao_20192[Mencao_20192=="DP"] <- "RP 2"
+  Mencao_20192[Mencao_20192=="RP"] <- "RP 2"
 })
 
-M1 <- Doc %>% filter(is.na(Trancados_1)) %>% filter(`Ano Ingresso Opcao`< anobase | (`Ano Ingresso Opcao`== anobase & `Semestre Ingresso Opcao`<=1) & `Ano Saida Opcao`>= anobase)
+#________________________________________________________
+# Adicionei (Roberto - 15/10/2020) : alterei Trancados_1 e Trancados_2 por TGM20191 e TGM20192
+#________________________________________________________
+
+M1 <- Doc %>% filter(is.na(TGM20191)) %>% filter(`Ano Ingresso Opcao`< anobase | (`Ano Ingresso Opcao`== anobase & `Semestre Ingresso Opcao`<=1) & `Ano Saida Opcao`>= anobase)
 AA1 <- M1 %>% group_by(`Nome Curso`) %>% summarize(`Alunos Ativos 1` = n())
-M1 <- inner_join(M1, HE20181, by = "MatricAluno")
+M1 <- inner_join(M1, HE1, by = "MatricAluno")
 MD1 <- M1 %>% group_by(`Nome Curso`) %>% summarise(`Matriculados em Disciplinas 1`=n())
-AP1 <- M1 %>% group_by(`Nome Curso`, Mencao_20181) %>% summarize(n=n()) %>% spread(Mencao_20181, n, fill = 0)
+AP1 <- M1 %>% group_by(`Nome Curso`, Mencao_20191) %>% summarize(n=n()) %>% spread(Mencao_20191, n, fill = 0)
 
-M2 <- Doc %>% filter(is.na(Trancados_2)) %>% filter(`Ano Ingresso Opcao`<= anobase & (`Ano Saida Opcao`> anobase | (`Ano Saida Opcao`== anobase & `Semestre Saida Opcao`==2)))
+M2 <- Doc %>% filter(is.na(TGM20192)) %>% filter(`Ano Ingresso Opcao`<= anobase & (`Ano Saida Opcao`> anobase | (`Ano Saida Opcao`== anobase & `Semestre Saida Opcao`==2)))
 AA2 <- M2 %>% group_by(`Nome Curso`) %>% summarize(`Alunos Ativos 2` = n())
-M2 <- inner_join(M2, HE20182, by = "MatricAluno")
+M2 <- inner_join(M2, HE2, by = "MatricAluno")
 MD2 <- M2 %>% group_by(`Nome Curso`) %>% summarise(`Matriculados em Disciplinas 2`=n())
-AP2 <- M2 %>% group_by(`Nome Curso`, Mencao_20182) %>% summarize(n=n()) %>% spread(Mencao_20182, n, fill = 0)
+AP2 <- M2 %>% group_by(`Nome Curso`, Mencao_20192) %>% summarize(n=n()) %>% spread(Mencao_20192, n, fill = 0)
 
 Tabela3.25 <- left_join(Nomes, AA1) %>% 
   left_join(AA2) %>% 
@@ -227,17 +277,32 @@ Tabela3.25 <- left_join(Nomes, AA1) %>%
 Totais <- Tabela3.25 %>% group_by(`Unidade`) %>% 
   select(-`Nome Curso`) %>%
   summarise_all(sum, na.rm = TRUE) %>% 
-  left_join(Label_Unidades)
+  left_join(label_unidade)
+
+#________________________________________________________
+# Adicionei (Roberto - 15/10/2020) 
+colnames(Totais)[colnames(Totais) == "Curso"] <- "Nome Curso"
+#________________________________________________________
 
 Tabela3.25$Unidade <- sapply(Tabela3.25$Unidade, function(x) paste(x, "-", collapse=""))
-Tabela3.25 <- rbind(Tabela3.25, Totais) %>% arrange(`Unidade`,`Nome Curso`)
+Tabela3.25 <- bind_rows(Tabela3.25, Totais) %>% arrange(`Unidade`,`Nome Curso`)
 
-rownames(Tabela3.25) <- Tabela3.25$`Nome Curso`
+#________________________________________________________
+# Adicionei (Roberto - 15/10/2020)
 
-Tabela3.25$Unidade <- NULL
+Tabela3.25_rownames <- Tabela3.25$`Nome Curso`
+Tabela3.25_rownames <- c(Tabela3.25_rownames, "Total Geral")
 Tabela3.25$`Nome Curso` <- NULL
+Tabela3.25$Unidade <- NULL
 
-Tabela3.25["Total Geral",] <- colSums(Tabela3.25, na.rm = T)
+
+tabela3.25_Total_Geral <- colSums(Tabela3.25, na.rm = TRUE)/2
+Tabela3.25 <- rbind(Tabela3.25, tabela3.25_Total_Geral)
+
+
+#__________________________________________________________
+
+#Tabela3.25["Total Geral",] <- colSums(Tabela3.25, na.rm = T)
 
 Tabela3.25$`% Aprovado/Matriculado 1` <- paste(round(Tabela3.25$`AP 1`/Tabela3.25$`Matriculados em Disciplinas 1`*100,1),"%", sep = "")
 Tabela3.25$`% Aprovado/Matriculado 2` <- paste(round(Tabela3.25$`AP 2`/Tabela3.25$`Matriculados em Disciplinas 2`*100,1),"%", sep = "")
@@ -257,13 +322,15 @@ Tabela3.25$`% Reprovado/Matriculado 2`[Tabela3.25$`% Reprovado/Matriculado 2`== 
 
 Tabela3.25 <- Tabela3.25 %>% select(1,2,3,5,4,6,7,8,9,10,11,12)
 
-rm(HE20180, HE20181, HE20182, M1, AA1, MD1, AP1, M2, AA2, MD2, AP2, Totais)
+row.names(Tabela3.25) <- Tabela3.25_rownames
+
+rm(HE0, HE1, HE2, M1, AA1, MD1, AP1, M2, AA2, MD2, AP2, Totais, tabela3.25_Total_Geral,Tabela3.25_rownames)
 
 # Tabela 3.26 Alunos Regulares por Sexo e Faixa Etária --------------------------------
 
-Tabela3.26 <- Doc %>% filter(`Ano Ingresso Opcao`<=2018 & (`Ano Saida Opcao`>2018 | (`Ano Saida Opcao`==2018 & `Semestre Saida Opcao`==2)))
+Tabela3.26 <- Doc %>% filter(`Ano Ingresso Opcao`<=2019 & (`Ano Saida Opcao`>2019 | (`Ano Saida Opcao`==2019 & `Semestre Saida Opcao`==2)))
 
-Tabela3.26$Idade <- difftime(as.Date("2018-01-01"), Tabela3.26$Nascimento)/365
+Tabela3.26$Idade <- difftime(as.Date("2019-01-01"), Tabela3.26$Nascimento)/365
 
 Tabela3.26 <- Tabela3.26 %>% mutate(`Faixa Etária` = ifelse(Idade > 18 & Idade <= 24, "De 19 a 24 anos",
                                                             ifelse(Idade > 24 & Idade <= 29, "De 25 a 29 anos",
@@ -276,7 +343,12 @@ Tabela3.26 <- Tabela3.26 %>% group_by(`Faixa Etária`, Sexo) %>% summarise(n=n()
 md <- melt(Tabela3.26, id=c("Faixa Etária", "Sexo"))
 Tabela3.26 <- dcast(md, `Faixa Etária` ~ Sexo)
 
-rownames(Tabela3.26) <- Tabela3.26$`Faixa Etária`
+#__________________________________________________
+# Adicionei (Roberto - 15/10/2020)
+Tabela3.26_rownames <- Tabela3.26$`Faixa Etária`
+
+#__________________________________________________
+
 Tabela3.26 <- Tabela3.26 %>% select(-`Faixa Etária`)
 
 Tabela3.26["Total", ] <- colSums(Tabela3.26, na.rm=T)
@@ -287,9 +359,11 @@ Tabela3.26$`% Masculino` <- paste(round(Tabela3.26$Masculino/Tabela3.26$Total*10
 
 Tabela3.26 <- Tabela3.26 %>% select(Feminino, `% Feminino`, Masculino, `% Masculino`, Total)
 
-rownames(Tabela3.26)[6] <- "45 anos ou mais"
+Tabela3.26_rownames <- c(Tabela3.26_rownames, "Total Geral")
+Tabela3.26_rownames[6] <- "45 anos ou mais"
+row.names(Tabela3.26) <- Tabela3.26_rownames
 
-rm(md)
+rm(md, Tabela3.26_rownames)
 
 # Tabela 3.27 Alunos Regulares Registrados por Sexo --------------------------------
 
@@ -302,7 +376,15 @@ M1 <- M1 %>% mutate(Total = rowSums(M1, na.rm=TRUE))
 M1 <- cbind(M1.1, M1)
 names(M1)[2:4] <- c("Feminino 1", "Masculino 1", "Total 1")
 M1 <- left_join(M1, Nomes)
-M1.Unidade <- M1 %>% select(-`Nome Curso`) %>% group_by(Unidade) %>% summarize_all(sum, na.rm=TRUE) %>% left_join(Label_Unidades)
+M1.Unidade <- M1 %>% select(-`Nome Curso`) %>% group_by(Unidade) %>% summarize_all(sum, na.rm=TRUE) %>% left_join(label_unidade)
+
+#__________________________________________________
+# Adicionei (Roberto - 15/10/2020)
+
+colnames(M1.Unidade)[5] <- "Nome Curso"
+
+#_____________________________________________________
+
 M1 <- rbind(M1.Unidade, M1) %>%  arrange(Unidade, `Nome Curso`)
 M1 <- M1 %>% select(-1) %>% select(4, 1, 2, 3)
 
@@ -317,7 +399,15 @@ M2 <- M2 %>% mutate(Total = rowSums(M2, na.rm=TRUE))
 M2 <- cbind(M2.2, M2)
 names(M2)[2:4] <- c("Feminino 2", "Masculino 2", "Total 2")
 M2 <- left_join(M2, Nomes)
-M2.Unidade <- M2 %>% select(-`Nome Curso`) %>% group_by(Unidade) %>% summarize_all(sum, na.rm=TRUE) %>% left_join(Label_Unidades)
+M2.Unidade <- M2 %>% select(-`Nome Curso`) %>% group_by(Unidade) %>% summarize_all(sum, na.rm=TRUE) %>% left_join(label_unidade)
+
+#__________________________________________________
+# Adicionei (Roberto - 15/10/2020)
+
+colnames(M2.Unidade)[5] <- "Nome Curso"
+
+#_____________________________________________________
+
 M2 <- rbind(M2.Unidade, M2) %>%  arrange(Unidade, `Nome Curso`)
 M2 <- M2 %>% select(-1) %>% select(4, 1, 2, 3)
 
@@ -326,94 +416,99 @@ Tabela3.27 <- left_join(M1, M2)
 
 Tabela3.27 <- Tabela3.27[c(1,2,3,4,6,5,10,7,8,9,12,11,15,13,14,16,18,17,20,19,22,21,24,23,26,25,28,27,29,34,30,31,32,33,35,36,37,38,44,39,40,41,42,43,45,46,47,48,50,49,58,51,52,53,54,55,56,57,59,60,63,61,62,64,66,65,68,67,69,71,70,74,72,73,78,75,76,77,79,80,81,82,83,85,84,86,87,88,90,89,92,91,93,94,95,96,97), ]
 
-row.names(Tabela3.27) <- Tabela3.27$`Nome Curso`
 
+Tabela3.27_rownames <- Tabela3.27$`Nome Curso`
 Tabela3.27$`Nome Curso` <- NULL
 
 "Total Geral" <-  colSums(Tabela3.27, na.rm = TRUE)/2
 
 Tabela3.27 <- rbind(Tabela3.27, `Total Geral`)
 
-row.names(Tabela3.27)[98] <- "Total Geral"
+Tabela3.27_rownames <- c(Tabela3.27_rownames, "Total Geral")
+rownames(Tabela3.27) <- Tabela3.27_rownames
 
-rm(M1, M1.1, M1.Unidade, M2, M2.2, M2.Unidade, md)
+rm(M1, M1.1, M1.Unidade, M2, M2.2, M2.Unidade, md, "Total Geral", Tabela3.27_rownames)
+
+
 
 Tabela3.27.2 <- Doc %>% filter(`Ano Ingresso Opcao` <= anobase & `Ano Saida Opcao` >= anobase) %>% group_by(Unidade) %>% summarise(Registrados=n()) %>% arrange(desc(Registrados))
 
-row.names(Tabela3.27.2 ) <- Tabela3.27.2$Unidade
+Tabela3.27.2_row.names <- Tabela3.27.2$Unidade
 Tabela3.27.2$Unidade <- NULL
+row.names(Tabela3.27.2) <- Tabela3.27.2_row.names
+
+rm(Tabela3.27.2_row.names)
 
 # Tabela 3.28 Alunos Ativos e Trancados por Sexo -------------------------------------------------------------
 
-# PARECE REPETIDO - REVER
-
-HE20180 <- read_fwf("X:/CIG/SIGRA/30072019/HE20180.txt", 
-                    fwf_widths(c(9,4,1,6,2,3,2,3), col_names=c("MatricAluno","Ano HE","Semestre HE", 
-                                                               "CodDisc", "Turma","Creditos","Mencao","Frequencia")), 
-                    locale = locale(encoding = "latin1"))
-
-HE20181 <- read_fwf("X:/CIG/SIGRA/30072019/HE20181.txt", 
-                    fwf_widths(c(9,4,1,6,2,3,2,3), col_names=c("MatricAluno","Ano HE","Semestre HE", 
-                                                               "CodDisc", "Turma","Creditos","Mencao","Frequencia")), 
-                    locale = locale(encoding = "latin1"))
-
-HE20181 <- rbind(HE20180, HE20181) %>% select(MatricAluno, Mencao_20181=Mencao); rm(HE20180)
+# PARECE REPETIDO - REVER: Gui, melhor alguém com mais experiência dizer se há repetição ou não
 
 
-HE20182 <- read_fwf("X:/CIG/SIGRA/30072019/HE20182.txt", 
-                    fwf_widths(c(9,4,1,6,2,3,2,3), col_names=c("MatricAluno","Ano HE","Semestre HE", 
-                                                               "CodDisc", "Turma","Creditos","Mencao","Frequencia")), 
-                    locale = locale(encoding = "latin1")) %>% select(MatricAluno, Mencao_20182=Mencao)
+HE0 <- read_fwf("dados_identificados/he20190.txt", fwf_widths(c(9,5,6,2,3,2,3), 
+                                                                  col_names = c("MatricAluno", "Periodo", "CodDisciplina", "Turma", "Credits", "Mencao_20191", "Frequencias")), 
+                    locale = locale(encoding = "latin1")) %>% distinct(MatricAluno, .keep_all = T)
+
+HE1 <- read_fwf("dados_identificados/he20191.txt", fwf_widths(c(9,5,6,2,3,2,3), 
+                                                                  col_names = c("MatricAluno", "Periodo", "CodDisciplina", "Turma", "Credits", "Mencao_20191", "Frequencias")), 
+                    locale = locale(encoding = "latin1")) %>% distinct(MatricAluno, .keep_all = T)
+
+HE2 <- read_fwf("dados_identificados/he20192.txt", fwf_widths(c(9,5,6,2,3,2,3), 
+                                                                  col_names = c("MatricAluno", "Periodo", "CodDisciplina", "Turma", "Credits", "Mencao_20192", "Frequencias")), 
+                    locale = locale(encoding = "latin1")) %>% distinct(MatricAluno, .keep_all = T) %>% select(MatricAluno, Mencao=Mencao_20192)
 
 
-HE20181 <- within(HE20181, {
-  Mencao_20181[Mencao_20181=="AP"] <- "AP 1"
-  Mencao_20181[Mencao_20181=="CC"] <- "AP 1"
-  Mencao_20181[Mencao_20181=="MM"] <- "AP 1"
-  Mencao_20181[Mencao_20181=="MS"] <- "AP 1"
-  Mencao_20181[Mencao_20181=="SS"] <- "AP 1"
+
+HE1 <- rbind(HE0, HE1) %>% select(MatricAluno, Mencao=Mencao_20191); rm(HE0)
+
+
+HE1 <- within(HE1, {
+ Mencao[Mencao=="AP"] <- "AP 1"
+ Mencao[Mencao=="CC"] <- "AP 1"
+ Mencao[Mencao=="MM"] <- "AP 1"
+ Mencao[Mencao=="MS"] <- "AP 1"
+ Mencao[Mencao=="SS"] <- "AP 1"
   
-  Mencao_20181[Mencao_20181=="SR"] <- "RP 1"
-  Mencao_20181[Mencao_20181=="II"] <- "RP 1"
-  Mencao_20181[Mencao_20181=="MI"] <- "RP 1"
-  Mencao_20181[Mencao_20181=="TR"] <- "RP 1"
-  Mencao_20181[Mencao_20181=="TJ"] <- "RP 1"
-  Mencao_20181[Mencao_20181=="DP"] <- "RP 1"
-  Mencao_20181[Mencao_20181=="RP"] <- "RP 1"
+ Mencao[Mencao=="SR"] <- "RP 1"
+ Mencao[Mencao=="II"] <- "RP 1"
+ Mencao[Mencao=="MI"] <- "RP 1"
+ Mencao[Mencao=="TR"] <- "RP 1"
+ Mencao[Mencao=="TJ"] <- "RP 1"
+ Mencao[Mencao=="DP"] <- "RP 1"
+ Mencao[Mencao=="RP"] <- "RP 1"
 })
 
-HE20182 <- within(HE20182, {
-  Mencao_20182[Mencao_20182=="AP"] <- "AP 2"
-  Mencao_20182[Mencao_20182=="CC"] <- "AP 2"
-  Mencao_20182[Mencao_20182=="MM"] <- "AP 2"
-  Mencao_20182[Mencao_20182=="MS"] <- "AP 2"
-  Mencao_20182[Mencao_20182=="SS"] <- "AP 2"
+HE2 <- within(HE2, {
+  Mencao[Mencao=="AP"] <- "AP 2"
+  Mencao[Mencao=="CC"] <- "AP 2"
+  Mencao[Mencao=="MM"] <- "AP 2"
+  Mencao[Mencao=="MS"] <- "AP 2"
+  Mencao[Mencao=="SS"] <- "AP 2"
   
-  Mencao_20182[Mencao_20182=="SR"] <- "RP 2"
-  Mencao_20182[Mencao_20182=="II"] <- "RP 2"
-  Mencao_20182[Mencao_20182=="MI"] <- "RP 2"
-  Mencao_20182[Mencao_20182=="TR"] <- "RP 2"
-  Mencao_20182[Mencao_20182=="TJ"] <- "RP 2"
-  Mencao_20182[Mencao_20182=="DP"] <- "RP 2"
-  Mencao_20182[Mencao_20182=="RP"] <- "RP 2"
+  Mencao[Mencao=="SR"] <- "RP 2"
+  Mencao[Mencao=="II"] <- "RP 2"
+  Mencao[Mencao=="MI"] <- "RP 2"
+  Mencao[Mencao=="TR"] <- "RP 2"
+  Mencao[Mencao=="TJ"] <- "RP 2"
+  Mencao[Mencao=="DP"] <- "RP 2"
+  Mencao[Mencao=="RP"] <- "RP 2"
 })
 
-AA1 <- Doc %>% filter(is.na(Trancados_1) & ((`Ano Ingresso Opcao`<anobase | (`Ano Ingresso Opcao`==anobase & `Semestre Ingresso Opcao`<=1)) & `Ano Saida Opcao`>=anobase)) %>% group_by(`Nome Curso`, Sexo) %>% summarise(n=n())
+AA1 <- Doc %>% filter(is.na(TGM20191) & ((`Ano Ingresso Opcao`<anobase | (`Ano Ingresso Opcao`==anobase & `Semestre Ingresso Opcao`<=1)) & `Ano Saida Opcao`>=anobase)) %>% group_by(`Nome Curso`, Sexo) %>% summarise(n=n())
 md <- melt(AA1, id=c("Nome Curso", "Sexo"))
 AA1 <- dcast(md, `Nome Curso` ~ Sexo)
 names(AA1)[2:3] <- c("Feminino A1", "Masculino A1")
 
-AT1 <- Doc %>% filter(Trancados_1==1 & ((`Ano Ingresso Opcao`<anobase | (`Ano Ingresso Opcao`==anobase & `Semestre Ingresso Opcao`<=1)) & `Ano Saida Opcao`>=anobase)) %>% group_by(`Nome Curso`, Sexo) %>% summarise(n=n())
+AT1 <- Doc %>% filter(TGM20191==1 & ((`Ano Ingresso Opcao`<anobase | (`Ano Ingresso Opcao`==anobase & `Semestre Ingresso Opcao`<=1)) & `Ano Saida Opcao`>=anobase)) %>% group_by(`Nome Curso`, Sexo) %>% summarise(n=n())
 md <- melt(AT1, id=c("Nome Curso", "Sexo"))
 AT1 <- dcast(md, `Nome Curso` ~ Sexo)
 names(AT1)[2:3] <- c("Feminino T1", "Masculino T1")
 
-AA2 <- Doc %>% filter(is.na(Trancados_2) & (`Ano Ingresso Opcao`<=anobase & (`Ano Saida Opcao`>anobase | (`Ano Saida Opcao`==anobase & `Semestre Saida Opcao`==2)))) %>% group_by(`Nome Curso`, Sexo) %>% summarise(n=n())
+AA2 <- Doc %>% filter(is.na(TGM20192) & (`Ano Ingresso Opcao`<=anobase & (`Ano Saida Opcao`>anobase | (`Ano Saida Opcao`==anobase & `Semestre Saida Opcao`==2)))) %>% group_by(`Nome Curso`, Sexo) %>% summarise(n=n())
 md <- melt(AA2, id=c("Nome Curso", "Sexo"))
 AA2 <- dcast(md, `Nome Curso` ~ Sexo)
 names(AA2)[2:3] <- c("Feminino A2", "Masculino A2")
 
-AT2 <- Doc %>% filter(Trancados_2==1 & (`Ano Ingresso Opcao`<=anobase & (`Ano Saida Opcao`>anobase | (`Ano Saida Opcao`==anobase & `Semestre Saida Opcao`==2)))) %>% group_by(`Nome Curso`, Sexo) %>% summarise(n=n())
+AT2 <- Doc %>% filter(TGM20192==1 & (`Ano Ingresso Opcao`<=anobase & (`Ano Saida Opcao`>anobase | (`Ano Saida Opcao`==anobase & `Semestre Saida Opcao`==2)))) %>% group_by(`Nome Curso`, Sexo) %>% summarise(n=n())
 md <- melt(AT2, id=c("Nome Curso", "Sexo"))
 AT2 <- dcast(md, `Nome Curso` ~ Sexo)
 names(AT2)[2:3] <- c("Feminino T2", "Masculino T2")
@@ -426,13 +521,14 @@ totais <- Tabela3.28 %>% group_by(Unidade) %>% summarise(`Feminino A1`=sum(`Femi
                                                          `Feminino A2`=sum(`Feminino A2`), `Masculino A2`=sum(`Masculino A2`),
                                                          `Feminino T1`=sum(`Feminino T1`), `Masculino T1`=sum(`Masculino T1`),
                                                          `Feminino T2`=sum(`Feminino T2`), `Masculino T2`=sum(`Masculino T2`))
-totais <- totais %>% left_join(Label_Unidades)
+totais <- totais %>% left_join(label_unidade)
+colnames(totais)[10] <- "Nome Curso"
 
 Tabela3.28$Unidade <- sapply(Tabela3.28$Unidade, function(x) paste(x, "-", collapse=""))
 
 Tabela3.28 <- bind_rows(Tabela3.28, totais) %>% arrange(Unidade, `Nome Curso`)
 
-row.names(Tabela3.28) <- Tabela3.28$`Nome Curso`
+Tabela3.28_rownames <- Tabela3.28$`Nome Curso`
 Tabela3.28$`Nome Curso` <- NULL
 Tabela3.28$Unidade <- NULL
 
@@ -453,9 +549,12 @@ Tabela3.28 <- Tabela3.28 %>% select(`Feminino A1`, `Masculino A1`, `Total 1AS`, 
 
 Total_Geral <- colSums(Tabela3.28, na.rm=T)/2
 Tabela3.28 <- rbind(Tabela3.28, Total_Geral) 
-row.names(Tabela3.28)[98] <- "Total Geral"
 
-rm(HE20181, HE20182, md, totais, AA1, AA2, AT1, AT2)
+Tabela3.28_rownames <-c(Tabela3.28_rownames, "Total Geral") 
+
+row.names(Tabela3.28) <- Tabela3.28_rownames
+
+rm(HE1, HE2, md, totais, AA1, AA2, AT1, AT2, Tabela3.28_rownames)
 
 
 # Tabela 3.29 Forma de Saída ----------------------------------------------
@@ -501,101 +600,184 @@ Tabela3.29[is.na(Tabela3.29)] <- 0
 Tabela3.29$`Total 1S` <- rowSums(Tabela3.29[,c(4,6,8,10)])
 Tabela3.29$`Total 2S` <- rowSums(Tabela3.29[,c(5,7,9,11)])
 
-totais <- Tabela3.29 %>% group_by(Unidade) %>% select(-"Nome Curso") %>%  summarize_all(sum, na.rm = TRUE) %>% left_join(Label_Unidades, by = "Unidade") 
+totais <- Tabela3.29 %>% group_by(Unidade) %>% select(-"Nome Curso") %>%  summarize_all(sum, na.rm = TRUE) %>% left_join(label_unidade, by = "Unidade") 
 Tabela3.29$Unidade <- sapply(Tabela3.29$Unidade, function(x) paste(x, "-", collapse=""))
+
+colnames(totais)[13] <- "Nome Curso"
 
 Tabela3.29 <- bind_rows(Tabela3.29, totais) 
 Tabela3.29 <- Tabela3.29 %>% arrange(Unidade,`Nome Curso`) %>% select(-"Unidade")
 
-row.names(Tabela3.29) <- Tabela3.29$`Nome Curso`
+Tabela3.29_rownames <- Tabela3.29$`Nome Curso`
 Tabela3.29$`Nome Curso` <- NULL
 
 
 Total_Geral <- colSums(Tabela3.29, na.rm=T)/2
-
 Tabela3.29 <- rbind(Tabela3.29, Total_Geral)
-row.names(Tabela3.29)[98] <- "Total Geral"
 
-Tabela3.29[Tabela3.29==0] <- "-"
+Tabela3.29_rownames <- c(Tabela3.29_rownames, " Total  Geral")
 
-rm(D1, D2, M2, md, Nomes_2, totais)
+Tabela3.29 <- Tabela3.29 %>% mutate(`Regulares Registrados no (2º Semestre)` = ifelse(`Regulares Registrados no (2º Semestre)`== 0,"-", `Regulares Registrados no (2º Semestre)`))
+Tabela3.29 <- Tabela3.29 %>% mutate(`Abandono 1` = ifelse(`Abandono 1`== 0,"-", `Abandono 1`))
+Tabela3.29 <- Tabela3.29 %>% mutate(`Abandono 2` = ifelse(`Abandono 2`== 0,"-", `Abandono 2`))
+Tabela3.29 <- Tabela3.29 %>% mutate(`Desligado-Falta de Rendimento 1` = ifelse(`Desligado-Falta de Rendimento 1`== 0,"-", `Desligado-Falta de Rendimento 1`))
+Tabela3.29 <- Tabela3.29 %>% mutate(`Desligado-Falta de Rendimento 2` = ifelse(`Desligado-Falta de Rendimento 2`== 0,"-", `Desligado-Falta de Rendimento 2`))
+Tabela3.29 <- Tabela3.29 %>% mutate(`Desligamento Voluntário 1` = ifelse(`Desligamento Voluntário 1`== 0,"-", `Desligamento Voluntário 1`))
+Tabela3.29 <- Tabela3.29 %>% mutate(`Desligamento Voluntário 2` = ifelse(`Desligamento Voluntário 2`== 0,"-", `Desligamento Voluntário 2`))
+Tabela3.29 <- Tabela3.29 %>% mutate(`Outros 1` = ifelse(`Outros 1`== 0,"-", `Outros 1`))
+Tabela3.29 <- Tabela3.29 %>% mutate(`Outros 2` = ifelse(`Outros 2`== 0,"-", `Outros 2`))
+Tabela3.29 <- Tabela3.29 %>% mutate(`Total 1S` = ifelse(`Total 1S`== 0,"-", `Total 1S`))
+Tabela3.29 <- Tabela3.29 %>% mutate(`Total 2S` = ifelse(`Total 2S`== 0,"-", `Total 2S`))
+
+row.names(Tabela3.29) <- Tabela3.29_rownames
+
+rm(D1, D2, M2, md, Nomes_2, totais, Total_Geral, Tabela3.29_rownames)
 
 # Tabela 3.30 Evolução Ingressantes -------------------------------------------
+Tabela3.30 <- EvoIngD <- read_excel("dados_doutorado/EvoIngD.xlsx")
 
-Tabela3.30 <- read.csv2("EvoIngD.csv", check.names=F) #Peguei esse csv do anuário passado
-Ing2018 <- Doc %>% filter(`Ano Ingresso Opcao`== anobase) %>% group_by(`Nome Curso`, Unidade) %>% summarise(`2018`=n())
+Ing2019 <- Doc %>% filter(`Ano Ingresso Opcao`== anobase) %>% group_by(`Nome Curso`, Unidade) %>% summarise(`2019`=n())
 
+totais <- Ing2019 %>% group_by(Unidade) %>% summarise(`2019`=sum(`2019`))
+totais <- totais %>% left_join(label_unidade)
 
-totais <- Ing2018 %>% group_by(Unidade) %>% summarise(`2018`=sum(`2018`))
-
-totais <- totais %>% left_join(Label_Unidades)
-
-Ing2018$Unidade <- sapply(Ing2018$Unidade, function(x) paste(x, "-", collapse=""))
-Ing2018 <- bind_rows(Ing2018,totais) %>% arrange(Unidade, `Nome Curso`)
-Ing2018$Unidade <- NULL
-colnames(Ing2018)[1] <- "Unidade Acadêmica/Curso"
+colnames(totais)[3] <- "Nome Curso"
 
 
+Ing2019$Unidade <- sapply(Ing2019$Unidade, function(x) paste(x, "-", collapse=""))
+Ing2019 <- bind_rows(Ing2019,totais) %>% arrange(Unidade, `Nome Curso`)
 
-Tabela3.30 <- left_join(Tabela3.30, Ing2018)
+
+colnames(Ing2019)[1] <- "Unidade Acadêmica/Curso"
+
+Tabela3.30 <- Tabela3.30[-c(99),] #verificar nos anos posteriores a localização da linha Total Geral
+Tabela3.30 <- full_join(Tabela3.30, Ing2019) 
+
+Tabela3.30[42,6] <- "FT -"
+Tabela3.30[48,6] <- "FT -"
+Tabela3.30[87,6] <- "IP -"
+Tabela3.30[66,6] <- "Ida -"
+Tabela3.30[74,6] <- "IG -"
+Tabela3.30[95,6] <- "IQ -"
+Tabela3.30[98,6] <- "IREL -" #Tem que confirmar se esse curso pertence ao IREL
+
+
+Tabela3.30 <- Tabela3.30 %>% arrange(Unidade, `Unidade Acadêmica/Curso`) 
+Tabela3.30_rownames <- Tabela3.30$`Unidade Acadêmica/Curso`
+Tabela3.30 <- Tabela3.30 %>% select(-`Unidade Acadêmica/Curso`, - Unidade)
+
+Tabela3.30 <- Tabela3.30 %>% mutate_if(is.character,as.numeric)
+Tabela3.30 <- Tabela3.30 %>% mutate_if(is.integer,as.numeric)
+
 Tabela3.30[is.na(Tabela3.30)] <- 0
-row.names(Tabela3.30) <- Tabela3.30$`Unidade Acadêmica/Curso`
-Tabela3.30 <- Tabela3.30 %>% select(-`Unidade Acadêmica/Curso`) 
 
 
-Tabela3.30[98,5] <- sum(as.integer(Tabela3.30$`2018`))/2
-Tabela3.30[98,5] <- round(Tabela3.30[98,5])
+Total_2019 <- round(colSums(Tabela3.30, na.rm =T)/2)
+Tabela3.30 <- bind_rows(Tabela3.30,Total_2019)
+Tabela3.30_rownames <- c(Tabela3.30_rownames, "Total Geral")
+row.names(Tabela3.30) <- Tabela3.30_rownames
 
-rm(Ing2018, totais, Total_Geral, "Total Geral")
+rm(Ing2019, totais, Total_2019, Tabela3.30_rownames)
+
+
 
 # Tabela 3.31 Evolução Alunos Registrados ----------------------------------------
+Tabela3.31 <- EvoForD <- read_excel("dados_doutorado/EvoRegD.xlsx")
 
-Tabela3.31 <- read.csv2("EvoRegD.csv", check.names=F) #Peguei esse csv do anuário passado
-Reg2018 <- Doc %>% filter(`Ano Ingresso Opcao`<= anobase & (`Ano Saida Opcao`>anobase | (`Ano Saida Opcao`==anobase & `Semestre Saida Opcao`==2))) %>% group_by(`Nome Curso`, Unidade) %>% summarise(`2018`=n())
+Reg2019 <- Doc %>% filter(`Ano Ingresso Opcao`<= anobase & (`Ano Saida Opcao`>anobase | (`Ano Saida Opcao`==anobase & `Semestre Saida Opcao`==2))) %>% group_by(`Nome Curso`, Unidade) %>% summarise(`2019`=n())
+
+totais <- Reg2019 %>% group_by(Unidade) %>% summarise(`2019`=sum(`2019`))
+totais <- totais %>% left_join(label_unidade)
+
+colnames(totais)[3] <- "Nome Curso"
 
 
-totais <- Reg2018 %>% group_by(Unidade) %>% summarise(`2018`=sum(`2018`))
+Reg2019$Unidade <- sapply(Reg2019$Unidade, function(x) paste(x, "-", collapse=""))
+Reg2019 <- bind_rows(Reg2019,totais) %>% arrange(Unidade, `Nome Curso`)
 
-totais <- totais %>% left_join(Label_Unidades)
 
-Reg2018$Unidade <- sapply(Reg2018$Unidade, function(x) paste(x, "-", collapse=""))
-Reg2018 <- bind_rows(Reg2018,totais) %>% arrange(Unidade, `Nome Curso`)
-Reg2018$Unidade <- NULL
-colnames(Reg2018)[1] <- "Unidade Acadêmica/Curso"
+colnames(Reg2019)[1] <- "Unidade Acadêmica/Curso"
 
-Tabela3.31 <- left_join(Tabela3.31, Reg2018)
+Tabela3.31 <- Tabela3.31[-c(102),] 
+Tabela3.31 <- full_join(Tabela3.31, Reg2019) 
+
+Tabela3.31[87,6] <- "IP -"
+Tabela3.31[88,6] <- "IP -"
+Tabela3.31[89,6] <- "IP -"
+Tabela3.31[66,6] <- "Ida -"
+Tabela3.31[74,6] <- "IG -"
+Tabela3.31[101,6] <- "IREL -" #Tem que confirmar se esse curso pertence ao IREL
+
+
+Tabela3.31 <- Tabela3.31 %>% arrange(Unidade, `Unidade Acadêmica/Curso`) 
+Tabela3.31_rownames <- Tabela3.31$`Unidade Acadêmica/Curso`
+Tabela3.31 <- Tabela3.31 %>% select(-`Unidade Acadêmica/Curso`, - Unidade)
+
+Tabela3.31 <- Tabela3.31 %>% mutate_if(is.character,as.numeric)
+Tabela3.31 <- Tabela3.31 %>% mutate_if(is.integer,as.numeric)
+
 Tabela3.31[is.na(Tabela3.31)] <- 0
-row.names(Tabela3.31) <- Tabela3.31$`Unidade Acadêmica/Curso`
-Tabela3.31 <- Tabela3.31 %>% select(-`Unidade Acadêmica/Curso`) 
 
-Tabela3.31[102,5] <- sum(Tabela3.31$`2018`)/2
-Tabela3.31[102,5] <- ceiling(Tabela3.31[102,5])
 
-rm(Reg2018, totais)
+Total_2019 <- ceiling(colSums(Tabela3.31, na.rm =T)/2)
+Tabela3.31 <- bind_rows(Tabela3.31,Total_2019)
+
+Tabela3.31_rownames <- c(Tabela3.31_rownames, "Total Geral")
+
+row.names(Tabela3.31) <- Tabela3.31_rownames
+
+rm(Reg2019, totais, Total_2019, Tabela3.31_rownames)
 
 # Tabela 3.32 Evolução Formados ----------------------------------------------------------------------
 
-Tabela3.32 <- read.csv2("EvoForD.csv", check.names=F)
-For2018 <- Doc %>% filter(`Ano Saida Opcao`==anobase & (`For. Saida Opcao`=="Formatura Pos-Graduacao" | `For. Saida Opcao`=="Formatura com Especializacao")) %>% group_by(`Nome Curso`, Unidade) %>% summarise(`2018`=n())
+Tabela3.32 <- EvoForD <- read_excel("dados_doutorado/EvoForD.xlsx")
 
-totais <- For2018 %>% group_by(Unidade) %>% summarise(`2018`=sum(`2018`))
+For2019 <- Doc %>% filter(`Ano Saida Opcao`==anobase & (`For. Saida Opcao`=="Formatura Pos-Graduacao" | `For. Saida Opcao`=="Formatura com Especializacao")) %>% group_by(`Nome Curso`, Unidade) %>% summarise(`2019`=n())
 
-totais <- totais %>% left_join(Label_Unidades)
+totais <- For2019 %>% group_by(Unidade) %>% summarise(`2019`=sum(`2019`))
+totais <- totais %>% left_join(label_unidade)
 
-For2018$Unidade <- sapply(For2018$Unidade, function(x) paste(x, "-", collapse=""))
-For2018 <- bind_rows(For2018,totais) %>% arrange(Unidade, `Nome Curso`)
-For2018$Unidade <- NULL
-colnames(For2018)[1] <- "Unidade Acadêmica/Curso"
+colnames(totais)[3] <- "Nome Curso"
 
-Tabela3.32 <- left_join(Tabela3.32, For2018)
+
+For2019$Unidade <- sapply(For2019$Unidade, function(x) paste(x, "-", collapse=""))
+For2019 <- bind_rows(For2019,totais) %>% arrange(Unidade, `Nome Curso`)
+
+
+colnames(For2019)[1] <- "Unidade Acadêmica/Curso"
+
+Tabela3.32 <- Tabela3.32[-c(94),] 
+Tabela3.32 <- full_join(Tabela3.32, For2019) 
+
+Tabela3.32[63,6] <- "Ida -"
+Tabela3.32[70,6] <- "IG -"
+Tabela3.32[82,6] <- "IP -"
+Tabela3.32[83,6] <- "IP -"
+Tabela3.32[93,6] <- "IREL -" #Tem que confirmar se esse curso pertence ao IREL
+
+Tabela3.32 <- Tabela3.32 %>% arrange(Unidade, `Unidade Acadêmica/Curso`) 
+Tabela3.32_rownames <- Tabela3.32$`Unidade Acadêmica/Curso`
+Tabela3.32 <- Tabela3.32 %>%  select(-`Unidade Acadêmica/Curso`, - Unidade)
+
+Tabela3.32 <- Tabela3.32 %>% mutate_if(is.character,as.numeric)
+Tabela3.32 <- Tabela3.32 %>% mutate_if(is.integer,as.numeric)
+
 Tabela3.32[is.na(Tabela3.32)] <- 0
-row.names(Tabela3.32) <- Tabela3.32$`Unidade Acadêmica/Curso`
-Tabela3.32 <- Tabela3.32 %>% select(-`Unidade Acadêmica/Curso`) 
 
-Tabela3.32[94,5] <- sum(Tabela3.32$`2018`)/2
-Tabela3.32[94,5] <- round(Tabela3.32[94,5])
 
-rm(For2018, totais)
+Total_2019 <- round(colSums(Tabela3.32, na.rm =T)/2)
+Tabela3.32 <- bind_rows(Tabela3.32,Total_2019)
+
+Tabela3.32_rownames <- c(Tabela3.32_rownames, "Total Geral")
+
+row.names(Tabela3.32) <- Tabela3.32_rownames
+
+#Retirar cursos com mais de 5 anos sem dados
+#Tabela3.32 <- Tabela3.32[-99,] # Não rodei essa linha, porque, embora haja mais de 5 anos sem dados de diplomados, em 2015, houve ingressante e registrados nesse curso
+
+rm(For2019, totais, Total_2019, Tabela3.32_rownames)
+
+
 
 # Tabela 3.06 Mestrado e Doutorado por Sexo -------------------------------------------------------------
 
@@ -623,31 +805,36 @@ Tabela3.06[is.na(Tabela3.06)] <- 0
 
 Tabela3.06$Total <- rowSums(Tabela3.06[,c(5,8)], na.rm = TRUE)
 
-totais <- Tabela3.06 %>% group_by(Unidade) %>% select(-"Nome Curso") %>%  summarize_all(sum, na.rm = TRUE) %>% left_join(Label_Unidades, by = "Unidade")
+totais <- Tabela3.06 %>% group_by(Unidade) %>% select(-"Nome Curso") %>%  summarize_all(sum, na.rm = TRUE) %>% left_join(label_unidade, by = "Unidade")
+colnames(totais)[9] <- "Nome Curso"
 
 Tabela3.06$Unidade <- sapply(Tabela3.06$Unidade, function(x) paste(x, "-", collapse=""))
 
 Tabela3.06 <-  bind_rows(Tabela3.06, totais) %>% arrange(Unidade, `Nome Curso`)
 
-row.names(Tabela3.06) <- Tabela3.06$`Nome Curso`
+Tabela3.06_rownames <- Tabela3.06$`Nome Curso`
 Tabela3.06 <- Tabela3.06 %>% select(-`Nome Curso`, -`Unidade`)
 
-Total_Geral <- colSums(Tabela3.06, na.rm=T)/2
+Total_Geral <- round(colSums(Tabela3.06, na.rm=T)/2)
 
 Tabela3.06 <- rbind(Tabela3.06, Total_Geral)
-row.names(Tabela3.06)[122] <- "Total Geral"
+Tabela3.06_rownames <- c(Tabela3.06_rownames, "Total Geral")
+
+row.names(Tabela3.06) <- Tabela3.06_rownames
+
+#Tabela 3.06.2
 
 Tabela3.06.2 <- totais %>% arrange(desc(Total)) %>% select(1,8)
 
-row.names(Tabela3.06.2) <- Tabela3.06.2$Unidade
+Tabela3.06.2_rownames <- Tabela3.06.2$Unidade
 Tabela3.06.2 <- Tabela3.06.2 %>% select(-`Unidade`)
+row.names(Tabela3.06.2) <- Tabela3.06.2_rownames
 
-
-rm(D2, M2, md, totais, Total_Geral)
+rm(D2, M2, md, totais, Total_Geral, Tabela3.06_rownames, Tabela3.06.2_rownames)
 
 ### exportei apenas esta tabela pois estava errada
 ### falta formatá-la para o arquivo final
-rio::export(list(Tabela3.06, Tabela3.06.2), "Tabela3.06.xlsx", row.names = TRUE)
+#rio::export(list(Tabela3.06, Tabela3.06.2), "Tabela3.06.xlsx", row.names = TRUE)
 
 # Tabela 3.07 Mestrado e Doutorado por Curso ------------------------------
 
@@ -663,191 +850,48 @@ Tabela3.07[is.na(Tabela3.07)] <- 0
 
 Tabela3.07$`Total Alunos` <- rowSums(Tabela3.07[,c(3,5)])
 
-Tabela3.07 <- left_join(Tabela3.07, Label_Unidades)
+Tabela3.07 <- left_join(Tabela3.07, label_unidade)
 
-row.names(Tabela3.07) <- Tabela3.07$`Nome Curso`
+colnames(Tabela3.07)[7] <- "Nome Curso"
+
+Tabela3.07_rownames <- Tabela3.07$`Nome Curso`
 Tabela3.07 <- Tabela3.07 %>% select(-`Nome Curso`, -`Unidade`)
 
 Total_Geral <- round(as.numeric(colSums(Tabela3.07, na.rm=T)),0)
 
 Tabela3.07 <- rbind(Tabela3.07, Total_Geral)
-row.names(Tabela3.07)[31] <- "Total Geral"
+Tabela3.07_rownames <- c(Tabela3.07_rownames, "Total Geral")
 
-rm(Doc, Dout, Mest, Mestr, Total_Geral)
+row.names(Tabela3.07) <- Tabela3.07_rownames
+
+rm(Doc, Dout, Mest, Mestr, Total_Geral, Tabela3.07_rownames)
+
+# Limpeza remanescente
+
+rm(Completo, EvoForD, EvoIngD, label_unidade, Nomes, anobase)
 
 # Excel -------------------------------------------------------------------
 
-# REVER TODA ESSA PARTE
-# ACHO QUE NÃO PRECISAMOS MAIS
-
-library(openxlsx)
-library(xlsx)
-
-wb <- createWorkbook()
-
-#Tabela 3.23
-sheet <- createSheet(wb, sheetName="Tabela 3.23")
-addDataFrame(Tabela3.23, sheet, row.names = T, startRow=6, startColumn = 4)
-cb <- CellBlock(sheet, 2, 4, 3, 1, create=TRUE) 
-x <- c("Tabela 3.23 - Ingresso de Alunos e Número de Teses Homologadas nos Cursos de Doutorado, por Unidade Acadêmica e Curso, UnB, 2017")
-CB.setRowData(cb, x, 1, F)
-cb <- CellBlock(sheet, 4, 4, 1, 60, create=TRUE)
-x <- c("Unidade Acadêmica/Curso", "Ingresso de Alunos", rep(NA,6), "Teses Homologadas")
-CB.setRowData(cb, x, 1, F) 
-cb <- CellBlock(sheet, 5, 5, 1, 60, create=TRUE)
-x <- c("1° Sem.", NA,NA,  "2° Sem.", NA,NA, "Total Ingressantes", "1° Sem.", NA,NA,  "2° Sem.", NA,NA, "Total Formados")
-CB.setRowData(cb, x, 1, F) 
-cb <- CellBlock(sheet, 6, 5, 1, 60, create=TRUE)
-x <- c("Fem.", "Masc.", "Total", "Fem.", "Masc.", "Total", NA, "Fem.", "Masc.", "Total")
-CB.setRowData(cb, x, 1, F)
-addDataFrame(Tabela3.23.2, sheet, row.names = T, startRow=6, startColumn = 21)
+#Mudei para uma programação que me sinto mais confortável na hora de salvar em excel
 
 
-#Tabela 3.24
-sheet <- createSheet(wb, sheetName="Tabela 3.24")
-addDataFrame(Tabela3.24, sheet, row.names = T, startRow=5, startColumn = 4)
-cb <- CellBlock(sheet, 2, 4, 1, 60, create=TRUE) 
-x <- c("Tabela 3.24 - Alunos Ingressantes e Concluintes nos Cursos de Doutorado, por Sexo e Faixa Etária, UnB, 2017")
-CB.setRowData(cb, x, 1, F)
-cb <- CellBlock(sheet, 4, 4, 1, 60, create=TRUE) 
-x <- c("Faixa Etária", "Ingressantes", rep(NA,4), "Concluintes")
-CB.setRowData(cb, x, 1, F)
-cb <- CellBlock(sheet, 5, 5, 1, 60, create=TRUE)
-x <- c("Fem.","%", "Masc.","%","Total", "Fem.","%", "Masc.","%","Total")
-CB.setRowData(cb, x, 1, F)
+list_of_datasets <- list("Tabela 3.06" = Tabela3.06,
+                         "Tabela 3.06.2" = Tabela3.06.2,
+                         "Tabela 3.07" = Tabela3.07,
+                         "Tabela 3.23" = Tabela3.23,
+                         "Tabela 3.23.2" = Tabela3.23.2,
+                         "Tabela 3.24" = Tabela3.24,
+                         "Tabela 3.25" = Tabela3.25,
+                         "Tabela 3.26" = Tabela3.26,
+                         "Tabela 3.27" = Tabela3.27,
+                         "Tabela 3.27.2" = Tabela3.27.2,
+                         "Tabela 3.28" = Tabela3.28,
+                         "Tabela 3.29" = Tabela3.29,
+                         "Tabela 3.30" = Tabela3.30,
+                         "Tabela 3.31" = Tabela3.31,
+                         "Tabela 3.32" = Tabela3.32)
+                         
+                         
 
+write.xlsx(list_of_datasets, file = "Tabelas_Doutorado_Anuário_2019.xlsx", row.names=T)
 
-#Tabela 3.25
-sheet <- createSheet(wb, sheetName="Tabela 3.25")
-addDataFrame(Tabela3.25, sheet, row.names = T, startRow=5, startColumn = 4)
-cb <- CellBlock(sheet, 2, 4, 1, 60, create=TRUE) 
-x <- c("Tabela 3.25 - Alunos Regulares Ativos, Matrículas e Aprovações em Disciplinas* nos Cursos de Doutorado, por Unidade Acadêmica e Curso, UnB, 2017")
-CB.setRowData(cb, x, 1, F)
-cb <- CellBlock(sheet, 4, 4, 1, 60, create=TRUE) 
-x <- c("Unidade Acadêmica/Curso", NA, "Alunos Ativos", NA, "Aprovado", NA, "Reprovado", NA, "% Aprovado/Matriculado", NA, "% Reprovado/Matriculado", NA)
-CB.setRowData(cb, x, 1, F)
-cb <- CellBlock(sheet, 5, 5, 1, 60, create=TRUE)
-x <- c("1° Sem.","2° Sem.", "1° Sem.", "2° Sem.","1° Sem.", "2° Sem.","1° Sem.", "2° Sem.")
-CB.setRowData(cb, x, 1, F)
-
-
-#Tabela 3.26
-sheet <- createSheet(wb, sheetName="Tabela 3.26")
-addDataFrame(Tabela3.26, sheet, row.names = T, startRow=5, startColumn = 4)
-cb <- CellBlock(sheet, 2, 4, 1, 60, create=TRUE) 
-x <- c("Tabela 3.26 - Alunos Regulares Registrados nos Cursos de Doutorado, por Sexo e Faixa Etária, UnB, 2º/2017")
-CB.setRowData(cb, x, 1, F)
-cb <- CellBlock(sheet, 5, 4, 1, 60, create=TRUE) 
-x <- c("Faixa Etária", "Fem.", "%", "Masc.", "%", "Total")
-CB.setRowData(cb, x, 1, F)
-
-
-#Tabela 3.27
-sheet <- createSheet(wb, sheetName="Tabela 3.27")
-addDataFrame(Tabela3.27, sheet, row.names = T, startRow=5, startColumn = 4)
-cb <- CellBlock(sheet, 2, 4, 3, 1, create=TRUE) 
-x <- c("Tabela 3.27 - Alunos Regulares Registrados nos Cursos de Doutorado, por Semestre, Unidade Acadêmica, Curso e Sexo, UnB, 2017")
-CB.setRowData(cb, x, 1, F)
-cb <- CellBlock(sheet, 4, 4, 1, 60, create=TRUE)
-x <- c("Unidade Acadêmica/Curso", "Alunos Regulares Registrados", "1° Sem.", NA,NA,  "2° Sem.")
-CB.setRowData(cb, x, 1, F) 
-cb <- CellBlock(sheet, 5, 5, 1, 60, create=TRUE)
-x <- c("Fem.", "Masc.", "Total", "Fem.", "Masc.", "Total")
-CB.setRowData(cb, x, 1, F)
-addDataFrame(Tabela3.27.2, sheet, row.names = T, startRow=6, startColumn = 13)
-
-
-#Tabela 3.28
-sheet <- createSheet(wb, sheetName="Tabela 3.28")
-addDataFrame(Tabela3.28, sheet, row.names = T, startRow=6, startColumn = 4)
-cb <- CellBlock(sheet, 2, 4, 3, 1, create=TRUE) 
-x <- c("Tabela 3.28 - Alunos Regulares Registrados Ativos e com Trancamento Geral de Matrícula nos Cursos de Doutorado, por Semestre, Sexo, Unidade Acadêmica e Curso, UnB, 2017")
-CB.setRowData(cb, x, 1, F)
-cb <- CellBlock(sheet, 4, 4, 1, 60, create=TRUE)
-x <- c("Unidade Acadêmica/Curso", "Ativos", rep(NA,5), "Com Trancamento Geral de Matrícula", rep(NA,5), "Total")
-CB.setRowData(cb, x, 1, F) 
-cb <- CellBlock(sheet, 5, 5, 1, 60, create=TRUE)
-x <- c("1° Sem.",NA,NA, "2° Sem.",NA,NA, "1° Sem.",NA,NA, "2° Sem.",NA,NA, "1° Sem.",NA,NA, "2° Sem.")
-CB.setRowData(cb, x, 1, F) 
-cb <- CellBlock(sheet, 6, 5, 1, 60, create=TRUE)
-x <- c("Fem.","Masc.","Total", "Fem.","Masc.","Total", "Fem.","Masc.","Total",
-       "Fem.","Masc.","Total", "Fem.","Masc.","Total", "Fem.","Masc.", "Total")
-CB.setRowData(cb, x, 1, F)
-
-
-#Tabela 3.29
-sheet <- createSheet(wb, sheetName="Tabela 3.29")
-addDataFrame(Tabela3.29, sheet, row.names = T, startRow=6, startColumn = 4)
-cb <- CellBlock(sheet, 2, 4, 3, 1, create=TRUE) 
-x <- c("Tabela 3.29 - Desligamento de Alunos nos Cursos de Doutorado, por Forma, Semestre, Unidade Acadêmica e Curso, UnB, 2017")
-CB.setRowData(cb, x, 1, F)
-cb <- CellBlock(sheet, 4, 4, 1, 60, create=TRUE)
-x <- c("Unidade Acadêmica/Curso", "Regulares Registrados (2º Semestre)", "Forma de Desligamento")
-CB.setRowData(cb, x, 1, F) 
-cb <- CellBlock(sheet, 5, 6, 1, 60, create=TRUE)
-x <- c("Abandono",NA, "Desl. Voluntário",NA, "Falta de Rendimento.",NA, "Outros",NA, "Total")
-CB.setRowData(cb, x, 1, F) 
-cb <- CellBlock(sheet, 6, 5, 1, 60, create=TRUE)
-x <- c(NA,"1° Sem.","2° Sem.", "1° Sem.", "2° Sem.","1° Sem.", "2° Sem.","1° Sem.", "2° Sem.","1° Sem.", "2° Sem.")
-CB.setRowData(cb, x, 1, F)
-
-
-#Tabela 3.30
-sheet <- createSheet(wb, sheetName="Tabela 3.30")
-addDataFrame(Tabela3.30, sheet, row.names = T, startRow=4, startColumn = 4)
-cb <- CellBlock(sheet, 2, 4, 1, 60, create=TRUE) 
-x <- c("Tabela 3.30 - Evolução do Ingresso de Alunos nos Cursos de Doutorado, por Unidade Acadêmica e Curso, UnB, 2011 a 2017")
-CB.setRowData(cb, x, 1, F)
-cb <- CellBlock(sheet, 4, 4, 1, 1, create=TRUE) 
-x <- c("Unidade Acadêmica/Curso")
-CB.setRowData(cb, x, 1, F)
-
-
-#Tabela 3.31
-sheet <- createSheet(wb, sheetName="Tabela 3.31")
-addDataFrame(Tabela3.31, sheet, row.names = T, startRow=4, startColumn = 4)
-cb <- CellBlock(sheet, 2, 4, 1, 60, create=TRUE) 
-x <- c("Tabela 3.31 - Evolução do Número de Alunos Registrados* nos Cursos de Doutorado, por Unidade Acadêmica e Curso, UnB, 2011 a 2017")
-CB.setRowData(cb, x, 1, F)
-cb <- CellBlock(sheet, 4, 4, 1, 1, create=TRUE) 
-x <- c("Unidade Acadêmica/Curso")
-CB.setRowData(cb, x, 1, F)
-
-
-#Tabela 3.32
-sheet <- createSheet(wb, sheetName="Tabela 3.32")
-addDataFrame(Tabela3.32, sheet, row.names = T, startRow=4, startColumn = 4)
-cb <- CellBlock(sheet, 2, 4, 1, 60, create=TRUE) 
-x <- c("Tabela 3.32 - Evolução do Número de Alunos com Teses Homologadas nos Cursos de Doutorado, por Unidade Acadêmica e Curso, UnB, 2011 a 2017")
-CB.setRowData(cb, x, 1, F)
-cb <- CellBlock(sheet, 4, 4, 1, 1, create=TRUE) 
-x <- c("Unidade Acadêmica/Curso")
-CB.setRowData(cb, x, 1, F)
-
-
-#Tabela 3.06
-sheet <- createSheet(wb, sheetName="Tabela 3.06")
-addDataFrame(Tabela3.06, sheet, row.names = T, startRow=4, startColumn = 4)
-cb <- CellBlock(sheet, 2, 4, 1, 60, create=TRUE) 
-x <- c("Tabela 3.06 - Número de Alunos de Mestrado e Doutorado por Sexo")
-CB.setRowData(cb, x, 1, F)
-cb <- CellBlock(sheet, 4, 4, 1, 1, create=TRUE) 
-x <- c("Unidade Acadêmica/Curso")
-CB.setRowData(cb, x, 1, F)
-addDataFrame(Tabela3.06.2, sheet, row.names = F, startRow=6, startColumn = 14)
-
-
-#Tabela 3.07
-sheet <- createSheet(wb, sheetName="Tabela 3.07")
-addDataFrame(Tabela3.07, sheet, row.names = F, startRow=5, startColumn = 4)
-cb <- CellBlock(sheet, 2, 4, 1, 60, create=TRUE) 
-x <- c("Tabela 3.07 - Número de Cursos e Alunos de Mestrado e Doutorado")
-CB.setRowData(cb, x, 1, F)
-cb <- CellBlock(sheet, 4, 4, 1, 5, create=TRUE) 
-x <- c("Unidade Acadêmica/Curso", "Mestrado", NA,NA, "Doutorado")
-CB.setRowData(cb, x, 1, F)
-
-
-saveWorkbook(wb, "dados_doutorado/Anuário Doutorado 2 UnB 2019.xlsx") # and of course you need to save it.
-
-rm(wb,cb,sheet,x)
