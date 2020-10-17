@@ -1,0 +1,43 @@
+# Extensão {#ext}
+
+
+```{r}
+options(scipen = 9)
+cursos_extensao <- rio::import("dados_extensao/extensao.xlsx", sheet=1)
+
+```
+
+```{r cursos_extensao}
+#xfun::embed_file("")
+cursos_extensao %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Cursos, minicursos e eventos de extensão, 2019", negrito = TRUE, tamfonte = 14, fundo = "#828065") %>% footnote(general = c("SIEX/DEX"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+unidades_extensao <- rio::import("dados_extensao/extensao.xlsx", sheet=2)
+
+```
+
+```{r unidades_extensao}
+#xfun::embed_file("")
+unidades_extensao %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Ações de extensão por centro de custo, 2019", negrito = TRUE, tamfonte = 14, fundo = "#828065") %>% footnote(general = c("SIEX/DEX"),
+           general_title = "Fonte:")
+```
+
+```{r}
+publico_extensao <- rio::import("dados_extensao/extensao.xlsx", sheet=3)
+
+```
+
+```{r publico_extensao}
+#xfun::embed_file("")
+publico_extensao %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Ações de extensão por centro de custo, 2019", negrito = TRUE, tamfonte = 14, fundo = "#828065") %>% footnote(number = c("ND : Não Disponível"),general = c("SIEX/DEX"),
+           general_title = "Fonte:")
+```

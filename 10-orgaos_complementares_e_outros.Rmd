@@ -1,0 +1,1074 @@
+# Órgãos Complementares, Centros, Assessorias, Secretarias e Unidades Auxiliares {#org}
+
+# Órgãos Complementares {-}
+
+## Hospital Universitário de Brasília (HUB) {-}
+<br><br>
+
+```{r}
+options(scipen = 9)
+indicadores_prod <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=1)
+
+```
+
+
+```{r indicadores_prod}
+#xfun::embed_file("")
+
+indicadores_prod %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Indicadores de produtividade, 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote(number = c("Não inclui outros procedimentos médicos","Inclui: Nutrição, Enfermagem, Psicologia, Serviço Social e Fisioterapia.","Outros Exames: Espirografia, Gasometria, Broncoscopia, Endoscopia Digestiva Baixa, Reabilitação Pulmonar, Laboratório de Reumatologia e Urodinâmica."),general = c("HUB/Serviço de Estatística"),
+           general_title = "Fonte:")
+```
+
+```{r}
+despesas_hub <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=2)
+
+```
+
+
+```{r despesas_hub}
+#xfun::embed_file("")
+despesas_hub %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Despesas realizadas pelo HUB, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote(general = c("Divisão de Administração e Finanças – DAF/HUB"),
+           general_title = "Fonte:")
+```
+
+```{r}
+programa_residencia <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=3)
+
+```
+
+
+```{r programa_residencia}
+#xfun::embed_file("")
+programa_residencia %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Programa de residência médica, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote(general = c("Diretoria Adjunta de Ensino e Pesquisa - DAEP/HUB/UnB"),
+           general_title = "Fonte:")
+```
+
+## Arquivo Central (ACE) {-}
+<br><br>
+
+```{r}
+custos <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=4)
+
+```
+
+
+```{r custos}
+#xfun::embed_file("")
+custos %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Custos (R$), 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote(general = c("ACE"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+projetos_ace <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=5)
+
+```
+
+
+```{r projetos_ace}
+#xfun::embed_file("")
+projetos_ace %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Projetos arquivísticos, 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote(number = c("ND : Não Disponível"),general = c("ACE"),
+           general_title = "Fonte:")
+```
+
+```{r}
+documentos_ace <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=6)
+
+```
+
+
+```{r documentos_ace}
+#xfun::embed_file("")
+documentos_ace %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Documentos tratados arquivisticamente , 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("ACE"),
+           general_title = "Fonte:")
+```
+
+## Biblioteca Central (BCE) {-}
+<br><br>
+
+
+```{r}
+bce_servicos <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=7)
+
+```
+
+
+```{r bce_servicos}
+#xfun::embed_file("")
+bce_servicos %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução dos serviços prestados pela BCE - empréstimo por tipo de material, 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("BCE"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+bce_servicos2 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=8)
+
+```
+
+
+```{r bce_servicos2}
+#xfun::embed_file("")
+bce_servicos2 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução dos serviços prestados pela BCE - empréstimo por categoria de usuário, 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("BCE"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+bce_servicos3 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=9)
+
+```
+
+
+```{r bce_servicos3}
+#xfun::embed_file("")
+bce_servicos3 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução dos serviços prestados pela BCE - tipos, 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("BCE"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+bce_servicos4 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=10)
+
+```
+
+
+```{r bce_servicos4}
+#xfun::embed_file("")
+bce_servicos3 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução dos serviços prestados pela BCE - acessos as bases de dados, 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("BCE"),
+           general_title = "Fonte:")
+```
+
+```{r}
+bce_servicos5 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=11)
+
+```
+
+
+```{r bce_servicos5}
+#xfun::embed_file("")
+bce_servicos5 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução dos serviços prestados pela BCE - comutação bibliográfica, 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("BCE"),
+           general_title = "Fonte:")
+```
+
+```{r}
+bce_servicos6 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=12)
+
+```
+
+
+```{r bce_servicos6}
+#xfun::embed_file("")
+bce_servicos6 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução dos serviços prestados pela BCE - informações adicionais, 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("BCE"),
+           general_title = "Fonte:")
+```
+
+```{r}
+acervo_bce <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=13)
+
+```
+
+
+```{r acervo_bce}
+#xfun::embed_file("")
+acervo_bce %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Acervo da BCE - Acervo Biblioteca Central por Tipo de Material¹, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("BCE"),
+           general_title = "Fonte:")
+```
+
+```{r}
+acervo_bce1 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=14)
+
+```
+
+
+```{r acervo_bce1}
+#xfun::embed_file("")
+acervo_bce1 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Acervo da BCE - Acervo Digital, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("BCE"),
+           general_title = "Fonte:")
+```
+
+```{r}
+acervo_bce2 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=15)
+
+```
+
+
+```{r acervo_bce2}
+#xfun::embed_file("")
+acervo_bce2 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Acervo da BCE - Acervo Biblioteca  Planaltina por Tipo de Material, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("BCE"),
+           general_title = "Fonte:")
+```
+
+```{r}
+acervo_bce3 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=16)
+
+```
+
+
+```{r acervo_bce3}
+#xfun::embed_file("")
+acervo_bce3 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Acervo da BCE - Acervo Biblioteca Ceilândia por tipo de Material, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("BCE"),
+           general_title = "Fonte:")
+```
+
+```{r}
+acervo_bce4 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=17)
+
+```
+
+
+```{r acervo_bce4}
+#xfun::embed_file("")
+acervo_bce4 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Acervo da BCE - Acervo Biblioteca Gama por tipo de Material, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("BCE"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+acervo_bce5 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=18)
+
+```
+
+
+```{r acervo_bce5}
+#xfun::embed_file("")
+acervo_bce5 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Acervo da BCE - Acervo Biblioteca Darcy e Berta Ribeiro por tipo de Material, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("BCE"),
+           general_title = "Fonte:")
+```
+
+```{r}
+acervo_bce6 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=19)
+
+```
+
+
+```{r acervo_bce6}
+#xfun::embed_file("")
+acervo_bce6 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Acervo da BCE - Acervo Biblioteca CEDIARTE  por tipo de Material, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("BCE"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+acervo_bce7 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=20)
+
+```
+
+
+```{r acervo_bce7}
+#xfun::embed_file("")
+acervo_bce7 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Acervo da BCE - Biblioteca Digital, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("BCE"),
+           general_title = "Fonte:")
+```
+
+```{r}
+acervo_bce8 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=21)
+
+```
+
+
+```{r acervo_bce8}
+#xfun::embed_file("")
+acervo_bce8 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Acervo da BCE - Aquisição BCE, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("BCE"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+acervo_bce9<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=22)
+
+```
+
+
+```{r acervo_bce9}
+#xfun::embed_file("")
+acervo_bce9 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Acervo da BCE - Doação incorporada ao acervo , 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("BCE"),
+           general_title = "Fonte:")
+```
+
+```{r}
+acervo_bce10<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=23)
+
+```
+
+
+```{r acervo_bce10}
+#xfun::embed_file("")
+acervo_bce10 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Acervo da BCE - Permuta , 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("BCE"),
+           general_title = "Fonte:")
+```
+
+## Editora Universidade de Brasília (EDU) {-}
+<br><br>
+
+```{r}
+servicos_edu<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=24)
+
+```
+
+
+```{r servicos_edu}
+#xfun::embed_file("")
+servicos_edu %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Serviços executados, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("Editora Universidade de Brasília – EDU"),
+           general_title = "Fonte:")
+```
+
+## Fazenda Água Limpa (FAL) {-}
+<br><br>
+
+```{r}
+frequentadores_fal<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=25)
+
+```
+
+
+```{r frequentadores_fal}
+#xfun::embed_file("")
+frequentadores_fal %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Frequentadores da FAL, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("FAL"),
+           general_title = "Fonte:")
+```
+
+```{r}
+animais_fal<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=26)
+
+```
+
+
+```{r animais_fal}
+#xfun::embed_file("")
+animais_fal %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Animais de Criação, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("FAL"),
+           general_title = "Fonte:")
+```
+
+```{r}
+producao_fal<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=27)
+
+```
+
+
+```{r producao_fal}
+#xfun::embed_file("")
+producao_fal %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Produção anual comercializada, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("FAL"),
+           general_title = "Fonte:")
+```
+
+## Parque Científico e Tecnológico (PCTec) {-}
+<br><br>
+
+
+```{r}
+pctec<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=28)
+
+```
+
+
+```{r pctec}
+#xfun::embed_file("")
+pctec %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Parque Científico e Tecnológico, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (number = c("Áreas de atuação do Parque Científico e Tecnológico: Biotecnologia; Tecnologia da Informação e Comunicação – TICs; Eficiência Energética; Tecnologias Ambientais; Tecnologias da Educação, Inteligência Urbana","Estimativa dos empregos gerados pelas empresas residentes, sem contar os gerados nas fabricas das empresas  e os empregos gerados pelas contratações de ganhadores dos Hackatons e eventos realizados pelo PCTec"),general = c("PCTec"),
+           general_title = "Fonte:")
+```
+
+```{r}
+eventos_pctec<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=29)
+
+```
+
+
+```{r eventos_pctec}
+#xfun::embed_file("")
+eventos_pctec %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Eventos Acadêmicos, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("PCTec"),
+           general_title = "Fonte:")
+```
+
+# Centros {-}
+
+## Centro de Informática (CPD) {-}
+<br><br>
+
+
+```{r}
+sistemas_cpd<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=30)
+
+```
+
+
+```{r sistemas_cpd}
+#xfun::embed_file("")
+sistemas_cpd %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Resumo Estatístico de Desempenho - Utilização dos Sistemas Administrativos/Acadêmicos Legados (VB e JAVA, em produção), 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("Serviço de Estratégia de Dados/CPD"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+sistemas_cpd1<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=31)
+
+```
+
+
+```{r sistemas_cpd1}
+#xfun::embed_file("")
+sistemas_cpd1 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Resumo Estatístico de Desempenho - Utilização dos Sistemas Integrados de Gestão - SIG (em produção), 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("Serviço de Estratégia de Dados/CPD"),
+           general_title = "Fonte:")
+```
+
+## Centro de Seleção e Promoção de Eventos (CESPE) {-}
+<br><br>
+
+```{r}
+inscritos_cespe<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=32)
+
+```
+
+
+```{r inscritos_cespe}
+#xfun::embed_file("")
+inscritos_cespe %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Inscritos no Programa de Avaliação Seriada – PAS, por tipos de escolas, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CESPE (CEBRASPE)"),
+           general_title = "Fonte:")
+```
+
+```{r}
+regiao_cespe<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=33)
+
+```
+
+
+```{r regiao_cespe}
+#xfun::embed_file("")
+regiao_cespe %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Distribuição do Número de Inscritos no PAS, por Região – Ano 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CESPE (CEBRASPE)"),
+           general_title = "Fonte:")
+```
+
+```{r}
+inscritos_pas<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=34)
+
+```
+
+
+```{r inscritos_pas}
+#xfun::embed_file("")
+inscritos_pas %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Inscritos, candidatos que compareceram e percentual de frequência, por tipo de escola – Ano 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CESPE (CEBRASPE)"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+classificados_pas<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=35)
+
+```
+
+
+```{r classificados_pas}
+#xfun::embed_file("")
+classificados_pas %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("classificados e selecionados, por tipo de escola – Ano 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CESPE (CEBRASPE)"),
+           general_title = "Fonte:")
+```
+
+## Centro de Apoio ao Desenvolvimento Tecnológico (CDT) {-}
+<br><br>
+
+
+```{r}
+cdt_ensinograd<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=36)
+
+```
+
+
+```{r cdt_ensinograd}
+#xfun::embed_file("")
+cdt_ensinograd %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Ações de ensino e extensão promovidas pelo CDT - Ensino na Graduação, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CDT"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+cdt_ensinograd2<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=37)
+
+```
+
+
+```{r cdt_ensinograd2}
+#xfun::embed_file("")
+cdt_ensinograd2 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Ações de ensino e extensão promovidas pelo CDT - Ensino na Graduação (métrica acadêmica), 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CDT"),
+           general_title = "Fonte:")
+```
+
+```{r}
+cdt_pos<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=38)
+
+```
+
+
+```{r cdt_pos}
+#xfun::embed_file("")
+cdt_pos %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Ações de ensino e extensão promovidas pelo CDT - Ensino na Pós-Graduação (PROFNIT), 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CDT"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+cdt_extensao<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=39)
+
+```
+
+
+```{r cdt_extensao}
+#xfun::embed_file("")
+cdt_extensao %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Ações de ensino e extensão promovidas pelo CDT - Extensão, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CDT"),
+           general_title = "Fonte:")
+```
+
+```{r}
+cdt_pesquisa<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=40)
+
+```
+
+
+```{r cdt_pesquisa}
+#xfun::embed_file("")
+cdt_pesquisa %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Projetos de Pesquisa, Desenvolvimento e Inovação – PD&I do CDT, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CDT"),
+           general_title = "Fonte:")
+```
+
+```{r}
+cdt_pi<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=41)
+
+```
+
+
+```{r cdt_pi}
+#xfun::embed_file("")
+cdt_pi %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral(" Propriedade intelectual e transferência de tecnologia - Serviços Tecnológicos, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CDT"),
+           general_title = "Fonte:")
+```
+
+```{r}
+cdt_pi2<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=42)
+
+```
+
+
+```{r cdt_pi2}
+#xfun::embed_file("")
+cdt_pi2 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral(" Propriedade intelectual e transferência de tecnologia - Propriedade Intelectual e Transferência de Tecnologia, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CDT"),
+           general_title = "Fonte:")
+```
+
+```{r}
+cdt_pi3<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=43)
+
+```
+
+
+```{r cdt_pi3}
+#xfun::embed_file("")
+cdt_pi3 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Propriedade intelectual e transferência de tecnologia - Agência de Comercialização de Tecnologias, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CDT"),
+           general_title = "Fonte:")
+```
+
+```{r}
+cdt_incubacao<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=44)
+
+```
+
+
+```{r cdt_incubacao}
+#xfun::embed_file("")
+cdt_incubacao %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Incubação de empresas, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CDT"),
+           general_title = "Fonte:")
+```
+
+
+## Centro de Estudos Avançados e Multidisciplinares (CEAM) {-}
+<br><br>
+
+```{r}
+ceam_extensao<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=45)
+
+```
+
+
+```{r ceam_extensao}
+#xfun::embed_file("")
+ceam_extensao %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Atividades desenvolvidas pelo CEAM por meio dos Núcleos Temáticos -  eventos de extensão realizados: cursos, minicursos e oficinas, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CEAM"),
+           general_title = "Fonte:")
+```
+
+```{r}
+ceam_projetos<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=46)
+
+```
+
+
+```{r ceam_projetos}
+#xfun::embed_file("")
+ceam_projetos %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Atividades desenvolvidas pelo CEAM por meio dos Núcleos Temáticos - projetos de ação contínua, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CEAM"),
+           general_title = "Fonte:")
+```
+
+```{r}
+ceam_especializacao<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=47)
+
+```
+
+
+```{r ceam_especializacao}
+#xfun::embed_file("")
+ceam_especializacao %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Atividades desenvolvidas pelo CEAM por meio dos Núcleos Temáticos - cursos de especialização, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CEAM"),
+           general_title = "Fonte:")
+```
+
+## Centro de Formação de Recursos Humanos em Transportes (CEFTRU) {-}
+<br><br>
+
+
+```{r}
+ceftru_projetos<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=48)
+
+```
+
+
+```{r ceftru_projetos}
+#xfun::embed_file("")
+ceftru_projetos %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Projetos desenvolvidos, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CEFTRU"),
+           general_title = "Fonte:")
+```
+
+## Centro de Excelência em Turismo (CET) {-}
+<br><br>
+
+```{r}
+cet_cursos<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=49)
+
+```
+
+
+```{r cet_cursos}
+cet_cursos %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Cursos, palestras e eventos eealizados pelo CET, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CET"),
+           general_title = "Fonte:")
+```
+
+```{r}
+cet_pesquisa<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=50)
+
+```
+
+
+```{r cet_pesquisa}
+cet_pesquisa %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Projetos de pesquisa do CET, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CET"),
+           general_title = "Fonte:")
+```
+
+```{r}
+cet_producao<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=51)
+
+```
+
+
+```{r cet_producao}
+cet_producao %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Produção científica, cultural e artística do CET, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CET"),
+           general_title = "Fonte:")
+```
+
+
+## Centro de Educação a Distância (CEAD) {-}
+<br><br>
+
+```{r}
+cead_extensao<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=52)
+
+```
+
+
+```{r cead_extensao}
+cead_extensao %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Atividades de extensão desenvolvidas pelo CEAD - cursos de extensão, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CEAD"),
+           general_title = "Fonte:")
+```
+
+```{r}
+cead_especializacao<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=53)
+
+```
+
+
+```{r cead_especializacao}
+cead_especializacao %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Atividades de extensão desenvolvidas pelo CEAD - cursos de especialização (Programa UAB), 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CEAD"),
+           general_title = "Fonte:")
+```
+
+
+## Centro de Produção Cultural e Educativa (CPCE) {-}
+<br><br>
+
+```{r}
+cpce<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=54)
+
+```
+
+
+```{r cpce}
+cpce %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Principais atividades do CPCE por mês, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CPCE"),
+           general_title = "Fonte:")
+```
+
+# Assessorias e Secretarias {-}
+
+## Assessoria de Assuntos Internacionais (INT) {-}
+<br><br>
+
+```{r}
+int_africa<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=55)
+
+```
+
+
+```{r int_africa}
+int_africa %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Visitas de cortesia, delegações e eventos por continente e países - África, 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INT"),
+           general_title = "Fonte:")
+```
+
+```{r}
+int_america<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=56)
+
+```
+
+
+```{r int_america}
+int_america %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Visitas de cortesia, delegações e eventos por continente e países - América, 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INT"),
+           general_title = "Fonte:")
+```
+
+```{r}
+int_asia<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=57)
+
+```
+
+
+```{r int_asia}
+int_asia %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Visitas de cortesia, delegações e eventos por continente e países - Ásia, 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INT"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+int_europa<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=58)
+
+```
+
+
+```{r int_europa}
+int_europa %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Visitas de cortesia, delegações e eventos por continente e países - Europa, 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INT"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+int_oceania<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=59)
+
+```
+
+
+```{r int_oceania}
+int_oceania %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Visitas de cortesia, delegações e eventos por continente e países - Oceania, 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INT"),
+           general_title = "Fonte:")
+```
+
+```{r}
+int_delegacoes<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=60)
+
+```
+
+
+```{r int_delegacoes}
+int_delegacoes %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Delegações recebidas, 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INT"),
+           general_title = "Fonte:")
+```
+
+## Secretaria de Gestão Patrimonial (SGP) {-}
+<br><br>
+
+
+```{r}
+sgp_arrecadacoes<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=61)
+
+```
+
+
+```{r sgp_arrecadacoes}
+sgp_arrecadacoes %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Arrecadação com aluguéis (R$ 1,00), 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("SGP"),
+           general_title = "Fonte:")
+```
+
+```{r}
+sgp_imoveis<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=62)
+
+```
+
+
+```{r sgp_imoveis}
+sgp_imoveis %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Imóveis da FUB para locação, 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("SGP"),
+           general_title = "Fonte:")
+```
+
+```{r}
+sgp_outros<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=63)
+
+```
+
+
+```{r sgp_outros}
+sgp_outros %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Outros imóveis, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("SGP"),
+           general_title = "Fonte:")
+```
+
+# Unidades Auxiliares {-}
+
+## Secretaria de Infraestrutura (INFRA) {-}
+<br><br>
+
+```{r}
+infra_atividades<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=64)
+
+```
+
+
+```{r infra_atividades}
+infra_atividades %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Atividades desenvolvidas pela INFRA, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INFRA"),
+           general_title = "Fonte:")
+```
+
+```{r}
+infra_eventos<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=65)
+
+```
+
+
+```{r infra_eventos}
+infra_eventos %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Eventos realizados no auditório do SG10-CEPLAN, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INFRA"),
+           general_title = "Fonte:")
+```
+
+```{r}
+infra_obras1 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=66)
+
+```
+
+
+```{r infra_obras1}
+infra_obras1 %>% 
+  tabela_geral("Relatório de Obras - Obras e Reformas para atender portadores de Necessidades Especiais nos Campi e Unidades Dispersas da UnB, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INFRA"),
+           general_title = "Fonte:")
+```
+
+```{r}
+infra_obras2 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=67)
+
+```
+
+
+```{r infra_obras2}
+infra_obras2 %>% 
+  tabela_geral("Relatório de Obras - Atividades realizadas pela INFRA / DOB, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INFRA"),
+           general_title = "Fonte:")
+```
+
+## Prefeitura do Campus (PRC) {-}
+<br><br>
+
+```{r}
+prc1<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=68)
+
+```
+
+
+```{r prc1}
+prc1 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Manutenção: ordens de serviço executadas, 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("PRC/DIMAP - SICOS e SIPAC"),
+           general_title = "Fonte:")
+```
+
+```{r}
+prc2<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=69)
+
+```
+
+
+```{r prc2}
+prc2 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Atividades da Diretoria de Manutenção de Equipamentos e Transportes (PRC/DIMEQ) - QUANTIDADE DE ORDENS DE SERVIÇOS FINALIZADAS POR TIPO SERVIÇO/EQUIPAMENTO, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("PPRC/DIMEQ"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+prc3<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=70)
+
+```
+
+
+```{r prc3}
+prc3 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Atividades realizadas pela Coordenação de Zeladoria e Mudança, 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c(" PRC/DIMAP/CZM"),
+           general_title = "Fonte:")
+```
+
+
+## Observatório Sismológico (SIS) {-}
+<br><br>
+
+```{r}
+sis<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=71)
+
+```
+
+
+```{r sis}
+sis %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução do número anual de sismos brasileiros com magnitude maior ou igual a 3,0, 2015 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("SISBRA e Boletim Sísmico / SIS"),
+           general_title = "Fonte:")
+```
+
+```{r}
+sis2<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=72)
+
+```
+
+
+```{r sis2}
+sis2 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Visitantes da mostra sismológica do observatório sismológico - SIS, 2016 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (number = c("ND : Não Disponível","*A Mostra esteve fechada para reforma durante um período do ano de 2019."),general = c("SIS"),
+           general_title = "Fonte:")
+```

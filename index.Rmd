@@ -77,7 +77,7 @@ colorir <- function(tabela, dados, alpha = 0.2){
 # tabela geral
 tabela_geral <- function(dados, 
                          titulo, 
-                         negrito = TRUE, 
+                         linhatotal = TRUE,
                          tamfonte = 16, 
                          colunas = colnames(dados), 
                          fundo = NULL, 
@@ -85,7 +85,7 @@ tabela_geral <- function(dados,
   
   colnames(dados) <- str_to_upper(colnames(dados))
   
-  dados %>%
+  tab <- dados %>%
     kable(
       caption = titulo,
       col.names = colunas,
@@ -101,17 +101,26 @@ tabela_geral <- function(dados,
       font_size = tamfonte
     ) %>%
     row_spec(
-      row = nrow(dados),
-      bold = negrito,
-      background = fundo,
-      color = ifelse(is.null(fundo), "#84898C", "white")
-    ) %>%
-    row_spec(
       row = 0,
       align = "c", color = ifelse(is.null(fundo), "#84898C", "white"), # pantone monument
       background = fundo,
       font_size = tamfonte - 2, extra_css = "vertical-align: middle"
     )
+  
+  if(linhatotal == TRUE){
+    
+    tab %>% 
+    row_spec(
+      row = nrow(dados),
+      bold = TRUE,
+      background = fundo,
+      color = ifelse(is.null(fundo), "#84898C", "white")
+    )
+  } else {
+    
+    tab
+    
+  }
 }
 ```
 
