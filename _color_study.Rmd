@@ -11,60 +11,92 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Cores da UnB
 
-## Verde
-
-Cores consultadas em: https://www.sessions.edu/color-calculator/
+Após consulta ao [manual de identidade da UnB](http://www.marca.unb.br/manual1.php), resolvi utilizar as cores propostas na paleta de cores auxiliares, que são as seguintes:
 
 ```{r}
-
-cores_unb_verde <- tribble(
+cores_unb <- tribble(
   
-  ~cor_unb, ~categoria,       ~cor_alternativa, ~codigo,
-  "verde",  "original",       "verde-unb",      "#007715",
-  "verde",  "complementar",   "roxo-c-tet",     "#770061",
-  "verde",  "monocromatica",  "verde-m",        "#1d9132",
-  "verde",  "analoga",        "verde-a1",       "#007751",
-  "verde",  "analoga",        "verde-a2",       "#267700",
-  "verde",  "complementar-p", "vermelho-cp",    "#770026",
-  "verde",  "complementar-p", "roxo-cp",        "#510077",
-  "verde",  "triade",         "vermelho-tt",    "#771600",
-  "verde",  "triade",         "azul-tri",       "#160077",
-  "verde",  "tetrade",        "roxo-c-tet",     "#770061",
-  "verde",  "tetrade",        "vermelho-tt",    "#771600",
-  "verde",  "tetrade",        "azul-tet",       "#006177"
+  ~cor,              ~codigo,
+  "verde-unb",       "#008D46",
+  "azul-unb",        "#00427E",
+  "verde-escuro",    "#00652E",
+  "verde-medio",     "#8EC63F",
+  "verde-claro",     "#ADD376",
+  "amarelo-medio",   "#FFCB06",
+  "amarelo-puro",    "#FFF100",
+  "azul-medio",      "#0071BB",
+  "azul-violeta",    "#303192",
+  "azul-esverdeado", "#00AAAD",
+  "ciano-puro",      "#00ADEE",
+  "concreto1",       "#828065",
+  "concreto2",       "#A8A791",
+  "concreto3",       "#D2D1C2",
+  "concreto4",       "#E7E6D4",
+  "preto",           "#231F20",
+  "preto75%",        "#646466",
+  "preto50%",        "#949599",
+  "preto25%",        "#C8C9CB",
+  "preto10%",        "#E6E6E6",
+  "preto5%",         "#F3F3F4",
+  "prata",           "#A8A9AD"   # pantone 877
   
 )
 
+scales::show_col(cores_unb$codigo)
 ```
 
-## Azul
+## Cores {-}
 
-azul-unb: #00376f
+Foram utilizadas nove cores principais na confecção deste relatório, de acordo com o [manual de identidade visual da UnB](http://www.marca.unb.br/manual1.php), uma por capítulo.
 
+```{r paleta-cores}
+cores_anuario <- c("geral" = "#00427E",
+                   "grad"  = "#0071BB",
+                   "pos"   = "#008D46",
+                   "mest"  = "#8EC63F",
+                   "dout"  = "#00652E",
+                   "pip"   = "#303192",
+                   "ext"   = "#828065",
+                   "rh"    = "#FFCB06",
+                   "comu"  = "#00ADEE",
+                   "org"   = "#A8A791",
+                   "dpo"   = "#00AAAD")
+```
+
+
+
+## Tipografia {-}
+
+A tipografia desta publicação é baseada em duas fontes distintas:
+- Sans Serif: [Fira Sans](https://fonts.google.com/specimen/Fira+Sans?query=fira);
+- Serif: [Charter](https://practicaltypography.com/charter.html).
+
+O leitor pode fazer a escolha de qual fonte utilizar, clicando no menu que está na parte superior do documento e selecionando *serif* ou *sans*, conforme figura abaixo.
 ```{r}
-
-cores_unb_azul <- tribble(
-  
-  ~cor_unb, ~categoria,       ~cor_alternativa, ~codigo,
-  "azul",   "original",       "azul-unb",       "#00376f",
-  "azul",   "complementar",   "marrom-c-tet",   "#6f3800",
-  "azul",   "monocromatica",  "azul-m",         "#1b5289",
-  "azul",   "analoga",        "azul-a1",        "#00006f",
-  "azul",   "analoga",        "azul-a2",        "#006f6f",
-  "azul",   "complementar-p", "marrom-cp",      "#6f6f00",
-  "azul",   "complementar-p", "vermelho-cp",    "#6f0000",
-  "azul",   "triade",         "verde-tt",       "#386f00",
-  "azul",   "triade",         "roxo-tri",       "#6f0038",
-  "azul",   "tetrade",        "marrom-c-tet",   "#6f3800",
-  "azul",   "tetrade",        "verde-tt",       "#386f00",
-  "azul",   "tetrade",        "azul-tet",       "#38006f"
-  
-)
-
+include_graphics("img/troca-fontes.png")
 ```
 
-TODO: fazer um gráfico mostrando cada uma das cores
+Seguindo os [padrões de usabilidade de publicações na internet](https://practicaltypography.com/point-size.html), o tamanho padrão da fonte é de 16 pixels, mas pode também ser alterado para maior ou menor, de acordo com a vontade do leitor, clicando no *A* menor, para diminuir, ou no *A* maior, para aumentar o tamanho da fonte, conforme figura acima.
 
-inserir seção de tipografia também:
-https://www.behance.net/gallery/79724387/DrWhy-Explainers-for-ML-models-data-visualization
+*TABELAS*  
+*Título*  
+Tamanho da fonte: 16px  
+Alinhamento: esquerda  
+Estilo: negrito  
+Cor: preta (#333333)  
+
+*Corpo*  
+Tamanho da fonte: 16px ou 14px  
+Alinhamento: esquerda para informação textual; direita para informação numérica  
+Estilo: regular  
+Cor: preta (#333333)  
+
+*Cabeçalho*  
+Tamanho da fonte: 14px ou 12px  
+Alinhamento: centralizado  
+Estilo: maiúsculo e negrito  
+Cor: branca (#FFFFFF)
+
+*GRÁFICOS*  
+
 

@@ -1,3 +1,4 @@
+if (!require("renv")) install.packages("renv")
 # https://github.com/grantmcdermott/renv-rspm
 # renv::init()    ## Automatically run if you cloned/opened the repo as an RStudio project
 renv::restore()   ## Enter "y" when prompted
