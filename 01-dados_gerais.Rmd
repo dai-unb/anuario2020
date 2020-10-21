@@ -24,15 +24,15 @@ options(scipen = 9)
 comp_inst <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=1)
 ```
 
-```{r comp_inst}
+```{r}
 #xfun::embed_file("dados_gerais/")
 
 comp_inst %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Componentes Institucionais", negrito = FALSE, fundo = "#00376f",
+  tabela_geral("Componentes Institucionais", linhatotal = FALSE, fundo = "#00376f",
                colunas = c("Componentes Institucionais", "Total"))
 ```
-<br><br>
+<br>
 
 ```{r}
 vagas_oferecidas <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=2)
@@ -43,7 +43,7 @@ vagas_oferecidas <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=
 
 vagas_oferecidas %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Números da Universidade de Brasília, 2019", negrito = TRUE, tamfonte = 14, fundo = "#00376f",
+  tabela_geral("Números da Universidade de Brasília, 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#00376f",
                colunas = c("VAGAS OFERECIDAS", "1º Semestre","2º Semestre","Total Anual"))
 ```
 
@@ -56,7 +56,7 @@ inscritos <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=3)
 
 inscritos %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Números da Universidade de Brasília, 2019", negrito = TRUE, tamfonte = 14, fundo = "#00376f",
+  tabela_geral("Números da Universidade de Brasília, 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#00376f",
                colunas = c("INSCRITOS", "1º Semestre","2º Semestre","Total Anual"))
 ```
 
@@ -69,7 +69,7 @@ demanda <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=4)
 
 demanda %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Números da Universidade de Brasília, 2019", negrito = FALSE, tamfonte = 14, fundo = "#00376f",
+  tabela_geral("Números da Universidade de Brasília, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#00376f",
                colunas = c("RELAÇÃO CANDIDATO/VAGA", "1º Semestre","2º Semestre","Total Anual"))
 ```
 
@@ -82,7 +82,7 @@ ingressantes <- rio::import("dados_gerais/Tabela_ingressantes.xlsx")
 
 ingressantes %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Números da Universidade de Brasília, 2019", negrito = TRUE, tamfonte = 14, fundo = "#00376f",
+  tabela_geral("Números da Universidade de Brasília, 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#00376f",
                colunas = c("INGRESSANTES", "1º Semestre","2º Semestre","Total Anual"))
 ```
 
@@ -95,7 +95,7 @@ formados <-  rio::import("dados_gerais/Tabela_formados.xlsx")
 
 formados %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Números da Universidade de Brasília, 2019", negrito = TRUE, tamfonte = 14, fundo = "#00376f",
+  tabela_geral("Números da Universidade de Brasília, 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#00376f",
                colunas = c("DIPLOMADOS", "1º Semestre","2º Semestre","Total Anual"))
 ```
 
@@ -108,7 +108,7 @@ escolaridade_docente <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sh
 
 escolaridade_docente %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Números da Universidade de Brasília, 2019", negrito = TRUE, tamfonte = 14, fundo = "#00376f")
+  tabela_geral("Números da Universidade de Brasília, 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#00376f")
 ```
 
 ```{r}
@@ -120,7 +120,7 @@ escolaridade_tecnico <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sh
 
 escolaridade_tecnico %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Números da Universidade de Brasília, 2019", negrito = TRUE, tamfonte = 14, fundo = "#00376f",
+  tabela_geral("Números da Universidade de Brasília, 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#00376f",
                colunas = c("ESCOLARIDADE DO CORPO TÉCNICO-ADMINISTRATIVO DO QUADRO",""))
 ```
 
@@ -134,7 +134,7 @@ area_fisica <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=7)
 # falta formatar os números
 area_fisica %>% 
   map_df(~replace_na(., "")) %>% 
-  tabela_geral("Números da Universidade de Brasília, 2019", negrito = FALSE, tamfonte = 14, fundo = "#00376f")
+  tabela_geral("Números da Universidade de Brasília, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#00376f")
 ```
 
 ```{r}
@@ -146,7 +146,7 @@ bce <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=8)
 
 bce %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Números da Universidade de Brasília, 2019", negrito = FALSE, tamfonte = 14, fundo = "#00376f",
+  tabela_geral("Números da Universidade de Brasília, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#00376f",
                colunas = c("EDITORA UNIVERSIDADE DE BRASÍLIA- EDU",""))
 ```
 
@@ -159,7 +159,7 @@ edu <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=9)
 
 edu %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Números da Universidade de Brasília, 2019", negrito = FALSE, tamfonte = 14, fundo = "#00376f",
+  tabela_geral("Números da Universidade de Brasília, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#00376f",
                colunas = c("BIBLIOTECA CENTRAL - BCE",""))
 ```
 
@@ -172,7 +172,7 @@ extensao <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=10)
 
 extensao %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Números da Universidade de Brasília, 2019", negrito = FALSE, tamfonte = 14, fundo = "#00376f",
+  tabela_geral("Números da Universidade de Brasília, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#00376f",
                colunas = c("EXTENSÃO",""))
 ```
 
@@ -186,7 +186,7 @@ ru <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=11)
 # tá estranha a tabela
 ru %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Números da Universidade de Brasília, 2019", negrito = FALSE, tamfonte = 14, fundo = "#00376f",
+  tabela_geral("Números da Universidade de Brasília, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#00376f",
                colunas = c("RESTAURANTE UNIVERSITÁRIO – RU",""))
 ```
 
@@ -199,7 +199,7 @@ indicadores_gerais <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", shee
 
 indicadores_gerais %>% 
   map_df(~replace_na(., "")) %>% 
-  tabela_geral("Indicadores gerais de desempenho, 2009 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#00376f",
+  tabela_geral("Indicadores gerais de desempenho, 2009 a 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#00376f",
                colunas = c("","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2009 a 2019"))
 ```
 
@@ -212,7 +212,7 @@ xfun::embed_file("dados_gerais/Tabela_1.03.xlsx")
 
 geral %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Dados gerais da UnB", negrito = TRUE, tamfonte = 14, fundo = "#00376f",
+  tabela_geral("Dados gerais da UnB", linhatotal = TRUE, tamfonte = 14, fundo = "#00376f",
                colunas = c("Unidades", "Graduação", "Pós-graduação\nMest./Dout.", 
                            "Grad.", "Mestr.", "Dout.", 
                            "Graduação", "Mestrado", "Doutorado")) %>% 
@@ -233,7 +233,7 @@ evo_pop <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=13)
 # precisa desses números subescritos?
 evo_pop %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Evolução da população universitária da UnB, 2015 a 2019", negrito = FALSE, tamfonte = 14, fundo = "#00376f",
+  tabela_geral("Evolução da população universitária da UnB, 2015 a 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#00376f",
                colunas = c("Ano","Alunos de Graduação ¹","Alunos de Pós-Graduação ¹","Docentes ²","Técnicos-Administrativos","Total"))
 ```
 
@@ -247,7 +247,7 @@ evo_alunos <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=14)
 evo_alunos %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Evolução do número de alunos registrados na graduação e na pós-graduação Stricto
-Sensu, 2015 a 2019 (2º semestre)", tamfonte = 14, fundo = "#00376f", negrito = FALSE,
+Sensu, 2015 a 2019 (2º semestre)", tamfonte = 14, fundo = "#00376f", linhatotal = FALSE,
                colunas = c("Ano","Graduação","Mestrado","Doutorado","Residência Médica","Total da Pós-Graduação","Total Geral"))
 ```
 
@@ -261,7 +261,7 @@ evo_formados <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=15)
 evo_formados %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Evolução do número de alunos formados na graduação, na especialização no mestrado e
-no doutorado, 1966 a 2019", negrito = TRUE, tamfonte = 14, fundo = "#00376f",
+no doutorado, 1966 a 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#00376f",
                colunas = c("Ano","Graduação","Especialização¹","Formados com Especialização²","Mestrado","Doutorado","Total"))
 ```
 
@@ -274,7 +274,7 @@ area_darcy <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=16)
 
 area_darcy %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Campus Universitário Darcy Ribeiro, 2019", negrito = FALSE, tamfonte = 14, fundo = "#00376f")
+  tabela_geral("Campus Universitário Darcy Ribeiro, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#00376f")
 ```
 
 ```{r}
@@ -286,7 +286,7 @@ area_outros <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=17)
 
 area_outros %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Campi UnB Planaltina, UnB Gama e UnB Ceilândia, 2019", negrito = FALSE, tamfonte = 14, fundo = "#00376f")
+  tabela_geral("Campi UnB Planaltina, UnB Gama e UnB Ceilândia, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#00376f")
 ```
 
 ```{r}
@@ -298,7 +298,7 @@ area_fal <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=18)
 
 area_fal %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("FAL/Fazenda Água Limpa, 2019", negrito = FALSE, tamfonte = 14, fundo = "#00376f")
+  tabela_geral("FAL/Fazenda Água Limpa, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#00376f")
 ```
 
 ```{r}
@@ -310,7 +310,7 @@ area_hub <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=19)
 
 area_hub %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Hospital Universitário de Brasília (HUB), 2019", negrito = FALSE, tamfonte = 14, fundo = "#00376f")
+  tabela_geral("Hospital Universitário de Brasília (HUB), 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#00376f")
 ```
 
 ```{r}
@@ -323,7 +323,7 @@ hvetao <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=20)
 
 hvetao %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Atividades realizadas pelo HVET - Setor de Grandes Animais, 2019", negrito = TRUE, tamfonte = 14, fundo = "#00376f")
+  tabela_geral("Atividades realizadas pelo HVET - Setor de Grandes Animais, 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#00376f")
 ```
 
 ```{r}
@@ -336,5 +336,5 @@ hvetinho <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=21)
 
 hvetinho %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Atividades realizadas pelo HVET - Setor de Pequenos Animais, 2019", negrito = TRUE, tamfonte = 14, fundo = "#00376f")
+  tabela_geral("Atividades realizadas pelo HVET - Setor de Pequenos Animais, 2019", linhatotal =TRUE, tamfonte = 14, fundo = "#00376f")
 ```
