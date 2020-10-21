@@ -279,22 +279,11 @@ Tabela2.05$`% Feminino` <- paste(round(Tabela2.05$Feminino/Tabela2.05$Total*100,
 Tabela2.05$`% Masculino` <- paste(round(Tabela2.05$Masculino/Tabela2.05$Total*100,1), "%", sep="")
 Tabela2.05$`% Total` <- paste(round(Tabela2.05$Total/Tabela2.05$Total[8]*100,1), "%", sep="")
 
-rownames(Tabela2.05) <- Tabela2.05$`Faixa Etária`
-
-nomes <- rownames(Tabela2.05)
-
 Tabela2.05 <- Tabela2.05 %>% 
-  select(Feminino, `% Feminino`, Masculino, `% Masculino`, Total, `% Total`)
+  select(`Faixa Etária`, Feminino, `% Feminino`, Masculino, `% Masculino`, Total, `% Total`)
 
-Tabela2.05 <- Tabela2.05 %>% 
-  mutate_at(vars(Feminino, Masculino, Total),
-            funs(format(., big.mark = ".")))
+rio::export(Tabela2.05, "dados_graduacao/Tabela2.05.xlsx")
 
-rownames(Tabela2.05) <- nomes
-
-save(Tabela2.05, file = "dados_graduacao/Tabela2.05.RData")
-
-rm(nomes, Tabela2.05)
 
 #-------------------------------------------------------------------------------------------
 #------------------------------ Tabela 2.06 Alunos Regulares por Turno ---------------------
@@ -348,19 +337,9 @@ M2$Total <- rowSums(M2[,c("Integral", "Noturno", "EAD")], na.rm=T)
 Tabela2.06 <- left_join(M1, M2, by = "Unidade") %>% 
   janitor::adorn_totals()
 
-rownames(Tabela2.06) <- Tabela2.06$Unidade
+names(Tabela2.06) <- c("Unidade", "Integral 1", "Noturno 1", "EAD 1", "Total 1", "Integral 2", "Noturno 2", "EAD 2", "Total 2")
 
-nomes <- rownames(Tabela2.06)
-
-#Tabela2.06[is.na(Tabela2.06)] <- 0
-
-Tabela2.06 <- map_df(Tabela2.06, ~ format(., big.mark = "."))
-
-Tabela2.06 <- select(Tabela2.06, -Unidade)
-
-rownames(Tabela2.06) <- nomes
-
-save(Tabela2.06, file = "dados_graduacao/Tabela2.06.RData")
+rio::export(Tabela2.06, "dados_graduacao/Tabela2.06.xlsx")
 
 rm(EAD1, EAD2, M1, M2, nomes, Tabela2.06)
 
@@ -390,18 +369,9 @@ M2 <- inner_join(Arquivo41, matriculados2, "ID_Inep") %>%
 
 Tabela2.07 <- left_join(M1, M2, by = "Unidade")
 
-rownames(Tabela2.07) <- Tabela2.07$Unidade
+names(Tabela2.07) <- c("Unidade", "Feminino 1", "Masculino 1", "Total 1", "Feminino 2", "Masculino 2", "Total 2")
 
-nomes <- rownames(Tabela2.07)
-
-Tabela2.07 <- map_df(Tabela2.07, ~ format(., big.mark = "."))
-rownames(Tabela2.07) <- nomes
-
-Tabela2.07 <- select(Tabela2.07, -Unidade)
-
-rownames(Tabela2.07) <- nomes
-
-save(Tabela2.07, file = "dados_graduacao/Tabela2.07.RData")
+rio::export(Tabela2.07, "dados_graduacao/Tabela2.07.xlsx")
 
 rm(M1, M2, matriculados1, matriculados2, nomes, Tabela2.07)
 
@@ -477,13 +447,7 @@ Tabela2.08$`Total Fem 2 Sem` <- rowSums(Tabela2.08[,c("Fem Ativo 2 Sem", "Fem Tr
 Tabela2.08$`Total Masc 2 Sem` <- rowSums(Tabela2.08[,c("Masc Ativo 2 Sem", "Masc Tranc 2 Sem")], na.rm = TRUE)
 Tabela2.08["Total Geral", ] <- colSums(Tabela2.08, na.rm = TRUE)/2
 
-#Tabela2.08[is.na(Tabela2.08)] <- 0
-
-nomes <- rownames(Tabela2.08)
-Tabela2.08 <- map_df(Tabela2.08, ~ format(., big.mark = "."))
-rownames(Tabela2.08) <- nomes
-
-save(Tabela2.08, file = "dados_graduacao/Tabela2.08.RData")
+salva_tabela_grad(Tabela2.08, "Tabela2.08")
 
 rm(t1, t2, t3, t4, T1, T2, M1, M2, matriculados1, matriculados2, trancados1, trancados2, totais, nomes, Tabela2.08)
 
@@ -518,22 +482,12 @@ Tabela2.09$`% Feminino` <- paste(round(Tabela2.09$Feminino/Tabela2.09$Total*100,
 Tabela2.09$`% Masculino` <- paste(round(Tabela2.09$Masculino/Tabela2.09$Total*100,1), "%", sep="")
 Tabela2.09$`% Total` <- paste(round(Tabela2.09$Total/Tabela2.09$Total[8]*100,1), "%", sep="")
 
+Tabela2.09 <- Tabela2.09 %>% 
+  select(`Faixa Etária`, Feminino, `% Feminino`, Masculino, `% Masculino`, Total, `% Total`)
+
 nomes <- Tabela2.09$`Faixa Etária`
-#rownames(Tabela2.09) <- Tabela2.09$`Faixa Etária`
 
-Tabela2.09 <- Tabela2.09 %>% 
-  select(Feminino, `% Feminino`, Masculino, `% Masculino`, Total, `% Total`)
-# Tabela2.09[] <- lapply(Tabela2.09, gsub, pattern = ".", replacement = ",", fixed = TRUE)
-
-#nomes <- rownames(Tabela2.09)
-
-Tabela2.09 <- Tabela2.09 %>% 
-  mutate_at(vars(Feminino, Masculino, Total),
-            funs(format(., big.mark = ".")))
-
-rownames(Tabela2.09) <- nomes
-
-save(Tabela2.09, file = "dados_graduacao/Tabela2.09.RData")
+rio::export(Tabela2.09, "dados_graduacao/Tabela2.09.xlsx")
 
 rm(matriculados2, nomes, Tabela2.09)
 
@@ -696,18 +650,7 @@ Tabela2.11$`Movimentacao 2` <- rowSums(Tabela2.11[,c(4,6,8,10)], na.rm = T)
 
 rownames(Tabela2.11) <- nomes
 
-Tabela2.11 <- Tabela2.11 %>% 
-  as.data.frame()
-Tabela2.11["Total Geral", ] <- colSums(Tabela2.11, na.rm = TRUE)/2
-Tabela2.11[is.na(Tabela2.11)] <- 0
-
-nomes <- rownames(Tabela2.11)
-
-Tabela2.11 <- map_df(Tabela2.11, ~ format(.x, big.mark = "."))
-
-rownames(Tabela2.11) <- nomes
-
-save(Tabela2.11, file = "dados_graduacao/Tabela2.11.RData")
+salva_tabela_grad(Tabela2.11, "Tabela2.11")
 
 rm(totais, nomes, Tabela2.11)
 
@@ -743,13 +686,7 @@ Tabela2.XX <- Tabela2.XX %>%
 Tabela2.XX["Total Geral", ] <- colSums(Tabela2.XX, na.rm=T)/2
 Tabela2.XX[is.na(Tabela2.XX)] <- 0
 
-nomes <- rownames(Tabela2.XX)
-
-Tabela2.XX <- map_df(Tabela2.XX, ~ format(., big.mark = "."))
-
-rownames(Tabela2.XX) <- nomes
-
-save(Tabela2.XX, file = "dados_graduacao/Tabela2.XX.RData")
+salva_tabela_grad(Tabela2.XX, "Tabela2.XX")
 
 rm(M2, totais, nomes, Tabela2.XX)
 
@@ -770,20 +707,9 @@ Tabela2.XX2$`% Feminino` <- paste(round(Tabela2.XX2$Feminino/Tabela2.XX2$Total*1
 Tabela2.XX2$`% Masculino` <- paste(round(Tabela2.XX2$Masculino/Tabela2.XX2$Total*100,1), "%", sep="")
 Tabela2.XX2$`% Total` <- paste(round(Tabela2.XX2$Total/Tabela2.XX2$Total[8]*100,1), "%", sep="")
 
-#rownames(Tabela2.XX2) <- Tabela2.XX2$Raca
-#nomes <- rownames(Tabela2.XX2)
+Tabela2.XX2 <- Tabela2.XX2 %>% select(Raca, Feminino, `% Feminino`, Masculino, `% Masculino`, Total, `% Total`)
 
-nomes <- Tabela2.XX2$Raca
-
-Tabela2.XX2 <- Tabela2.XX2 %>% select(Feminino, `% Feminino`, Masculino, `% Masculino`, Total, `% Total`)
-
-Tabela2.XX2 <- Tabela2.XX2 %>% 
-  mutate_at(vars(Feminino, Masculino, Total),
-            funs(format(., big.mark = ".")))
-
-rownames(Tabela2.XX2) <- nomes
-
-save(Tabela2.XX2, file = "dados_graduacao/Tabela2.XX2.RData")
+salva_tabela_grad(Tabela2.XX2, "Tabela2.XX2")
 
 rm(nomes, Tabela2.XX2)
 
@@ -913,13 +839,7 @@ Tabela2.10$`RP 1` <- paste(round(Tabela2.10$`RP 1`*100,1), "%", sep="")
 Tabela2.10$`RP 2` <- Tabela2.10$`AP 2`/(Tabela2.10$`RP 2` + Tabela2.10$`AP 2`)
 Tabela2.10$`RP 2` <- paste(round(Tabela2.10$`RP 2`*100,1), "%", sep="")
 
-nomes <- rownames(Tabela2.10)
-
-Tabela2.10 <- map_df(Tabela2.10, ~ format(., big.mark = "."))
-
-rownames(Tabela2.10) <- nomes
-
-save(Tabela2.10, file = "dados_graduacao/Tabela2.10.RData")
+salva_tabela_grad(Tabela2.10, "Tabela2.10")
 
 rm(AA1, AA2, AP1, AP2, HE1, HE2, M1, M2, MD1, MD2, totais, nomes, Tabela2.10)
 
@@ -961,7 +881,7 @@ Tabela2.12$Unidade <- NULL
 
 rownames(Tabela2.12) <- nomes
 
-save(Tabela2.12, file = "dados_graduacao/Tabela2.12.RData")
+salva_tabela_grad(Tabela2.12, "Tabela2.12")
 
 rm(totais, nomes, Tabela2.12)
 
@@ -1052,15 +972,8 @@ Tabela2.14$Total <- rowSums(Tabela2.14, na.rm=T)
 Tabela2.14["Total Geral", ] <- colSums(Tabela2.14, na.rm=T)/2
 Tabela2.14[is.na(Tabela2.14)] <- 0
 
-nomes <- rownames(Tabela2.14)
-
-Tabela2.14 <- as.data.frame(Tabela2.14)
-Tabela2.14.2 <- as.data.frame(Tabela2.14.2)
-
-rownames(Tabela2.14) <- nomes
-
-save(Tabela2.14, file = "dados_graduacao/Tabela2.14.RData")
-save(Tabela2.14.2, file = "dados_graduacao/Tabela2.14.2.RData")
+salva_tabela_grad(Tabela2.14, "Tabela2.14")
+rio::export(Tabela2.14.2, "dados_graduacao/Tabela2.14.2.xlsx")
 
 rm(Label_Pais, totais, Tabela2.14, Tabela2.14.2, nomes)
 
@@ -1068,8 +981,7 @@ rm(Label_Pais, totais, Tabela2.14, Tabela2.14.2, nomes)
 #------------------------------ Tabela 2.21 Evolução Ingressantes --------------------------
 #-------------------------------------------------------------------------------------------
 
-# Atualizar o CSV que está na pasta
-# com os dados do último anuário
+# Atualizar o CSV que está na pasta com os dados do último anuário
 Tabela2.21 <- rio::import("dados_graduacao/evo_ing.xlsx", skip = 1) %>% 
   filter(!is.na(`2014`), !is.na(`2015`), !is.na(`2016`), !is.na(`2017`), !is.na(`2018`)) %>% 
   # retira o ano mais antigo
@@ -1128,12 +1040,7 @@ nomes <- Tabela2.21$`Unidade Acadêmica / Curso / Habilitação`
 
 Tabela2.21[is.na(Tabela2.21)] <- 0
 
-Tabela2.21 <- map_df(Tabela2.21[-1], ~ format(.x, big.mark = "."))
-Tabela2.21 <- map_df(Tabela2.21, ~ str_replace(.x, "NA", "-"))
-
-rownames(Tabela2.21) <- nomes
-
-save(Tabela2.21, file = "dados_graduacao/Tabela2.21.RData")
+rio::export(Tabela2.21, "dados_graduacao/Tabela2.21.xlsx")
 
 rm(Ing, totais, nomes, total_geral, Tabela2.21)
 
@@ -1141,8 +1048,7 @@ rm(Ing, totais, nomes, total_geral, Tabela2.21)
 #------------------------------ Tabela 2.22 Evolução Alunos Registrados --------------------
 #-------------------------------------------------------------------------------------------
 
-# Atualizar o CSV que está na pasta
-# com os dados do último anuário
+# Atualizar o CSV que está na pasta com os dados do último anuário
 Tabela2.22 <- rio::import("dados_graduacao/evo_matric.xlsx", skip = 1) %>% 
   filter(!is.na(`2014`), !is.na(`2015`), !is.na(`2016`), !is.na(`2017`), !is.na(`2018`)) %>% 
   # retira o ano mais antigo
@@ -1189,12 +1095,11 @@ nomes <- Tabela2.22$`Unidade Acadêmica / Curso / Habilitação`
 
 Tabela2.22[is.na(Tabela2.22)] <- 0
 
-Tabela2.22 <- map_df(Tabela2.22[-1], ~ format(.x, big.mark = "."))
-Tabela2.22 <- map_df(Tabela2.22, ~ str_replace(.x, "NA", "-"))
+# retira os cursos que não têm ninguém
+Tabela2.22 <- Tabela2.22 %>% 
+  filter(!(`2015` == 0 & `2016` == 0 & `2017` == 0 & `2018` == 0 & `2019` == 0))
 
-rownames(Tabela2.22) <- nomes
-
-save(Tabela2.22, file = "dados_graduacao/Tabela2.22.RData")
+rio::export(Tabela2.22, "dados_graduacao/Tabela2.22.xlsx")
 
 rm(Reg, totais, nomes, total_geral, Tabela2.22)
 
@@ -1250,12 +1155,11 @@ nomes <- Tabela2.23$`Unidade Acadêmica / Curso / Habilitação`
 
 Tabela2.23[is.na(Tabela2.23)] <- 0
 
-Tabela2.23 <- map_df(Tabela2.23, ~ format(.x, big.mark = "."))
-Tabela2.23 <- map_df(Tabela2.23[-1], ~ str_replace(.x, "NA", "-"))
+# retira os cursos que não têm ninguém
+Tabela2.23 <- Tabela2.23 %>% 
+  filter(!(`2015` == 0 & `2016` == 0 & `2017` == 0 & `2018` == 0 & `2019` == 0))
 
-rownames(Tabela2.23) <- nomes
-
-save(Tabela2.23, file = "dados_graduacao/Tabela2.23.RData")
+rio::export(Tabela2.23, "dados_graduacao/Tabela2.23.xlsx")
 
 rm(For, totais, nomes, total_geral, Tabela2.23)
 
@@ -1301,12 +1205,7 @@ cursos <- rownames(Tabela2.27)
 
 Tabela2.27[is.na(Tabela2.27)] <- 0
 
-Tabela2.27 <- map_df(Tabela2.27, ~ format(.x, big.mark = "."))
-Tabela2.27 <- map_df(Tabela2.27, ~ str_replace(.x, "NA", "-"))
-
-rownames(Tabela2.27) <- cursos
-
-save(Tabela2.27, file = "dados_graduacao/Tabela2.27.RData")
+salva_tabela_grad(Tabela2.27, "Tabela2.27")
 
 rm(Pesquisa_1, Pesquisa_2, totais, cursos, Tabela2.27)
 
@@ -1349,12 +1248,7 @@ cursos <- rownames(Tabela2.28)
 
 Tabela2.28[is.na(Tabela2.28)] <- 0
 
-Tabela2.28 <- map_df(Tabela2.28, ~ format(.x, big.mark = "."))
-Tabela2.28 <- map_df(Tabela2.28, ~ str_replace(.x, "NA", "-"))
-
-rownames(Tabela2.28) <- cursos
-
-save(Tabela2.28, file = "dados_graduacao/Tabela2.28.RData")
+salva_tabela_grad(Tabela2.28, "Tabela2.28")
 
 rm(Extensao_1, Extensao_2, totais, cursos, Tabela2.28)
 
@@ -1397,12 +1291,7 @@ cursos <- rownames(Tabela2.29)
 
 Tabela2.29[is.na(Tabela2.29)] <- 0
 
-Tabela2.29 <- map_df(Tabela2.29, ~ format(.x, big.mark = "."))
-Tabela2.29 <- map_df(Tabela2.29, ~ str_replace(.x, "NA", "-"))
-
-rownames(Tabela2.29) <- cursos
-
-save(Tabela2.29, file = "dados_graduacao/Tabela2.29.RData")
+salva_tabela_grad(Tabela2.29, "Tabela2.29")
 
 rm(Monitoria_1, Monitoria_2, totais, Tabela2.29, cursos)
 
@@ -1443,12 +1332,7 @@ cursos <- rownames(Tabela2.30)
 
 Tabela2.30[is.na(Tabela2.30)] <- 0
 
-Tabela2.30 <- map_df(Tabela2.30, ~ format(.x, big.mark = "."))
-Tabela2.30 <- map_df(Tabela2.30, ~ str_replace(.x, "NA", "-"))
-
-rownames(Tabela2.30) <- cursos
-
-save(Tabela2.30, file = "dados_graduacao/Tabela2.30.RData")
+salva_tabela_grad(Tabela2.30, "Tabela2.30")
 
 rm(EnO_1, EnO_2, totais, cursos, Tabela2.30)
 
@@ -1495,12 +1379,7 @@ Tabela2.COTA["Total Geral", ] <- colSums(Tabela2.COTA, na.rm=T)/2
 ### formatação
 nomes <- rownames(Tabela2.COTA)
 
-Tabela2.COTA <- map_df(Tabela2.COTA, ~ format(.x, big.mark = "."))
-Tabela2.COTA <- map_df(Tabela2.COTA, ~ str_replace(.x, "NA", "-"))
-
-rownames(Tabela2.COTA) <- nomes
-
-save(Tabela2.COTA, file = "dados_graduacao/Tabela2.COTA.RData")
+salva_tabela_grad(Tabela2.COTA, "Tabela2.COTA")
 
 rm(M2, totais, nomes, Tabela2.COTA)
 
@@ -1535,17 +1414,14 @@ Tabela2.COTA2$`% Masculino` <- paste(round(Tabela2.COTA2$Masculino/Tabela2.COTA2
 Tabela2.COTA2$`% Total` <- paste(round(Tabela2.COTA2$Total/Tabela2.COTA2$Total[nrow(Tabela2.COTA2)]*100,1), "%", sep="")
 
 Tabela2.COTA2 <- Tabela2.COTA2 %>% 
-  mutate(Feminino = format(Feminino, big.mark = "."),
-         Masculino = format(Masculino, big.mark = "."),
-         Total = format(Total, big.mark = ".")) %>% 
+  # mutate(Feminino = format(Feminino, big.mark = "."),
+  #        Masculino = format(Masculino, big.mark = "."),
+  #        Total = format(Total, big.mark = ".")) %>% 
   select(Cotas,
          Feminino, `% Feminino`,
          Masculino, `% Masculino`,
          Total, `% Total`)
 
-rownames(Tabela2.COTA2) <- Tabela2.COTA2$Cotas
-Tabela2.COTA2$Cotas <- NULL
-
-save(Tabela2.COTA2, file = "dados_graduacao/Tabela2.COTA2.RData")
+rio::export(Tabela2.COTA2, "dados_graduacao/Tabela2.COTA2.xlsx")
 
 rm(Cotas, Tabela2.COTA2)

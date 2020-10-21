@@ -1,0 +1,213 @@
+# Recursos Humanos {#rh}
+
+## Docentes {-}
+
+```{r}
+options(scipen = 9)
+docentes_ativos <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=1)
+
+```
+
+```{r docentes_ativos}
+#xfun::embed_file("")
+docentes_ativos %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Docentes ativos, por classe, regime de trabalho e titulação, 2019", linhatotal =  TRUE, tamfonte = 14, fundo = "#FFCB06") %>% footnote(general = c(" Extrator de Dados - SIAPE/DGP/UnB"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+docentes_sub <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=2)
+
+```
+
+```{r docentes_sub}
+#xfun::embed_file("")
+docentes_sub %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Docentes substitutos, temporários e visitantes, por regime de trabalho e titulação, 2019", linhatotal =  TRUE, tamfonte = 14, fundo = "#FFCB06") %>% footnote(general = c(" Extrator de Dados - SIAPE/DGP/UnB"),
+           general_title = "Fonte:")
+```
+
+```{r}
+docentes_idade <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=3)
+
+```
+
+```{r docentes_idade}
+#xfun::embed_file("")
+docentes_idade %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Número de docentes ativos, por classe e faixa etária, 2019", linhatotal =  TRUE, tamfonte = 14, fundo = "#FFCB06") %>% footnote(general = c(" Extrator de Dados - SIAPE/DGP/UnB"),
+           general_title = "Fonte:")
+```
+
+```{r}
+docentes_tit <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=4)
+
+```
+
+```{r docentes_tit}
+#xfun::embed_file("")
+#APLICAR JANITOR
+docentes_tit %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução do número de docentes ativos, por titulação, 2015 a 2019", linhatotal =  TRUE, tamfonte = 14, fundo = "#FFCB06") %>% footnote(general = c(" Extrator de Dados - SIAPE/DGP/UnB"),
+           general_title = "Fonte:")
+```
+
+```{r}
+docentes_classe <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=5)
+
+```
+
+```{r docentes_classe}
+#xfun::embed_file("")
+#APLICAR JANITOR
+docentes_classe %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução do número de docentes ativos, por classe, 2015 a 2019", linhatotal =  TRUE, tamfonte = 14, fundo = "#FFCB06") %>% footnote(general = c(" Extrator de Dados - SIAPE/DGP/UnB"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+docentes_reg <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=6)
+
+```
+
+```{r docentes_reg}
+#xfun::embed_file("")
+#APLICAR JANITOR
+docentes_reg %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução do número de docentes ativos por regime de trabalho, 2015 a 2019", linhatotal =  FALSE, tamfonte = 14, fundo = "#FFCB06") %>% footnote(general = c(" Extrator de Dados - SIAPE/DGP/UnB"),
+           general_title = "Fonte:")
+```
+
+```{r}
+docentes_inativos <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=7)
+
+```
+
+```{r docentes_inativos}
+#xfun::embed_file("")
+docentes_inativos %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução do número de docentes inativos, por titulação,  2015 a 2019", linhatotal =  TRUE, tamfonte = 14, fundo = "#FFCB06") %>% footnote(general = c(" Extrator de Dados - SIAPE/DGP/UnB"),
+           general_title = "Fonte:")
+```
+
+```{r}
+docentes_inativos_classe <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=8)
+
+```
+
+```{r docentes_inativos_classe}
+#xfun::embed_file("")
+docentes_inativos_classe %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução do número de docentes inativos por classe,  2015 a 2019", linhatotal =  TRUE, tamfonte = 14, fundo = "#FFCB06") %>% footnote(general = c(" Extrator de Dados - SIAPE/DGP/UnB"),
+           general_title = "Fonte:")
+```
+
+
+```{r}
+docentes_inativos_regime <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=9)
+
+```
+
+```{r docentes_inativos_regime}
+#xfun::embed_file("")
+docentes_inativos_regime %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução do número de docentes inativos por regime de trabalho, 2015 a 2019", linhatotal =  FALSE, tamfonte = 14, fundo = "#FFCB06") %>% footnote(general = c(" Extrator de Dados - SIAPE/DGP/UnB"),
+           general_title = "Fonte:")
+```
+
+## Corpo Técnico-Administrativo {-}
+
+```{r}
+tecnicos_ativos <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=10)
+
+```
+
+```{r tecnicos_ativos}
+#xfun::embed_file("")
+#APLICAR JANITOR
+tecnicos_ativos %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução do número de técnico-administrativos ativos, por nível, 2015 a 2019", linhatotal =  TRUE, tamfonte = 14, fundo = "#FFCB06") %>% footnote(general = c(" Extrator de Dados - SIAPE/DGP/UnB"),
+           general_title = "Fonte:")
+```
+
+```{r}
+tecnicos_idade <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=11)
+
+```
+
+```{r tecnicos_idade}
+#xfun::embed_file("")
+
+tecnicos_idade %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Número de técnico-administrativos ativos por nível e faixa etária, 2019", linhatotal =  TRUE, tamfonte = 14, fundo = "#FFCB06") %>% footnote(general = c(" Extrator de Dados - SIAPE/DGP/UnB"),
+           general_title = "Fonte:")
+```
+
+```{r}
+tecnicos_inativos <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=12)
+
+```
+
+```{r tecnicos_inativos}
+#xfun::embed_file("")
+
+tecnicos_inativos %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução do número de técnico-administrativos inativos, por nível, 2015 a 2019", linhatotal =  TRUE, tamfonte = 14, fundo = "#FFCB06") %>% footnote(general = c(" Extrator de Dados - SIAPE/DGP/UnB"),
+           general_title = "Fonte:")
+```
+
+```{r}
+afastamentos <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=13)
+
+```
+
+```{r afastamentos}
+#xfun::embed_file("")
+
+afastamentos %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Relação de afastamento de técnicos para capacitação, 2018-2019", linhatotal =  FALSE, tamfonte = 14, fundo = "#FFCB06") %>% footnote(general = c("PROCAP/SRH"),
+           general_title = "Fonte:")
+```
+
+```{r}
+capacitacao <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=14)
+
+```
+
+```{r capacitacao}
+#xfun::embed_file("")
+
+capacitacao %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução do número de atividades de capacitação de pessoal, 2015 a 2019", linhatotal =  FALSE, tamfonte = 14, fundo = "#FFCB06") %>% footnote(general = c("PROCAP/SRH"),
+           general_title = "Fonte:")
+```
+
+```{r}
+saude_serv <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=15)
+
+```
+
+```{r saude_serv}
+#xfun::embed_file("")
+
+saude_serv %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Serviços de atendimento de saúde a servidores, 2019", linhatotal =  TRUE, tamfonte = 14, fundo = "#FFCB06") %>% footnote(general = c("DSQVT/DGP"),
+           general_title = "Fonte:")
+```
