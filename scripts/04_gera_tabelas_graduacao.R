@@ -634,6 +634,12 @@ totais <- Tabela2.11 %>%
 Tabela2.11$Unidade <- sapply(Tabela2.11$Unidade, function(x) paste(x, "-", collapse=""))
 Tabela2.11 <- bind_rows(Tabela2.11,totais) %>% arrange(Unidade, Curso)
 
+Tabela2.11 <- Tabela2.11 %>% 
+  bind_rows(totais %>% summarise_if(is.numeric, sum, na.rm = TRUE)) %>% 
+  mutate(Curso = ifelse(is.na(Curso),
+                        "Total geral",
+                        Curso))
+
 nomes <- Tabela2.11$Curso
 
 Tabela2.11$Curso <- NULL
@@ -709,7 +715,7 @@ Tabela2.XX2$`% Total` <- paste(round(Tabela2.XX2$Total/Tabela2.XX2$Total[8]*100,
 
 Tabela2.XX2 <- Tabela2.XX2 %>% select(Raca, Feminino, `% Feminino`, Masculino, `% Masculino`, Total, `% Total`)
 
-salva_tabela_grad(Tabela2.XX2, "Tabela2.XX2")
+rio::export(Tabela2.XX2, "dados_graduacao/Tabela2.XX2.xlsx")
 
 rm(nomes, Tabela2.XX2)
 
@@ -807,7 +813,15 @@ Tabela2.10 <- left_join(Nomes, AA1) %>%
   left_join(MD2) %>% 
   left_join(AP1) %>% 
   left_join(AP2) %>% 
-  as.data.frame()
+  as.data.frame() %>% 
+  map_df(~replace_na(., 0))
+
+# remove cursos que só têm zero
+Tabela2.10 <- Tabela2.10 %>% 
+  filter(!(`Alunos Ativos 1` == 0 & `Alunos Ativos 2` == 0 &
+         `Matriculados em Disciplinas 1` == 0 & `Matriculados em Disciplinas 2` == 0 &
+         `AP 1` == 0 & `AP 2` == 0 &
+         `RP 1` == 0 & `RP 2` == 0))
 
 totais <- Tabela2.10 %>% 
   group_by(Unidade) %>% 
@@ -828,7 +842,8 @@ Tabela2.10 <- Tabela2.10 %>%
   ungroup() %>% 
   select(`Alunos Ativos 1`, `Alunos Ativos 2`, 
          `Matriculados em Disciplinas 1`, `Matriculados em Disciplinas 2`,
-         `AP 1`, `AP 2`, `RP 1`, `RP 2`)
+         `AP 1`, `AP 2`, `RP 1`, `RP 2`) %>% 
+  as.data.frame()
 
 rownames(Tabela2.10) <- nomes
 
@@ -838,6 +853,16 @@ Tabela2.10$`RP 1` <- Tabela2.10$`AP 1`/(Tabela2.10$`RP 1` + Tabela2.10$`AP 1`)
 Tabela2.10$`RP 1` <- paste(round(Tabela2.10$`RP 1`*100,1), "%", sep="")
 Tabela2.10$`RP 2` <- Tabela2.10$`AP 2`/(Tabela2.10$`RP 2` + Tabela2.10$`AP 2`)
 Tabela2.10$`RP 2` <- paste(round(Tabela2.10$`RP 2`*100,1), "%", sep="")
+
+nomes <- rownames(Tabela2.10)
+
+# arruma os NANs
+Tabela2.10 <- Tabela2.10 %>% 
+  mutate(`RP 2` = ifelse(`RP 2` == "NaN%",
+                         "",
+                         `RP 2`))
+
+rownames(Tabela2.10) <- nomes
 
 salva_tabela_grad(Tabela2.10, "Tabela2.10")
 
