@@ -4,7 +4,7 @@
 fundo <- cores_anuario["mest"]
 ```
 
-## Tabela 3.12 – Ingresso de Alunos e Número de Dissertações Homologadas nos Cursos de Mestrado, por Unidade Acadêmica e Curso, UnB, 2019
+## Ingresso de Alunos e Número de Dissertações Homologadas nos Cursos de Mestrado, por Unidade Acadêmica e Curso, UnB, 2019
 
 ```{r}
 tab1 <- rio::import("dados_mestrado/Tabelas_Mestrado_Anuário_2019.xlsx", 
@@ -13,7 +13,7 @@ tab1 <- rio::import("dados_mestrado/Tabelas_Mestrado_Anuário_2019.xlsx",
 # xfun::embed_file("dados_mestrado/EvoForM.csv")
 
 tab1 %>% 
-  tabela_geral("Tabela 3.12 – Ingresso de Alunos e Número de Dissertações Homologadas nos Cursos de Mestrado, por Unidade Acadêmica e Curso, UnB, 2019", 
+  tabela_geral("Ingresso de Alunos e Número de Dissertações Homologadas nos Cursos de Mestrado, por Unidade Acadêmica e Curso, UnB, 2019", 
                linhatotal = TRUE, 
                tamfonte = 10,
                colunas = c("Unidade Acadêmica/Curso","Ing. Fem. 1S","Ing. Masc. 1S", "Ing. Totais 1S", "Ing. Fem. 2S","Ing. Masc. 2S", "Ing. Totais 2S", "Ing. 2019", "Teses Hom. Fem. 1S", "Teses Hom. Masc. 1S", "Teses Hom. Totais 1S", "Teses Hom. Fem. 2S", "Teses Hom. Masc. 2S", "Teses Hom.Totais 2S", "Teses Hom. Totais 2019"),
@@ -21,7 +21,7 @@ tab1 %>%
   colorir(dados = tab1)
 ```
 
-## Tabela 3.13 – Alunos Ingressantes e Concluintes nos Cursos de Mestrado, por Sexo e Faixa Etária, UnB, 2019
+## Alunos Ingressantes e Concluintes nos Cursos de Mestrado, por Sexo e Faixa Etária, UnB, 2019
 
 ```{r}
 
@@ -38,7 +38,7 @@ tab2 %>%
 
 ```
 
-## Tabela 3.14 – Alunos Regulares Ativos, Matrículas e Aprovações em Disciplinas nos Cursos de Mestrado, por Unidade Acadêmica e Curso, UnB, 2018
+## Alunos Regulares Ativos, Matrículas e Aprovações em Disciplinas nos Cursos de Mestrado, por Unidade Acadêmica e Curso, UnB, 2018
 
 ```{r}
 
@@ -56,7 +56,7 @@ tab3 %>%
   colorir(dados = tab3)
 ```
 
-## Tabela 3.15 – Alunos Regulares Registrados nos Cursos de Mestrado, por Sexo e Faixa Etária, UnB, 2º/2018
+## Alunos Regulares Registrados nos Cursos de Mestrado, por Sexo e Faixa Etária, UnB, 2º/2018
 
 ```{r}
 
@@ -91,7 +91,7 @@ tab5 %>%
   colorir(dados = tab5)
 ```
 
-## Tabela 3.17 – Alunos Regulares Registrados Ativos e com Trancamento Geral de Matrícula nos Cursos de Mestrado, por Semestre, Sexo, Unidade Acadêmica e Curso, UnB, 2019
+## Alunos Regulares Registrados Ativos e com Trancamento Geral de Matrícula nos Cursos de Mestrado, por Semestre, Sexo, Unidade Acadêmica e Curso, UnB, 2019
 
 ```{r}
 
@@ -127,7 +127,7 @@ tab7 %>%
   colorir(dados = tab7)
 ```
 
-## Tabela 3.19 – Evolução do Ingresso de Alunos nos Cursos de Mestrado, por Unidade Acadêmica e Curso, UnB, 2015 a 2019
+## Evolução do Ingresso de Alunos nos Cursos de Mestrado, por Unidade Acadêmica e Curso, UnB, 2015 a 2019
 
 ```{r}
 
@@ -145,7 +145,7 @@ tab8 %>%
   colorir(dados = tab8)
 ```
 
-## Tabela 3.20 – Evolução do Número de Alunos Registrados* nos Cursos de Mestrado, por Unidade Acadêmica e Curso, UnB, 2015 a 2019
+## Evolução do Número de Alunos Registrados* nos Cursos de Mestrado, por Unidade Acadêmica e Curso, UnB, 2015 a 2019
 
 ```{r}
 tab9 <- rio::import("dados_mestrado/Tabelas_Mestrado_Anuário_2019.xlsx", 
@@ -162,7 +162,7 @@ tab9 %>%
   colorir(dados = tab9)
 ```
 
-## Tabela 3.21 – Evolução do Número de Alunos com Dissertações Homologadas nos Cursos de Mestrado, por Unidade Acadêmica e Curso, UnB, 2015 a 2019
+## Evolução do Número de Alunos com Dissertações Homologadas nos Cursos de Mestrado, por Unidade Acadêmica e Curso, UnB, 2015 a 2019
 
 ```{r}
 
@@ -180,7 +180,7 @@ tab10 %>%
   colorir(dados = tab10)
 ```
 
-## Tabela 3.08 – Evolução do Número de Alunos com Dissertações Homologadas nos Cursos de Mestrado, por Unidade Acadêmica e Curso, UnB, 2015 a 2019
+## Evolução do Número de Alunos com Dissertações Homologadas nos Cursos de Mestrado, por Unidade Acadêmica e Curso, UnB, 2015 a 2019
 
 ```{r}
 

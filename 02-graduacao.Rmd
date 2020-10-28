@@ -5,6 +5,7 @@
 fundo <- cores_anuario[2]
 ```
 
+## Dados e características dos cursos de graduação oferecidos pela UnB, 2019
 ```{r}
 # tabela 12 - Dados e características dos cursos de graduação oferecidos pela UnB
 tab1 <- rio::import("dados_graduacao/Tabela12_DEG-2019.xlsx", sheet = "tab")
@@ -13,9 +14,14 @@ tab1 <- tab1 %>%
                                                                  "Enfermagem FCE",
                                                                  "Enfermagem"))
 tab1 %>% 
+  mutate(`Data do Ato` = as.double(`Data do Ato`),
+         `Data do Ato` = as.Date(`Data do Ato`, origin = "1899-12-30"),
+         `Data do Ato` = format(`Data do Ato`, "%d/%m/%Y")) %>% 
+  map_df(~replace_na(., "")) %>% 
+  select(`Unidade Acadêmica / Curso / Habilitação`:`Perm. Máx.`, `N. Ord.`) %>% 
   tabela_geral("Dados e características dos cursos de graduação oferecidos pela UnB, 2019", 
                linhatotal = FALSE, 
-               tamfonte = 12,
+               tamfonte = 10,
                fundo = fundo) %>% 
   colorir(dados = tab1) %>% 
   footnote(general_title = "Fonte: SIGAA, atualização CAEG/DTG/DEG, em 23/06/2020",
@@ -47,7 +53,7 @@ tab2 %>%
                            "1º SEM", "2º SEM",
                            "TOTAL GERAL"),
                fundo = fundo,
-               tamfonte = 12) %>% 
+               tamfonte = 8) %>% 
   colorir(dados = tab2) %>% 
   add_header_above(c("-", 
                      "VESTIBULAR" = 2,
@@ -59,7 +65,7 @@ tab2 %>%
                      "C.PEC" = 2,
                      "JUD." = 2,
                      "-"),
-                   color = "white", extra_css = 'vertical-align: middle', background = fundo) %>% 
+                   color = "white", extra_css = 'text-align: center', background = fundo) %>% 
   footnote(general_title = "Fonte: Censo da Educação Superior 2019", general = "")
 ```
 
@@ -67,6 +73,26 @@ tab2 %>%
 
 ```{r}
 # gráfico de barras dos totais por forma de ingresso
+graf1 <- rio::import("dados_graduacao/Tabela2.03.2.xlsx")
+
+graf1 %>% 
+  mutate(name = factor(name, levels = rev(c("Vestibular", "PAS", "ENEM", "Outras vias")))) %>% 
+  ggplot(aes(x = value, y = name)) +
+  geom_col(fill = fundo, width = 0.6) +
+  geom_text(aes(label = format(value, big.mark = "."), 
+                fontface = "bold"), 
+            hjust = "right", 
+            nudge_x = -100,
+            color = "white",
+            ) + 
+  theme_minimal() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.text.x = element_blank(), 
+        axis.title.x = element_blank()) +
+  labs(y = "Forma de ingresso",
+       title = "Ingresso de alunos nos cursos de graduação pelo vestibular, PAS, ENEM e outras vias, UnB, 2019",
+       caption = "Fonte: Censo da Educação Superior 2019")
 ```
 
 <br>
@@ -93,6 +119,25 @@ tab3 %>%
 
 ```{r}
 # gráfico de barras do total de ing e form por unidade
+graf2 <- rio::import("dados_graduacao/Tabela2.04.2.RData")
+
+graf2 %>% 
+  pivot_longer(-Unidade) %>% 
+  mutate(Unidade = factor(Unidade),
+         Unidade = factor(Unidade, levels = rev(levels(Unidade)))) %>% 
+  ggplot(aes(x = value, y = Unidade, fill = name)) +
+  geom_col(position = position_dodge()) +
+  scale_fill_manual(values = c('#0071BB', alpha('#0071BB', 0.5))) +
+  theme_minimal() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.text.x = element_blank(), 
+        axis.title.x = element_blank(),
+        plot.title = element_markdown(),
+        legend.position = "none") +
+  labs(y = "Unidade acadêmica",
+       title = "<span style='color:#7FB8DD'>Ingressantes</span> e <span style='color:#0071BB'>formados</span> nos cursos de graduação, por unidade acadêmica, UnB, 2019",
+       caption = "Fonte: Censo da Educação Superior 2019")
 ```
 
 <br>
@@ -127,9 +172,18 @@ tab5 <- rio::import("dados_graduacao/Tabela2.06.xlsx")
 tab5 %>% 
   tabela_geral(
     titulo = "Alunos regulares registrados nos cursos de graduação presenciais, por unidade acadêmica e turno, UnB, 2019",
+    colunas = c("UNIDADE",
+                "INTEGRAL", "NOTURNO", "EAD", "TOTAL",
+                "INTEGRAL", "NOTURNO", "EAD", "TOTAL"),
     fundo = fundo
   ) %>% 
-  footnote(general_title = "Fonte: Censo da Educação Superior 2019", general = "")
+  footnote(general_title = "Fonte: Censo da Educação Superior 2019", general = "") %>% 
+  add_header_above(c("-",
+                     "1º SEMESTRE" = 4,
+                     "2º SEMESTRE" = 4),
+                   color = "white", 
+                   extra_css = 'text-align:center', 
+                   background = fundo)
 ```
 
 <br>
@@ -138,17 +192,23 @@ tab5 %>%
 # gráfico de pizza do total por turno
 ```
 
-## Alunos regulares ativos registrados nos cursos de graduação, por unidade acadêmica e sexo, UnB, 2019
+## Alunos regulares ativos nos cursos de graduação, por unidade acadêmica e sexo, UnB, 2019
 ```{r}
 # tabela 17
 tab6 <- rio::import("dados_graduacao/Tabela2.07.xlsx")
 
 tab6 %>% 
   tabela_geral(
-    titulo = "Alunos regulares ativos registrados nos cursos de graduação, por unidade acadêmica e sexo, UnB, 2019",
-    colunas = c("Unidade", "Fem 1ºS", "Masc 1ºS", "Total 1ºS", "Fem 2ºS", "Masc 2ºS", "Total 2ºS"),
+    titulo = "Alunos regulares ativos nos cursos de graduação, por unidade acadêmica e sexo, UnB, 2019",
+    colunas = c("UNIDADE", "FEM", "MASC", "TOTAL", "FEM", "MASC", "TOTAL"),
     fundo = fundo
-  ) %>% 
+  )  %>% 
+  add_header_above(c("-",
+                     "1º SEMESTRE" = 3,
+                     "2º SEMESTRE" = 3),
+                   color = "white", 
+                   extra_css = 'text-align:center', 
+                   background = fundo) %>% 
   footnote(general_title = "Fonte: Censo da Educação Superior 2019", general = "")
 ```
 
@@ -160,7 +220,7 @@ tab6 %>%
 
 <br>
 
-## Alunos regulares registrados ativos e com trancamento geral de matrícula nos cursos de graduação, por unidade acadêmica, curso, habilitação e sexo, UnB, 2019
+## Alunos regulares ativos e com trancamento geral de matrícula nos cursos de graduação, por unidade acadêmica, curso, habilitação e sexo, UnB, 2019
 ```{r}
 # tabela 18
 tab7 <- rio::import("dados_graduacao/Tabela2.08.xlsx") %>% 
@@ -170,21 +230,31 @@ tab7 <- rio::import("dados_graduacao/Tabela2.08.xlsx") %>%
 
 tab7 %>% 
   tabela_geral(
-    titulo = "Alunos regulares registrados ativos e com trancamento geral de matrícula nos cursos de graduação, por unidade acadêmica, curso, habilitação e sexo, UnB, 2019",
+    titulo = "Alunos regulares ativos e com trancamento geral de matrícula nos cursos de graduação, por unidade acadêmica, curso, habilitação e sexo, UnB, 2019",
     colunas = c("UNIDADE ACADÊMICA / CURSO / HABILITAÇÃO",
-                "FEM 1ºS", "MASC 1ºS", "FEM 2ºS", "MASC 2ºS",
-                "FEM 1ºS", "MASC 1ºS", "FEM 2ºS", "MASC 2ºS",
-                "FEM 1ºS", "MASC 1ºS", "FEM 2ºS", "MASC 2ºS"),
+                "FEM", "MASC", "FEM", "MASC",
+                "FEM", "MASC", "FEM", "MASC",
+                "FEM", "MASC", "FEM", "MASC"),
     fundo = fundo,
-    tamfonte = 12
+    tamfonte = 10
   ) %>% 
   colorir(dados = tab7) %>% 
+  add_header_above(c("-",
+                     "1º SEM" = 2,
+                     "2º SEM" = 2,
+                     "1º SEM" = 2,
+                     "2º SEM" = 2,
+                     "1º SEM" = 2,
+                     "2º SEM" = 2),
+                   color = "white", 
+                   extra_css = 'text-align:center', 
+                   background = fundo) %>% 
   add_header_above(c("-",
                      "ATIVOS" = 4,
                      "TRANCADOS" = 4,
                      "TOTAL" = 4),
                    color = "white", 
-                   extra_css = 'vertical-align: middle', 
+                   extra_css = 'text-align:center', 
                    background = fundo) %>% 
   footnote(general_title = "Fonte: Censo da Educação Superior 2019", general = "")
 ```
@@ -234,12 +304,12 @@ tab9 %>%
   ) %>% 
   colorir(dados = tab9) %>% 
   add_header_above(c("-",
-                     "ATIVOS" = 2,
+                     "ALUNOS\nATIVOS" = 2,
                      "MATRÍCULAS EM\nDISCIPLINAS" = 2,
                      "APROVADOS EM\nDISCIPLINAS" = 2,
                      "PERCENTUAL DE\nAPROVAÇÃO" = 2),
                    color = "white", 
-                   extra_css = 'vertical-align: middle', 
+                   extra_css = 'text-align:center', 
                    background = fundo) %>% 
   footnote(general_title = "Fonte: Censo da Educação Superior 2019", general = "")
 ```
@@ -273,11 +343,11 @@ tab10 %>%
                      "MATRICULADOS" = 2,
                      "ABANDONO" = 2,
                      "DESLIG.\nVOLUNTÁRIO" = 2,
-                     "DESLIG. POR\nFALTA DE\nRENDIMENTO" = 2,
+                     "DESLIG. FALTA RENDIMENTO" = 2,
                      "OUTROS(1)" = 2,
                      "TOTAL\nMOVIMENTAÇÃO" = 2),
                    color = "white", 
-                   extra_css = 'vertical-align: middle', 
+                   extra_css = 'text-align:center', 
                    background = fundo) %>% 
   footnote(general_title = "Fonte: Censo da Educação Superior 2019", 
            general = "(1) Inclui falecimento, força de convênio, falta de documentação, anulação de registro, mudança de habilitação, transferência, desligamento decisão judicial, novo vestibular, expulsão disciplinar, mudança de curso, vestibular para outra habilitação, mudança de turno")
@@ -298,7 +368,7 @@ tab11 %>%
   tabela_geral(
     titulo = "Alunos regulares registrados nos cursos de graduação, por unidade acadêmica, curso, habilitação e raça/cor autodeclarada, UnB, 2019 (2º semestre)",
     fundo = fundo,
-    tamfonte = 14
+    tamfonte = 12
   ) %>% 
   colorir(dados = tab11) %>% 
   footnote(general_title = "Fonte: Censo da Educação Superior 2019", 
@@ -374,7 +444,7 @@ tab14 %>%
 
 <br>
 
-## Alunos estrangeiros regulares registrados nos cursos de graduação, por continente, país e unidade acadêmica, UnB, 2019 (2º semestre)
+## Alunos estrangeiros regulares registrados nos cursos de graduação, por continente e país, UnB, 2019 (2º semestre)
 ```{r}
 # tabela 26
 tab15 <- rio::import("dados_graduacao/Tabela2.14.xlsx")
@@ -386,13 +456,13 @@ cor <- tab15 %>%
   deframe()
 
 tab15 %>% 
+  select("PAÍS / CONTINENTE" = `Unidade acadêmica / curso / habilitação`, Total) %>% 
   tabela_geral(
-    titulo = "Alunos estrangeiros regulares registrados nos cursos de graduação, por continente, país e unidade acadêmica, UnB, 2019 (2º semestre)",
+    titulo = "Alunos estrangeiros regulares registrados nos cursos de graduação, por continente e país, UnB, 2019 (2º semestre)",
     fundo = fundo,
-    tamfonte = 10
+    tamfonte = 14
   ) %>% 
   row_spec(cor, background = alpha(fundo, 0.2)) %>% 
-  # row_spec(0, background = fundo) %>% 
   footnote(general_title = "Fonte: Censo da Educação Superior 2019", 
            general = "")
 ```
@@ -416,7 +486,7 @@ tab16 %>%
   tabela_geral(
     titulo = "Alunos regulares Portadores de Necessidades Especiais registrados nos cursos da UnB, 2019 (2º semestre)",
     fundo = fundo,
-    tamfonte = 14
+    tamfonte = 12
   ) %>% 
   colorir(dados = tab16) %>% 
   footnote(general_title = "Fonte: Censo da Educação Superior 2019", 
@@ -433,9 +503,9 @@ tab17 %>%
     titulo = "Bolsas acadêmicas de pesquisa concedidas a alunos de graduação, por unidade acadêmica, curso e habilitação, 2019",
     fundo = fundo,
     colunas = c("UNIDADE ACADÊMICA / CURSO / HABILITAÇÃO",
-                "REM 1ºS", "NÃO REM 1ºS",
-                "REM 2ºS", "NÃO REM 2ºS"),
-    tamfonte = 14
+                "REM\n1º SEM", "NÃO REM\n1º SEM",
+                "REM\n2º SEM", "NÃO REM\n2º SEM"),
+    tamfonte = 12
   ) %>% 
   colorir(dados = tab17) %>% 
   footnote(general_title = "Fonte: Censo da Educação Superior 2019", 
@@ -454,9 +524,9 @@ tab18 %>%
     titulo = "Bolsas acadêmicas de extensão concedidas a alunos de graduação, por unidade acadêmica, curso e habilitação, 2019",
     fundo = fundo,
     colunas = c("UNIDADE ACADÊMICA / CURSO / HABILITAÇÃO",
-                "REM 1ºS", "NÃO REM 1ºS",
-                "REM 2ºS", "NÃO REM 2ºS"),
-    tamfonte = 14
+                "REM\n1º SEM", "NÃO REM\n1º SEM",
+                "REM\n2º SEM", "NÃO REM\n2º SEM"),
+    tamfonte = 12
   ) %>% 
   colorir(dados = tab18) %>% 
   footnote(general_title = "Fonte: Censo da Educação Superior 2019", 
@@ -475,9 +545,9 @@ tab19 %>%
     titulo = "Bolsas acadêmicas de monitoria concedidas a alunos de graduação, por unidade acadêmica, curso e habilitação, 2019",
     fundo = fundo,
     colunas = c("UNIDADE ACADÊMICA / CURSO / HABILITAÇÃO",
-                "REM 1ºS", "NÃO REM 1ºS",
-                "REM 2ºS", "NÃO REM 2ºS"),
-    tamfonte = 14
+                "REM\n1º SEM", "NÃO REM\n1º SEM",
+                "REM\n2º SEM", "NÃO REM\n2º SEM"),
+    tamfonte = 12
   ) %>% 
   colorir(dados = tab19) %>% 
   footnote(general_title = "Fonte: Censo da Educação Superior 2019", 

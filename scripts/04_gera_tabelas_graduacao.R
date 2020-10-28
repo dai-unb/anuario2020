@@ -3,6 +3,7 @@
 #-------------------------------------------------------------------------------------------
 # setwd("C:/anuario2020") -  inserir apenas caminhos relativos
 # source("scripts/00_execute-me.R")
+options(OutDec = ",")
 library(tidyverse)
 # library(openxlsx)
 # library(xlsx)
@@ -110,6 +111,23 @@ Tabela2.03["Total Geral",] <- colSums(Tabela2.03, na.rm=T)/2
 salva_tabela_grad(Tabela2.03, "Tabela2.03")
 
 rm(totais, Tabela2.03)
+
+### tabela 2.03_2 para o gráfico
+Tabela2.03_2 <- totais %>%
+  select(-Unidade, -Curso) %>% 
+  summarise_all(sum, na.rm = TRUE) %>% 
+  mutate(Vestibular = sum(`Vestibular 1 Sem`, `Vestibular 2 Sem`),
+         PAS = sum(`PAS 1 Sem`, `PAS 2 Sem`),
+         ENEM = sum(`ENEM 1 Sem`, `ENEM 2 Sem`),
+         "Outras vias" = sum(`Convênio PEC 1 Sem`, `Convênio PEC 2 Sem`,
+                             `Programas Especiais 1`, `Programas Especiais 2`,
+                             `Transferência Facultativa 1 Sem`, `Transferência Facultativa 2 Sem`,
+                             `Transferência Obrigatória 1 Sem`, `Transferência Obrigatória 2 Sem`,
+                             `Judicial 1`, `Judicial 2`)) %>% 
+  select(Vestibular:`Outras vias`) %>% 
+  pivot_longer(cols = everything())
+
+rio::export(Tabela2.03_2, "dados_graduacao/Tabela2.03.2.xlsx")
 
 #-------------------------------------------------------------------------------------------
 #------------------------------ Tabela 2.04 Ingressantes e Formados ------------------------

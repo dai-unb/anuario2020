@@ -1,6 +1,6 @@
 --- 
 title: "ANUÁRIO ESTATÍSTICO 2020"
-author: "Diretoria de Avaliação e Informações Gerenciais (DAI)<br>Decanato de Planejamento, Orçamento e Informações Gerenciais (DPO)"
+author: "Diretoria de Avaliação e Informações Gerenciais (DAI)<br>Decanato de Planejamento, Orçamento e Avaliação Institucional (DPO)"
 date: "Setembro de 2020"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
@@ -23,6 +23,7 @@ knitr::opts_chunk$set(
 library(tidyverse)
 library(knitr)
 library(kableExtra)
+library(ggtext)
 
 load("labels/Label_Unidades_pos.RData")
 ```
@@ -45,12 +46,12 @@ cores_anuario <- c("geral" = "#00427E",
 
 # insere a coluna de unidade etc nas tabelas que não têm
 # serve só pra graduação por enquanto
-insere_descricao <- function(tabela, nome){
-  
-  tabela %>% 
-    mutate({{ nome }} := rownames(tabela)) %>% 
-    select({{ nome }}, everything())
-}
+# insere_descricao <- function(tabela, nome){
+#   
+#   tabela %>% 
+#     mutate({{ nome }} := rownames(tabela)) %>% 
+#     select({{ nome }}, everything())
+# }
 
 # acha as linhas que devem ser coloridas
 colorir <- function(tabela, dados, alpha = 0.2){
@@ -104,7 +105,7 @@ tabela_geral <- function(dados,
       row = 0,
       align = "c", color = ifelse(is.null(fundo), "#84898C", "white"), # pantone monument
       background = fundo,
-      font_size = tamfonte - 2, extra_css = "vertical-align: middle"
+      font_size = tamfonte - 2, extra_css = c("vertical-align: middle", "horizontal-align: middle")
     )
   
   if(linhatotal == TRUE){
