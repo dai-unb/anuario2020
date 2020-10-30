@@ -1,6 +1,14 @@
 # Graduação {#grad}
 
 ```{r}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  error = FALSE,
+  warning = FALSE,
+  cache = TRUE
+)
+
 # define o fundo desta seção
 fundo <- cores_anuario[2]
 ```
@@ -72,27 +80,7 @@ tab2 %>%
 <br>
 
 ```{r}
-# gráfico de barras dos totais por forma de ingresso
-graf1 <- rio::import("dados_graduacao/Tabela2.03.2.xlsx")
-
-graf1 %>% 
-  mutate(name = factor(name, levels = rev(c("Vestibular", "PAS", "ENEM", "Outras vias")))) %>% 
-  ggplot(aes(x = value, y = name)) +
-  geom_col(fill = fundo, width = 0.6) +
-  geom_text(aes(label = format(value, big.mark = "."), 
-                fontface = "bold"), 
-            hjust = "right", 
-            nudge_x = -100,
-            color = "white",
-            ) + 
-  theme_minimal() +
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        axis.text.x = element_blank(), 
-        axis.title.x = element_blank()) +
-  labs(y = "Forma de ingresso",
-       title = "Ingresso de alunos nos cursos de graduação pelo vestibular, PAS, ENEM e outras vias, UnB, 2019",
-       caption = "Fonte: Censo da Educação Superior 2019")
+include_graphics("graficos/graduacao/graf1.png")
 ```
 
 <br>
@@ -118,26 +106,7 @@ tab3 %>%
 <br>
 
 ```{r}
-# gráfico de barras do total de ing e form por unidade
-graf2 <- rio::import("dados_graduacao/Tabela2.04.2.RData")
-
-graf2 %>% 
-  pivot_longer(-Unidade) %>% 
-  mutate(Unidade = factor(Unidade),
-         Unidade = factor(Unidade, levels = rev(levels(Unidade)))) %>% 
-  ggplot(aes(x = value, y = Unidade, fill = name)) +
-  geom_col(position = position_dodge()) +
-  scale_fill_manual(values = c('#0071BB', alpha('#0071BB', 0.5))) +
-  theme_minimal() +
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        axis.text.x = element_blank(), 
-        axis.title.x = element_blank(),
-        plot.title = element_markdown(),
-        legend.position = "none") +
-  labs(y = "Unidade acadêmica",
-       title = "<span style='color:#7FB8DD'>Ingressantes</span> e <span style='color:#0071BB'>formados</span> nos cursos de graduação, por unidade acadêmica, UnB, 2019",
-       caption = "Fonte: Censo da Educação Superior 2019")
+include_graphics("graficos/graduacao/graf2.png")
 ```
 
 <br>
@@ -159,7 +128,7 @@ tab4 %>%
 <br>
 
 ```{r}
-# gráfico de colunas do percentual de ingresso por sexo e faixa etária
+include_graphics("graficos/graduacao/graf3.png")
 ```
 
 <br>

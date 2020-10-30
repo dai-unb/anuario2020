@@ -18,12 +18,11 @@ knitr::opts_chunk$set(
   message = FALSE,
   error = FALSE,
   warning = FALSE,
-  cache = TRUE
+  cache = FALSE
 )
 library(tidyverse)
 library(knitr)
 library(kableExtra)
-library(ggtext)
 
 load("labels/Label_Unidades_pos.RData")
 ```
@@ -141,11 +140,11 @@ Com a utilização dessa base, mantém-se a consistência histórica e instituci
 
 <br><br>
 
-## Inovação desta versão {-}
+## Inovações desta versão {-}
 
 Continuando a tendência de inovações para o Anuário Estatístico, este ano o Anuário foi feito inteiramente no [software livre R](https://www.r-project.org/), por meio do pacote [bookdown](https://cran.r-project.org/package=bookdown). Essa mudança teve como objetivo tornar o processo de confecção do documento o mais linear possível, aumentando a confiabilidade das informações aqui contidas. 
 
-Além disso, ganhamos em transparência, pois todo o fluxo de trabalho está documentado no repositório [github/dai-dpo/anuario2020](https://github.com/dai-unb/anuario2020). No entanto não é possível reproduzir ou replicar as tabelas e gráficos aqui contidos, pois devido à sensibilidade dos dados tratados (informações pessoais de estudantes e servidores da UnB), a base de dados bruta não pôde ser disponibilizada.
+Além disso, ganhamos em transparência, pois todo o fluxo de trabalho está documentado no repositório [github/dai-dpo/anuario2020](https://github.com/dai-unb/anuario2020). No entanto, não é possível reproduzir ou replicar as tabelas e gráficos aqui contidos, pois devido à sensibilidade dos dados tratados (informações pessoais de estudantes e servidores da UnB), a base de dados bruta não pôde ser disponibilizada.
 
 Assim como na última versão, é possível baixar todas as tabelas que compõem o documento, garantindo o fácil acesso a diversas informações da Universidade de Brasília.
 
