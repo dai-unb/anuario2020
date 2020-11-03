@@ -146,7 +146,7 @@ Continuando a tendência de inovações para o Anuário Estatístico, este ano o
 
 Além disso, ganhamos em transparência, pois todo o fluxo de trabalho está documentado no repositório [github/dai-dpo/anuario2020](https://github.com/dai-unb/anuario2020). No entanto, não é possível reproduzir ou replicar as tabelas e gráficos aqui contidos, pois devido à sensibilidade dos dados tratados (informações pessoais de estudantes e servidores da UnB), a base de dados bruta não pôde ser disponibilizada.
 
-Assim como na última versão, é possível baixar todas as tabelas que compõem o documento, garantindo o fácil acesso a diversas informações da Universidade de Brasília.
+Assim como na última versão, é possível baixar todas as tabelas e gráficos que compõem o documento, garantindo o fácil acesso a diversas informações da Universidade de Brasília.
 
 <br><br>
 

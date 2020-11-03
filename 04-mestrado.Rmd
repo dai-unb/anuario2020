@@ -145,7 +145,7 @@ tab8 %>%
   colorir(dados = tab8)
 ```
 
-## Evolução do Número de Alunos Registrados* nos Cursos de Mestrado, por Unidade Acadêmica e Curso, UnB, 2015 a 2019
+## Evolução do Número de Alunos Registrados nos Cursos de Mestrado, por Unidade Acadêmica e Curso, UnB, 2015 a 2019
 
 ```{r}
 tab9 <- rio::import("dados_mestrado/Tabelas_Mestrado_Anuário_2019.xlsx", 
@@ -179,22 +179,3 @@ tab10 %>%
                fundo = fundo) %>% 
   colorir(dados = tab10)
 ```
-
-## Evolução do Número de Alunos com Dissertações Homologadas nos Cursos de Mestrado, por Unidade Acadêmica e Curso, UnB, 2015 a 2019
-
-```{r}
-
-tab11 <- rio::import("dados_mestrado/Tabelas_Mestrado_Anuário_2019.xlsx", 
-                     sheet = "Tabela 3.08")
-# xfun::embed_file("dados_Mestrado/EvoForM.csv")
-
-tab11 %>% 
-  tabela_geral("Alunos estrangeiros regulares registrados nos cursos de Pós-Graduação Stricto Sensu, por Continente, País e Unidade Acadêmica, UnB, 2o Semestre de 2019", 
-               linhatotal = T, 
-               tamfonte = 12,  
-               fundo = fundo) %>% 
-  row_spec(row = 0, background = fundo)
-
-```
-
-

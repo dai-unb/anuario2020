@@ -1,17 +1,13 @@
 # Graduação {#grad}
 
 ```{r}
-knitr::opts_chunk$set(
-  echo = FALSE,
-  message = FALSE,
-  error = FALSE,
-  warning = FALSE,
-  cache = TRUE
-)
-
 # define o fundo desta seção
 fundo <- cores_anuario[2]
 ```
+
+Faça o download de todas as tabelas desta seção: `r xfun::embed_file("dados_graduacao/tabelas_graduacao.xlsx")`
+
+<br>
 
 ## Dados e características dos cursos de graduação oferecidos pela UnB, 2019
 ```{r}
@@ -81,6 +77,8 @@ tab2 %>%
 
 ```{r}
 include_graphics("graficos/graduacao/graf1.png")
+
+xfun::embed_file("graficos/graduacao/graf1.png")
 ```
 
 <br>
@@ -107,6 +105,8 @@ tab3 %>%
 
 ```{r}
 include_graphics("graficos/graduacao/graf2.png")
+
+xfun::embed_file("graficos/graduacao/graf2.png")
 ```
 
 <br>
@@ -129,6 +129,8 @@ tab4 %>%
 
 ```{r}
 include_graphics("graficos/graduacao/graf3.png")
+
+xfun::embed_file("graficos/graduacao/graf3.png")
 ```
 
 <br>
@@ -159,16 +161,19 @@ tab5 %>%
 
 ```{r}
 # gráfico de pizza do total por turno
+include_graphics("graficos/graduacao/graf4.png")
+
+xfun::embed_file("graficos/graduacao/graf4.png")
 ```
 
-## Alunos regulares ativos nos cursos de graduação, por unidade acadêmica e sexo, UnB, 2019
+## Alunos regulares registrados nos cursos de graduação, por unidade acadêmica e sexo, UnB, 2019
 ```{r}
 # tabela 17
 tab6 <- rio::import("dados_graduacao/Tabela2.07.xlsx")
 
 tab6 %>% 
   tabela_geral(
-    titulo = "Alunos regulares ativos nos cursos de graduação, por unidade acadêmica e sexo, UnB, 2019",
+    titulo = "Alunos regulares registrados nos cursos de graduação, por unidade acadêmica e sexo, UnB, 2019",
     colunas = c("UNIDADE", "FEM", "MASC", "TOTAL", "FEM", "MASC", "TOTAL"),
     fundo = fundo
   )  %>% 
@@ -185,6 +190,9 @@ tab6 %>%
 
 ```{r}
 # graf barra do total por semestre e sexo
+include_graphics("graficos/graduacao/graf5.png")
+
+xfun::embed_file("graficos/graduacao/graf5.png")
 ```
 
 <br>
@@ -248,6 +256,9 @@ tab8 %>%
 
 ```{r}
 # graf de colunas com o percentual de matriculados por faixa etária
+include_graphics("graficos/graduacao/graf6.png")
+
+xfun::embed_file("graficos/graduacao/graf6.png")
 ```
 
 <br>
@@ -348,6 +359,9 @@ tab11 %>%
 
 ```{r}
 # graf de barras do total por raça/cor
+include_graphics("graficos/graduacao/graf7.png")
+
+xfun::embed_file("graficos/graduacao/graf7.png")
 ```
 
 <br>
@@ -370,6 +384,9 @@ tab12 %>%
 
 ```{r}
 # graf do total de matriculados por sexo e raça/cor
+include_graphics("graficos/graduacao/graf8.png")
+
+xfun::embed_file("graficos/graduacao/graf8.png")
 ```
 
 <br>
@@ -413,7 +430,7 @@ tab14 %>%
 
 <br>
 
-## Alunos estrangeiros regulares registrados nos cursos de graduação, por continente e país, UnB, 2019 (2º semestre)
+## Alunos estrangeiros regulares registrados nos cursos de graduação, por continente e país, UnB, 2º semestre de 2019
 ```{r}
 # tabela 26
 tab15 <- rio::import("dados_graduacao/Tabela2.14.xlsx")
@@ -440,8 +457,18 @@ tab15 %>%
 
 ```{r}
 # grad de total por continente
+include_graphics("graficos/graduacao/graf9.png")
 
+xfun::embed_file("graficos/graduacao/graf9.png")
+```
+
+<br>
+
+```{r}
 # graf de total por país (maiores apenas)
+include_graphics("graficos/graduacao/graf10.png")
+
+xfun::embed_file("graficos/graduacao/graf10.png")
 ```
 
 <br>
@@ -628,12 +655,6 @@ tab24 %>%
 
 <br>
 
-```{r}
-# graf de barras da evolução do total de ingressantes por ano 
-```
-
-<br>
-
 ## Evolução do número de alunos regulares registrados nos cursos de graduação, por unidade acadêmica, curso e habilitação, UnB, 2015 a 2019 (2º semestre)
 ```{r}
 # tabela 36
@@ -651,12 +672,6 @@ tab25 %>%
   colorir(dados = tab25) %>% 
   footnote(general_title = "Fonte: Censo da Educação Superior", 
            general = "")
-```
-
-<br>
-
-```{r}
-# graf de barras da evolução do total de matriculados por ano 
 ```
 
 <br>
@@ -684,8 +699,17 @@ tab26 %>%
 
 ```{r}
 # graf de barras da evolução do total de formados por ano 
+include_graphics("graficos/graduacao/graf11.png")
 
-# graf da evolução do número de formados por década
+xfun::embed_file("graficos/graduacao/graf11.png")
 ```
 
 <br>
+
+```{r}
+tabelas_grad <- list(tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9,
+                     tab10, tab11, tab12, tab13, tab14, tab15, tab16, tab17,
+                     tab18, tab19, tab20, tab21, tab22, tab23, tab24, tab25, tab26)
+rio::export(tabelas_grad, "dados_graduacao/tabelas_graduacao_semtitulo.xlsx")
+```
+
