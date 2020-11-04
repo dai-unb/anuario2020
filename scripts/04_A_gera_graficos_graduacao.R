@@ -44,16 +44,21 @@ graf <- graf2 %>%
   ggplot(aes(x = value, y = Unidade, fill = name)) +
   geom_col(position = position_dodge()) +
   scale_fill_manual(values = c('#0071BB', alpha('#0071BB', 0.5))) +
+  xlim(c(0,1000)) +
+  geom_vline(xintercept = 250, color = "#F3F3F4") +
+  geom_vline(xintercept = 500, color = "#F3F3F4") +
+  geom_vline(xintercept = 750, color = "#F3F3F4") +
+  geom_vline(xintercept = 1000, color = "#F3F3F4") +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
-        axis.text.x = element_blank(), 
+        # axis.text.x = element_blank(), 
         axis.title.x = element_blank(),
         plot.title = element_markdown(lineheight = 1.2),
         legend.position = "none") +
   labs(y = "Unidade acadêmica",
        title = "<span style='color:#7FB8DD'>Ingressantes</span> e <span style='color:#0071BB'>formados</span> nos cursos de graduação,<br>por unidade acadêmica, UnB, 2019",
        caption = "Fonte: Censo da Educação Superior 2019")
-
+graf
 ggsave("graficos/graduacao/graf2.pdf", device = cairo_pdf)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf2.pdf", 
                       filenames = "graficos/graduacao/graf2.png", 
@@ -341,7 +346,7 @@ pdftools::pdf_convert(pdf = "graficos/graduacao/graf10.pdf",
                       format = "png", 
                       dpi = 500)
 
-# graf de barras da evolução do total de ingressantes por ano 
+# graf de linhas da evolução do total de ingressantes por ano 
 graf11_ing <- rio::import("dados_graduacao/Tabela2.21.xlsx") %>% 
   filter(`Unidade Acadêmica / Curso / Habilitação` == "Total Geral") %>% 
   mutate(`Unidade Acadêmica / Curso / Habilitação` = "Ingressantes")
@@ -375,12 +380,47 @@ graf <-
         plot.title = element_markdown(lineheight = 1.2),
         legend.position = "none") +
   labs(x = "Ano",
-       title = "Evolução do número de alunos <span style='color:#0071BB'>matriculados</span>, <span style='color:#00AAAD'>ingressantes</span> e <span style='color:#008D46'>formados</span>,<br>UnB, 2015 a 2019",
+       title = "Evolução do número de alunos de graduação <span style='color:#0071BB'>matriculados</span>, <span style='color:#00AAAD'>ingressantes</span> e <span style='color:#008D46'>formados</span>,<br>UnB, 2015 a 2019",
        caption = "Fonte: Censo da Educação Superior 2019")
   
 graf
 ggsave("graficos/graduacao/graf11.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf11.pdf", 
                       filenames = "graficos/graduacao/graf11.png", 
+                      format = "png", 
+                      dpi = 500)
+
+# Evolução do número de alunos formados nos cursos de graduação, por década, 1976 a 2019
+graf12 <- tribble(
+  
+  ~Década, ~Formados,
+  "Até 1970", 1272,
+  "Até 1980", 12067,
+  "Até 1990", 24181,
+  "Até 2000", 39952,
+  "Até 2010", 75071,
+  "Até 2019", 115319
+  
+)
+
+graf <- 
+  graf12 %>% 
+  ggplot(aes(x = Formados, y = Década)) +
+  geom_col(fill = fundo, width = 0.5) +
+  coord_flip() + 
+  geom_text(aes(label = format(Formados, big.mark = "."), family = "Charter"),
+            vjust = "bottom", nudge_x = 1000, hjust = 0.55) + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.text.y = element_blank(), 
+        axis.title.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_markdown(lineheight = 1.2)) +
+  labs(title = "Evolução do número de alunos formados nos cursos de graduação,<br>por década, 1976 a 2019",
+       caption = "Fonte: Sistemas acadêmicos da UnB, em 14/04/2020")
+graf
+ggsave("graficos/graduacao/graf12.pdf", device = cairo_pdf, width = 8)
+pdftools::pdf_convert(pdf = "graficos/graduacao/graf12.pdf", 
+                      filenames = "graficos/graduacao/graf12.png", 
                       format = "png", 
                       dpi = 500)
