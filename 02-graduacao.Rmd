@@ -75,7 +75,7 @@ tab2 %>%
 
 <br>
 
-```{r}
+```{r fig.cap='Ingresso de alunos nos cursos de graduação por forma de ingresso, UnB, 2019'}
 include_graphics("graficos/graduacao/graf1.png")
 
 xfun::embed_file("graficos/graduacao/graf1.png")
@@ -103,7 +103,7 @@ tab3 %>%
 
 <br>
 
-```{r}
+```{r fig.cap='Ingressantes e formados nos cursos de graduação, por unidade acadêmica, UnB, 2019'}
 include_graphics("graficos/graduacao/graf2.png")
 
 xfun::embed_file("graficos/graduacao/graf2.png")
@@ -127,7 +127,7 @@ tab4 %>%
 
 <br>
 
-```{r}
+```{r fig.cap='Ingresso de alunos nos cursos de graduação por faixa etária e sexo, UnB, 2019'}
 include_graphics("graficos/graduacao/graf3.png")
 
 xfun::embed_file("graficos/graduacao/graf3.png")
@@ -159,8 +159,7 @@ tab5 %>%
 
 <br>
 
-```{r}
-# gráfico de pizza do total por turno
+```{r fig.cap='Alunos regulares nos cursos de graduação por turno e unidade acadêmica, UnB, 2º semestre de 2019'}
 include_graphics("graficos/graduacao/graf4.png")
 
 xfun::embed_file("graficos/graduacao/graf4.png")
@@ -188,8 +187,7 @@ tab6 %>%
 
 <br>
 
-```{r}
-# graf barra do total por semestre e sexo
+```{r fig.cap='Alunos regulares nos cursos de graduação por sexo e unidade acadêmica, UnB, 2º semestre de 2019'}
 include_graphics("graficos/graduacao/graf5.png")
 
 xfun::embed_file("graficos/graduacao/graf5.png")
@@ -254,8 +252,7 @@ tab8 %>%
 
 <br>
 
-```{r}
-# graf de colunas com o percentual de matriculados por faixa etária
+```{r fig.cap='Alunos regulares nos cursos de graduação por faixa etária e sexo, UnB, 2º semestre de 2019'}
 include_graphics("graficos/graduacao/graf6.png")
 
 xfun::embed_file("graficos/graduacao/graf6.png")
@@ -357,8 +354,7 @@ tab11 %>%
 
 <br>
 
-```{r}
-# graf de barras do total por raça/cor
+```{r fig.cap='Alunos regulares nos cursos de graduação por raça/cor autodeclarada, UnB, 2º semestre de 2019'}
 include_graphics("graficos/graduacao/graf7.png")
 
 xfun::embed_file("graficos/graduacao/graf7.png")
@@ -382,8 +378,7 @@ tab12 %>%
 
 <br>
 
-```{r}
-# graf do total de matriculados por sexo e raça/cor
+```{r fig.cap='Alunos regulares nos cursos de graduação por raça/cor autodeclarada e sexo, UnB, 2º semestre de 2019'}
 include_graphics("graficos/graduacao/graf8.png")
 
 xfun::embed_file("graficos/graduacao/graf8.png")
@@ -455,8 +450,8 @@ tab15 %>%
 
 <br>
 
-```{r}
-# grad de total por continente
+```{r fig.cap='Alunos estrangeiros regulares nos cursos de graduação por continente, UnB, 2º semestre de 2019'}
+
 include_graphics("graficos/graduacao/graf9.png")
 
 xfun::embed_file("graficos/graduacao/graf9.png")
@@ -464,8 +459,7 @@ xfun::embed_file("graficos/graduacao/graf9.png")
 
 <br>
 
-```{r}
-# graf de total por país (maiores apenas)
+```{r fig.cap='Alunos estrangeiros regulares nos cursos de graduação por país (10 maiores), UnB, 2º semestre de 2019'}
 include_graphics("graficos/graduacao/graf10.png")
 
 xfun::embed_file("graficos/graduacao/graf10.png")
@@ -697,11 +691,18 @@ tab26 %>%
 
 <br>
 
-```{r}
-# graf de barras da evolução do total de formados por ano 
+```{r fig.cap='Evolução do número de alunos de graduação matriculados, ingressantes e formados, UnB, 2015 a 2019'}
 include_graphics("graficos/graduacao/graf11.png")
 
 xfun::embed_file("graficos/graduacao/graf11.png")
+```
+
+<br>
+
+```{r fig.cap='Evolução do número de alunos de graduação formados, por década, UnB, 2015 a 2019'}
+include_graphics("graficos/graduacao/graf12.png")
+
+xfun::embed_file("graficos/graduacao/graf12.png")
 ```
 
 <br>

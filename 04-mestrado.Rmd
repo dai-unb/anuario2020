@@ -26,7 +26,7 @@ tab1 %>%
 
 <br>
 
-```{r}
+```{r fig.cap='Ingressantes e concluintes nos cursos de mestrado por unidade acadêmica, UnB, 2019'}
 include_graphics("graficos/mestrado/graf1.png")
 
 xfun::embed_file("graficos/mestrado/graf1.png")
@@ -50,7 +50,7 @@ tab2 %>%
 
 <br>
 
-```{r}
+```{r fig.cap='Ingresso de alunos nos cursos de mestrado por faixa etária e sexo, UnB, 2019'}
 include_graphics("graficos/mestrado/graf2.png")
 
 xfun::embed_file("graficos/mestrado/graf2.png")
@@ -58,7 +58,7 @@ xfun::embed_file("graficos/mestrado/graf2.png")
 
 <br>
 
-```{r}
+```{r fig.cap='Formatura de alunos nos cursos de mestrado por faixa etária e sexo, UnB, 2019'}
 include_graphics("graficos/mestrado/graf3.png")
 
 xfun::embed_file("graficos/mestrado/graf3.png")
@@ -66,7 +66,7 @@ xfun::embed_file("graficos/mestrado/graf3.png")
 
 <br>
 
-## Alunos regulares registrados nos cursos de mestrado, por sexo e faixa etária, UnB, 2º semestre de 2019
+## Alunos regulares nos cursos de mestrado, por sexo e faixa etária, UnB, 2º semestre de 2019
 ```{r}
 tab3 <- rio::import("dados_Mestrado/Tabelas_Mestrado_Anuário_2019.xlsx", 
                     sheet = "Tabela 3.15",
@@ -74,7 +74,7 @@ tab3 <- rio::import("dados_Mestrado/Tabelas_Mestrado_Anuário_2019.xlsx",
 # xfun::embed_file("dados_Mestrado/EvoForM.csv")
 
 tab3 %>% 
-  tabela_geral("Alunos regulares registrados nos cursos de mestrado, por sexo e faixa etária, UnB, 2º semestre de 2019", 
+  tabela_geral("Alunos regulares nos cursos de mestrado, por sexo e faixa etária, UnB, 2º semestre de 2019", 
                linhatotal = TRUE, 
                tamfonte = 12,
                colunas = c("Faixa Etária", "Fem.",	"% Fem.",	"Masc.", "% Masc", "Total"),
@@ -83,7 +83,7 @@ tab3 %>%
 
 <br>
 
-```{r}
+```{r fig.cap='Alunos regulares nos cursos de mestrado por faixa etária e sexo, UnB, 2019'}
 include_graphics("graficos/mestrado/graf4.png")
 
 xfun::embed_file("graficos/mestrado/graf4.png")
@@ -91,7 +91,7 @@ xfun::embed_file("graficos/mestrado/graf4.png")
 
 <br>
 
-## Alunos regulares registrados nos cursos de Mestrado, por semestre, unidade acadêmica, curso e sexo, UnB, 2019
+## Alunos regulares nos cursos de Mestrado, por semestre, unidade acadêmica, curso e sexo, UnB, 2019
 ```{r}
 tab4 <- rio::import("dados_Mestrado/Tabelas_Mestrado_Anuário_2019.xlsx", 
                     sheet = "Tabela 3.16",
@@ -99,7 +99,7 @@ tab4 <- rio::import("dados_Mestrado/Tabelas_Mestrado_Anuário_2019.xlsx",
 # xfun::embed_file("dados_Mestrado/EvoForM.csv")
 
 tab4 %>% 
-  tabela_geral("Alunos regulares registrados nos cursos de Mestrado, por semestre, unidade acadêmica, curso e sexo, UnB, 2019", 
+  tabela_geral("Alunos regulares nos cursos de Mestrado, por semestre, unidade acadêmica, curso e sexo, UnB, 2019", 
                linhatotal = TRUE, 
                tamfonte = 12,
                colunas = c("Unidade Acadêmica/Curso", "Fem. 1S",	"Masc. 1S",	"Total 1S", "Fem 2S", "Fem. 2S", "Total 2S"),
@@ -109,7 +109,7 @@ tab4 %>%
 
 <br>
 
-```{r}
+```{r fig.cap='Alunos regulares nos cursos de mestrado por unidade e sexo, UnB, 2º semestre de 2019'}
 include_graphics("graficos/mestrado/graf5.png")
 
 xfun::embed_file("graficos/mestrado/graf5.png")
@@ -190,7 +190,7 @@ tab8 %>%
 
 <br>
 
-## Evolução do número de alunos registrados nos cursos de mestrado, por unidade acadêmica e curso, UnB, 2015 a 2019 (2º semestre)
+## Evolução do número de alunos regulares nos cursos de mestrado, por unidade acadêmica e curso, UnB, 2015 a 2019 (2º semestre)
 ```{r}
 tab9 <- rio::import("dados_mestrado/Tabelas_Mestrado_Anuário_2019.xlsx", 
                     sheet = "Tabela 3.20",
@@ -198,7 +198,7 @@ tab9 <- rio::import("dados_mestrado/Tabelas_Mestrado_Anuário_2019.xlsx",
 # xfun::embed_file("dados_mestrado/EvoForM.csv")
 
 tab9 %>% 
-  tabela_geral("Evolução do número de alunos registrados nos cursos de mestrado, por unidade acadêmica e curso, UnB, 2015 a 2019 (2º semestre)", 
+  tabela_geral("Evolução do número de alunos regulares nos cursos de mestrado, por unidade acadêmica e curso, UnB, 2015 a 2019 (2º semestre)", 
                linhatotal = TRUE, 
                tamfonte = 12,
                colunas = c("Unidade Acadêmica/Curso", "2015", "2016", "2017", "2018", "2019"),  
@@ -226,7 +226,7 @@ tab10 %>%
 
 <br>
 
-```{r}
+```{r fig.cap='Evolução do número de alunos de mestrado matriculados, ingressantes e formados, UnB, 2015 a 2019'}
 include_graphics("graficos/mestrado/graf6.png")
 
 xfun::embed_file("graficos/mestrado/graf6.png")
@@ -234,7 +234,7 @@ xfun::embed_file("graficos/mestrado/graf6.png")
 
 <br>
 
-```{r}
+```{r fig.cap='Evolução do número de alunos com dissertações homologadas nos cursos de mestrado por década, 1976 a 2019'}
 include_graphics("graficos/mestrado/graf7.png")
 
 xfun::embed_file("graficos/mestrado/graf7.png")

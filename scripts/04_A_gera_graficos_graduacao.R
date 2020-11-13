@@ -32,7 +32,7 @@ ggsave("graficos/graduacao/graf1.pdf", device = cairo_pdf)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf1.pdf", 
                       filenames = "graficos/graduacao/graf1.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # gráfico de barras do total de ing e form por unidade
 graf2 <- rio::import("dados_graduacao/Tabela2.04.2.RData")
@@ -63,7 +63,7 @@ ggsave("graficos/graduacao/graf2.pdf", device = cairo_pdf)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf2.pdf", 
                       filenames = "graficos/graduacao/graf2.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # gráfico de colunas do percentual de ingresso por sexo e faixa etária
 graf3 <- rio::import("dados_graduacao/Tabela2.05.xlsx")
@@ -97,7 +97,7 @@ ggsave("graficos/graduacao/graf3.pdf", device = cairo_pdf, width = 7)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf3.pdf", 
                       filenames = "graficos/graduacao/graf3.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # gráfico de barras do total de matriculados por turno e unidade, no 2º semestre
 graf4 <- rio::import("dados_graduacao/Tabela2.06.xlsx")
@@ -126,14 +126,14 @@ graf <-
         plot.title = element_markdown(lineheight = 1.2),
         legend.position = "none") +
   labs(y = "Unidade acadêmica",
-       title = "Alunos regulares registrados por turno, <span style='color:#65A5D1'>integral</span></b>, <span style='color:#00AAAD'>noturno</span> e <span style='color:#008D46'>EaD</span>, nos cursos de graduação,<br>por unidade acadêmica, UnB, 2º semestre de 2019",
+       title = "Alunos regulares nos cursos de graduação por unidade acadêmica e turno,<br><span style='color:#65A5D1'>integral</span></b>, <span style='color:#00AAAD'>noturno</span> e <span style='color:#008D46'>EaD</span>, UnB, 2º semestre de 2019",
        caption = "Fonte: Censo da Educação Superior 2019")
 graf
 ggsave("graficos/graduacao/graf4.pdf", device = cairo_pdf, height = 10, width = 8)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf4.pdf", 
                       filenames = "graficos/graduacao/graf4.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # gráfico de barras do total de alunos registrados por sexo e unidade, no 2º semestre
 graf5 <- rio::import("dados_graduacao/Tabela2.07.xlsx")
@@ -162,14 +162,14 @@ graf <-
         plot.title = element_markdown(lineheight = 1.2),
         legend.position = "none") +
   labs(y = "Unidade acadêmica",
-       title = "Alunos regulares registrados por sexo, <span style='color:#7FB8DD'>feminino</span></b> e <span style='color:#0071BB'>masculino</span>, nos cursos de graduação,<br>por unidade acadêmica, UnB, 2º semestre de 2019",
+       title = "Alunos regulares nos cursos de graduação por unidade acadêmica e sexo,<br><span style='color:#7FB8DD'>feminino</span></b> e <span style='color:#0071BB'>masculino</span>, UnB, 2º semestre de 2019",
        caption = "Fonte: Censo da Educação Superior 2019")
 graf
 ggsave("graficos/graduacao/graf5.pdf", device = cairo_pdf, height = 10, width = 8)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf5.pdf", 
                       filenames = "graficos/graduacao/graf5.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # gráfico de colunas do percentual de ingresso por sexo e faixa etária
 graf6 <- rio::import("dados_graduacao/Tabela2.05.xlsx")
@@ -196,7 +196,7 @@ graf <-
         plot.title = element_markdown(lineheight = 1.2),
         legend.position = "none") +
   labs(y = "Faixa etária",
-       title = "Alunos regulares registrados nos cursos de graduação por faixa etária e sexo,<br><span style='color:#7FB8DD'>feminino</span> e <span style='color:#0071BB'>masculino</span>, UnB, 2º semestre de 2019",
+       title = "Alunos regulares nos cursos de graduação por faixa etária e sexo,<br><span style='color:#7FB8DD'>feminino</span> e <span style='color:#0071BB'>masculino</span>, UnB, 2º semestre de 2019",
        caption = "Fonte: Censo da Educação Superior 2019")
 graf
 
@@ -204,7 +204,7 @@ ggsave("graficos/graduacao/graf6.pdf", device = cairo_pdf, height = 8, width = 8
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf6.pdf", 
                       filenames = "graficos/graduacao/graf6.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # graf de barras do total por raça/cor
 graf7 <- rio::import("dados_graduacao/Tabela2.XX.xlsx")
@@ -233,14 +233,14 @@ graf <-
         axis.text.y = element_text(size = 12),
         plot.title = element_markdown(lineheight = 1.2)) +
   labs(y = "Raça/cor autodeclarada",
-       title = "Alunos regulares registrados nos cursos de graduação por<br>raça/cor autodeclarada, UnB, 2º semestre de 2019",
+       title = "Alunos regulares nos cursos de graduação por<br>raça/cor autodeclarada, UnB, 2º semestre de 2019",
        caption = "Fonte: Censo da Educação Superior 2019")
 graf
 ggsave("graficos/graduacao/graf7.pdf", device = cairo_pdf, height = 8, width = 8)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf7.pdf", 
                       filenames = "graficos/graduacao/graf7.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # graf do total de matriculados por sexo e raça/cor
 graf8 <- rio::import("dados_graduacao/Tabela2.XX2.xlsx")
@@ -274,7 +274,7 @@ graf <-
         plot.title = element_markdown(lineheight = 1.2),
         legend.position = "none") +
   labs(y = "Raça/cor autodeclarada",
-       title = "Alunos regulares registrados nos cursos de graduação por raça/cor autodeclarada<br>e sexo, <span style='color:#7FB8DD'>feminino</span> e <span style='color:#0071BB'>masculino</span>, UnB, 2º semestre de 2019",
+       title = "Alunos regulares nos cursos de graduação por raça/cor autodeclarada<br>e sexo, <span style='color:#7FB8DD'>feminino</span> e <span style='color:#0071BB'>masculino</span>, UnB, 2º semestre de 2019",
        caption = "Fonte: Censo da Educação Superior 2019")
 graf
 
@@ -282,7 +282,7 @@ ggsave("graficos/graduacao/graf8.pdf", device = cairo_pdf, height = 8, width = 1
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf8.pdf", 
                       filenames = "graficos/graduacao/graf8.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # grad de total por continente
 graf9 <- rio::import("dados_graduacao/Tabela2.14.xlsx")
@@ -311,14 +311,14 @@ graf <-
         axis.title.x = element_blank(),
         plot.title = element_markdown(lineheight = 1.2)) +
   labs(y = "Continente",
-       title = "Alunos estrangeiros regulares registrados nos cursos de graduação,<br>por continente, UnB, 2º semestre de 2019",
+       title = "Alunos estrangeiros regulares nos cursos de graduação<br>por continente, UnB, 2º semestre de 2019",
        caption = "Fonte: Censo da Educação Superior 2019")
 graf
 ggsave("graficos/graduacao/graf9.pdf", device = cairo_pdf, width = 7)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf9.pdf", 
                       filenames = "graficos/graduacao/graf9.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # graf de total por país (maiores apenas)
 graf10 <- rio::import("dados_graduacao/Tabela2.14.2.xlsx")
@@ -337,14 +337,14 @@ graf <-
         axis.title.x = element_blank(),
         plot.title = element_markdown(lineheight = 1.2)) +
   labs(y = "País",
-       title = "Alunos estrangeiros regulares registrados nos cursos de graduação,<br>por país (10 maiores), UnB, 2º semestre de 2019",
+       title = "Alunos estrangeiros regulares nos cursos de graduação<br>por país (10 maiores), UnB, 2º semestre de 2019",
        caption = "Fonte: Censo da Educação Superior 2019")
 graf
 ggsave("graficos/graduacao/graf10.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf10.pdf", 
                       filenames = "graficos/graduacao/graf10.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # graf de linhas da evolução do total de ingressantes por ano 
 graf11_ing <- rio::import("dados_graduacao/Tabela2.21.xlsx") %>% 
@@ -388,7 +388,7 @@ ggsave("graficos/graduacao/graf11.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf11.pdf", 
                       filenames = "graficos/graduacao/graf11.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # Evolução do número de alunos formados nos cursos de graduação, por década, 1976 a 2019
 graf12 <- tribble(
@@ -416,11 +416,11 @@ graf <-
         axis.title.y = element_blank(),
         axis.title.x = element_blank(),
         plot.title = element_markdown(lineheight = 1.2)) +
-  labs(title = "Evolução do número de alunos formados nos cursos de graduação,<br>por década, 1976 a 2019",
+  labs(title = "Evolução do número de alunos de graduação formados<br>por década, UnB, 1976 a 2019",
        caption = "Fonte: Sistemas acadêmicos da UnB, em 14/04/2020")
 graf
 ggsave("graficos/graduacao/graf12.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf12.pdf", 
                       filenames = "graficos/graduacao/graf12.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)

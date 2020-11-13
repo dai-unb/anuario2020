@@ -31,14 +31,14 @@ graf <-
         plot.title = element_markdown(lineheight = 1.2),
         legend.position = "none") +
   labs(y = "Unidade",
-       title = "<b><span style='color:#8EC63F'>Ingressantes</span></b> e <b><span style='color:#D2E8B2'>concluintes</span></b> nos cursos de mestrado,<br>por unidade acadêmica, UnB, 2019",
+       title = "<b><span style='color:#8EC63F'>Ingressantes</span></b> e <b><span style='color:#D2E8B2'>concluintes</span></b> nos cursos de mestrado<br>por unidade acadêmica, UnB, 2019",
        caption = "Fonte: Sistemas acadêmicos da UnB, em 14/04/2020")
 graf
 ggsave("graficos/mestrado/graf1.pdf", device = cairo_pdf)
 pdftools::pdf_convert(pdf = "graficos/mestrado/graf1.pdf", 
                       filenames = "graficos/mestrado/graf1.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # Alunos ingressantes nos cursos de mestrado, por sexo e faixa etária, UnB, 2019
 graf2 <- rio::import("dados_Mestrado/Tabelas_Mestrado_Anuário_2019.xlsx", 
@@ -73,7 +73,7 @@ ggsave("graficos/mestrado/graf2.pdf", device = cairo_pdf, width = 7)
 pdftools::pdf_convert(pdf = "graficos/mestrado/graf2.pdf", 
                       filenames = "graficos/mestrado/graf2.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # Alunos concluintes nos cursos de mestrado, por sexo e faixa etária, UnB, 2019
 graf3 <- rio::import("dados_Mestrado/Tabelas_Mestrado_Anuário_2019.xlsx", 
@@ -108,7 +108,7 @@ ggsave("graficos/mestrado/graf3.pdf", device = cairo_pdf, width = 7)
 pdftools::pdf_convert(pdf = "graficos/mestrado/graf3.pdf", 
                       filenames = "graficos/mestrado/graf3.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # Alunos matriculados nos cursos de mestrado, por sexo e faixa etária, UnB, 2019
 graf4 <- rio::import("dados_Mestrado/Tabelas_Mestrado_Anuário_2019.xlsx", 
@@ -136,7 +136,7 @@ graf <-
         plot.title = element_markdown(lineheight = 1.2),
         legend.position = "none") +
   labs(y = "Faixa etária",
-       title = "Alunos regulares registrados nos cursos de mestrado por faixa etária e sexo,<br><b><span style='color:#D2E8B2'>feminino</span></b> e <b><span style='color:#8EC63F'>masculino</span></b>, UnB, 2019",
+       title = "Alunos regulares nos cursos de mestrado por faixa etária e sexo,<br><b><span style='color:#D2E8B2'>feminino</span></b> e <b><span style='color:#8EC63F'>masculino</span></b>, UnB, 2019",
        caption = "Fonte: Sistemas acadêmicos da UnB, em 14/04/2020")
 graf
 
@@ -144,7 +144,7 @@ ggsave("graficos/mestrado/graf4.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/mestrado/graf4.pdf", 
                       filenames = "graficos/mestrado/graf4.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # Alunos matriculados nos cursos de mestrado, por sexo e unidade, UnB, 2019
 graf5 <- rio::import("dados_Mestrado/Tabelas_Mestrado_Anuário_2019.xlsx", 
@@ -174,7 +174,7 @@ graf <-
         plot.title = element_markdown(lineheight = 1.2),
         legend.position = "none") +
   labs(y = "Unidade",
-       title = "Alunos regulares registrados nos cursos de mestrado por unidade e sexo,<br><b><span style='color:#D2E8B2'>feminino</span></b> e <b><span style='color:#8EC63F'>masculino</span></b>, UnB, 2º semestre de 2019",
+       title = "Alunos regulares nos cursos de mestrado por unidade e sexo,<br><b><span style='color:#D2E8B2'>feminino</span></b> e <b><span style='color:#8EC63F'>masculino</span></b>, UnB, 2º semestre de 2019",
        caption = "Fonte: Sistemas acadêmicos da UnB, em 14/04/2020")
 graf
 
@@ -182,7 +182,7 @@ ggsave("graficos/mestrado/graf5.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/mestrado/graf5.pdf", 
                       filenames = "graficos/mestrado/graf5.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # graf de linhas da evolução do total de ingressantes, matriculados e formados por ano 
 graf6_ing <- rio::import("dados_mestrado/Tabelas_Mestrado_Anuário_2019.xlsx", 
@@ -232,7 +232,7 @@ ggsave("graficos/mestrado/graf6.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/mestrado/graf6.pdf", 
                       filenames = "graficos/mestrado/graf6.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # Evolução do número de alunos com dissertações homologadas nos cursos de mestrado, por décadas, 1976 a 2018
 graf7 <- tribble(
@@ -259,11 +259,11 @@ graf <-
         axis.title.y = element_blank(),
         axis.title.x = element_blank(),
         plot.title = element_markdown(lineheight = 1.2)) +
-  labs(title = "Evolução do número de alunos com dissertações homologadas nos cursos de mestrado,<br>por década, 1976 a 2019",
+  labs(title = "Evolução do número de alunos com dissertações homologadas nos cursos de mestrado<br>por década, 1976 a 2019",
        caption = "Fonte: Sistemas acadêmicos da UnB, em 14/04/2020")
 graf
 ggsave("graficos/mestrado/graf7.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/mestrado/graf7.pdf", 
                       filenames = "graficos/mestrado/graf7.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)

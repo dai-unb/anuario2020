@@ -27,6 +27,7 @@ Estar entre as melhores universidades do Brasil, inserida internacionalmente, co
 <br>
 <br>
 
+## Componentes institucionais da UnB
 ```{r}
 comp_inst <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=1)
 
@@ -40,6 +41,7 @@ comp_inst %>%
 
 <br>
 
+## Vagas oferecidas nos processos de seleção primários da UnB, 2019
 ```{r}
 vagas_oferecidas <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=2)
 
@@ -54,6 +56,7 @@ vagas_oferecidas %>%
 
 <br>
 
+## Inscritos nos processos de seleção primários da UnB, 2019
 ```{r}
 inscritos <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=3)
 
@@ -68,6 +71,7 @@ inscritos %>%
 
 <br>
 
+## Relação candidato x vaga nos processos de seleção primários da UnB, 2019
 ```{r}
 demanda <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=4)
 demanda$`1º semestre` <- round(demanda$`1º semestre`, digits = 2)
@@ -88,6 +92,7 @@ demanda %>%
 
 <br>
 
+## Ingressantes pelos processos de seleção da UnB, 2019
 ```{r}
 ingressantes <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet = 5)
 
@@ -103,6 +108,7 @@ ingressantes %>%
 
 <br>
 
+## Total de cursos da UnB por grau, 2019
 ```{r}
 Cursos <-  rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet = 6)
 
@@ -118,6 +124,7 @@ Cursos %>%
 
 <br>
 
+## Total de formados da UnB por grau, 2019
 ```{r}
 Formados <-  rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet = 7)
 
@@ -134,6 +141,7 @@ Formados %>%
 
 <br>
 
+## Total de docentes ativos da UnB por grau de titulação, 2019
 ```{r}
 docente_ativo <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=8)
 
@@ -146,6 +154,7 @@ docente_ativo %>%
 
 <br>
 
+## Número de técnico-administrativos do quadro, por cargo, 2019
 ```{r}
 escolaridade_tecnico <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=9)
 
@@ -158,12 +167,16 @@ escolaridade_tecnico %>%
 
 <br>
 
+## Área física dos campi da Universidade de Brasília, 2019
 ```{r}
 area_fisica <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=10)
 
 area_fisica %>%
-  mutate(`m²` = round(`m²`, 0)) %>% 
-  # map_df(~replace_na(., " ")) %>% 
+  mutate(`m²` = format(round(`m²`, 0), big.mark = "."),
+         `m²` = ifelse(str_detect(`m²`, "NA"),
+                       "",
+                       `m²`)) %>% 
+  # map_df(~replace_na(., " ")) %>%
   tabela_geral("Área física dos campi da Universidade de Brasília, 2019", 
                colunas = c("Campus", "Metragem (m²)"),
                linhatotal = FALSE, 
@@ -172,6 +185,7 @@ area_fisica %>%
 
 <br>
 
+## Números da Biblioteca Central (BCE) da UnB, 2019
 ```{r}
 bce <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=11)
 
@@ -184,6 +198,7 @@ bce %>%
 
 <br>
 
+## Números da Editora Universidade de Brasília (EDU), 2019
 ```{r}
 edu <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=12)
 
@@ -198,6 +213,7 @@ edu %>%
 
 <br>
 
+## Números da extensão da UnB, 2019
 ```{r}
 extensao <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=13)
 
@@ -211,6 +227,7 @@ extensao %>%
 
 <br>
 
+## Números do Restaurante Universitário (RU) da UnB, 2019
 ```{r}
 ru <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=14)
 
@@ -225,6 +242,7 @@ ru %>%
 
 <br>
 
+## Indicadores gerais de desempenho da UnB, 2009 a 2019
 ```{r}
 indicadores_gerais <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=15)
 
@@ -249,9 +267,9 @@ indicadores_gerais %>%
                                 `2009 A 2019`,
                                 paste0(round(100 * as.double(`2009 A 2019`), 2), "%"))) %>% 
   map_df(~replace_na(., "")) %>%
-  tabela_geral("Indicadores gerais de desempenho, 2009 a 2019", 
+  tabela_geral("Indicadores gerais de desempenho da UnB, 2009 a 2019", 
                linhatotal = F, 
-               tamfonte = 14, 
+               tamfonte = 10, 
                fundo = fundo) %>% 
   row_spec(row = cores, background = fundo, color = "white") %>% 
   footnote(general_title = "Notas: ",
@@ -260,6 +278,7 @@ indicadores_gerais %>%
 
 <br>
 
+## Dados gerais por unidade da UnB, 2019
 ```{r}
 geral <- rio::import("dados_gerais/Tabela_1.03.xlsx")
 
@@ -281,6 +300,7 @@ geral %>%
 
 <br>
 
+## População universitária da UnB, 2015 a 2019
 ```{r}
 evo_pop <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=16)
 evo_pop$Ano <- as.character(evo_pop$Ano)
@@ -300,10 +320,15 @@ evo_pop %>%
 
 <br>
 
-#Gráfico 1 - Evolução da população universitária da UnB, 2015 a 2019
+## Gráfico Evolução da população universitária da UnB, 2015 a 2019
 
-#Gráfico 2 - Evolução da população universitária da UnB por categoria, 2015 a 2019
+<br>
 
+## Gráfico Evolução da população universitária da UnB por categoria, 2015 a 2019
+
+<br>
+
+## Alunos regulares na graduação e na pós-graduação Stricto Sensu, 2015 a 2019 (2º semestre)
 ```{r}
 evo_alunos <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=17)
 evo_alunos$Ano <- as.character(evo_alunos$Ano)
@@ -321,11 +346,15 @@ evo_alunos %>%
 
 <br>
 
-#Gráfico 3 - Evolução da população universitária da UnB, 2015 a 2019 (2º semestre)
+## Gráfico Evolução da população universitária da UnB, 2015 a 2019 (2º semestre)
 
-#Gráfico 4 - Evolução do número de alunos registrados na pós-graduação Stricto Sensu, 2015 a 2019 (2º semestre)
+<br>
 
+## Gráfico Evolução do número de alunos registrados na pós-graduação Stricto Sensu, 2015 a 2019 (2º semestre)
 
+<br>
+
+## Alunos formados na graduação e pós-graduação, 1966 a 2019
 ```{r}
 evo_formados <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=18)
 
@@ -343,8 +372,11 @@ evo_formados %>%
 
 <br>
 
-#Gráfico 5 - Total de alunos formados na graduação, na especialização, no mestrado e no doutorado por período, 1966 a 2019
+## Gráfico Total de alunos formados na graduação, na especialização, no mestrado e no doutorado por período, 1966 a 2019
 
+<br>
+
+## Área física do Campus Universitário Darcy Ribeiro, 2019
 ```{r}
 area_darcy <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=19)
 
@@ -360,6 +392,7 @@ area_darcy %>%
 
 <br>
 
+## Área física dos Campi UnB Planaltina, UnB Gama e UnB Ceilândia, 2019
 ```{r}
 area_outros <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=20)
 
@@ -374,6 +407,7 @@ area_outros %>%
 
 <br>
 
+## Área física da Fazenda Água Limpa (FAL), 2019
 ```{r}
 area_fal <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=21)
 
@@ -384,8 +418,9 @@ area_fal %>%
            general = "")
 ```
 
-<br
+<br>
 
+## Área física do Hospital Universitário de Brasília (HUB), 2019
 ```{r}
 area_hub <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=22)
 

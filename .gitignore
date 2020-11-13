@@ -40,3 +40,8 @@ vignettes/*.pdf
 
 # Ignore Dados Identificados
 dados_identificados
+
+# ignore outros
+*.pdf
+*.docx
+*.rar

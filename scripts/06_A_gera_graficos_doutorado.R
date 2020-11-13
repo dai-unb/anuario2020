@@ -31,14 +31,14 @@ graf <-
         plot.title = element_markdown(lineheight = 1.2),
         legend.position = "none") +
   labs(y = "Unidade",
-       title = "<b><span style='color:#00652E'>Ingressantes</span></b> e <b><span style='color:#7FB296'>concluintes</span></b> nos cursos de doutorado,<br>por unidade acadêmica, UnB, 2019",
+       title = "<b><span style='color:#00652E'>Ingressantes</span></b> e <b><span style='color:#7FB296'>concluintes</span></b> nos cursos de doutorado<br>por unidade acadêmica, UnB, 2019",
        caption = "Fonte: Sistemas acadêmicos da UnB, em 14/04/2020")
 graf
 ggsave("graficos/doutorado/graf1.pdf", device = cairo_pdf)
 pdftools::pdf_convert(pdf = "graficos/doutorado/graf1.pdf", 
                       filenames = "graficos/doutorado/graf1.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # Alunos ingressantes nos cursos de doutorado, por sexo e faixa etária, UnB, 2019
 graf2 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx", 
@@ -74,7 +74,7 @@ ggsave("graficos/doutorado/graf2.pdf", device = cairo_pdf, width = 7)
 pdftools::pdf_convert(pdf = "graficos/doutorado/graf2.pdf", 
                       filenames = "graficos/doutorado/graf2.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # Alunos concluintes nos cursos de doutorado, por sexo e faixa etária, UnB, 2019
 graf3 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx", 
@@ -111,7 +111,7 @@ ggsave("graficos/doutorado/graf3.pdf", device = cairo_pdf, width = 7)
 pdftools::pdf_convert(pdf = "graficos/doutorado/graf3.pdf", 
                       filenames = "graficos/doutorado/graf3.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # Alunos matriculados nos cursos de doutorado, por sexo e faixa etária, UnB, 2019
 graf4 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx", 
@@ -142,7 +142,7 @@ graf <-
         plot.title = element_markdown(lineheight = 1.2),
         legend.position = "none") +
   labs(y = "Faixa etária",
-       title = "Alunos regulares registrados nos cursos de doutorado por faixa etária e sexo,<br><b><span style='color:#7FB296'>feminino</span></b> e <b><span style='color:#00652E'>masculino</span></b>, UnB, 2019",
+       title = "Alunos regulares nos cursos de doutorado por faixa etária e sexo,<br><b><span style='color:#7FB296'>feminino</span></b> e <b><span style='color:#00652E'>masculino</span></b>, UnB, 2019",
        caption = "Fonte: Sistemas acadêmicos da UnB, em 14/04/2020")
 graf
 
@@ -150,7 +150,7 @@ ggsave("graficos/doutorado/graf4.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/doutorado/graf4.pdf", 
                       filenames = "graficos/doutorado/graf4.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # Alunos matriculados nos cursos de doutorado, por sexo e unidade, UnB, 2019
 graf5 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx", 
@@ -180,7 +180,7 @@ graf <-
         plot.title = element_markdown(lineheight = 1.2),
         legend.position = "none") +
   labs(y = "Unidade",
-       title = "Alunos regulares registrados nos cursos de doutorado por unidade e sexo,<br><b><span style='color:#7FB296'>feminino</span></b> e <b><span style='color:#00652E'>masculino</span></b>, UnB, 2º semestre de 2019",
+       title = "Alunos regulares nos cursos de doutorado por unidade e sexo,<br><b><span style='color:#7FB296'>feminino</span></b> e <b><span style='color:#00652E'>masculino</span></b>, UnB, 2º semestre de 2019",
        caption = "Fonte: Sistemas acadêmicos da UnB, em 14/04/2020")
 graf
 
@@ -188,7 +188,7 @@ ggsave("graficos/doutorado/graf5.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/doutorado/graf5.pdf", 
                       filenames = "graficos/doutorado/graf5.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # graf de linhas da evolução do total de ingressantes, matriculados e formados por ano 
 graf6_ing <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx", 
@@ -238,7 +238,7 @@ ggsave("graficos/doutorado/graf6.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/doutorado/graf6.pdf", 
                       filenames = "graficos/doutorado/graf6.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
 
 # Evolução do número de alunos com teses homologadas nos cursos de doutorado, por décadas, 1976 a 2018
 graf7 <- tribble(
@@ -264,11 +264,11 @@ graf <-
         axis.title.y = element_blank(),
         axis.title.x = element_blank(),
         plot.title = element_markdown(lineheight = 1.2)) +
-  labs(title = "Evolução do número de alunos com teses homologadas nos cursos de doutorado,<br>por década, 1976 a 2019",
+  labs(title = "Evolução do número de alunos com teses homologadas nos cursos de doutorado<br>por década, 1976 a 2019",
        caption = "Fonte: Sistemas acadêmicos da UnB, em 14/04/2020")
 graf
 ggsave("graficos/doutorado/graf7.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/doutorado/graf7.pdf", 
                       filenames = "graficos/doutorado/graf7.png", 
                       format = "png", 
-                      dpi = 300)
+                      dpi = 250)
