@@ -3,6 +3,7 @@
 #-------------------------------------------------------------------------------------------
 # setwd("C:/anuario2020") -  inserir apenas caminhos relativos
 # source("scripts/00_execute-me.R")
+options(OutDec = ",")
 library(tidyverse)
 # library(openxlsx)
 # library(xlsx)
@@ -110,6 +111,23 @@ Tabela2.03["Total Geral",] <- colSums(Tabela2.03, na.rm=T)/2
 salva_tabela_grad(Tabela2.03, "Tabela2.03")
 
 rm(totais, Tabela2.03)
+
+### tabela 2.03_2 para o gráfico
+Tabela2.03_2 <- totais %>%
+  select(-Unidade, -Curso) %>% 
+  summarise_all(sum, na.rm = TRUE) %>% 
+  mutate(Vestibular = sum(`Vestibular 1 Sem`, `Vestibular 2 Sem`),
+         PAS = sum(`PAS 1 Sem`, `PAS 2 Sem`),
+         ENEM = sum(`ENEM 1 Sem`, `ENEM 2 Sem`),
+         "Outras vias" = sum(`Convênio PEC 1 Sem`, `Convênio PEC 2 Sem`,
+                             `Programas Especiais 1`, `Programas Especiais 2`,
+                             `Transferência Facultativa 1 Sem`, `Transferência Facultativa 2 Sem`,
+                             `Transferência Obrigatória 1 Sem`, `Transferência Obrigatória 2 Sem`,
+                             `Judicial 1`, `Judicial 2`)) %>% 
+  select(Vestibular:`Outras vias`) %>% 
+  pivot_longer(cols = everything())
+
+rio::export(Tabela2.03_2, "dados_graduacao/Tabela2.03.2.xlsx")
 
 #-------------------------------------------------------------------------------------------
 #------------------------------ Tabela 2.04 Ingressantes e Formados ------------------------
@@ -634,6 +652,12 @@ totais <- Tabela2.11 %>%
 Tabela2.11$Unidade <- sapply(Tabela2.11$Unidade, function(x) paste(x, "-", collapse=""))
 Tabela2.11 <- bind_rows(Tabela2.11,totais) %>% arrange(Unidade, Curso)
 
+Tabela2.11 <- Tabela2.11 %>% 
+  bind_rows(totais %>% summarise_if(is.numeric, sum, na.rm = TRUE)) %>% 
+  mutate(Curso = ifelse(is.na(Curso),
+                        "Total geral",
+                        Curso))
+
 nomes <- Tabela2.11$Curso
 
 Tabela2.11$Curso <- NULL
@@ -709,7 +733,7 @@ Tabela2.XX2$`% Total` <- paste(round(Tabela2.XX2$Total/Tabela2.XX2$Total[8]*100,
 
 Tabela2.XX2 <- Tabela2.XX2 %>% select(Raca, Feminino, `% Feminino`, Masculino, `% Masculino`, Total, `% Total`)
 
-salva_tabela_grad(Tabela2.XX2, "Tabela2.XX2")
+rio::export(Tabela2.XX2, "dados_graduacao/Tabela2.XX2.xlsx")
 
 rm(nomes, Tabela2.XX2)
 
@@ -807,7 +831,15 @@ Tabela2.10 <- left_join(Nomes, AA1) %>%
   left_join(MD2) %>% 
   left_join(AP1) %>% 
   left_join(AP2) %>% 
-  as.data.frame()
+  as.data.frame() %>% 
+  map_df(~replace_na(., 0))
+
+# remove cursos que só têm zero
+Tabela2.10 <- Tabela2.10 %>% 
+  filter(!(`Alunos Ativos 1` == 0 & `Alunos Ativos 2` == 0 &
+         `Matriculados em Disciplinas 1` == 0 & `Matriculados em Disciplinas 2` == 0 &
+         `AP 1` == 0 & `AP 2` == 0 &
+         `RP 1` == 0 & `RP 2` == 0))
 
 totais <- Tabela2.10 %>% 
   group_by(Unidade) %>% 
@@ -828,7 +860,8 @@ Tabela2.10 <- Tabela2.10 %>%
   ungroup() %>% 
   select(`Alunos Ativos 1`, `Alunos Ativos 2`, 
          `Matriculados em Disciplinas 1`, `Matriculados em Disciplinas 2`,
-         `AP 1`, `AP 2`, `RP 1`, `RP 2`)
+         `AP 1`, `AP 2`, `RP 1`, `RP 2`) %>% 
+  as.data.frame()
 
 rownames(Tabela2.10) <- nomes
 
@@ -838,6 +871,16 @@ Tabela2.10$`RP 1` <- Tabela2.10$`AP 1`/(Tabela2.10$`RP 1` + Tabela2.10$`AP 1`)
 Tabela2.10$`RP 1` <- paste(round(Tabela2.10$`RP 1`*100,1), "%", sep="")
 Tabela2.10$`RP 2` <- Tabela2.10$`AP 2`/(Tabela2.10$`RP 2` + Tabela2.10$`AP 2`)
 Tabela2.10$`RP 2` <- paste(round(Tabela2.10$`RP 2`*100,1), "%", sep="")
+
+nomes <- rownames(Tabela2.10)
+
+# arruma os NANs
+Tabela2.10 <- Tabela2.10 %>% 
+  mutate(`RP 2` = ifelse(`RP 2` == "NaN%",
+                         "",
+                         `RP 2`))
+
+rownames(Tabela2.10) <- nomes
 
 salva_tabela_grad(Tabela2.10, "Tabela2.10")
 

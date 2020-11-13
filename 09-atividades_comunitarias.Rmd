@@ -1,0 +1,128 @@
+# Atividades Comunitárias {#comu}
+
+## Decanato de Assuntos Comunitários (DAC) {-}
+
+```{r}
+options(scipen = 9)
+assistencia <- rio::import("dados_atividades_comunitarias/atividades_comunitarias.xlsx", sheet=1)
+
+```
+
+```{r assistencia-estudantil}
+#xfun::embed_file("")
+assistencia %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Evolução da assistência estudantil, 2015 a 2019", linhatotal =  FALSE, tamfonte = 14, fundo = "#00ADEE") %>% footnote(general = c("DDS/DAC"),
+           general_title = "Fonte:")
+```
+
+
+
+```{r}
+
+dasu <- rio::import("dados_atividades_comunitarias/atividades_comunitarias.xlsx", sheet=2)
+
+```
+
+```{r dasu}
+#xfun::embed_file("")
+dasu %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Atividades e serviços ofertados à comunidade universitária, 2019", linhatotal =  FALSE, tamfonte = 14, fundo = "#00ADEE") %>% footnote(general = c("DASU/DAC"),
+           general_title = "Fonte:")
+```
+
+```{r}
+
+atividade_comunitaria <- rio::import("dados_atividades_comunitarias/atividades_comunitarias.xlsx", sheet=3)
+
+```
+
+```{r atividade-comunitaria}
+#xfun::embed_file("")
+atividade_comunitaria %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Atividades comunitárias abertas à população do Distrito Federal e à de outros estados, 2015 a 2019", linhatotal =  FALSE, tamfonte = 14, fundo = "#00ADEE") %>% footnote(number = c("ND : Não Disponível","*Projetos acrescentados em 2019"),general = c("DEA/DAC"),
+           general_title = "Fonte:")
+```
+
+## Restaurante Universitário (RU) {-}
+
+```{r}
+
+ru <- rio::import("dados_atividades_comunitarias/atividades_comunitarias.xlsx", sheet=4)
+
+```
+
+```{r ru}
+#xfun::embed_file("")
+ru %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Recursos humanos, serviços e custos, Jan. – Dez. de 2019", linhatotal =  FALSE, tamfonte = 14, fundo = "#00ADEE") %>% footnote(general = c("RU"),
+           general_title = "Fonte:")
+```
+
+```{r}
+
+ru2 <- rio::import("dados_atividades_comunitarias/atividades_comunitarias.xlsx", sheet=5)
+
+```
+
+```{r ru2}
+#xfun::embed_file("")
+ru2 %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral(" Número de refeições servidas no Restaurante Universitário por mês, Jan. – Dez. de 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#00ADEE") %>% footnote(general = c("RU"),
+           general_title = "Fonte:")
+```
+
+## Núcleo de Práticas Jurídicas da Faculdade de Direito (NPJ/FD) {-}
+
+```{r}
+
+fd <- rio::import("dados_atividades_comunitarias/atividades_comunitarias.xlsx", sheet=6)
+
+```
+
+```{r fd}
+#xfun::embed_file("")
+fd %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral(" Evolução dos atendimentos sociais à população do Distrito Federal e de sua região de influência, 2015 a 2019", linhatotal =  FALSE, tamfonte = 14, fundo = "#00ADEE") %>% footnote(number = c("ND : Não Disponível"),general = c("NPJ/FD"),
+           general_title = "Fonte:")
+```
+
+
+
+## Centro de Atendimento e Estudos Psicológicos (CAEP/IP) {-}
+
+```{r}
+
+caep <- rio::import("dados_atividades_comunitarias/atividades_comunitarias.xlsx", sheet=7)
+
+```
+
+```{r caep}
+#xfun::embed_file("")
+caep %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Atendimentos psicoterápicos à população do Distrito Federal e de sua região de influência por Mês, Jan. – Dez. 2019", linhatotal =  TRUE, tamfonte = 14, fundo = "#00ADEE") %>% footnote(number= c("* Devido às restrições relacionadas a pandemia (COVID-19), não foi possível realizar a contagem mensal. "),general = c("CAEP/IP"),
+           general_title = "Fonte:")
+```
+
+
+## Núcleo de apoio Psicopedagógico e Bem Estar do Estudante de Medicina (NAPEM/FM){-}
+
+```{r}
+
+napem <- rio::import("dados_atividades_comunitarias/atividades_comunitarias.xlsx", sheet=8)
+
+```
+
+```{r napem}
+#xfun::embed_file("")
+napem %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Atendimentos psicopedagógicos aos estudantes de medicina da Universidade de Brasília por mês, Jan – Dez. de 2019", linhatotal =  TRUE, tamfonte = 14, fundo = "#00ADEE") %>% footnote(general = c("NAPEM/FM"),
+           general_title = "Fonte:")
+```

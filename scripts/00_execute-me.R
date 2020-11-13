@@ -1,7 +1,9 @@
 ### script para atualizar todas as tabelas
 ### e para ativar o RENV (gerenciamento de pacotes)
 ### vai ser construído aos poucos
-options(encoding = "UTF-8", OutDec = ",", scipen = 9)
+options(encoding = "UTF-8", 
+        OutDec = ",", 
+        scipen = 9)
 
 source("scripts/01_renv_setup.R")
 source("scripts/02_pega_dados_censo.R")

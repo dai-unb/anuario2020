@@ -12,7 +12,7 @@ indicadores_prod <- rio::import("dados_orgaos_complementares_e_outros/orgaos_com
 ```
 
 
-```{r indicadores_prod}
+```{r}
 #xfun::embed_file("")
 
 indicadores_prod %>% 
@@ -27,7 +27,7 @@ despesas_hub <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complem
 ```
 
 
-```{r despesas_hub}
+```{r}
 #xfun::embed_file("")
 despesas_hub %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -41,7 +41,7 @@ programa_residencia <- rio::import("dados_orgaos_complementares_e_outros/orgaos_
 ```
 
 
-```{r programa_residencia}
+```{r}
 #xfun::embed_file("")
 programa_residencia %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -49,8 +49,33 @@ programa_residencia %>%
            general_title = "Fonte:")
 ```
 
+### Hospital Veterinário (HVET) {-}
+
+```{r}
+hvetao <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=23)
+
+hvetao %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Atividades realizadas pelo HVET - Setor de Grandes Animais, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#00376f") %>% 
+  footnote(general_title = "Fonte: Hospital Universitário (HVET)",
+           general = "")
+```
+
+<br>
+
+```{r}
+hvetinho <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=24)
+
+hvetinho %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Atividades realizadas pelo HVET - Setor de Pequenos Animais, 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#00376f") %>% 
+  footnote(general_title = "Fonte: Hospital Universitário (HVET)",
+           general = "")
+```
+
+
 ### Arquivo Central (ACE) {-}
-<br><br>
+<br>
 
 ```{r}
 custos <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=4)
@@ -58,7 +83,7 @@ custos <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementare
 ```
 
 
-```{r custos}
+```{r}
 #xfun::embed_file("")
 custos %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -73,7 +98,7 @@ projetos_ace <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complem
 ```
 
 
-```{r projetos_ace}
+```{r}
 #xfun::embed_file("")
 projetos_ace %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -87,7 +112,7 @@ documentos_ace <- rio::import("dados_orgaos_complementares_e_outros/orgaos_compl
 ```
 
 
-```{r documentos_ace}
+```{r}
 #xfun::embed_file("")
 documentos_ace %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -96,8 +121,7 @@ documentos_ace %>%
 ```
 
 ### Biblioteca Central (BCE) {-}
-<br><br>
-
+<br>
 
 ```{r}
 bce_servicos <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=7)
@@ -105,7 +129,7 @@ bce_servicos <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complem
 ```
 
 
-```{r bce_servicos}
+```{r}
 #xfun::embed_file("")
 bce_servicos %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -120,7 +144,7 @@ bce_servicos2 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_comple
 ```
 
 
-```{r bce_servicos2}
+```{r}
 #xfun::embed_file("")
 bce_servicos2 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -135,7 +159,7 @@ bce_servicos3 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_comple
 ```
 
 
-```{r bce_servicos3}
+```{r}
 #xfun::embed_file("")
 bce_servicos3 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -150,7 +174,7 @@ bce_servicos4 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_comple
 ```
 
 
-```{r bce_servicos4}
+```{r}
 #xfun::embed_file("")
 bce_servicos4 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -164,7 +188,7 @@ bce_servicos5 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_comple
 ```
 
 
-```{r bce_servicos5}
+```{r}
 #xfun::embed_file("")
 bce_servicos5 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -178,7 +202,7 @@ bce_servicos6 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_comple
 ```
 
 
-```{r bce_servicos6}
+```{r}
 #xfun::embed_file("")
 bce_servicos6 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -192,7 +216,7 @@ acervo_bce <- rio::import("dados_orgaos_complementares_e_outros/orgaos_complemen
 ```
 
 
-```{r acervo_bce}
+```{r}
 #xfun::embed_file("")
 acervo_bce %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -206,7 +230,7 @@ acervo_bce1 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r acervo_bce1}
+```{r}
 #xfun::embed_file("")
 acervo_bce1 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -220,7 +244,7 @@ acervo_bce2 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r acervo_bce2}
+```{r}
 #xfun::embed_file("")
 acervo_bce2 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -234,7 +258,7 @@ acervo_bce3 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r acervo_bce3}
+```{r}
 #xfun::embed_file("")
 acervo_bce3 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -248,7 +272,7 @@ acervo_bce4 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r acervo_bce4}
+```{r}
 #xfun::embed_file("")
 acervo_bce4 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -263,7 +287,7 @@ acervo_bce5 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r acervo_bce5}
+```{r}
 #xfun::embed_file("")
 acervo_bce5 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -277,7 +301,7 @@ acervo_bce6 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r acervo_bce6}
+```{r}
 #xfun::embed_file("")
 acervo_bce6 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -292,7 +316,7 @@ acervo_bce7 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r acervo_bce7}
+```{r}
 #xfun::embed_file("")
 acervo_bce7 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -306,7 +330,7 @@ acervo_bce8 <- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r acervo_bce8}
+```{r}
 #xfun::embed_file("")
 acervo_bce8 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -321,7 +345,7 @@ acervo_bce9<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complemen
 ```
 
 
-```{r acervo_bce9}
+```{r}
 #xfun::embed_file("")
 acervo_bce9 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -335,7 +359,7 @@ acervo_bce10<- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r acervo_bce10}
+```{r}
 #xfun::embed_file("")
 acervo_bce10 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -352,7 +376,7 @@ servicos_edu<- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r servicos_edu}
+```{r}
 #xfun::embed_file("")
 servicos_edu %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -369,7 +393,7 @@ frequentadores_fal<- rio::import("dados_orgaos_complementares_e_outros/orgaos_co
 ```
 
 
-```{r frequentadores_fal}
+```{r}
 #xfun::embed_file("")
 frequentadores_fal %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -383,7 +407,7 @@ animais_fal<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complemen
 ```
 
 
-```{r animais_fal}
+```{r}
 #xfun::embed_file("")
 animais_fal %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -397,7 +421,7 @@ producao_fal<- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r producao_fal}
+```{r}
 #xfun::embed_file("")
 producao_fal %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -415,7 +439,7 @@ pctec<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_
 ```
 
 
-```{r pctec}
+```{r}
 #xfun::embed_file("")
 pctec %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -429,7 +453,7 @@ eventos_pctec<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complem
 ```
 
 
-```{r eventos_pctec}
+```{r}
 #xfun::embed_file("")
 eventos_pctec %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -449,7 +473,7 @@ sistemas_cpd<- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r sistemas_cpd}
+```{r}
 #xfun::embed_file("")
 sistemas_cpd %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -464,7 +488,7 @@ sistemas_cpd1<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complem
 ```
 
 
-```{r sistemas_cpd1}
+```{r}
 #xfun::embed_file("")
 sistemas_cpd1 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -481,7 +505,7 @@ inscritos_cespe<- rio::import("dados_orgaos_complementares_e_outros/orgaos_compl
 ```
 
 
-```{r inscritos_cespe}
+```{r}
 #xfun::embed_file("")
 inscritos_cespe %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -495,7 +519,7 @@ regiao_cespe<- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r regiao_cespe}
+```{r}
 #xfun::embed_file("")
 regiao_cespe %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -509,7 +533,7 @@ inscritos_pas<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complem
 ```
 
 
-```{r inscritos_pas}
+```{r}
 #xfun::embed_file("")
 inscritos_pas %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -524,7 +548,7 @@ classificados_pas<- rio::import("dados_orgaos_complementares_e_outros/orgaos_com
 ```
 
 
-```{r classificados_pas}
+```{r}
 #xfun::embed_file("")
 classificados_pas %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -542,7 +566,7 @@ cdt_ensinograd<- rio::import("dados_orgaos_complementares_e_outros/orgaos_comple
 ```
 
 
-```{r cdt_ensinograd}
+```{r}
 #xfun::embed_file("")
 cdt_ensinograd %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -557,7 +581,7 @@ cdt_ensinograd2<- rio::import("dados_orgaos_complementares_e_outros/orgaos_compl
 ```
 
 
-```{r cdt_ensinograd2}
+```{r}
 #xfun::embed_file("")
 cdt_ensinograd2 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -571,7 +595,7 @@ cdt_pos<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementare
 ```
 
 
-```{r cdt_pos}
+```{r}
 #xfun::embed_file("")
 cdt_pos %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -586,7 +610,7 @@ cdt_extensao<- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r cdt_extensao}
+```{r}
 #xfun::embed_file("")
 cdt_extensao %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -600,7 +624,7 @@ cdt_pesquisa<- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r cdt_pesquisa}
+```{r}
 #xfun::embed_file("")
 cdt_pesquisa %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -614,7 +638,7 @@ cdt_pi<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares
 ```
 
 
-```{r cdt_pi}
+```{r}
 #xfun::embed_file("")
 cdt_pi %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -628,7 +652,7 @@ cdt_pi2<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementare
 ```
 
 
-```{r cdt_pi2}
+```{r}
 #xfun::embed_file("")
 cdt_pi2 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -642,7 +666,7 @@ cdt_pi3<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementare
 ```
 
 
-```{r cdt_pi3}
+```{r}
 #xfun::embed_file("")
 cdt_pi3 %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -656,7 +680,7 @@ cdt_incubacao<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complem
 ```
 
 
-```{r cdt_incubacao}
+```{r}
 #xfun::embed_file("")
 cdt_incubacao %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -674,7 +698,7 @@ ceam_extensao<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complem
 ```
 
 
-```{r ceam_extensao}
+```{r}
 #xfun::embed_file("")
 ceam_extensao %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -688,7 +712,7 @@ ceam_projetos<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complem
 ```
 
 
-```{r ceam_projetos}
+```{r}
 #xfun::embed_file("")
 ceam_projetos %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -702,7 +726,7 @@ ceam_especializacao<- rio::import("dados_orgaos_complementares_e_outros/orgaos_c
 ```
 
 
-```{r ceam_especializacao}
+```{r}
 #xfun::embed_file("")
 ceam_especializacao %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -720,7 +744,7 @@ ceftru_projetos<- rio::import("dados_orgaos_complementares_e_outros/orgaos_compl
 ```
 
 
-```{r ceftru_projetos}
+```{r}
 #xfun::embed_file("")
 ceftru_projetos %>% 
   map_df(~replace_na(., 0)) %>% 
@@ -737,7 +761,7 @@ cet_cursos<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complement
 ```
 
 
-```{r cet_cursos}
+```{r}
 cet_cursos %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Cursos, palestras e eventos eealizados pelo CET, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CET"),
@@ -750,7 +774,7 @@ cet_pesquisa<- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r cet_pesquisa}
+```{r}
 cet_pesquisa %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Projetos de pesquisa do CET, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CET"),
@@ -763,7 +787,7 @@ cet_producao<- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r cet_producao}
+```{r}
 cet_producao %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Produção científica, cultural e artística do CET, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CET"),
@@ -780,7 +804,7 @@ cead_extensao<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complem
 ```
 
 
-```{r cead_extensao}
+```{r}
 cead_extensao %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Atividades de extensão desenvolvidas pelo CEAD - cursos de extensão, 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CEAD"),
@@ -793,7 +817,7 @@ cead_especializacao<- rio::import("dados_orgaos_complementares_e_outros/orgaos_c
 ```
 
 
-```{r cead_especializacao}
+```{r}
 cead_especializacao %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Atividades de extensão desenvolvidas pelo CEAD - cursos de especialização (Programa UAB), 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CEAD"),
@@ -810,7 +834,7 @@ cpce<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e
 ```
 
 
-```{r cpce}
+```{r}
 cpce %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Principais atividades do CPCE por mês, 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("CPCE"),
@@ -828,7 +852,7 @@ int_africa<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complement
 ```
 
 
-```{r int_africa}
+```{r}
 int_africa %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Visitas de cortesia, delegações e eventos por continente e países - África, 2015 a 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INT"),
@@ -841,7 +865,7 @@ int_america<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complemen
 ```
 
 
-```{r int_america}
+```{r}
 int_america %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Visitas de cortesia, delegações e eventos por continente e países - América, 2015 a 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INT"),
@@ -854,7 +878,7 @@ int_asia<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementar
 ```
 
 
-```{r int_asia}
+```{r}
 int_asia %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Visitas de cortesia, delegações e eventos por continente e países - Ásia, 2015 a 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INT"),
@@ -868,7 +892,7 @@ int_europa<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complement
 ```
 
 
-```{r int_europa}
+```{r}
 int_europa %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Visitas de cortesia, delegações e eventos por continente e países - Europa, 2015 a 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INT"),
@@ -882,7 +906,7 @@ int_oceania<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complemen
 ```
 
 
-```{r int_oceania}
+```{r}
 int_oceania %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Visitas de cortesia, delegações e eventos por continente e países - Oceania, 2015 a 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INT"),
@@ -895,7 +919,7 @@ int_delegacoes<- rio::import("dados_orgaos_complementares_e_outros/orgaos_comple
 ```
 
 
-```{r int_delegacoes}
+```{r}
 int_delegacoes %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Delegações recebidas, 2015 a 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INT"),
@@ -912,7 +936,7 @@ sgp_arrecadacoes<- rio::import("dados_orgaos_complementares_e_outros/orgaos_comp
 ```
 
 
-```{r sgp_arrecadacoes}
+```{r}
 sgp_arrecadacoes %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Arrecadação com aluguéis (R$ 1,00), 2015 a 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("SGP"),
@@ -925,7 +949,7 @@ sgp_imoveis<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complemen
 ```
 
 
-```{r sgp_imoveis}
+```{r}
 sgp_imoveis %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Imóveis da FUB para locação, 2015 a 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("SGP"),
@@ -938,7 +962,7 @@ sgp_outros<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complement
 ```
 
 
-```{r sgp_outros}
+```{r}
 sgp_outros %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Outros imóveis, 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("SGP"),
@@ -956,7 +980,7 @@ infra_atividades<- rio::import("dados_orgaos_complementares_e_outros/orgaos_comp
 ```
 
 
-```{r infra_atividades}
+```{r}
 infra_atividades %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Atividades desenvolvidas pela INFRA, 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INFRA"),
@@ -969,7 +993,7 @@ infra_eventos<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complem
 ```
 
 
-```{r infra_eventos}
+```{r}
 infra_eventos %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Eventos realizados no auditório do SG10-CEPLAN, 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INFRA"),
@@ -982,7 +1006,7 @@ infra_obras1<- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r infra_obras1}
+```{r}
 infra_obras1 %>% 
     tabela_geral("Relatório de Obras - Obras e Reformas para atender portadores de Necessidades Especiais nos Campi e Unidades Dispersas da UnB, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INFRA"),
            general_title = "Fonte:")
@@ -994,7 +1018,7 @@ infra_obras2<- rio::import("dados_orgaos_complementares_e_outros/orgaos_compleme
 ```
 
 
-```{r infra_obras2}
+```{r}
 infra_obras2 %>% 
     tabela_geral("Relatório de Obras - Atividades realizadas pela INFRA / DOB, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("INFRA"),
            general_title = "Fonte:")
@@ -1009,7 +1033,7 @@ prc1<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e
 ```
 
 
-```{r prc1}
+```{r}
 prc1 %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Manutenção: ordens de serviço executadas, 2015 a 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("PRC/DIMAP - SICOS e SIPAC"),
@@ -1022,7 +1046,7 @@ prc2<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e
 ```
 
 
-```{r prc2}
+```{r}
 prc2 %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Atividades da Diretoria de Manutenção de Equipamentos e Transportes (PRC/DIMEQ) - QUANTIDADE DE ORDENS DE SERVIÇOS FINALIZADAS POR TIPO SERVIÇO/EQUIPAMENTO, 2019", linhatotal = TRUE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("PPRC/DIMEQ"),
@@ -1036,7 +1060,7 @@ prc3<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e
 ```
 
 
-```{r prc3}
+```{r}
 prc3 %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Atividades realizadas pela Coordenação de Zeladoria e Mudança, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c(" PRC/DIMAP/CZM"),
@@ -1053,7 +1077,7 @@ sis<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_
 ```
 
 
-```{r sis}
+```{r}
 sis %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Evolução do número anual de sismos brasileiros com magnitude maior ou igual a 3,0, 2015 a 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#A8A791") %>% footnote (general = c("SISBRA e Boletim Sísmico / SIS"),
@@ -1066,7 +1090,7 @@ sis2<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e
 ```
 
 
-```{r sis2}
+```{r}
 sis2 %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Visitantes da mostra sismológica do observatório sismológico - SIS, 2016 a 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#A8A791") %>% footnote (number = c("ND : Não Disponível","*A Mostra esteve fechada para reforma durante um período do ano de 2019."),general = c("SIS"),

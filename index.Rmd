@@ -1,6 +1,6 @@
 --- 
 title: "ANUÁRIO ESTATÍSTICO 2020"
-author: "Diretoria de Avaliação e Informações Gerenciais (DAI)<br>Decanato de Planejamento, Orçamento e Informações Gerenciais (DPO)"
+author: "Diretoria de Avaliação e Informações Gerenciais (DAI)<br>Decanato de Planejamento, Orçamento e Avaliação Institucional (DPO)"
 date: "Setembro de 2020"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
   message = FALSE,
   error = FALSE,
   warning = FALSE,
-  cache = TRUE
+  cache = FALSE
 )
 library(tidyverse)
 library(knitr)
@@ -45,12 +45,12 @@ cores_anuario <- c("geral" = "#00427E",
 
 # insere a coluna de unidade etc nas tabelas que não têm
 # serve só pra graduação por enquanto
-insere_descricao <- function(tabela, nome){
-  
-  tabela %>% 
-    mutate({{ nome }} := rownames(tabela)) %>% 
-    select({{ nome }}, everything())
-}
+# insere_descricao <- function(tabela, nome){
+#   
+#   tabela %>% 
+#     mutate({{ nome }} := rownames(tabela)) %>% 
+#     select({{ nome }}, everything())
+# }
 
 # acha as linhas que devem ser coloridas
 colorir <- function(tabela, dados, alpha = 0.2){
@@ -104,7 +104,7 @@ tabela_geral <- function(dados,
       row = 0,
       align = "c", color = ifelse(is.null(fundo), "#84898C", "white"), # pantone monument
       background = fundo,
-      font_size = tamfonte - 2, extra_css = "vertical-align: middle"
+      font_size = tamfonte - 2, extra_css = c("vertical-align: middle", "horizontal-align: middle")
     )
   
   if(linhatotal == TRUE){
@@ -130,24 +130,24 @@ include_graphics("img/unb-longo.jpg")
 
 # Apresentação {-}
 
-A Universidade de Brasília – UnB apresenta o Anuário Estatístico 2020. O Anuário Estatístico tem por finalidade consolidar e disponibilizar informações à toda comunidade acadêmica, além de se constituir em um importante referencial para estudos e pesquisas sobre a política educacional da Universidade. Está organizado em uma série de cinco anos, possibilitando análises comparadas, longitudinais e de evolução em cada área de conhecimento. O controle dos registros acadêmicos ocorre por meio do Cadastro de Pessoa Física (CPF) de cada estudante.
+A Universidade de Brasília – UnB apresenta o Anuário Estatístico 2020, documento que tem por finalidade consolidar e disponibilizar informações à comunidade acadêmica, além de constituir-se em um importante referencial para estudos e pesquisas  relacionadas à Instituição.
 
-Esta é a 22ª edição do anuário, iniciado no ano de 1988. Os dados aqui informados referem-se a cursos e alunos de graduação e de pós-graduação do ano de 2019, com retrospectiva desde o ano de 2015, tendo como fonte de dados o Censo da Educação Superior (CenSup), após sua consolidação pelo Instituto de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP), autarquia do Ministério da Educação (MEC).
+Esta é a 22ª edição do anuário, cujo primeiro exemplar data de 1988. Nesta edição, os dados informados referem-se a cursos e alunos de graduação e de pós-graduação do ano de 2019, com retrospectiva desde o ano de 2015. Os dados de graduação têm como fonte de dados o Censo da Educação Superior (CenSup), após sua consolidação pelo Instituto de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP) e os dados da pós-graduação são retirados dos sistemas acadêmicos da universidade. Sempre que possível, os dados são comparados a de uma série histórica de pelo menos cinco anos, o que possibilita análises longitudinais e de evolução em cada área de conhecimento.
 
-Para a busca de informações atualizadas, o Decanato de Planejamento, Orçamento e Avaliação Institucional enviou, em 26 de maio de 2020, solicitações de informações aos diferentes setores, Institutos e Faculdades da UnB. Em 8 de julho, ainda por meio do SEI, foi reiterada a solicitação de informações referentes ao ano de 2019 para compor o Anuário Estatístico 2020. 
+Ao consultar o Anuário Estatístico de 2020, também será possível ter acesso ao panorama da estrutura física e organizacional da Universidade, além de um conjunto de indicadores relativos às atividades de ensino, pesquisa e extensão desenvolvidas no período vigente e na série histórica. 
 
-Com a utilização dessa base, mantém-se a consistência histórica e institucional de informações da UnB, em um processo dinâmico de constante aperfeiçoamento.  
+A organização do documento é feita sob a coordenação do Decanato de Planejamento e Orçamento e Avaliação Institucional (DPO), por meio da Diretoria de Avaliação e Informações Gerenciais (DAI). A publicação está à disposição da comunidade universitária, de autoridades, dirigentes públicos e da sociedade.  Com isso, além de firmar o compromisso com a transparência, a Universidade prima pela consistência histórica e institucional de seus dados em um processo dinâmico e de constante aperfeiçoamento.
+
 
 <br><br>
 
-## Inovação desta versão {-}
+## Inovações desta versão {-}
 
-Continuando a tendência de inovações para o Anuário Estatístico, este ano o Anuário foi feito inteiramente no [software livre R](https://www.r-project.org/), por meio do pacote [bookdown](https://cran.r-project.org/package=bookdown). Essa mudança teve como objetivo tornar o processo de confecção do documento o mais linear possível, aumentando a confiabilidade das informações aqui contidas. 
+Na edição de 2020, em busca de inovação para o Anuário Estatístico, o documento foi feito inteiramente no [software livre R](https://www.r-project.org/), por meio do pacote [bookdown](https://cran.r-project.org/package=bookdown). Essa mudança teve como objetivo tornar o processo de consolidação do documento e organização dos dados mais linear,  aumentando a confiabilidade das informações apresentadas.
 
-Além disso, ganhamos em transparência, pois todo o fluxo de trabalho está documentado no repositório [github/dai-dpo/anuario2020](https://github.com/dai-unb/anuario2020). No entanto não é possível reproduzir ou replicar as tabelas e gráficos aqui contidos, pois devido à sensibilidade dos dados tratados (informações pessoais de estudantes e servidores da UnB), a base de dados bruta não pôde ser disponibilizada.
+Além disso, também aprimora a transparência da Instituição, pois todo o fluxo de trabalho  passou a ser documentado no repositório  [github/dai-dpo/anuario2020](https://github.com/dai-unb/anuario2020). 
 
-Assim como na última versão, é possível baixar todas as tabelas que compõem o documento, garantindo o fácil acesso a diversas informações da Universidade de Brasília.
-
+Importante ressaltar que, por princípio de privacidade e segurança, não é permitido reproduzir ou replicar as tabelas e gráficos contidos no Anuário Estatístico. Há diversos dados sensíveis, tais como informações pessoais que devem ser protegidas, o que inviabiliza a disponibilização da base de dados bruta. Porém, o download das informações é permitido e a atual versão o disponibiliza de forma facilitada. 
 <br><br>
 
 ## Lista de autoridades {-}
