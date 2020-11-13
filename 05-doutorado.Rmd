@@ -1,11 +1,14 @@
 # Doutorado {#dout}
 
-## Ingresso de alunos e número de teses homologadas nos cursos de doutorado, por unidade acadêmica e curso, UnB, 2019
-
 ```{r}
 fundo <- cores_anuario["dout"]
 ```
 
+Faça o download de todas as tabelas desta seção: `r xfun::embed_file("dados_doutorado/tabelas_doutorado.xlsx")`
+
+<br>
+
+## Ingresso de alunos e número de teses homologadas nos cursos de doutorado, por unidade acadêmica e curso, UnB, 2019
 ```{r tab-ing-form}
 tab1 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx", 
                     sheet = "Tabela 3.23",
@@ -21,8 +24,17 @@ tab1 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx",
   colorir(dados = tab1)
 ```
 
-## Alunos ingressantes e concluintes nos cursos de doutorado, por sexo e faixa etária, UnB, 2019
+<br>
 
+```{r}
+include_graphics("graficos/doutorado/graf1.png")
+
+xfun::embed_file("graficos/doutorado/graf1.png")
+```
+
+<br>
+
+## Alunos ingressantes e concluintes nos cursos de doutorado, por sexo e faixa etária, UnB, 2019
 ```{r}
 
 tab2 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx", 
@@ -39,8 +51,25 @@ tab2 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx",
    
 ```
 
-## Alunos regulares ativos, matrículas e aprovações em disciplinas nos cursos de doutorado, por unidade acadêmica e curso, UnB, 2019
+<br>
 
+```{r}
+include_graphics("graficos/doutorado/graf2.png")
+
+xfun::embed_file("graficos/doutorado/graf2.png")
+```
+
+<br>
+
+```{r}
+include_graphics("graficos/doutorado/graf3.png")
+
+xfun::embed_file("graficos/doutorado/graf3.png")
+```
+
+<br>
+
+## Alunos regulares ativos, matrículas e aprovações em disciplinas nos cursos de doutorado, por unidade acadêmica e curso, UnB, 2019
 ```{r}
 
 tab3 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx", 
@@ -57,8 +86,9 @@ tab3 %>%
    colorir(dados = tab3)
 ```
 
-## Alunos regulares registrados nos cursos de doutorado, por sexo e faixa etária, UnB, 2019
+<br>
 
+## Alunos regulares registrados nos cursos de doutorado, por sexo e faixa etária, UnB, 2019
 ```{r}
 
 tab4 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx", 
@@ -74,8 +104,17 @@ tab4 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx",
                fundo = fundo)
 ```
 
-## Alunos regulares registrados nos cursos de doutorado, por semestre, unidade acadêmica, curso e sexo UnB, 2019
+<br>
 
+```{r}
+include_graphics("graficos/doutorado/graf4.png")
+
+xfun::embed_file("graficos/doutorado/graf4.png")
+```
+
+<br>
+
+## Alunos regulares registrados nos cursos de doutorado, por semestre, unidade acadêmica, curso e sexo UnB, 2019
 ```{r}
 
 tab6 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx", 
@@ -92,10 +131,18 @@ tab6 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx",
    colorir(dados = tab6)
 ```
 
-## Alunos regulares registrados ativos e com trancamento geral de matrícula nos cursos de doutorado, por semestre, sexo, unidade acadêmica e curso, UnB, 2019
+<br>
 
 ```{r}
+include_graphics("graficos/doutorado/graf5.png")
 
+xfun::embed_file("graficos/doutorado/graf5.png")
+```
+
+<br>
+
+## Alunos regulares registrados ativos e com trancamento geral de matrícula nos cursos de doutorado, por semestre, sexo, unidade acadêmica e curso, UnB, 2019
+```{r}
 tab7 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx", 
                     sheet = "Tabela 3.28",
                     skip = 1)
@@ -110,11 +157,10 @@ tab7 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx",
    colorir(dados = tab7)
 ```
 
+<br>
 
 ## Desligamento de alunos nos cursos de doutorado, por forma, semestre, unidade acadêmica e curso, UnB, 2019
-
 ```{r}
-
 tab8 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx", 
                     sheet = "Tabela 3.29",
                     skip = 1)
@@ -129,14 +175,13 @@ tab8 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx",
    colorir(dados = tab8)
 ```
 
+<br>
+
 ## Evolução do ingresso de alunos nos cursos de doutorado, por unidade acadêmica e curso, UnB, 2015 a 2019
-
 ```{r}
-
 tab9 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx", 
                     sheet = "Tabela 3.30",
                     skip = 1)
-# xfun::embed_file("dados_doutorado/EvoForD.csv")
 
  tab9 %>% 
   tabela_geral("Evolução do ingresso de alunos nos cursos de doutorado, por unidade acadêmica e curso, UnB, 2015 a 2019", 
@@ -147,10 +192,10 @@ tab9 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx",
    colorir(dados = tab9)
 ```
 
+<br>
+
 ## Evolução do número de alunos registrados nos cursos de doutorado, por unidade acadêmica e curso, UnB, 2015 a 2019 (2º semestre)
-
 ```{r}
-
 tab10 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx", 
                     sheet = "Tabela 3.31",
                     skip = 1)
@@ -165,10 +210,10 @@ tab10 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx",
    colorir(dados = tab10)
 ```
 
+<br>
+
 ## Evolução do número de alunos com teses homologadas nos cursos de doutorado, por unidade acadêmica e curso, UnB, 2015 a 2019
-
 ```{r}
-
 tab11 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx", 
                     sheet = "Tabela 3.32",
                     skip = 1)
@@ -183,39 +228,18 @@ tab11 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx",
    colorir(dados = tab11)
 ```
 
-## Número de alunos regulares registrados nos cursos de pós-graduação Stricto Sensu por sexo, unidade acadêmica e curso, UnB, 2019 (2º semestre)
+<br>
 
 ```{r}
+include_graphics("graficos/doutorado/graf6.png")
 
-tab12 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx", 
-                    sheet = "Tabela 3.06",
-                    skip = 1)
-# xfun::embed_file("dados_doutorado/EvoForD.csv")
-
- tab12 %>% 
-  tabela_geral("Número de alunos regulares registrados nos cursos de pós-graduação Stricto Sensu por sexo, unidade acadêmica e curso, UnB, 2019 (2º semestre)", 
-               linhatotal = TRUE, 
-               tamfonte = 12,
-               colunas = c("Unidade Acadêmica/Curso", "Fem. Mest.", "Masc. Mest.", "Tot. Mest.", "Fem. Dout.", "Masc. Dout.", "Tot. Dout.", "Total"),  
-               fundo = fundo) %>% 
-   colorir(dados = tab12)
+xfun::embed_file("graficos/doutorado/graf6.png")
 ```
 
-## Número de cursos e alunos regulares registrados nos cursos de pós-graduação Stricto Sensu por unidade acadêmica e curso, UnB, 2018 (2º semestre)
+<br>
 
 ```{r}
+include_graphics("graficos/doutorado/graf7.png")
 
-tab13 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx", 
-                    sheet = "Tabela 3.07",
-                    skip = 1)
-# xfun::embed_file("dados_doutorado/EvoForD.csv")
-
- tab13 %>% 
-  tabela_geral("Número de cursos e alunos regulares registrados nos cursos de pós-graduação Stricto Sensu por unidade acadêmica e curso, UnB, 2018 (2º semestre)", 
-               linhatotal = TRUE, 
-               tamfonte = 12,
-               colunas = c("Unidade Acadêmica/Curso", "Cur. Mest.", "Alun. Mest.", "Cur. Dout.", "Alun. Dout.", "Total"),  
-               fundo = fundo)
-   
+xfun::embed_file("graficos/doutorado/graf7.png")
 ```
-

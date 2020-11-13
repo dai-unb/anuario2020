@@ -32,7 +32,7 @@ ggsave("graficos/graduacao/graf1.pdf", device = cairo_pdf)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf1.pdf", 
                       filenames = "graficos/graduacao/graf1.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)
 
 # gráfico de barras do total de ing e form por unidade
 graf2 <- rio::import("dados_graduacao/Tabela2.04.2.RData")
@@ -63,7 +63,7 @@ ggsave("graficos/graduacao/graf2.pdf", device = cairo_pdf)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf2.pdf", 
                       filenames = "graficos/graduacao/graf2.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)
 
 # gráfico de colunas do percentual de ingresso por sexo e faixa etária
 graf3 <- rio::import("dados_graduacao/Tabela2.05.xlsx")
@@ -97,7 +97,7 @@ ggsave("graficos/graduacao/graf3.pdf", device = cairo_pdf, width = 7)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf3.pdf", 
                       filenames = "graficos/graduacao/graf3.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)
 
 # gráfico de barras do total de matriculados por turno e unidade, no 2º semestre
 graf4 <- rio::import("dados_graduacao/Tabela2.06.xlsx")
@@ -133,7 +133,7 @@ ggsave("graficos/graduacao/graf4.pdf", device = cairo_pdf, height = 10, width = 
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf4.pdf", 
                       filenames = "graficos/graduacao/graf4.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)
 
 # gráfico de barras do total de alunos registrados por sexo e unidade, no 2º semestre
 graf5 <- rio::import("dados_graduacao/Tabela2.07.xlsx")
@@ -169,7 +169,7 @@ ggsave("graficos/graduacao/graf5.pdf", device = cairo_pdf, height = 10, width = 
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf5.pdf", 
                       filenames = "graficos/graduacao/graf5.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)
 
 # gráfico de colunas do percentual de ingresso por sexo e faixa etária
 graf6 <- rio::import("dados_graduacao/Tabela2.05.xlsx")
@@ -204,7 +204,7 @@ ggsave("graficos/graduacao/graf6.pdf", device = cairo_pdf, height = 8, width = 8
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf6.pdf", 
                       filenames = "graficos/graduacao/graf6.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)
 
 # graf de barras do total por raça/cor
 graf7 <- rio::import("dados_graduacao/Tabela2.XX.xlsx")
@@ -240,7 +240,7 @@ ggsave("graficos/graduacao/graf7.pdf", device = cairo_pdf, height = 8, width = 8
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf7.pdf", 
                       filenames = "graficos/graduacao/graf7.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)
 
 # graf do total de matriculados por sexo e raça/cor
 graf8 <- rio::import("dados_graduacao/Tabela2.XX2.xlsx")
@@ -282,7 +282,7 @@ ggsave("graficos/graduacao/graf8.pdf", device = cairo_pdf, height = 8, width = 1
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf8.pdf", 
                       filenames = "graficos/graduacao/graf8.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)
 
 # grad de total por continente
 graf9 <- rio::import("dados_graduacao/Tabela2.14.xlsx")
@@ -318,7 +318,7 @@ ggsave("graficos/graduacao/graf9.pdf", device = cairo_pdf, width = 7)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf9.pdf", 
                       filenames = "graficos/graduacao/graf9.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)
 
 # graf de total por país (maiores apenas)
 graf10 <- rio::import("dados_graduacao/Tabela2.14.2.xlsx")
@@ -344,7 +344,7 @@ ggsave("graficos/graduacao/graf10.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf10.pdf", 
                       filenames = "graficos/graduacao/graf10.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)
 
 # graf de linhas da evolução do total de ingressantes por ano 
 graf11_ing <- rio::import("dados_graduacao/Tabela2.21.xlsx") %>% 
@@ -388,7 +388,7 @@ ggsave("graficos/graduacao/graf11.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf11.pdf", 
                       filenames = "graficos/graduacao/graf11.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)
 
 # Evolução do número de alunos formados nos cursos de graduação, por década, 1976 a 2019
 graf12 <- tribble(
@@ -423,4 +423,4 @@ ggsave("graficos/graduacao/graf12.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf12.pdf", 
                       filenames = "graficos/graduacao/graf12.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)

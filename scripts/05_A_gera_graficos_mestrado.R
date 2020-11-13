@@ -38,7 +38,7 @@ ggsave("graficos/mestrado/graf1.pdf", device = cairo_pdf)
 pdftools::pdf_convert(pdf = "graficos/mestrado/graf1.pdf", 
                       filenames = "graficos/mestrado/graf1.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)
 
 # Alunos ingressantes nos cursos de mestrado, por sexo e faixa etária, UnB, 2019
 graf2 <- rio::import("dados_Mestrado/Tabelas_Mestrado_Anuário_2019.xlsx", 
@@ -73,7 +73,7 @@ ggsave("graficos/mestrado/graf2.pdf", device = cairo_pdf, width = 7)
 pdftools::pdf_convert(pdf = "graficos/mestrado/graf2.pdf", 
                       filenames = "graficos/mestrado/graf2.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)
 
 # Alunos concluintes nos cursos de mestrado, por sexo e faixa etária, UnB, 2019
 graf3 <- rio::import("dados_Mestrado/Tabelas_Mestrado_Anuário_2019.xlsx", 
@@ -108,7 +108,7 @@ ggsave("graficos/mestrado/graf3.pdf", device = cairo_pdf, width = 7)
 pdftools::pdf_convert(pdf = "graficos/mestrado/graf3.pdf", 
                       filenames = "graficos/mestrado/graf3.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)
 
 # Alunos matriculados nos cursos de mestrado, por sexo e faixa etária, UnB, 2019
 graf4 <- rio::import("dados_Mestrado/Tabelas_Mestrado_Anuário_2019.xlsx", 
@@ -144,7 +144,7 @@ ggsave("graficos/mestrado/graf4.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/mestrado/graf4.pdf", 
                       filenames = "graficos/mestrado/graf4.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)
 
 # Alunos matriculados nos cursos de mestrado, por sexo e unidade, UnB, 2019
 graf5 <- rio::import("dados_Mestrado/Tabelas_Mestrado_Anuário_2019.xlsx", 
@@ -182,7 +182,7 @@ ggsave("graficos/mestrado/graf5.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/mestrado/graf5.pdf", 
                       filenames = "graficos/mestrado/graf5.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)
 
 # graf de linhas da evolução do total de ingressantes, matriculados e formados por ano 
 graf6_ing <- rio::import("dados_mestrado/Tabelas_Mestrado_Anuário_2019.xlsx", 
@@ -232,7 +232,7 @@ ggsave("graficos/mestrado/graf6.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/mestrado/graf6.pdf", 
                       filenames = "graficos/mestrado/graf6.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)
 
 # Evolução do número de alunos com dissertações homologadas nos cursos de mestrado, por décadas, 1976 a 2018
 graf7 <- tribble(
@@ -266,4 +266,4 @@ ggsave("graficos/mestrado/graf7.pdf", device = cairo_pdf, width = 8)
 pdftools::pdf_convert(pdf = "graficos/mestrado/graf7.pdf", 
                       filenames = "graficos/mestrado/graf7.png", 
                       format = "png", 
-                      dpi = 500)
+                      dpi = 300)

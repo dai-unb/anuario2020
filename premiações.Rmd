@@ -1,0 +1,436 @@
+
+## Prêmios, Distinções, Títulos e Honrarias
+<br><br>
+
++ **PRÊMIO CAPES DE TESE - EDIÇÃO 2019**.Menção Honrosa - Prêmio CAPES de Tese - Edição 2019. Concedido pela CAPES.ALEXANDRE RESENDE TOFETI.Instituto de Ciências Humanas/Departamento de Geografia/ Programa de Pós-Graduação em Geografia. Brasília/DF. Setembro/2019.
+<br>
++**Simpósio Internacional e Datathon: Inteligência Artificial em Saúde**.2º lugar.Concedido pelo Hospital Israelita Albert Einstein.II Simpósio Internacional e Datathon: Inteligência Artificial em Saúde.Ronaldo de Jesus.Instituto de Ciências Exatas/Departamento de Ciência da Computação/Mestrado Profissional em Computação Aplicada.São Paulo/SP. Abril/2019. evento promovido pelo Hospital Israelita Albert Einstein com o apoio do Ministério da Saúde (Projeto PROADI-SUS) e do Instituto de Tecnologia de Massachusetts (MIT), 2019.
+<br>
++**Mostra Nacional de Experiências Bem-Sucedidas em Epidemiologia de Doenças**.1º lugar- Mestrado.Concedido pela Secretaria de Vigilância em Saúde do Ministério da Saúde. Melhor dissertação de mestrado.Ronaldo de Jesus (discente) e Gladston Luiz da Silva (orientador).Instituto de Ciências Exatas/Departamento de Ciência da Computação/Mestrado Profissional em Computação Aplicada. Brasília/DF. Dezembro/2019.Produção técnico-científica por parte de profissional do SUS que contribuiu para o aprimoramento das ações de vigilância em saúde.
+<br>
++**Paper of the Year of the Journal of Systems and Software**.Melhor artigo do ano - Periódico Journal of Systems and Software.JSS 2019 Paper of the Year. Welder Pinheiro Luz (discente), Rodrigo Bonifácio de Almeida (orientador) e Gustavo Henrique Lima Pinto (coorientador).nstituto de Ciências Exatas/Departamento de Ciência da Computação/Mestrado Profissional em Computação Aplicada. Estados Unidos. Novembro/2019. Artigo: “Adopting DevOps in the real world: A theory, a model, and a case study”.
+<br>
++**VII Symposium on Knowledge Discovery, Mining and Learning**.Best paper.Concedido pela Sociedade Brasileira de Computação (SBC).2019 KDMiLe Best paper. Otto Kristian von Sperling (discente) e Marcelo Ladeira (orientador). Instituto de Ciências Exatas/Departamento de Ciência da Computação/Bacharel em Ciência da Computação. Fortaleza/CE. Outubro/2019.artigo "Mining Twitter Data for Signs of Depression in Brazil".
+<br>
++**16th Annual (2019) “Humies” Awards for Human-Competitive Results**.Finalista.Concedido pela Genetic and Evolutionary Computation Conference: GECCO 2019.“Humies” Awards for Human-Competitive Results.Icaro Marciano Miranda (discente), Marcelo Ladeira (orientador) e Claus Aranha (coorientador, Universidade de Tsukuba, Japão).Instituto de Ciências Exatas/Departamento de Ciência da Computação. República Tcheca.Julho/2019.artigo “Classification of EEG signals using genetic programming for feature construction”.
+<br>
++**Concurso Provincial Premio Anual de La Salud 2019 - Nível Nacional**. Melhor Artigo. Concedido pelo MINISTERIO SALUD PÚBLICA CONSEJO NACIONAL DE SOCIEDADES CIENTÍFICAS DE LA SALUD CONVOCATORIA.Suélia de Siqueira Rodrigues Fleury Rosa.Faculdade Gama – Programa de Pós Graduação em Engenharia Biomédica.Santiago de Cuba, CUBA. Julho/2019.
+<br>
++**Concurso Provincial Premio Anual de La Salud 2019 - Nivel Estadual**.Melhor Artigo. Concedido pelo MINISTERIO SALUD PÚBLICA CONSEJO NACIONAL DE SOCIEDADES CIENTÍFICAS DE LA SALUD CONVOCATORIA.Suélia de Siqueira Rodrigues Fleury Rosa.Faculdade Gama – Programa de Pós Graduação em Engenharia Biomédica.Santiago de Cuba, CUBA. Abril/2019.
+<br>
++**Professora Homenageada Curso de Engenharia Eletronica, Universidade de Brasilia Faculdade do Gama**.Professora Homenageada. Concedido pela Universidade de Brasília - Faculdade Gama. Suélia de Siqueira Rodrigues Fleury Rosa.Faculdade Gama – Programa de Pós Graduação em Engenharia Biomédica. Brasília/DF. Março/2019.
+<br>
++**Prêmio Nise da Silveira**. Menção honrosa na área temática: Estratégias diagnósticas, terapêuticas e assistenciais para o desenvolvimento da saúde e funcionalidade humana. Concedido pela Faculdade de Ceilândia, FCE/UnB, Simpósio de Ciências e Tecnologias em Saúde.Suélia de Siqueira Rodrigues Fleury Rosa.Faculdade Gama – Programa de Pós Graduação em Engenharia Biomédica.Brasília/DF. Outubro/2019.O Simpósio de Ciências e Tecnologias em Saúde é um evento científico de âmbito regional, voltado para a área interdisciplinar, que abrange o eixo temático das tecnologias leves, envolvendo as modalidades de atuação que congregam as tecnologias sociais, convencionais, sustentáveis e socioambientais; bem como o eixo temático das tecnologias duras, envolvendo as modalidades de atuação que incluem a tecnologia assistiva, a biotecnologia e a nanobiotecnologia. O evento proporá palestras e cursos ministrados por professores ou outros profissionais de diferentes áreas do conhecimento. A coordenação do evento é composta pelos alunos do PPGCTS, com apoio do corpo docente Universidade de Brasília – UnB, e este ano será realizada sua 3ª edição.
+<br>
++**Melhor Trabalho na modalidade de apresentação oral **. COncedido pela Rede Brasileira de Avaliação de Tecnologias em Saúde (REBRATS).Melhor Trabalho na modalidade de apresentação oral do Eixo temático Execução de Métodos de Avaliação de Tecnologias em Saúde (ATS).Rodrigo Luiz Carregaro e Everton Nunes da Silva,Caroline Ribeiro Tottoli e Maurits van Tulder.Programa de Pós-Graduação em Ciências da Reabilitação (PPGCR), Campus UnB Ceilândia. Brasília/DF. Outubro/2019. Premiação conferida no I Congresso da REBRATS (https://proceedings.science/rebrats-2019/papers/custos-diretos-e-indiretos-da-dor-lombar-no-brasil-entre-2012-2016)
+<br>
++**Prêmio EXPOCOM NACIONAL**.Primeiro lugar na categoria Programa Laboratorial de Áudio.Concedido pela Sociedade Brasileira para o Estudo da Comunicação - INTERCOM.Melhor Programa Laboratorial de Áudio - Série Radiofônica: O Direito de ser diferente.Thiago Junior Nascimento Melo,Carlos Eduardo Machado da Costa Esch, Glauber Oliveira e André Araújo.Faculdade de Comunicação – Departamento de Jornalismo/Curso de Jornalismo.Belém/PA.Setembro/2019.
+<br>
++**Convidado de Honra Festival Internacional Analogio **.Cpncedido pelo Analogio International Institute, Greek Institute for Drama, Theatre, Arts & Letters.Convidado de Honra. Profa. Nitza Tenenblat e Coletiva Teatro que inclui: Nei Cirqueira (mestrando CEN), Jorge Renan Mendes Marinho (mestrando CEN), Pedro Henrique Lopes (egresso da graduação CEN), Iuri Pereira dos Santos (egresso graduação CEN), Higor Filipe (egresso graduação CEN), Thiago Sabino (egresso graduação e prof. substituto CEN), Carolina Resende (graduanda CEN, egressa Pedagogia, egressa Comunicação Social), Ana Paula (graduanda VIS e egressa Comunicação Social) e Glauco Maciel (Técnico CEN).IdA/Departamento de Artes Cênicas. Atenas, Grécia.Setembro/2019. Durante o Festival Internacional Analogio a Coletiva Teatro apresentou dois espetáculos de seu repertório: 'O Amor Que Habito' e 'Luar de Contos' ambos com legendas em grego. Além disso ofertou, na Embaixada do Brasil em Atenas, uma oficina com atores gregos como parte do Projeto de Pesquisa Exercícios Interculturais de Criação em Coletivo para a Cena.   
+<br>
++**International Visitor at Stanford University Fellowship (2019-2020)**.Concedido pela Stanford Humanities Center, Stanford University.Profa. Dra. Nitza Tenenblat.IdA/Departamento de Artes Cênicas.Stanford, Califórnia, EUA.Prêmio concedido em dezembro de 2018 mas considero-o como sendo de 2019 pois o seu usufruto é relativo ao ano acadêmico 2019-2020.O prêmio é uma bolsa cujo usufruto foi planejado para maio de 2020, data em que tanto o Departamento de Teatro e Performance da Universidade de Stanford poderia me receber, quanto período em que eu poderia estar lá (usufruindo da minha licença capacitação), mas foi interrompido devido à Covid-19, com nova data a ser definida em breve.
+<br>
++**PRÉMIO WEB DO TEATRO DO DF 2019**.CATEGORIA ESPETÁCULO ADULTO.Concedido pelo Grupo Tripé-Teatro de Base-Brasília/DF. Espetáculo Amplexos, do grupo Pés.Mônica Ferreira Gaspar de Oliveira.IdA/Departamento de Artes Cênicas.Brasília/DF.Dezembro/2019. Dançante do Projeto Pés.
+<br>
++**Diploma de destaque cultural Jaburu (2019)**.Destaque Cultural Circense.Governo do Estado de Goiás / Conselho Estadual de Cultura / Secretaria Estadual da Cultura.Diploma de destaque cultural Jaburu pela realização do espetáculo circense "Causos de voos e risco".Gabriel Coelho Mendonça.Doutorado / Instituto de Artes / Departamento de Artes Cênicas / Programa de Pós-Graduação em Artes Cênicas.Goiânia/GO.Agosto/2019.
+<br>
++**Prêmio Web de Teatro do DF 2019**.Segundo lugar na categoria MELHOR MONTAGEM ACADÊMICA.Concedido pelo grupo Tripé."Água de Lavar..." Espetáculo de Teatro - Realização: "Universidade de Brasília" - 66º Cometa Cenas. Direção Geral: Tiago Mundim; Elenco (alunas da graduação): Grupo EmIncomum -  Ana Carolina Nóbrega, Maria Fernanda Pires, Monique Vieira e Rachel Rianele.Equipe de Encenação (alunas da graduação): Ana Carolina Nóbrega, Luara Hias, Maria Fernanda Pires, Milca Orrico, Monique Vieira, Natália Vídua, Richard Campello e Thiago Reis. Orientação de encenação: Thiago Sabino. IdA - CEN - Bacharelado em Interpretação Teatral e Licenciatura em Artes Cênicas e IdA - PPG-CEN.Brasília/DF. Dezembro/2019.
+<br>
++**Prêmio Web de Teatro do DF 2019**.1 lugar na categoria Melhor Montagem Acadêmica. Concedido pelo Grupo Tripé.III Prêmio Web de Teatro do DF 2019 como Melhor Montagem Acadêmica para o espetáculo "Essa mensagem foi apagada".Turma de Prática de Montagem do segundo semestre de 2019, sob orientação e direção da Professora Alice Stefânia Curi.IdA/Departamento de Artes Cênicas.Brasília/DF.Fevereiro/2020 (relativo a ações de 2019). 
+<br>
++**Prêmio Baobá – Contadores de Histórias 2020**.São dez premiados por indicações, sem categoria ou distinção.Concedido pelo Centro Cultural Santo Amaro, São Paulo SP.Reconhecimento pela contribuição à arte do contador de histórias.Profª Drª  ngela Barcellos Café.CEN - Departamento de Artes Cênicas - IDA.São Paulo - SP. Março/2020 (referente a 2019).Os selecionados para o Prêmio são aqueles que estão na programação apresentada (https://gruposulnews.com.br/centro-cultural-santo-amaro-realiza-10-horas-de-programacao-literaria/). 
+<br>
++**Melhor Atriz, na Mostra Brasília BRB, do 52º Festival de Brasília do Cinema Brasileiro, filme Dulcina (2019), direção de Glória Teixeira, egressa do CEN**.Melhor atriz. Concedido pela Secretaria de Cultura do Distrito Federal.Melhor Atriz da Mostra Brasília BRB do 52º Festival de Brasília do Cinema Brasileiro.Prêmio dividido entre as atrizes Prof. Dra. Ana Cristina Filgueira Galvão (Bidô Galvão), Carmem Moretzsohn, Françoise Forton, Glória Teixeira, Iara Pietricovsky e Tereza Amayo.CEN - IdA.Brasília/DF.NOvembro/2019.
+<br>
++**Prêmio Web de Teatro do DF 2019**.º lugar na categoria Melhor Festival ou Mostra de Teatro de Brasília.Concedido pelo Grupo Tripé.Prêmio Web de Teatro do DF 2019 para Melhor Festival ou Mostra de Teatro de Brasília, para a 66ª Edição do Cometa Cenas, Mostra Semestral de Trabalhos do CEN.Professor Dr. Fernando Antonio Pinheiro Villar de Queiroz (Coordenação Pedagógica); estudantes Arthur Heinrich Scherdien e Carol Franklin (Coordenação Geral), e equipe de produção com discentes Alana Beltrão; Amanda Inter; Ana Cecília Kresch; Ana Vitória Rabelo; Caetano Pires de Almeida; Carla Veras; Diana Belloni; Henrique Silva Costa; Luana Lebazi; Mar Mendonça; Octávio Vilaronga; Priscylla Dias; Rafaela Giavoni; Raíssa Frazão; Richarde Rodrigues Campelo, e Victor Souza.Bacharelado em Interpretação Teatral e das Licenciaturas em Artes Cênicas do Departamento de Artes Cênicas, Instituto de Artes (CEN-IdA).Brasília/DF. Fevereiro/2020 (referente a 2019).
+<br>
++**Prêmio EXPOCOM REGIONAL CENTRO-OESTE**.Primeiro lugar na categoria Programa Laboratorial de Áudio. Concedido pela Sociedade Brasileira para o Estudo da Comunicação - INTERCOM.Melhor Programa Laboratorial de Áudio - Série Radiofônica: O Direito de ser diferente.Thiago Junior Nascimento Melo,Carlos Eduardo Machado da Costa Esch, Glauber Oliveira e André Araújo.Faculdade de Comunicação – Departamento de Jornalismo/Curso de Jornalismo.Goiânia/GO. Maio/2019.
+<br>
++**Menção Honrosa**.Concedida pela Universidade de Brasília - UnB.Igor dos Santos Lima e Caio Barbosa Rodrigues.Universidade de Brasília; Departamento de Matemática; Matemática Bacharelado.Brasília/DF. Dezembro/2019.
+<br>
++**Programa de Iniciação Científica/UnB**.Concedido pela Universidade de Brasília - UnB.Menção Honrosa.Rozana Reigota Naves e Kely Viana de Oliveira.Instituto de Letras/Departamento de Linguística, Português e Línguas Clássicas/ Curso de Letras - Língua Portuguesa e Respectiva Literatura. Brasília/DF. Outubro/2019.
++**Programa de Iniciação Científica/UnB**.Concedido pela Universidade de Brasília - UnB.Menção Honrosa.Juliana Soledade Barbosa Coelho e Vitória Regina Italiano Alves.Instituto de Letras/Departamento de Linguística, Português e Línguas Clássicas; Curso de Letras - Língua Portuguesa e Respectiva Literatura. Brasília/DF. Outubro/2019.
++**Programa de Iniciação Científica/UnB**.Concedido pela Universidade de Brasília - UnB.Menção Honrosa.Juliana Soledade Barbosa Coelho e Matheus Calci Ferreira Gomes.Instituto de Letras/Departamento de Linguística, Português e Línguas Clássicas; Curso de Letras - Língua Portuguesa e Respectiva Literatura. Brasília/DF. Outubro/2019.
++**Programa de Iniciação Científica/UnB**.Concedido pela Universidade de Brasília - UnB.Menção Honrosa.Dioney Moreira Gomes e Arthur Britta Scandelari.Instituto de Letras/Departamento de Linguística, Português e Línguas Clássicas; Curso de Letras - Língua Portuguesa e Respectiva Literatura. Brasília/DF. Outubro/2019.
+<br>
++**Prêmio Internacional Anamaría Harvey de Teses e Dissertações 2019**.Primeiro lugar na categoria dissertação.Concedido pela Associação Latino-Americana de Estudos do Discurso.Viviane de Melo Resende e Nair Rabelo.PPGDSCI/Ceam.Santo Domingo/ República Dominicana.Dezembro/2019.Trata-se de premiação concedida pela Associação Latino-Americana de Estudos do Discurso em concurso que inclui uma etapa nacional nos países e uma etapa internacional. A dissertação de Nair recebeu o primeiro prêmio internacional.
+<br>
++**Moção de Louvor**.Concedida pela Câmara Legislativa do Distrito Federal.Gláucio de Castro Júnior.Brasília/DF. Setembro/2019.
+<br>
++**Menção Honrosa**.25° Congresso de Iniciação Científica da UnB e 16° Congresso de Iniciação Científica do DF.Concedida pela Universidade de Brasília.Menção Honrosa com o trabalho: “Avaliação venográfica da utilização do triclorfon, na perfusão regional distal, em membros de equinos”.Rita de Cássia Campebell, Daniel Carneiro Lino, Divino Fábio de Morais, Pedro Figueiredo Bastos de Souza e Igor Louzada Moreira. UnB/FAV/ Departamento de Medicina Veterinária. Brasília/DF. Outubro/2019.
+<br>
++**Professora Homenageada**.XXXIV Turma de Medicina Veterinária da UnB. Professora Dra Rita de Cássia Campebell. UnB/FAV/ Departamento de Medicina Veterinária. Brasília/DF. Março/2019.
+<br>
++**Brasília/DF. Outubro/2019**.XXXV Turma de Medicina Veterinária da UnB. Professora Dra Rita de Cássia Campebell. UnB/FAV/ Departamento de Medicina Veterinária. Brasília/DF. Agosto/2019.
+<br>
++**Título de Membro Honorário da Força Aérea Brasileira**.Concedido pela Força Aérea Brasileira. Cristiane Faiad de Moura.Instituto de Psicologia, Departamento de Psicologia Clínica, Programa de Psicologia Social, do Trabalho e das Organizações. Rio de Janeiro/RJ. Novembro/2019.
+<br>
++**Prêmio SBPH/Marisa Decat de Moura**.1º Lugar Sênior. Concedido pela Sociedade Brasileira de Psicologia Hospitalar (SBPH). 1º. Lugar Sênior Prêmio SBPH/Marisa Decat de Moura pela pesquisa intitulada ‘Avaliação de Necessidades em Cuidados Paliativos Oncológicos’. Laura Campos de Moura e Tereza Cristina Cavalcanti Ferreira de Araujo.Hospital Universitário de Brasília e Departamento de Psicologia Clínica. Salvador/BA. Setembro/2019.
+<br>
++**Menção Honrosa por trabalho apresentado no 16º congresso de Iniciação Científica do DF**. Concedida pela Universidade de Brasília. Liana Barbaresco Gomide Matheus e Cariele de Aguiar Freitas. Curso de fisioterapia/Faculdade de Ceilândia. Brasília/DF. Outubro/2019.
+<br>
++**Menção Honrosa do Congresso de Iniciação Científica da UnB/DF**.Menção Honrosa da área Ciências da Vida. Concedida pela Universidade de Brasília.Menção Honrosa do Congresso de Iniciação Científica da UnB/DF com o trabalho: “Desenvolvimento e validação de método para quantificação simultânea de latanoprosta e minoxidil por cromatografia líquida com detecção por massas".Letícia Castro Furtado de França e Guilherme Martins Gelfuso.Faculdade de Ciências da Saúde/Departamento de Farmácia. Brasília/DF. 2019.
+<br>
++**Prêmio Científico do QualiHosp 2019 - Congresso Internacional de Qualidade em Serviços e Sistemas de Saúde**.1º lugar na Categoria Avaliação e Qualidade do Cuidado. Concedido pela FGVsaúde – Centro de Estudos em Planejamento e Gestão de Saúde da EAESP. 1º lugar na Categoria Avaliação e Qualidade do Cuidado por trabalho científico apresentado no QualiHosp 2019 - Congresso Internacional de Qualidade em Serviços e Sistemas de Saúde.Helaine Carneiro Capucho.Faculdade de Ciências da Saúde / Departamento de Farmácia.São Paulo/ SP. Abril/2019.http://www.cff.org.br/noticia.php?id=5218&titulo=Farmacêutica+fica+em+1º+lugar+em+prêmio+sobre+segurança+do+paciente ; https://fs.unb.br/pgcs/index.php?option=com_content&view=article&id=63&Itemid=60
+<br>
++**Menção Honrosa**.Concedida pelo Decanato de Pós-graduação/UnB.Mônica Valero da Silva e Guilherme de Ataides Ribeiro.Faculdade de Ciências da Saúde/ Departamento de Farmácia.Brasília/DF.Setembro/2019. 25° Congresso de Iniciação Científica e 16° Congresso de Iniciação Científica do DF.
+<br>
++**5º Prêmio ABEU - 2019**. 2º lugar, Ciências humanas. Concedido pela Associação Brasileira de Editoras Universitárias (ABEU). Julio Ramón Cabrera Alvarez. Editora UnB. São Paulo/SP. Novembro/2019.
+<br>
++**Menção Honrosa**. Internacional. Concedida pelo World Organization for Early Childhood Education (OMEP).Education for Sustainability. Prof.ª Drª Alice Maria Corrêa Medina. Faculdade de Educação Física. Brasília/DF. Junho/2019.
+<br>
++**Prêmio UFMG de Teses**. Melhor tese do Programa de Pós-Graduação em Geografia, Universidade Federal de Minas Gerais – UFMG. Concedido pela Universidade Federal de Minas Gerais – UFMG. Melhor Tese - Geografia. Prof. Dr. Gabriel Túlio de Oliveira Barbosa. Centro de Excelência em Turismo/UnB .Belo Horizonte/MG. Outubro/2019.
+<br>
++**Grande Prêmio UFMG de Teses**.Menção honrosa no grupo de Grandes Áreas de Ciências Humanas, Ciências Sociais Aplicadas e Linguística, Letras e Artes, Universidade Federal de Minas Gerais - UFMG. Concedido pela Universidade Federal de Minas Gerais – UFMG.Menção Honrosa - grupo de Grandes Áreas de Ciências Humanas, Ciências Sociais Aplicadas e Linguística, Letras e Artes. Prof. Dr. Gabriel Túlio de Oliveira Barbosa. Centro de Excelência em Turismo/UnB .Belo Horizonte/MG. Outubro/2019.
+<br>
++**The Hofer Young Researcher Award**.Prêmio a jovem pesquisador. Concedido pela ABCM – Associação Brasileira de Engenharia e Ciências Mecânica. Adriano Todorovic Fabro. Faculdade de  Tecnologia/Departamento de Engenharia Mecânica.Armação dos Búzios/RJ. Março/2019.O prêmio Hofer de jovem pesquisador é oferecido a jovens pesquisadores que demonstrem desempenho excepcional em pesquisas relacionadas ao escopo do DINAME (International Symposium on Dynamic Problems of Mechanics). Candidatos ao prêmio devem ser nomeados por pesquisadores da indústria ou academia e deve apresentar seu trabalho durante o simpósio. Candidatos elegíveis devem ter menos de 35 anos no momento da nomeação e devem ter tidos o título de doutorado nos últimos quatro anos. Maiores informações: http://eventos.abcm.org.br/diname2019/authors/hofer-young-researchers-award/ .
+<br>
++**‘Menção Honrosa’ relativa ao VII Prêmio Martín Novión de Melhor Dissertação de Graduação em Antropologia da UnB, pela orientação da Dissertação de Graduação Lixão da Estrutural: uma paisagem no tempo de Rebecca Valões Dytz, primeira colocada no certame**.Dissertação de Graduação Lixão da Estrutural: uma paisagem no tempo de Rebecca Valões Dytz ficou em primeiro lugar nessa sétima edição do Prêmio. Concedida pelo Departamento de Antropologia/Instituto de Ciências Sociais/Universidade de Brasília. Prêmio Martín Novión de Melhor Dissertação de Graduação em Antropologia da UnB. Henyo Trindade Barretto Filho e Rebecca Valões Dytz.Departamento de Antropologia/Instituto de Ciências Sociais/Universidade de Brasília.Brasília/DF. Junho/2019.
+<br>
++**Prêmio ESOCITE.BR – Melhor Tese de Doutorado**.Melhor Tese de Doutorado. Concedido pela Associação Brasileira de Estudos Sociais das Ciências e das Tecnologias. Rosana Maria Nascimento Castro Silva e 	Soraya Resende Fleischer. Departamento de Antropologia/Instituto de Ciências Sociais/Programa de Pós-Graduação em Antropologia Social – nível: Doutorado. Belo Horizonte/MG.Agosto/2019.
+<br>
++**Concurso ANPOCS de Obras Científicas e Teses Universitárias em Ciências Sociais**. Melhor Tese de Doutorado. Concedido pela Associação Nacional de Pós-Graduação e Pesquisa em Ciências Sociais - ANPOCS. Rosana Maria Nascimento Castro Silva e 	Soraya Resende Fleischer. Departamento de Antropologia/Instituto de Ciências Sociais/Programa de Pós-Graduação em Antropologia Social – nível: Doutorado. Belo Horizonte/MG.Agosto/2019.
++**Concurso ANPOCS de Obras Científicas e Teses Universitárias em Ciências Sociais**. Melhor Tese de Doutorado. Concedido pela Associação Nacional de Pós-Graduação e Pesquisa em Ciências Sociais - ANPOCS. Rosana Maria Nascimento Castro Silva e 	Soraya Resende Fleischer. Departamento de Antropologia/Instituto de Ciências Sociais/Programa de Pós-Graduação em Antropologia Social – nível: Doutorado. Caxambu/MG. Outubro/2019. Segundo prêmio de melhor tese recebido pela autora. O primeiro foi o de melhor tese de doutorado na área de Estudos Sociais da Ciência e da Tecnologia do biênio 2018-2019, outorgado pela Associação Brasileira de Estudos Sociais das Ciências e das Tecnologias.
+<br>
++**25º Congresso de Iniciação Científica da Universidade de Brasília/160º Congresso de Iniciação Científica do Distrito Federal – PIBIC/UnB**.Menção Honrosa. Concedida pela Universidade de Brasília. Rosania Oliveira do Nascimento e Carlos Alexandre Barboza Plínio dos Santos. Departamento de Antropologia/Instituto de Ciências Sociais/Curso de Graduação em Ciências Sociais – Habilitação em Antropologia. Brasília/DF. Setembro/2019.Prêmio Menção Honrosa referente ao trabalho: Vozes Quilombolas na IV CONAPIR: desenvolvimento de políticas públicas de cuidado e atenção à saúde quilombola.
+<br>
++**Concurso de Fotografia e Vídeos Curtos "A China nas minhas lentes" de 2019**.Categoria Vídeos, Primeiro Lugar, IG URACTAN FREITAS CARVALHO. Concedido pela Embaixada da República Popular da China no Brasil em parceria com o Grupo de Mídias da China. Primeiro lugar da Categoria de Vídeos no concurso "A China nas minhas lentes" de 2019. IG URACTAN FREITAS CARVALHO. CPCE/UnBTV. China (gravação dos vídeos), Brasil (Premiação). Setembro/2019. http://br.china-embassy.org/por/hdyg/t1694398.htm .
+<br>
++**IEEE Impact Creators**. Concedido pelo Institute of Electrical and Electronics Engineers (IEEE). IEEE Impact Creator. Prof. Dr. Renato Alves Borges.Faculdade de Tecnologia, Departamento de Engenharia Elétrica.. Estados UNidos. Julho/2019. “In an effort to increase awareness of the great work that IEEE members are doing, the IEEE Public Visibility committee recently launched an awareness campaign: IEEE Impact Creators. The initiative spotlights the contributions of members who participate in the IEEE Public Visibility program, which aims to increase recognition of IEEE along with a general awareness and understanding of cutting-edge engineering. The Impact Creators campaign uses online profiles and social media engagement to give reporters and others a chance to find out what inspires, challenges, and excites top engineers, as well as what influences their work.” (https://spectrum.ieee.org/the-institute/ieee-news/new-awareness-campaign-spotlights-the-contributions-of-experts-in-robotics-and-wireless-communications) .
+<br>
++**Menção honrosa no 25º Congresso de Iniciação Científica da Universidade de Brasília**. Edital PIBIC e Artes e Humanidades. Concedido pela Universidade de Brasília. Indicação ao Prêmio Destaque de Iniciação Científica. Márcio Bezerra da Silva e Mariana Ambrósio Ribeiro. Faculdade de Ciência da Informação (FCI) / Curso de Biblioteconomia. Brasília/DF. Setembro/2019. o trabalho intitula-se “A web 2.0 nos sistema de automação de bibliotecas (SAB): uma proposta de interface”.
+<br>
++**Menção honrosa no 25º Congresso de Iniciação Científica da Universidade de Brasília**. Edital PIBIC e Artes e Humanidades. Concedido pela Universidade de Brasília. Indicação ao Prêmio Destaque de Iniciação Científica. Márcio Bezerra da Silva e Denise Oliveira de Araújo. Faculdade de Ciência da Informação (FCI) / Curso de Biblioteconomia. Brasília/DF. Setembro/2019. o trabalho intitula-se “Análise sobre os processos de instalação, customização e implementação do repositório institucional da UnB a partir do software DSpace”.
+<br>
++**Concurso TCC ABECIN - 2019**. TCC de Biblioteconomia. Concedido pela Associação Brasileira de Ensino em Ciência da Informação (ABECIN). 1ª Colocada Prêmio Nacional. Jaqueline Alves Ribeiro e João de Melo Maricato. Faculdade de Ciência da Informação, Curso de Bacharelado em Biblioteconomia. Brasil. Novembro/2019. Título trabalho: Notícias falsas ou questionáveis compartilhadas em mídias sociais na era da pós-verdade: uma análise do uso da informação científica em postagens sobre vacinas no Facebook.
+<br>
++**Concurso TCC - Abecin - 2019**. 1º lugar -  TCC em Museologia - Centro-Oeste. Concedido pela Associação Brasileira de Educação em Ciência da Informação - Abecin. Nathalia Gianini Reys e Ana Lúcia de Abreu Gomes. Faculdade de Ciência da Informação. Centro-Oeste.2019.
+<br>
++**Entre os Melhores Trabalhos do II GCEI**.Concedido pela Coordenação Científica do II Congresso de Comitê da Rede de Gestão da Informação e do Conhecimento e Editorial do periódico Perspectiva em Ciência da Informação.Publicação em periódico de Qualis A1.Daniela Francescutti Martins Hott e Joeanne Neves Fraz. Faculdade de Ciência da Informação / Faculdade de Educação. Porto Alegre/RS. Novembro/2019.
+<br>
++**Certificado de Menção Honrosa**. Concedido pela Comissão de Defesa dos Direitos da Pessoa com Deficiência (CPD) da Câmara dos Deputados. Menção honrosa à equipe da Coordenação de Acessibilidade pelos trabalhos prestados. Adriana Padula Jannuzzi, Dulcenira Maria da Silva e Daniela Francescutti Martins Hott. Faculdade de Ciência da Informação. Brasília/DF. Setembro/2019. 
+<br>
++**Prêmio Destaque de Iniciação Científica**. Artes e Humanidade. Concedido pela Universidade de Brasília /Proic/UnB. ndicação ao Prêmio Destaque de Iniciação Científica e Menção Honrosa de Iniciação Científica. Gabriel Rodrigues Rocha e Silva, Helen da Costa Gurgel e Eliane Lima e Silva. Instituto de Ciências Humanas (IH)/ Departamento de Geografia (GEA)/ Laboratório de Geografia, Ambiente e Saúde (LAGAS). Brasília/DF. Setembro/2019. 
+<br>
++**As melhores exposições de arte de 2019 - Votação aberta ao público**. Concedido pela Revista Select. Melhor exposição coletiva institucional. Ana cândida Franceschini de Avelar Fernandes, Gisele lima Rocha, Victor Velu Fonseca Zaiden, Samara Correia da Cunha, Matheus Melo de Miranda Miranda, Ludmylla Kristhina Barbosa de Oliveira, Lucas Gomes de Carvalho, Renata Silva Reis, Raniel da Conceição Fernandes, Helena bessa Lamenza, Lorena Cardoso de Castro, Gisele Cavalcanti Brito e José Carlos Vieira Martis. Decanato de Extensão. São Paulo/SP. https://www.select.art.br/as-melhores-exposicoes-de-arte-de-2019/. 
+<br>
++**Servidores Ouro da Casa**. Concedido pela Universidade de Brasília. Gilberto Daisson Santos. Decanato de Extensão/Secretaria Administrativa.  Brasília/DF. Dezembro/2019.http://dgp.unb.br/noticias/112-homenagem-aos-servidores-docentes-e-tecnico-administrativos-prata-e-ouro-da-casa-2019#servidores-ouro-da-casa
+<br>
++**Servidor Prata da Casa**. Concedido pela Universidade de Brasília. Rubens Augusto Franco Brandão. Decanato de Extensão/Secretaria Administrativa.  Brasília/DF. Dezembro/2019.http://dgp.unb.br/noticias/112-homenagem-aos-servidores-docentes-e-tecnico-administrativos-prata-e-ouro-da-casa-2019#servidores-ouro-da-casa.
+<br>
++**Prêmio Destaque de Iniciação Científica**. 25º Congresso de Iniciação Científica da UnB e 16º Congresso de Iniciação Científica do DF. Plataforma Digital Palavra Gráfica: Poesia na prosa de Valter Hugo Mãe. Ania Oliveira Gomes e Ana Mansur de Oliveira.Design. Brasília/DF.Dezembro/2019.
+<br>
++**Prêmio Destaque de Iniciação Científica**. 25º Congresso de Iniciação Científica da UnB e 16º Congresso de Iniciação Científica do DF. Projeto Expográfico Palavra Gráfica: Poesia na prosa de Valter Hugo Mãe. Laila Santanna de Oliveira e Ana Mansur de Oliveira.Design. Brasília/DF.Dezembro/2019.
+<br>
++**Melhor Trabalho**. Premiado MELHOR TRABALHO na categoria Agentes no VI Simpósio Brasileiro de Qualidade do Projeto no Ambiente Construído. Concedido pela ANTAC – UFU – FAUeD PPGAU. Sustentabilidade nos Apartamentos do Século XXI premiado na categoria agentes.Juliane Calvet e Julia Abrahão. Programa de Pós Graduação Faculdade de Arquitetura e Urbanismo/ Universidade de Brasília. Uberlândia/ MG. Novembro/2019 
+<br>
++**Circuito ABRAMN 2019 - Provas Longas**. 2o lugar, faixa: 50 Feminino. Concedido pela Associação Brasiliense Masters de Natação. Daniela Francescutti Martins Hott. Faculdade de Ciência da Informação. Brasília/DF.Dezembro/2019. http://www.abmn.org.br/arquivos/2020/provas_longas_-_final_2019.pdf .
+<br>
++**Circuito ABRAMN 2019 - Provas Curtas**. 3o lugar, faixa: 50 Feminino. Concedido pela Associação Brasiliense Masters de Natação. Daniela Francescutti Martins Hott. Faculdade de Ciência da Informação. Brasília/DF.Dezembro/2019. http://www.abmn.org.br/arquivos/2020/provas_curtas_-_final_2019.pdf  .
+<br>
++**Classic PCD Feminino - Etapa Rio de Janeiro**.2o lugar, categoria: PCD. Rei e Rainha do Mar (RRM). Daniela Francescutti Martins Hott. Faculdade de Ciência da Informação. Rio de Janeiro/RJ. Dezembro/2019. Travessia em mar (2.500m).
+<br>
++**Indicação do Distrito Federal para 32ª. Edição do Prêmio Rodrigo Melo Franco de Andrade/2019 - IPHAN**. Indicação de representação do Distrito Federal: Categoria 1 – Ações de excelência no campo do Patrimônio Material e Segmento 4 - Pessoas Físicas e representantes de grupos ou coletivos. Concedido pelo IPHAN/DF: Instituto do Patrimônio Histórico e Artístico Nacional – Distrito Federal. Ana Lúcia de Abreu Gomes e Elizângela Carrijo. Faculdade de Ciência da Informação/ Curso de Museologia. Brasília/DF. Julho/2019. Trata-se de uma distinção para representação local de um prêmio nacional.
+<br>
++**Prêmio Jovem Pesquisador  Administração Pública**. Concedido pela Associação Nacional de Pós Graduação e Pesquisa em Administração -Anpad. Caio César de Medeiros Costa. FACE/ADM. Fortaleza/CE. Maio/2019. O Prêmio é dado a pesquisadores indicados por programas de Pós Graduação por sua contribuição à comunidade de administração pública e que tenha concluído o doutorado em até 5 anos. 
+<br>
++**Melhor trabalho decorrente de tese de doutorado “Therapeutic Jurisprudence and Restorative Justice in Brazil”**. Científico. Concedido pela Associação Nacional de Pós-Graduação e Pesquisa em Administração (ANPAD). Melhor trabalho decorrente de tese de doutorado apresentado no Encontro de Administração Pública da ANPAD (EnAPG 2019).Jessica Traguetto Silva e Tomas de Aquino Guimaraes. Doutorado em Administração - Programa de Pós-Graduação em Administração FACE/PPGA.Fortaleza/CE. Maio/2019. 
+<br>
++**Melhor Artigo Derivado de Dissertação de Mestrado no ENEO 2019**. Concedido pela Associação Nacional de Pós-Graduação e Pesquisa em Administração (ANPAD). Melhor Artigo Derivado de Dissertação de Mestrado no ENEO 2019 ao artigo: “Agravos físicos e sociais em policiais militares: relações com a organização do trabalho”. Leonardo Borges Ferreira, Cledinaldo Aparecido Dias e Marcus Vinicius Soares Siqueira. Doutorado em Administração - Programa de Pós-Graduação em Administração FACE/PPGA. Fortaleza/CE. Maio/2019.
+<br>
++**Reconhecimento de Mérito pela Organização da Primeira Colação de Grau do ADM**. Concedido pelo Departamento de Administração - UnB. Reconhecimento de Mérito pela Organização da Primeira Colação de Grau do ADM. Vanessa Cabral Gomes, Olinda Maria Gomes Lesses e Elizânia Araújo Gonçalves.  FACE/ Departamento de Administração -ADM. Brasília/DF. Março/2019. 
+<br>
++**Menção honrosa pelo artigo "Comportamento do turista: uma revisão sistemática e bibliométrica da literatura nacional" no XXII SEMEAD**. Concedida pela Faculdade de Economia, Administração, Contabilidade e Atuária da Universidade de São Paulo (FEA /USP). Letícia Salazar Serra e Solange Alfinito. Programa de Pós-Graduação em Administração FACE/PPGA. São Paulo/SP. Novembro/2019.
+<br>
++**Menção honrosa – 25º Congresso de Iniciação Científica da UnB e 16º Congresso de Iniciação Científica do DF pelo trabalho “Perspectivas da implementação dos condomínios de armazéns rurais no entorno do Distrito Federal”**.Concedida pela Universidade de Brasília (PROIC/UnB). Kevin Willian Almeida dos Santos e Patricia Guarnieri dos Santos.Programa de Pós-Graduação em Administração FACE/PPGA. Brasília/DF. Setembro/2019.
+<br>
++**Menção honrosa – 25º Congresso de Iniciação Científica da UnB e 16º Congresso de Iniciação Científica do DF**.Concedida pela Universidade de Brasília (PROIC/UnB). Governança em Cooperativas Agropecuárias: Investigação Baseada em Práticas Recomendadas pelo Instituto Brasileiro de Governança Corporativa. Wauana Sheeva Costa Silva Manchineri e Carlos André de Melo Alves. Departamento de Administração -ADM/FACE. Brasília/DF. Setembro/2019.
+<br>
++**Professora Homenageada, turma 2018/2, Bacharelado em Administração, Universidade de Brasília**. Concedido pelo Departamento de Administração -ADM/UnB.Professora Homenageada, turma 2018/2, Bacharelado em Administração,  colação em Março de 2019. Solange Alfinito. FACE/ Departamento de Administração -ADM. Brasília/DF. Março/2019.
+<br>
++**“Emerging Scholar award” para a 15ª Conferência das Artes na sociedade (15th International Conference on the arts in society)**. Concedido pelo Common Ground Research Networks. Luís Müller Posca. IDA/Artes Visuais. National University of Ireland (NUI) – Galway/Irlanda. (Selecionado em Novembro de 2019) – Evento ocorrido em Junho de 2020. Ao ser selecionado pela instituição com o prêmio de bolsista emergente, além de zerar os custos para participação no evento que aconteceria presencialmente na National University of Ireland – NUI em Galway também pude apresentar meu trabalho acadêmico e ser reconhecido e premiado ao final do evento. Meu papel principal seria o de presidir sessões temáticas do painel de trabalhos selecionados, introduzindo essas sessões, a manutenção do cronograma, o início e o término no prazo das apresentações, facilitando perguntas e respostas e ajudando com questões técnicas da melhor maneira possível para o sucesso do evento. Como parte da equipe da conferência organizada pela Common Ground, também pude apresentar a comunicação de meu trabalho “Boa Vista – Roraima (Brazil): border city and cultural hybridization”. Caso o evento fosse realizado presencialmente, seria reconhecido e apresentado na sessão de abertura da conferência e premiado pelo trabalho na sessão de encerramento da conferência. 
+<br>
++**Prêmio ANTAQ 2019**. Classificado em primeiro lugar na categoria Artigo Técnico-Científico. Concedido pela ANTAQ. Carlos Henrique Marques da Rocha e Carlos Alberto Ayupe Vitoi. FT/ENC/PPGT (Mestrado em Transportes). Brasília/DF. Dezembro/2019. Título do artigo premiado: “Portos Brasileiros, Manuseio de Granéis Vegetais e Data Envelopment Analysis”; Link do prêmio: http://portal.antaq.gov.br/index.php/premioantaq2019/.
+<br>
++**Prêmio de trabalho destaque da área de Botânica no II**. Simpósio de Biodiversidade da Universidade de Brasília. Progressos no desenvolvimento de modelos para solutos solúveis (°BRIX) da polpa do pérola do Cerrado (Passiflora setacea) utilizando a espectroscopia no infravermelho médio. Mariana Tigano, Diego José da Silva, Ana Maria Costa, Dario Grattapaglia e Lúcio Flávio de Alencar Figueiredo. Instituto de Biologia/   Universidade de Brasília / Departamento de Botânica/ Curso de Ciências Biológicas. Brasília/DF. Novembro/2019.
+<br>
++**Prêmio pelo melhor Poster da Área de Fluidos de toda conferência, intitulado “Modelling and Experiments of Capillary Flow of Magnetic Fluids Under Uniform Field”**. Concedido pela renomada Conferência Internacional de Fluidos Magnéticos - ICMF - 2019. Melhor poster da área de fluidos. Yuri Zeniti Sinzato e Francisco Ricardo da Cunha. Faculdade de Tecnologia/Departamento de Engenharia Mecânica / Programa de Pós-Graduação em Ciências Mecânicas. Paris / França. Julho/2019.
+<br>
++**Menção Honrosa no Prêmio ABCM – EMBRAER 2019 (descrito no site da ABMC como um prêmio de pesquisa em engenharia mecânica)**. Categoria de melhor dissertação de mestrado. Concedida pela Associação Brasileira de Engenharia e Ciências Mecânicas (ACBM). Lucas Hildebrand Pires da Cunha e Taygoara Felamingo de Oliveira. Faculdade de Tecnologia, Programa de Pós-Graduação em Ciências Mecânicas. Uberlândia/MG. Outubro/2019. Artigo recém aceito fruto da dissertação do estudante foi selecionado como “editor’s pick” e ficará em destaque no site da revista (Physics of Fluids), com download aberto, durante entre a publicação do volume do artigo e o próximo. Ainda não temos as informações editoriais definitivas, apenas a carta do editor.
+<br>
++**Marian Smoluchowski  professorship**.Concedido pela Jagellianska University, Poland. Fernando Albuquerque de Oliveira. Instituto de Física. Cracóvia, Polônia. Maio/2019.O prêmio é concedido pela Faculdade de Física, Astronomia e ciências computacionais da JU, a mais conceituada da Polônia em Física e entre as mais prestigiosas do mundo em termos de ciência. Entre seus ex-alunos temos o famoso Nicolau Corpernicus. O prêmio consiste em um diploma, em anexo, e um semestre de cátedra com à apresentação de um curso para alunos de PósGraduação de livre escolha do premiado.
+<br>
++**Menção honrosa pela participação no Prêmio Zulmira Guerrero Marques Lacava**.Concedida pela Universidade de Brasília, Faculdade de Ceilândia. Universidade de Brasília, Faculdade de Ceilândia. Pós-Graduação em Ciências e Tecnologias em Saúde da Universidade de Brasília. Ceilândia/DF. Outubro/2019.
+<br>
++**Prêmio Anpocs**.Melhor Dissertação. Concedido pela Anpocs.Délia Maria Dutra da Silveira Margalef e Maria Luiza Wlater Costa. Instituto de Ciências Sociais/ Departamento de Estudos Latino-Americanos/ Programa de Estudos Comparados sobre as Américas. Brasília/DF. Outubro/2019.
+<br>
++**"Certificate of Appreciation" (Certificado de Apreciação) **.Concedido pela University of Florida, College of Dentistry, Department of Restorative Dental Sciences. "Certificate of Appreciation" (Certificado de Apreciação). Lucas Fernando Tabata. Departamento de Odontologia da FS - UnB. Gainesville, Flórida, EUA. Março/2019. "awarded in recognition of the many valuable contributions to the Division of Operative Dentistry as a Research Scholar - UFCD" (Premiação dada em reconhecimento as diversas contribuições valiosas prestadas à Divisão de Odontologia Restauradora da UFCD)
+<br>
++**Newton International Fellowship**. The Academy of Medical Sciences (Reino Unido). Concedido pela Newton International Fellowship award.Naile Dame Teixeira. Departamento de Odontologia/FS. Leeds, Reino Unido. Dezembro/2019. A Academy of Medical Sciences, instituição Britânica, premiou a professora Naile com o Newton International Fellowship (projeto n. NIF\R5\242). Eles financiarão uma bolsa de estudos no exterior e taxa de bancada no total de £65.400,00 (aproximadamente R$ 358.000,00) para a pesquisa intitulada "Effect of mutant bacteria and prebiotics on lesion development in a root caries in vitro model", com duração de dois anos, na University of Leeds. O projeto será realizado com colaboração da Dra. Thuy Do (University of Leeds). O início da pesquisa ocorrerá após a crise da COVID-19, caso o processo de afastamento da professora Naile seja aprovado. 
+<br>
++**Prêmio Myaki Issao**. 1º Lugar na modalidade Prêmio Myaki Issao área Estomatologia. Concedido pela Sociedade Brasileira de Pesquisa Odontológica (SBPqO).Certificado de Premiação. Juliana Amorim dos Santos, Beatriz Regina Lima de Aguiar, Ana Gabriela Costa Normando, Gabriel Álvares Borges, Paula Elaine Diniz Reis, Silva Taveira Elias e Eliete Neves da Silva Guerra. Laboratório de Histopatologia Bucal/ Departamento de Odontologia/ Faculdade de Ciência da Saúde – UnB. Campinas/SP. Setembro/2019. Apresentação de Painel Científico na 36ª Reunião Anual da SBPqO - In vitro model of oral mucositis and evaluation of protective effect of natural mTOR inhibitors.
+<br>
++**Prêmio Destaque PIBITI**. Grande Área Artes e Humanidades. Concedido pelo 25o Congresso de Iniciação Científica da UnB/16o Congresso de Iniciação Científica do Distrito Federal.Agregação de valor aos frutos do Cerrado por meio de tecnologia de secagem. Kelly Soraya da Luz, Janaína Deane de Abreu Sá Diniz e Andressa Regina Vasques Mendonça. Gestão do agronegócio, campus Planaltina. Brasília/DF. Setembro/2019.
+<br>
++**Melhor Trabalho na modalidade de apresentação oral**. Concedido pela Rede Brasileira de Avaliação de Tecnologias em Saúde (REBRATS). Melhor Trabalho na modalidade de apresentação oral do Eixo temático Execução de Métodos de Avaliação de Tecnologias em Saúde (ATS). Rodrigo Luiz Carregaro, Everton Nunes da Silva, Caroline Ribeiro Tottoli e Maurits van Tulder.Programa de Pós-Graduação em Ciências da Reabilitação (PPGCR), Campus UnB Ceilândia. Brasília/DF. Outubro/2019. Premiação conferida no I Congresso da REBRATS (https://proceedings.science/rebrats-2019/papers/custos-diretos-e-indiretos-da-dor-lombar-no-brasil-entre-2012-2016).
+<br>
++**Prêmio Jovem Pesquisador **.Graduação. Concedido pela ABRHidro. 1º Colocado.Daniela Junqueira Carvalho; Maria Elisa Leite Costa; Cátia dos Santos Conserva; Natalia da Silva Lemos; Liza Maria Souza de Andrade e Sergio Koide. Engenharia Ambiental, Faculdade de Tecnologia, Departamento de Engenharia Civil e Ambiental, Programa de Pós-Graduação de Tecnologia Ambiental e Recursos Hídricos. Foz do Iguaçu/PR. Novembro/2019. Título: Análise de solução de drenagem urbana de baixo impacto por modelagem hidrológica de base contínua;Autor(a) Principal: Daniela Junqueira Carvalho.
+<br>
++**Menção Honrosa PIBIC UnB**. Concedido pela Universidade de Brasília. Grupos com uma quantidade limitada de subgrupos próprios solúveis e o programa GAP ( Group, Algotihms and Programming). Igor dos Santos Lima e Leonardo santos da Cruz.Departamento de Matemática. Brasília/DF.Setembro/2019.
+<br>
++**Prata da Casa – 2019 / Homenagem**. Concedido pela Universidade de Brasília -UnB. Reginaldo José Ferreira da Silva. Brasília/DF. Dezembro/2019.
+<br>
++**Awards and recognition for Young Water Professionals (YWP)**. Poster. Concedido pelo The International Water Association. Best Poster Presentation Award. Maria Elisa Leite Costa e Sergio Koide.Faculdade de Tecnologia, Departamento de Engenharia Civil e Ambiental, Programa de Pós-Graduação de Tecnologia Ambiental e Recursos Hídricos. Jeju – Coreia do Sul. Outubro/2019.Título: Study of Diffuse Pollution Modelling in Urban Watersheds in the Brazilian Central Region.
+<br>
++**Menção Honrosa**.Servidor destaque da Procuradoria.Concedido pela Universidade de Brasília.Maurício Rovigatti Leiva. PJU/UnB. Brasília/DF. Dezembro/2019.
+<br>
++**Menção Honrosa**.Servidor destaque da Procuradoria.Concedido pela Universidade de Brasília.Luana Fernandes Monteiro. PJU/UnB. Brasília/DF. Dezembro/2019.
+<br>
++**Melhor pôster da XVI Escola de Modelos de Regressão**.Categoria profissional/professor. Concedido pela Associação Brasileira de Estatística (ABE). 1º lugar do Concurso de Melhor Pôster. Eduardo Yoshio Nakano. Instituto de Ciências Exatas / Departamento de Estatística. Pirenópolis/GO. Março / 2019.
+<br>
++**Top Downloaded Article 2017-2018**. Concedido pelo Journal Cereal Chemistry, Wiley. George von Borries e Érica S. Rios. Departamento de Estatística – UnB. Editora Wiley. Junho/2019.
+<br>
++**Melhor Trabalho de Iniciação Científica**.Prêmio para nível de graduação. Concedido pela Reunião Anual da Região Brasileira da Sociedade Internacional de Biometria (16º RBRAS) e Simpósio de Estatística Aplicada à Experimentação Agronômica (18º SEAGRO). Melhor Trabalho de Iniciação Científica. Ana Gabriela Pereira de Vasconcelos e Joanlise Marco de Leon Andrade. Bacharelado em Estatística / Departamento de Estatística / Instituto de Ciências Exatas. Cuiabá/MT. Agosto / 2019. Título do Trabalho: “Aplicação de Modelos Mistos e SVM em Seleção Genômica de Árvores de Eucalipto”.
+<br>
++**Menção Honrosa no 25° Congresso de Iniciação Científica da UnB / 16° Congresso de Iniciação Científica do DF**.Concedido pelo Decanato de Pós-Graduação – PROIC / Universidade de Brasília. Menção Honrosa. Tatiana Keiko Borges Umeda e Lucas Moreira.Curso de Engenharia Química – Instituto de Química / UnB. Brasília/DF. Setembro/2019. Título do Trabalho: “Cadeias de Ordem Variável”;Grande Área: Exatas e Tecnológicas;Link: http://proic.unb.br/images/Congresso_2019/Men%C3%A7%C3%A3o_Honrosa.pdf .
+<br>
++**XXIV Prêmio Tesouro Nacional 2019**.2º lugar - Concurso de monografias. Concedido pela Secretaria do Tesouro Nacional - Ministério da Economia. Sérgio Ricardo de Brito Gadelha, Alex Felipe Rodrigues Lima  e Démerson André Polli.Instituto de Ciências Exatas / Departamento de Estatística / Mestrado em Estatística. Brasília/DF. Setembro/2019.
+<br>
++**Moção de Louvor**.Concedido pela Câmara Legislativa do Distrito Federal.Edileuza Fernandes da Silva.Brasília/DF. Agosto/2019.
+<br>
++**Melhor Argo na trilha principal do evento da área**.No Simpósio Brasileiro de Engenharia de Software (SBES) 2019.Concedido pela SBC/SBES.Walter Lucas Monteiro de Mendonça, Rodrigo Bonifácio de Almeida, Edna Dias Canedo, Diego Marcílio e Fernanda Lima.IE/CIC. Salvador/BA. Setembro/2019. 
+<br>
++**Maratona de Programação**.4o Lugar, Campeão da Região Centro-Oeste, Finalista Mundial. Concedido pela Sociedade Brasileira de Computação. Campeão da Região Centro-Oeste. Guilherme Novaes Ramos/José Marcos Leite/Luís Gebrim/Thiago Veras. Instituto de Ciências Exatas / Departamento de Ciência da Computação / Bacharelado em Ciência da Computação. Campina Grande/PB.Novembro/2019. http://maratona.ime.usp.br/hist/2019/index.html
+<br>
++**Menção Honrosa**.Concedida pela Universidade de Brasília (Proic/UnB).Atlas da Pluviosidade do DF e entorno. Rafael Rodrigues da Franca (orientador)/Julio Eduardo Mafra Ribeiro. Instituto de Humanas/ Departamento de Geografia. Brasília/DF. Setembro/2019.
+<br>
++**Ordem do Mérito Bombeiro Militar do Distrito Federal "Imperador Dom Pedro II"**.Oficial. Concedido pelo Corpo de Bombeiros Militar do Distrito Federal. Carlos Henke de Oliveira. Departamento de Ecologia / Instuto de Biologia. Brasília/DF. Julho/2019. Decorrente das avidades de pesquisas cienficas sobre
+combate aos incêndios florestais no Cerrado.
+<br>
++**Prêmio de melhor artigo de aluno (best student paper) no 31st IEEE International Conference on Tools with Artificial Intelligence (ICTAI)**.Concedido pelo Biological & Artificial Intelligence Foundation (BAIF). Artigo intitulado "Experience Sharing Between Cooperative Reinforcement Learning Agents". Lucas Oliveira Souza.Instuto de Ciências Exatas/Departamento de Ciência da Computação/Programa de Pós-Graduação em Informáca. Portland,Oregon, USA. Novembro/2019. O artigo está relacionado à dissertação de mestrado do aluno defendido em 15 Fev 2019, intitulado "Accelerating Learning in Multiagent Domains through Experience Sharing" (disponível em: https://repositorio.unb.br/handle/10482/35397), com banca examinadora composta pela Profa. Dra.Anna Helena Reali Costa (USP) e o Prof. Dr. Teófilo Emídio de Campos (UnB).
+<br>
++**Menção Honrosa**. Congresso Menção Honrosa. Concedida pelo Decananto de Pós Graduação (DPG), UnB.25º Congresso de Iniciação Científica da UnB e 16º Congresso de Iniciação Científica do DF.Felix Martin
+Carbajal Gamarra e Anne Karoline Feitoza Mendoça. Faculdade UnB Gama/Departamento: Engenharia de Energia/ Curso Engenharia de Energia. Brasília/DF. Setembro/2019.
+<br>
++**FSF Free Software Award**.Outstanding New Free Software Contributor. Concedido pela FSF Free Software Award. Outstanding New Free Software Contributor.Clarissa Lima Borges. Universidade de Brasília, Faculdade do Gama, FGA, Engenharia de Software. BOSTON, Massachusetts, USA. Março/2020 (referente a premiação de 2019). https://www.fsf.org/news/lets-encrypt-jim-meyering-and-clarissa-lima-borges-receive-fsfs-2019-free-software-awards .
+<br>
++**Moção de Louvor**.Concedida pela CLDF. Moção de Louvor ofertada aos professores da UniSER / UnB. Maria Ivoneide de Lima Brito e outros professores da UnB.OUV / FCE. Brasília/DF. Maio/2019. Pela valorização e promoção de ações com foco na inclusão social da pessoa idosa.
+<br>
++**Prêmio Diário Contemporâneo de Fotografia**. Fotografia Contemporânea/Artes Visuais. Concedido pelo Diário Contemporâneo de Fotografia | Realização: Diário do Pará/RBA. X Prêmio Diário Contemporâneo de Fotografia.Júlia Milward. Instituto de Artes (IdA), PPG-Artes Visuais/Deslocamentos e Espacialidades. Belém do Pará/PA. Agosto/2019.
+<br>
++**Primeiro Lugar no Nasa Space Apps Challenge Brasilia 2019**.Primeiro lugar Regional. Concedido pela Nasa. Equipe Vencedora da Etapa Regional, Nasa On Fire. Gabriel de Oliveira do Espirito Santo (CIC-UNB), Maria Julia Almeida de Araujo (CET - UNB), Vinicius da Silva Rocha (CIC-UNB), Joao Victor de Souza Calassio (CIC-UNB) e outros.Brasília/DF> Outubro/2019. Site do Evento na nossa página, nesse site está como Nomeados Globais pois fomos qualificados para o mundial. o "Local People's choice" é o primeiro lugar em Brasilia.https://2019.spaceappschallenge.org/challenges/living-our-world/spot-fire-v20/teams/nasaonfire/project .
+<br>
++**1º Prêmio Marielle Franco de Direitos Humanos da CLDF**. organização da sociedade civil. Concedido pela  Comissão de Direitos Humanos da Câmara Legislava do Distrito Federal.Promotoras Legais Populares
+- projeto de extensão premiado na categoria "organização da sociedade civil". Faculdade de Direito da Unb. Brasília/DF. Brasília/DF. Novembro/2019.
+<br>
++**Prêmio PIPA**.Concedido pelo  Instituto PIPA de Arte Contemporânea. Geraldo Orthof.  VIS/IdA. Rio de Janeiro/RJ. 2019.
+<br>
++**CCAS International Artistic Residency**.Concedido pela Canberra Center Art Space.Geraldo Orthof.  VIS/IdA. Canberra, Australia. 2019.
+<br>
++**Columbus International Artistic Residency**. Concedido pela Columbus State University. Geraldo Orthof.  VIS/IdA. Columbus, Georgia, Estados Unidos. 2019.
+<br> 
++**Menção Honrosa no 25o Congresso de Iniciação Científica da UnB e 16o Congresso de Iniciação Científica do DF**. Concedida pelo Decanato de Pós-Graduação UnB. Apresentação do trabalho "PROBLEMAS DE SAÚDE DECORRENTES DA EXPOSIÇÃO AO AMIANTO: OVERVIEW DE REVISÕES SISTEMÁTICAS". Maria Paula do Amaral Zaitune e WIGOR DA SILVA ALVES. Faculdade de Ciências da Saúde / Departamento de Saúde Coletiva. Brasília/DF. Novembro/2019.
+<br>
++**Menção Honrosa no 8º Congresso Ibero-Americano em Investigação Qualitativa.**.Concedida pela  ESEL - Escola Superior de Enfermagem de Lisboa - Portugal. Ádria Jane Albarado, Elizabeth Alves de Jesus, Natália Fernandes e Priscila Torres Brito, Ana Valéria Machado Mendonça e Maria Fátima de Sousa.  Faculdade Ciências da Saúde - Programa de Pós-Graduação em Saúde Coletiva - Mestrado Profissinal, Mestrado Acadêmico e Doutorado.Lisboa / Portugal. Julho/2019. Artigo premiado "Análise da recepção de campanhas audiovisuais de saúde no Brasil:um estudo qualitativo sobre a percepção da população no controle do aedes".
+<br>
++**Troféu Vera Brant**.Homenagem de reconhecimento pela contribuição para as artes Visuais do Distrito Federal.Concedido pelo Prêmio Vera Brant / Curador e Presidente do Júri do Prêmio Vera Brant, Rogério Carvalho. Homenagem. Cinara Barbosa de Sousa. Instituto de Artes/ Departamento de Artes Visuais. Brasília/DF. https://visitebrasilia.com.br/noticia/iio-premio-vera-brant-de-arte-contemporanea-inaugura-artistas-nocentro-cultural-renato-russo/ ;A ocasião de abertura da exposição e entrega dos Troféus Vera Brant de reconhecimento pela
+contribuiçãopara as artes visuais no DF tiveram como homenageados da edição de 2019 a profa. Cinara Barbosa e Wagner Barja, ex diretor do Museu Nacional. 
+<br>
++**Menção Honrosa/Congresso de IC 2018/2019 (25º Congresso de IC da UnB e 16º do DF)**.PIBIC/UnB. Concedida pela Universidade de Brasília. Melissa Maria Santos Braga e Tainá Bacellar Zaneti.Bacharelado em Turismo, Centro de Excelência em Turismo - CET.Brasília/DF. Setembro/2019.
+<br>
++**Terra Inova**.Redução de Custos. Concedido pela Agência de Desenvolvimento do Distrito Federal - TERRACAP. Moniterra - Sistema de Monitoramento Remoto de Terras Públicas. Giancarlo Brugnara Chelotti e Carine Dutra Telles.Programa de Pós Graduação em Ciências Ambientais / Faculdade UnB Planaltina - PPGCA/FUP/UNB. Brasília/DF. Outubro/2019.
+<br>
++**Patrono**.Concedido pela Faculdade de Ciências da Saúde / Departamento de Enfermagem. Valéria
+Bertonha Machado.  Faculdade de Ciências da Saúde / Departamento de Enfermagem. Brasília/DF. Novembro/2019.
+<br>
++**Menção honrosa**.Área da Saúde / Vida. Concedida pelo 25° Congresso de Iniciação Cienfica da UnB e 16° Congresso de Iniciação Cienfica do Distrito Federal. Luiz Guilherme Grossi Porto e Kevin Alves Barreto. Faculdade de Educação Física - curso de Educação Física. Brasília/DF. Setembro/2019.
+<br>
++**Prata da Casa**.Concedido pela Universidade de Brasília- UnB. Honraria.  Ana Beatriz Duarte Vieira. Faculdade de Ciências da Saúde/ Departamento de Enfermagem. Brasília/DF. Outubro/2019. 25 anos de UnB.
+<br>
++**PROFESSORA HOMENAGEADA NA SOLENIDADE DE OUTORGA DE GRAU DA SEPTUAGÉSIMA SÉTIMA TURMA DE ENFERMAGEM DA UNIVERSIDADE DE BRASÍLIA.** Paula Elaine Diniz dos Reis (Docente do Departamento de Enfermagem-UnB).
+Brasília/DF. fevereiro/2019.
+<br>
++**MELHOR TRABALHO NA CATEGORIA "QUALIDADE DE VIDA E COMPORTAMENTO" NO ENCONTRO NACIONAL DE PESQUISA EM ONCOLOGIA**. TRABALHO INTITULADO "Imagem corporal de pacientes oncológicos submetidos a radioterapia: revisão integrativa de literatura". Amanda Gomes de Menêses (Doutoranda pelo Programa de Pós-Graduação em Enfermagem-UnB), Elaine Barros Ferreira (Docente do Departamento de Enfermagem- UnB), Paula Elaine Diniz dos Reis (Docente do Departamento de Enfermagem- UnB)
+e Renata Oliveira Fagundes. Brasília/DF.Março/2019.
+<br>
++**MENÇÃO HONROSA MIRIAM CRISTINA DE SOUSA NA VIII JORNADA CIENTÍFICA DA LIGA DE COMBATE AO CÂNCER DA UNB - CIÊNCIA E INOVAÇÃO NA PRÁTICA MULTIDISCIPLINAR EM ONCOLOGIA**. TRABALHO INTITULADO "Efeitos da
+Suplementação oral no manejo da mucosite em pacientes com câncer: revisão sistemática". Amanda Gomes de Menêses (Doutoranda pelo Programa de Pós-Graduação em Enfermagem-UnB), Ana Gabriela Costa Normando (Mestre pelo Programa de Pós-Graduação em Ciência da Saúde-UnB), Isabela Porto de Toledo (Doutoranda pelo Programa de Pós-Graduação em Ciência da Saúde-UnB), Eliete Neves da Silva Guerra (Docente do Departamento de OdontologiaUnB) e Paula Elaine Diniz dos Reis (Docente do Departamento de Enfermagem- UnB). Brasília/DF. Junho/2019.
+<br>
++**PRIMEIRO LUGAR NA MODALIDADE PRÊMIO MYAKI ISSAO NA 36ª REUNIÃO ANUAL DASOCIEDADE BRASILEIRA DE PESQUISA ODONTOLÓGICA**. TRABALHO INTITULADO "In vitro modelo f oral mucositis and evaluation of protective effect of natural mTOR inibithors".Juliana Amorim dos Santos (Graduanda em Odontologia-UnB), Beatriz Regina Lima de Aguiar (Mestranda pelo Programa de Pós-Graduação em Ciências da Saúde-UnB), Ana Gabriela Costa Normando (Mestre pelo Programa de PósGraduação em Ciências da Saúde-UnB), Gabriel A. Borges (Doutor pelo Programa de PósGraduação em Ciências da Saúde-UnB), Paula Elaine Diniz dos Reis (Docente do Departamento de Enfermagem-UnB), Silvia Taveira Elias (Doutora pelo Programa de Pós-Graduação em Ciências da Saúde-UnB) e Eliete Neves da Silva Guerra (Docente do Departamento de Odontologia da UnB).Brasília/DF. Setembro/2019.
+<br>
++**MENÇÃO HONROSA NO 25ºCONGRESSO DE INICIAÇÃO CIENTÍFICA DA UnB E 16º CONGRESSO DE INICIAÇÃO CIENTIFICA DO DF**.TRABALHO INTITULADO "Associação de polimorfismo no gene XRCC1 na predição da radiodermatite em pacientes com câncer de cabeça e pescoço submetidos à radioterapia: revisão sistemática". Sabrina dos Santos Dias (Graduada em Enfermagem-UnB) e Paula Elaine Diniz dos Reis (Docente do Departamento de Enfermagem- UnB). Brasília/DF. Setembro/2019.
+<br>
++**Prêmio Jovem Pesquisador**.Graduação. Concedido pela ABRHidro. 3º Colocado. Stefanie Katrin Fischer Henz; Maria Elisa Leite Costa; Ana Carolina Vieira de Paula e Sergio Koide. Engenharia Ambiental, Faculdade de Tecnologia, Departamento de Engenharia Civil e Ambiental, Programa de Pós-Graduação de Tecnologia Ambiental e Recursos Hídricos. Foz do Iguaçu/PR.NOvembro/2019. ítulo: Monitoramento da qualidade da água em uma bacia de detenção no Distrito Federal;Autor(a) Principal: Stefanie Katrin Fischer Henz.
+<br>
++**Professora Emérita**.Concedido pela UNiversidade de Brasília.Sylvia Ficher. Brasília/DF. Novembro/2019. Documentação:Resolução do Conselho Universitário nº 0018/2019.
+<br>
++**Open Education Awards for Excellence**.Open Policy.Concedido pela Open Education Consortium. Melhor projeto global. Prof. Tel Amiel (pela Cátedra UNESCO em EaD) em parceria com o Instituto Educadigital (SP). Faculdade de Educação. EUA. 2019.
+<br>
++**1º Prêmio Marielle Franco de Direitos Humanos**.Servidora Pública. Concedido pela Comissão de Direitos Humanos da Câmara Legislativa do DF. Maria Aparecida Gussi.Faculdade de Saúde/Departamento de Enfermagem. Brasília/DF. Novembro/2019.
+<br>
++**Menção honrosa com trabalho referente ao Programa de Iniciação Científica (Edital 2018 ProIC/DPG/UnB – PIBIC CNPq), projeto “Reorganização dos e nos processos de trabalho na rede de atenção psicossocial do Distrito Federal: atenção integral em saúde mental e a participação social dos usuários e seus familiares na Rede de Atenção **.Concedido pela Universidade de Brasília/25º Congresso de Iniciação Científica da UnB e 16º Congresso de Iniciação Científica do DF.Sabrina da Silva Bravo, Maria Aparecida Gussi e Maria da Glória Lima. Faculdade de Saúde/Departamento de Enfermagem. Brasília/DF. Setembro/2019.
+<br>
++**HONRA AO MÉRITO ODONTOLÓGICO ADRIANO MAGALHÃES FREIRE**. Contribuição Científica - Prêmio CAPES de Tese - Edição 2019. Concedido pelo CONSELHO REGIONAL DE ODONTOLOGIA DO DISTRITO FEDERAL / CRO-DF. LAUDIMAR ALVES DE OLIVEIRA. DEPARTAMENTO DE ODONTOLOGIA/ FACULDADE DE CIÊNCIAS DA SAÚDE. Brasília/DF. Agosto/2019.
+<br>
+
++ **Menção honrosa PIBIC/UNB**. Ciências Exatas - 25º Congresso de Iniciação Científica da UnB e 16º Congresso de Iniciação Científica do DF. Classificação de grupos simples não abelianos por meio da quantidade de elementos de mesma ordem e o programa GAP(Groups, Algorithms and Programming). Concedido pela Universidade de Brasília. Igor dos Santos Lima e Josyane dos Santos Pereira. Instituto de Exatas / Departamento de Matemática / Matemática licenciatura. Brasília/DF.  Setembro/2019.
+<br>
+
++ **Prêmio Capes de Teses 2019**. Primeiro Colocado como Melhor Tese em Ciência Política e Relações Internacionais em 2019. Concedido pela Capes. ANDRE BORGES DE CARVALHO e NIVALDO ADAO FERREIRA JUNIOR. Programa de Pós-graduação em Ciência Política do Instituto de Ciência Política da Universidade de Brasília. Brasília/DF. Dezembro/2019.
+<br>
+
++ **Honra ao Mérito, designado pelo Dep. Leandro Grass (CLDF)**. Honra ao mérito pelos relevantes serviços prestados para o curso de gestão de políticas públicas da Universidade de Brasília. Concedido pelo Dep. Leandro Grass (CLDF). DENILSON BANDEIRA COELHO. Instituto de Ciência Política da Universidade de Brasília. Brasília/DF. Agosto/2019.
+<br>
+
++ **Prêmio Ubirajara Martins de destaque em taxonomia zoológica**. Prêmio Ubirajara Martins 2016-2019: Destaque em taxonomia zoológica pela tese "Taxonomic revision of Pimelodella Eigenmann & Eigenmann, 1888: an integrative proposal to delimit species", Museu de Zoologia da Universidade de São Paulo. Prêmio único para o nível de doutorado. Concedido pelo Museu de Zoologia da Universidade de São Paulo. Veronica de Barros Slobodian Motta. Instituto de Ciências Biológicas, Departamento de Zoologia. São Paulo/SP. Novembro/2019.
+<br>
+
++ **Menção honrosa da Reunião Anual da Sociedade Brasileira de Neurociências e Comportamento**. Menção honrosa na categoria Pôster para o trabalho "Análise da dieta como pressão seletiva para a visão em cores em primatas". Concedido pela Sociedade Brasileira de Neurociências e Comportamento. Luana L. Alves, Laís P. C. Machado, Veronica de Barros Slobodian Motta, Julia Klaczko, Rafael S. Maior. Instituto de Ciências Biológicas. São Paulo/SP. Outubro/2019.
+<br>
+
++ **Menção Honrosa conferida à trabalho científico na 10ª Semana de Enfermagem da Faculdade de Ceilândia/UnB na 80ª Semana Brasileira de Enfermagem**. Menção honrosa na categoria apresentação oral. Concedido pela Faculdade de Ceilândia/Programa de Pós-graduação em Ciências e Tecnologias em Saúde. Mani Indiana Funez e Thaise Loyanne Felix Dias.  Brasília/DF. Maio/2020.
+<br>
+
++ **Prêmio Nacional pelo Resultado de Maior Impacto Científico nas Ciências Técnicas**. "Contribuições para o desenvolvimento de mecânica estrutural, métodos numéricos e mecânica computacional em Engenharia". Prêmio Nacional concedido pelo Ministro da Educação Superior de Cuba. Marcio Muniz de Farias e Manoel Porfírio Cordão Neto. Universidade de Brasília, Faculdade de Tecnologia, Departamento de Engenharia Civil e Ambiental. Ciudad de La Habana, La Habana. Cuba. Maio/2019.
+<br>
+
++ **Prêmio Anual pelo Resultado de Maior Impacto Científico nas Ciências Técnicas**. "Contribuições para o desenvolvimento de mecânica estrutural, métodos numéricos e mecânica computacional em Engenharia". Prêmio Anual concedido pelo Reitora da Universidade Central de Las Villas em Cuba. Marcio Muniz de Farias e Manoel Porfírio Cordão Neto. Universidade de Brasília, Faculdade de Tecnologia, Departamento de Engenharia Civil e Ambiental. Santa Clara, Villa Clara, Cuba. Abril/2019.
+<br>
+
++ **Prêmio Anual da Academia de Ciências de Cuba**. "Desarrollo de tecnologías numéricas de avanzada para la modelación de problemas de ingeniería: Contribuciones a los Métodos SPH y MPM". Prêmio Anual concedido pela Academia de Ciências de Cuba. República de Cuba. Marcio Muniz de Farias, Manoel Porfírio Cordão Neto e Renato Pinto da Cunha. Universidade de Brasília, Faculdade de Tecnologia, Departamento de Engenharia Civil e Ambiental. Ciudad de La Habana, La Habana. Cuba. Abril/2019.
+<br>
+
++ **Prêmio Anual da Academia de Ciências de Cuba**. "Contribuciones al Desarrollo de Métodos Numéricos de Partículas: Método de los Elementos Discretos - DEM". Prêmio Anual concedido pela Academia de Ciências de Cuba. República de Cuba. Marcio Muniz de Farias, Manoel Porfírio Cordão Neto e Renato Pinto da Cunha. Universidade de Brasília, Faculdade de Tecnologia, Departamento de Engenharia Civil e Ambiental. Ciudad de La Habana, La Habana. Cuba. Abril/2019.
+<br>
+
++ **Prêmio Anual da Academia de Ciências de Cuba**. "Contribuciones de la Modelación Numérica a la Solución de Problemas de la Ingeniería Civil". Prêmio Anual concedido pela Academia de Ciências de Cuba. República de Cuba. Luciano Mendes Bezerra. Universidade de Brasília, Faculdade de Tecnologia, Departamento de Engenharia Civil e Ambiental. Ciudad de La Habana, La Habana. Cuba. Abril/2019.
+<br>
+
++ **Prêmio Anual das Delegações Provinciais de Ciego de Ávila do Ministério da Ciência, Tecnologia e Meio Ambiente**. "Contribuciones de la Modelación Numérica a la Solución de Problemas de la Ingeniería Civil". Prêmio Anual concedido pelas Delegações Provinciais de Ciego de Ávila do Ministério da Ciência, Tecnologia e Meio Ambiente. República de Cuba. Luciano Mendes Bezerra. Universidade de Brasília, Faculdade de Tecnologia, Departamento de Engenharia Civil e Ambiental. Ciego de Avila, Cuba. Fevereiro/2019.
+<br>
+
++ **Prêmio Jovem Pesquisador**. Graduação. 3º Colocado. "Monitoramento da qualidade da água em uma bacia de detenção no Distrito Federal". Concedido pela ABRHidro. Stefanie Katrin Fischer Henz, Maria Elisa Leite Costa, Ana Carolina Vieira de Paula e Sergio Koide. Engenharia Ambiental, Faculdade de Tecnologia, Departamento de Engenharia Civil e Ambiental, Programa de Pós-Graduação de Tecnologia Ambiental e Recursos Hídricos. Foz do Iguaçu/PR. Novembro/2019.
+<br>
+
++ **Awards and recognition for Young Water Professionals (YWP)**. Poster. Best Poster Presentation Award. "Study of Diffuse Pollution Modelling in Urban Watersheds in the Brazilian Central Region". Concedido pela The International Water Association. Maria Elisa Leite Costa e Sergio Koide. Faculdade de Tecnologia, Departamento de Engenharia Civil e Ambiental, Programa de Pós-Graduação de Tecnologia Ambiental e Recursos Hídricos. Jeju – Coreia do Sul. Outubro/2019.
+<br>
+
++ **Prêmio Jovem Pesquisador**. Graduação. 1º Colocado. "Análise de solução de drenagem urbana de baixo impacto por modelagem hidrológica de base contínua". Concedido pela ABRHidro. Daniela Junqueira Carvalho, Maria Elisa Leite Costa, Cátia dos Santos Conserva, Natalia da Silva Lemos, Liza Maria Souza de Andrade e Sergio Koide. Faculdade de Tecnologia, Departamento de Engenharia Civil e Ambiental, Programa de Pós-Graduação de Tecnologia Ambiental e Recursos Hídricos. Foz do Iguaçu/PR. Novembro/2019.
+<br>
+
++ **Troféu Guardião das Águas**. Pelos relevantes serviços de assessoramento e apoio à capacitação da equipe técnica da Adasa. Concedido pela ADASA - Agência Reguladora de Águas, Energia e Saneamento Básico do DF. Sergio Koide. Faculdade de Tecnologia/Departamento de Engenharia Civil e Ambiental. Brasília/DF. Março/2019.
+<br>
+
++ **Cidadão Honorário de Brasília**. Concedido pela Câmara Legislativa do Distrito Federal - CLDF. Sergio Koide. Faculdade de Tecnologia/Departamento de Engenharia Civil e Ambiental. Brasília/DF. Setembro/2019.
+<br>
+
++ **Artigo científico escolhido para ser capa da conceituada revista internacional Organometallics, da American Chemical Society**. Capa de revista internacional. Título do artigo: Synthesis and Biological Investigation of (+)-JD1, an Organometallic BET Bromodomain Inhibitor. Organometallics 2020, 39, 408−416. doi: 10.1021/acs.organomet.9b00750. Concedido pela revista Organometallics, da American Chemical Society. Brenno Amaro da Silveira Neto. Instituto de Química. Washington, DC, USA. Dezembro/2019.
+<br>
+
++ **Congresso Internacional “1st International Conferences on Noncovalent Interactions”**. Melhor trabalho apresentado no Congresso. “Crystal Structure and Hirshfeld Surface of a New Copper(II) Complex with Hydrazone Derived of B6 Vitamin”. Concedido pela Faculdade de Ciências da Universidade de Lisboa. Claudia Cristina Gatto. Instituto de Química. Lisboa, Portugal. Setembro/2019.
+<br>
+
++ **VI Encontro Brasileiro de Administração Pública**. 1º Colocado. Prêmio de Melhor Artigo no GT Governança e Cooperação Intergovernamental. Concedido pela Sociedade Brasileira de Administração Pública (SBAP). Ricardo Dias Ramagem e Ricardo Corrêa Gomes. Programa de Pós-Graduação em Administração UnB. Salvador/BA. Junho/2019.
+<br>
+
++ **VII Congresso Científico de Administração do CRA-DF**. 1º Colocado. Prêmio de Melhor Artigo de Pós-Graduação do VII Congresso Científico de Administração do CRA-DF. Concedido pelo Conselho Regional de Administração do Distrito Federal (CRA-DF). Newton da Silva Miranda Júnior, Denise Rossato Quatrin e Valmir Emil Hoffmann. Programa de Pós-Graduação em Administração UnB. Brasília/DF. Setembro/2019.
+<br>
+
++ **I Concurso de Artigos Científicos do Superior Tribunal de Justiça - Justiça Cidadã**. 2º Colocado. Prêmio de segundo melhor artigo na categoria Eficiência da Justiça. Concedido pelo Superior Tribunal de Justiça – STJ. Jeovan Assis da Silva, Guilherme Ferreira Viana e Ana Carolina Prata. Programa de Pós-Graduação em Administração UnB. Brasília/DF. Setembro/2019.
+<br>
+
++ **30º Encontro Nacional dos Cursos de Graduação em Administração - ENANGRAD**. 1º Colocado. Prêmio de Melhor Artigo da Área de Estratégia no ENANGRAD 2019. Concedido pela  Associação Nacional dos Cursos de Graduação em Administração (ANGRAD). Cleidson Nogueira Dias, Valmir Emil Hoffmann e María Teresa Martínez-Fernández. Programa de Pós-Graduação em Administração UnB. Uberlândia/MG. Agosto/2019.
+<br>
+
++ **X Encontro de Estudos Organizacionais da ANPAD - EnEO**. 1º Colocado. Prêmio Melhor Artigo Derivado de Dissertação de Mestrado no ENEO 2019. Concedido pela Associação Nacional de Pós Graduação e Pesquisa em Administração (ANPAD). Leonardo Borges Ferreira, Cledinaldo Aparecido Dias e Marcus Vinícius Soares Siqueira. Programa de Pós-Graduação em Administração UnB. Fortaleza/CE. Maio/2019.
+<br>
+
++ **ENANPAD 2019**. 1º Colocado. Prêmio de Melhor Projeto de Tese do Consórcio Doutoral 2019. Concedido pela Associação Nacional de Pós Graduação e Pesquisa em Administração (ANPAD). Simone Gelmini Araújo e Valmir Emil Hoffmann. Programa de Pós-Graduação em Administração UnB. São Paulo/SP. Outubro/2019.
+<br>
+
++ **XXII SEMEAD**. 1º Colocado. Prêmio de Melhor artigo científico da área Estudos Organizacionais. Concedido pela Faculdade de Economia, Administração e Contabilidade da USP. André Luiz Mendes Athayde e Claudio Vaz Torres. Programa de Pós-Graduação em Administração UnB. São Paulo/SP. Novembro/2019.
+<br>
+
++ **EnAPG 2019**. 1º Colocado. Prêmio jovem Pesquisador - ENAPG 2019. Concedido pela Associação Nacional de Pós Graduação e Pesquisa em Administração (ANPAD). Caio César de Medeiros Costa. Programa de Pós-Graduação em Administração UnB. Fortaleza/CE. Maio/2019.
+<br>
+
++ **EnAPG 2019**. 1º Colocado. Melhor trabalho decorrente de tese de doutorado apresentado no Encontro de Administração Pública da ANPAD. Concedido pela Associação Nacional de Pós Graduação e Pesquisa em Administração (ANPAD). Jessica Traguetto Silva e Tomas de Aquino Guimarães. Programa de Pós-Graduação em Administração UnB. Fortaleza/CE. Maio/2019.
+<br>
+
++ **Edital 01/2019 – Apoio à participação em eventos, cursos de curta duração ou visitas técnicas de natureza científica, tecnológica e de inovação**. Concedido pela Fundação de Apoio à Pesquisa do Distrito Federal - FAPDF. Rodolfo Augusto Melo Ward de Oliveira. Programa de Pós-Graduação em Artes Visuais. Brasília/DF. 2019.
+<br>
+
++ **EDITAL INTERNO DE MOBILIDADE PPGAV/IdA/UNB N. 02/2019**. Concedido pelo Instituto de Artes (IdA)/UnB. Rodolfo Augusto Melo Ward de Oliveira. Programa de Pós-Graduação em Artes Visuais. Brasília/DF. 2019.
+<br>
+
++ **Edital Apoio à Publicação de Artigos em Anais de Eventos - Edital DPI | DPG - UnB N° 02/2019**. Concedido pela Universidade de Brasília – UnB/DPI | DPG. Rodolfo Augusto Melo Ward de Oliveira. Programa de Pós-Graduação em Artes Visuais. Brasília/DF. 2019.
+<br>
+
++ **Prêmio XII Convenção de Contabilidade do Distrito Federal**. 3º Lugar no Prêmio XII Convenção de Contabilidade do Distrito Federal. Concedido pelo Prêmio XII Convenção de Contabilidade do Distrito Federal. Diana Vaz de Lima e Roselaine Araujo Vassalo. Faculdade de Administração, Contabilidade Economia, e Gestão Pública (FACE). Brasília/DF. Outubro/2019.
+<br>
+
++ **Melhor trabalho na área de Atuárias**. Melhor trabalho de Atuárias do XIII CONUCIC. Concedido pela Universidade Federal de Pernambuco. Diana Vaz de Lima. Faculdade de Administração, Contabilidade Economia, e Gestão Pública (FACE). Recife/PE. Setembro/2019.
+<br>
+
++ **XXVI Prêmio Corecon-DF de Monografia em Economia - 2019**. 1º Colocado. Bolhas no Mercado de Bitcoins: uma abordagem comportamental. Concedido pelo CORECON-DF. Daniel Oliveira Cajueiro e Bernardo Lembi Ramalho Maciel. Departamento de Economia. Brasília/DF. Dezembro/2019.
+<br>
+
++ **XXVI Prêmio Corecon-DF de Monografia em Economia - 2019**. 2º Colocado. Simulações de Acordos de Livre Comércio para o Mercosul: Cenários com a China e com os Estados Unidos. Concedido pelo CORECON-DF. Flávio Tosi Feijó e Matheus Augusto Santana Souza. Departamento de Economia. Brasília/DF. Dezembro/2019.
+<br>
+
++ **XXVI Prêmio Corecon-DF de Monografia em Economia - 2019**. 3º Colocado. Produção Agrícola no Brasil: Análise via Função de Produção e Regressão Quantílica. Concedido pelo CORECON-DF. Marcelo de Oliveira Torres e Pedro Gabriel Eduard V. M. Meiners. Departamento de Economia. Brasília/DF. Dezembro/2019.
+<br>
+
++ **XXVI Prêmio Corecon-DF de Monografia em Economia - 2019**. Menção Honrosa. A Desigualdade na Economia. Concedido pelo CORECON-DF. Maria de Lourdes Rollemberg Mollo e Luiz Philippe François Cormier de Araújo. Departamento de Economia. Brasília/DF. Dezembro/2019.
+<br>
+
++ **XXVI Prêmio Corecon-DF de Monografia em Economia - 2019**. Menção Honrosa. A Relação entre Desigualdade Salarial e a Escravidão Africana no Brasil. Concedido pelo CORECON-DF. Bernardo Pinheiro Machado Mueller e Gabriela Lourdes Machado Silva. Departamento de Economia. Brasília/DF. Dezembro/2019.
+<br>
+
++ **Menção Honrosa no 25º Congresso de Iniciação Cientifica da Universidade de Brasília**. Menção Honrosa. "O Papel da História nas Escolas do Pensamento Econômico Anteriores à Revolução Keynesiana". Concedido pela Universidade de Brasília. Marcos Ferreira Couto Pinto e Daniela Freddo. Departamento de Economia. Brasília/DF. Setembro/2019.
+<br>
+
++ **Best Article Award de 2019**. Dado ao melhor artigo de História do Pensamento Econômico publicado no mundo. "O Papel da História nas Escolas do Pensamento Econômico Anteriores à Revolução Keynesiana". Concedido pela European Society for the History of Economic Thought. Mauro Boianovsky. Departamento de Economia. 2019.
+<br>
+
++ **Concurso Provincial Premio Anual de La Salud 2019 - Nível Nacional**. Melhor Artigo. Concedido pelo MINISTERIO SALUD PÚBLICA CONSEJO NACIONAL DE SOCIEDADES CIENTÍFICAS DE LA SALUD CONVOCATORIA. Suélia de Siqueira Rodrigues Fleury Rosa. Faculdade Gama – Programa de Pós Graduação em Engenharia Biomédica. Santiago de Cuba, CUBA. Julho/2019.
+<br>
+
++ **Concurso Provincial Premio Anual de La Salud 2019 - Nivel Estadual**. Melhor Artigo. Concedido pelo MINISTERIO SALUD PÚBLICA CONSEJO NACIONAL DE SOCIEDADES CIENTÍFICAS DE LA SALUD CONVOCATORIA. Suélia de Siqueira Rodrigues Fleury Rosa. Faculdade Gama – Programa de Pós Graduação em Engenharia Biomédica. Santiago de Cuba, CUBA. Abril/2019.
+<br>
+
++ **Professora Homenageada Curso de Engenharia Eletronica, Universidade de Brasilia Faculdade do Gama**. Professora Homenageada. Concedido pela Universidade de Brasilia, Faculdade do Gama. Suélia de Siqueira Rodrigues Fleury Rosa. Faculdade Gama – Programa de Pós Graduação em Engenharia Biomédica. Brasília/DF. Março/2019.
+<br>
+
++ **Prêmio Nise da Silveira**. Menção honrosa na área temática: Estratégias diagnósticas, terapêuticas e assistenciais para o desenvolvimento da saúde e funcionalidade humana, III Simpósio de Ciências e Tecnologias em Saúde. Concedido pela Faculdade de Ceilândia, FCE/UnB, Simpósio de Ciências e Tecnologias em Saúde. Suélia de Siqueira Rodrigues Fleury Rosa. Faculdade Gama – Programa de Pós Graduação em Engenharia Biomédica. Brasília/DF. Outubro/2019.
+<br>
+
++ **Produção: PODCAST - PREMIO RECEBIDO**. Rede Nacional para Ensino das Ciências Ambientais. TAITIANY KARITA BONZANINI. UNIVERSIDADE DE SÃO PAULO (SÃO CARLOS) (USP/SC). Administração. São Paulo/SP. Novembro/2019.
+<br>
+
++ **Prêmio de Melhor Artigo de Pós-Graduação do VII Congresso Científico de Administração do CRA-DF**. "A chegada dos aplicativos de transporte como ruptura da dependência da trajetória das empresas de táxi do Distrito Federal". Concedido pelo CRA-DF. Newton da Silva Miranda Júnior, Denise Rossato Quatrin, Valmir Emil Hoffmann. Administração. Brasília/DF. Setembro/2019.
+<br>
+
++ **I Concurso de Artigos Científicos do Superior Tribunal de Justiça - Justiça Cidadã**. Prêmio de segundo melhor artigo na categoria Eficiência da Justiça no. Concedido pelo Superior Tribunal de Justiça. Leonardo Borges Ferreira, Cledinaldo Aparecido Dias e Marcus Vinícius Soares Siqueira. Administração. Brasília/DF. Setembro/2019.
+<br>
+
++ **Prêmio Melhor Artigo Derivado de Dissertação de Mestrado no ENEO 2019**. Prêmio Melhor Artigo. Concedido pelo ENEO. Leonardo Borges Ferreira, Cledinaldo Aparecido Dias e Marcus Vinícius Soares Siqueira. Administração. Brasília/DF. Março/2019.
+<br>
+
++ **VIII EnAPG**. Menção Honrosa no VIII EnAPG pelo artigo: Programa Educacional de Resistência as Drogas da Polícia Militar do Estado de Pernambuco como uma Contribuição para o Serviço de Policiamento Comunitário. Francisco Guilherme Lima Macedo. Administração. Maio/2019.
+<br>
+
++ **Prêmio de Melhor Artigo da Área de Estratégia no ENANGRAD 2019**. Melhor Artigo. Concedido pela Área de Estratégia no ENANGRAD 2019. Cleidson Nogueira Dias, Valmir Emil Hoffmann e María Teresa Martínez-Fernández. Administração. Brasília/DF. Agosto/2019.
+<br>
+
++ **Prêmio de Melhor Projeto de Tese do Consórcio Doutoral 2019 no Enanpad 2019**. Prêmio de Melhor Projeto de Tese. Concedido pelo Consórcio Doutoral 2019 no Enanpad 2019. Simone Gelmini Araújo e Valmir Emil Hoffmann. Administração. Brasília/DF. Outubro/2019.
+<br>
+
++ **XXII SEMEAD**. Menção honrosa pelo artigo "Comportamento do turista: uma revisão sistemática e bibliométrica da literatura nacional", no XXII SEMEAD. Letícia Serra e Solange Alfinito. Administração. Novembro/2019.
+<br>
+
++ **XXII SEMEAD**. Prêmio de Melhor artigo científico da área Estudos Organizacionais, XXII SEMEAD - Seminários em Administração, PPGA/FEA/USP: "One step further in organizational behavior: the influence of personality traits and personal values on the use of guidance sources at work". André Luiz Mendes Athayde e Claudio Vaz Torres. Administração. São Paulo/SP. Novembro/2019.
+<br>
+
++ **Anais do Encontro de Administração Pública**. Therapeutic Jurisprudence and Restorative Justice in Brazil. Concedido pela ANPAD. Prêmio de melhor trabalho decorrente de tese de doutorado. Tragetto, J. e Guimaraes, T.A. Administração. Outubro/2019.
+<br>

@@ -1,5 +1,9 @@
 # Mestrado {#mest}
 
+Faça o download de todas as tabelas desta seção: `r xfun::embed_file("dados_mestrado/tabelas_mestrado.xlsx")`
+
+<br>
+
 ```{r}
 fundo <- cores_anuario["mest"]
 ```
