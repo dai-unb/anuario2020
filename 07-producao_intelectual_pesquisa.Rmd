@@ -4,42 +4,46 @@
 options(scipen = 9)
 ```
 
+## Produção intelectual bibliográfica, UnB, 2019
 ```{r}
 prod_bibliografica <- rio::import("dados_producao_intelectual/producao_intelectual.xlsx", sheet=1)
 
 prod_bibliografica %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Produção intelectual bibliográfica, 2019", linhatotal =TRUE, tamfonte = 14, fundo = "#303192") %>% 
-  footnote(general = c("Extraído do Sistema Coleta da CAPES"),
-           general_title = "Fonte:")
+  footnote(general = "",
+           general_title = "Fonte: Extraído do Sistema Coleta da CAPES")
 ```
 
 <br>
 
+## Produção intelectual técnica, UnB, 2019
 ```{r}
 prod_tecnica <- rio::import("dados_producao_intelectual/producao_intelectual.xlsx", sheet=2)
 
 prod_tecnica %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Produção intelectual técnica, 2019", linhatotal =TRUE, tamfonte = 14, fundo = "#303192") %>% 
-  footnote(general = c("Extraído do Sistema Coleta da CAPES"),
-           general_title = "Fonte:")
+  footnote(general = "",
+           general_title = "Fonte: Extraído do Sistema Coleta da CAPES")
 ```
 
 <br>
 
+## Produção intelectual artística, UnB, 2019
 ```{r}
 prod_artistica <- rio::import("dados_producao_intelectual/producao_intelectual.xlsx", sheet=3)
 
 prod_artistica %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Produção intelectual artística, 2019", linhatotal =TRUE, tamfonte = 14, fundo = "#303192") %>% 
-  footnote(general = c("Extraído do Sistema Coleta da CAPES"),
-           general_title = "Fonte:")
+  footnote(general = "",
+           general_title = "Fonte: Extraído do Sistema Coleta da CAPES")
 ```
 
 <br>
 
+## Número de bolsas e investimento em bolsas no país, por modalidade, UnB, 2019
 ```{r}
 num_bolsa_pais <- rio::import("dados_producao_intelectual/producao_intelectual.xlsx", sheet=4)
 
@@ -47,13 +51,13 @@ num_bolsa_pais %>%
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Número de bolsas e investimento em bolsas no país, por modalidade, 2019", 
                linhatotal =TRUE, tamfonte = 14, fundo = "#303192") %>% 
-  footnote(number = c("Valor Mensal*"),
-           general = c("DPG/DIRIC e Programas de Pós-Graduação, julho-2020"),
-           general_title = "Fonte:")
+  footnote(general = "Notas: (*) valor mensal",
+           general_title = "Fonte: DPG/DIRIC e Programas de Pós-Graduação, julho-2020")
 ```
 
 <br>
 
+## Número de bolsas e investimento em bolsas no exterior, por modalidade, UnB, 2019
 ```{r}
 num_bolsa_ex <- rio::import("dados_producao_intelectual/producao_intelectual.xlsx", sheet=5)
 
@@ -61,13 +65,13 @@ num_bolsa_ex %>%
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Número de bolsas e investimento em bolsas no exterior, por modalidade – UnB, 2019", 
                linhatotal =TRUE, tamfonte = 14, fundo = "#303192") %>% 
-  footnote(number = c("Valor Mensal*","Cotação do dólar em 08/07/2020 = R$ 6,02"),
-           general = c("Programas de Pós-Graduação, julho-2020."),
-           general_title = "Fonte:")
+  footnote(general = "Notas: (*) valor mensal; cotação do dólar em 08/07/2020 = R$ 6,02",
+           general_title = "Fonte: Programas de Pós-Graduação, julho-2020")
 ```
 
 <br>
 
+## CNPq: Distribuição dos grupos de pesquisa por área de conhecimento cadastrados no diretório, UnB, 2019
 ```{r}
 cnpq_grupos <- rio::import("dados_producao_intelectual/producao_intelectual.xlsx", sheet=6)
 
@@ -75,24 +79,26 @@ cnpq_grupos %>%
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("CNPq: Distribuição dos grupos de pesquisa por área de conhecimento cadastrados no diretório, 2019", 
                linhatotal =TRUE, tamfonte = 14, fundo = "#303192") %>% 
-  footnote(general = c("DPG/ CNPq/ Plataforma Lattes (www.lattes.cnpq.br/web/dgp), julho-2020"),
-           general_title = "Fonte:")
+  footnote(general = "",
+           general_title = "Fonte: DPG/ CNPq/ Plataforma Lattes (www.lattes.cnpq.br/web/dgp), julho-2020")
 ```
 
 <br>
 
+## Grupos de Pesquisa ativos da UnB, 2019
 ```{r}
 unb_grupos <- rio::import("dados_producao_intelectual/producao_intelectual.xlsx", sheet=7)
 
 unb_grupos %>% 
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Grupos de Pesquisa ativos da UnB, 2019", linhatotal =TRUE, tamfonte = 14, fundo = "#303192") %>% 
-  footnote(general = c("DPI, julho-2020"),
-           general_title = "Fonte:")
+  footnote(general = "",
+           general_title = "Fonte: DPI, julho-2020")
 ```
 
 <br>
 
+## Programa institucional de bolsas de iniciação científica – PIBIC, UnB, 2019
 ```{r}
 pibic <- rio::import("dados_producao_intelectual/producao_intelectual.xlsx", sheet=8)
 
@@ -100,26 +106,27 @@ pibic %>%
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Programa institucional de bolsas de iniciação científica – PIBIC, 2019", 
                linhatotal = FALSE, tamfonte = 14, fundo = "#303192") %>% 
-  footnote(general = c("DPG/DIRIC, Julho-2020"),
-           general_title = "Fonte:")
+  footnote(general = c(""),
+           general_title = "Fonte: DPG/DIRIC, Julho-2020")
 ```
 
 <br>
 
+## Evolução do PIBIC por tipo de bolsa e inscrições, UnB, 2015 a 2019
 ```{r}
 bolsas_pibic <- rio::import("dados_producao_intelectual/producao_intelectual.xlsx", sheet=9)
 
 bolsas_pibic %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Evolução do PIBIC na UnB, por inscrições, bolsas do CNPq e da UnB, 2015 a 2019", 
+  tabela_geral("Evolução do PIBIC por tipo de bolsa e inscrições, UnB, 2015 a 2019", 
                linhatotal = FALSE, tamfonte = 14, fundo = "#303192") %>% 
-  footnote(number = c("No último mês de 2015 houve a implementação das bolsas da FAP-DF*","Revisão da apuração do dado, julho-2020**","Em 2019, a FAPDF concedeu 352 bolsas de IC à UnB ***"),
-           general = c("DPG/DIRIC, julho-2020"),
-           general_title = "Fonte:")
+  footnote(general = c("Notas:\n(*) No último mês de 2015 houve a implementação das bolsas da FAP-DF","(**) Revisão da apuração do dado, julho-2020","(***) Em 2019, a FAPDF concedeu 352 bolsas de IC à UnB ***"),
+           general_title = "Fonte: DPG/DIRIC, julho-2020")
 ```
 
 <br>
 
+## Evolução do número de alunos voluntários do PIBIC, 2015 a 2019
 ```{r}
 alunos_volunt <- rio::import("dados_producao_intelectual/producao_intelectual.xlsx", sheet=10)
 
@@ -127,12 +134,13 @@ alunos_volunt %>%
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Evolução do número de alunos voluntários do PIBIC, 2015 a 2019", 
                linhatotal = FALSE, tamfonte = 14, fundo = "#303192") %>% 
-  footnote(general = c("DPG/DIRIC, julho-2020"),
-           general_title = "Fonte:")
+  footnote(general = c(""),
+           general_title = "Fonte: DPG/DIRIC, julho-2020")
 ```
 
 <br>
 
+## Evolução do número de projetos aprovados, orientadores e bolsistas do PIBIC, 2015 a 2019
 ```{r}
 projetos_pibic <- rio::import("dados_producao_intelectual/producao_intelectual.xlsx", sheet=11)
 
@@ -140,13 +148,13 @@ projetos_pibic %>%
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Evolução do número de projetos aprovados, orientadores e bolsistas do PIBIC, 2015 a 2019", 
                linhatotal = FALSE, tamfonte = 14, fundo = "#303192") %>% 
-  footnote(number = c("Revisão da apuração do dado, julho-2020*","revisão da apuração do dado, julho-2020**"),
-           general = c("DPG/DIRIC"),
-           general_title = "Fonte:")
+  footnote(general = c("Notas:\n(*) Revisão da apuração do dado, julho-2020","(**) Revisão da apuração do dado, julho-2020"),
+           general_title = "Fonte: DPG/DIRIC")
 ```
 
 <br>
 
+## Evolução do número de trabalhos apresentados pelos bolsistas do PIBIC nas reuniões da SBPC, 2015 a 2019
 ```{r}
 trabalhos_pibic <- rio::import("dados_producao_intelectual/producao_intelectual.xlsx", sheet=12)
 
@@ -154,19 +162,20 @@ trabalhos_pibic %>%
   map_df(~replace_na(., 0)) %>% 
   tabela_geral("Evolução do número de trabalhos apresentados pelos bolsistas do PIBIC nas reuniões da SBPC, 2015 a 2019", 
                linhatotal = FALSE, tamfonte = 14, fundo = "#303192") %>% 
-  footnote(general = c("DPG/DIRIC, julho-2020"),
-           general_title = "Fonte:")
+  footnote(general = c(""),
+           general_title = "Fonte: DPG/DIRIC, julho-2020")
 ```
 
 <br>
 
+## Evolução do número de trabalhos apresentados nos congressos do PIBIC, UnB, 2015 a 2019
 ```{r}
 congresso_pibic <- rio::import("dados_producao_intelectual/producao_intelectual.xlsx", sheet=12)
 
 congresso_pibic %>% 
   map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Evolução do número de trabalhos apresentados nos congressos do PIBIC – UnB, 2015 a 2019", 
+  tabela_geral("Evolução do número de trabalhos apresentados nos congressos do PIBIC, UnB, 2015 a 2019", 
                linhatotal = FALSE, tamfonte = 14, fundo = "#303192") %>% 
-  footnote(general = c("DPG/DIRIC, julho-2020"),
-           general_title = "Fonte:")
+  footnote(general = c(""),
+           general_title = "Fonte: DPG/DIRIC, julho-2020")
 ```

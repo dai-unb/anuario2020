@@ -8,21 +8,21 @@ fundo <- cores_anuario["geral"]
 
 1. Informações e Dados Gerais
 <br>
-*Fundação Universidade de Brasília*  
+**Fundação Universidade de Brasília**  
 Criação: Lei n. 3998/1961, de 15/12/1961, homologada pelo Decreto n. 500, de 15/1/1962.  
 Estatuto da FUB: publicado no Diário Oficial da União de 16/1/1962.  
 Edificação da Pedra Fundamental em 15/12/1961.  
 <br>
-*Universidade de Brasília*  
+**Universidade de Brasília**  
 Criação: prevista no art. 3º da Lei n. 3998/1961, de 15/12/1961.  
 Estatuto em vigor: aprovado pela Resolução do Conselho Diretor n. 13/1993, de 19/10/1993, e publicado no Diário Oficial da União n. 7 de 11/1/1994.  
 <br>
-*Missão da UnB*  
+**Missão da UnB**  
 Ser uma instituição inovadora, comprometida com a excelência acadêmica, científica e tecnológica
 formando cidadãos conscientes do seu papel transformador na sociedade, respeitadas a ética e a
 valorização de identidades e culturas com responsabilidade social.
 <br>
-*Visão de Futuro*  
+**Visão de Futuro**  
 Estar entre as melhores universidades do Brasil, inserida internacionalmente, com excelência em gestão de processos que fortaleça o ensino, pesquisa e extensão.
 <br>
 <br>
@@ -320,11 +320,12 @@ evo_pop %>%
 
 <br>
 
-## Gráfico Evolução da população universitária da UnB, 2015 a 2019
+## Gráfico da evolução da população universitária da UnB, 2015 a 2019
+```{r fig.cap='Evolução da população universitária da UnB, 2015 a 2019'}
+include_graphics("graficos/dados_gerais/graf1.png")
 
-<br>
-
-## Gráfico Evolução da população universitária da UnB por categoria, 2015 a 2019
+xfun::embed_file("graficos/dados_gerais/graf1.png")
+```
 
 <br>
 
@@ -343,14 +344,6 @@ evo_alunos %>%
   footnote(general_title = "Fonte: Sistemas acadêmicos & Censo da Educação Superior",
            general = "")
 ```
-
-<br>
-
-## Gráfico Evolução da população universitária da UnB, 2015 a 2019 (2º semestre)
-
-<br>
-
-## Gráfico Evolução do número de alunos registrados na pós-graduação Stricto Sensu, 2015 a 2019 (2º semestre)
 
 <br>
 
