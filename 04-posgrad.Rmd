@@ -135,11 +135,12 @@ tab6 %>%
 
 <br>
 
-## Gráfico Número de alunos regulares registrados nos cursos de pós-graduação Stricto Sensu por unidade acadêmica, UnB, 2019 (2º semestre)
+## Gráfico Número de alunos regulares nos cursos de pós-graduação Stricto Sensu por unidade acadêmica, UnB, 2019 (2º semestre)
+```{r fig.cap='Alunos regulares nos cursos de pós-graduação Stricto Sensu por unidade acadêmica, UnB, 2º semestre de 2019'}
+include_graphics("graficos/posgrad/graf1.png")
 
-<br>
-
-## Gráfico Número de alunos regulares registrados nos cursos de pós-graduação Stricto Sensu por nível, UnB, 2019 (2º semestre)
+xfun::embed_file("graficos/posgrad/graf1.png")
+```
 
 <br>
 
@@ -178,11 +179,30 @@ tab8 %>%
 
 <br>
 
-## Gráfico Alunos estrangeiros regulares registrados nos cursos de pós-graduação Stricto Sensu, por continente, UnB, 2019 (2º semestre)
+## Gráfico Alunos estrangeiros regulares nos cursos de pós-graduação Stricto Sensu, por continente, UnB, 2019 (2º semestre)
+```{r fig.cap='Alunos estrangeiros regulares nos cursos de pós-graduação Stricto Sensu por continente, UnB, 2º semestre de 2019'}
+include_graphics("graficos/posgrad/graf2.png")
+
+xfun::embed_file("graficos/posgrad/graf2.png")
+```
 
 <br>
 
-## Gráfico Alunos estrangeiros regulares registrados nos cursos de pós-graduação Stricto Sensu, por unidade acadêmica, UnB, 2019 (2º semestre)
+## Gráfico Alunos estrangeiros regulares nos cursos de pós-graduação Stricto Sensu, por unidade acadêmica, UnB, 2019 (2º semestre)
+```{r fig.cap='Alunos estrangeiros regulares nos cursos de pós-graduação Stricto Sensu por unidade acadêmica, UnB, 2º semestre de 2019'}
+include_graphics("graficos/posgrad/graf2.png")
+
+xfun::embed_file("graficos/posgrad/graf2.png")
+```
+
+<br>
+
+## Gráfico Países com maior número de alunos regulares nos cursos de\npós-graduação Stricto Sensu, UnB, 2º semestre de 2019
+```{r fig.cap='Países com maior número de alunos regulares nos cursos de pós-graduação Stricto Sensu, UnB, 2º semestre de 2019'}
+include_graphics("graficos/posgrad/graf2.png")
+
+xfun::embed_file("graficos/posgrad/graf2.png")
+```
 
 <br>
 

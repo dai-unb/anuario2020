@@ -26,6 +26,7 @@ tab1 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx",
 
 <br>
 
+## Gráfico dos ingressantes e concluintes nos cursos de doutorado por unidade acadêmica, UnB, 2019
 ```{r fig.cap='Ingressantes e concluintes nos cursos de doutorado por unidade acadêmica, UnB, 2019'}
 include_graphics("graficos/doutorado/graf1.png")
 
@@ -53,6 +54,7 @@ tab2 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx",
 
 <br>
 
+## Gráfico do ingresso de alunos nos cursos de doutorado por faixa etária e sexo, UnB, 2019
 ```{r fig.cap='Ingresso de alunos nos cursos de doutorado por faixa etária e sexo, UnB, 2019'}
 include_graphics("graficos/doutorado/graf2.png")
 
@@ -61,6 +63,7 @@ xfun::embed_file("graficos/doutorado/graf2.png")
 
 <br>
 
+## Gráfico da formatura de alunos nos cursos de doutorado por faixa etária e sexo, UnB, 2019
 ```{r fig.cap='Formatura de alunos nos cursos de doutorado por faixa etária e sexo, UnB, 2019'}
 include_graphics("graficos/doutorado/graf3.png")
 
@@ -106,6 +109,7 @@ tab4 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx",
 
 <br>
 
+## Gráfico dos alunos regulares nos cursos de doutorado por faixa etária e sexo, UnB, 2019
 ```{r fig.cap='Alunos regulares nos cursos de doutorado por faixa etária e sexo, UnB, 2019'}
 include_graphics("graficos/doutorado/graf4.png")
 
@@ -133,6 +137,7 @@ tab6 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx",
 
 <br>
 
+## Gráfico dos alunos regulares nos cursos de doutorado por unidade e sexo, UnB, 2º semestre de 2019
 ```{r fig.cap='Alunos regulares nos cursos de doutorado por unidade e sexo, UnB, 2º semestre de 2019'}
 include_graphics("graficos/doutorado/graf5.png")
 
@@ -230,6 +235,7 @@ tab11 <- rio::import("dados_doutorado/Tabelas_Doutorado_Anuário_2019.xlsx",
 
 <br>
 
+## Gráfico da evolução do número de alunos de doutorado matriculados, ingressantes e formados, UnB, 2015 a 2019
 ```{r fig.cap='Evolução do número de alunos de doutorado matriculados, ingressantes e formados, UnB, 2015 a 2019'}
 include_graphics("graficos/doutorado/graf6.png")
 
@@ -238,6 +244,7 @@ xfun::embed_file("graficos/doutorado/graf6.png")
 
 <br>
 
+## Gráfico da evolução do número de alunos com teses homologadas nos cursos de doutorado por década, 1976 a 2019
 ```{r fig.cap='Evolução do número de alunos com teses homologadas nos cursos de doutorado por década, 1976 a 2019'}
 include_graphics("graficos/doutorado/graf7.png")
 

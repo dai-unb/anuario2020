@@ -365,7 +365,12 @@ evo_formados %>%
 
 <br>
 
-## Gráfico Total de alunos formados na graduação, na especialização, no mestrado e no doutorado por período, 1966 a 2019
+## Gráfico do total de alunos formados por período, UnB, 1966 a 2019
+```{r fig.cap='Total de alunos formados por período, UnB, 1966 a 2019'}
+include_graphics("graficos/dados_gerais/graf2.png")
+
+xfun::embed_file("graficos/dados_gerais/graf2.png")
+```
 
 <br>
 
