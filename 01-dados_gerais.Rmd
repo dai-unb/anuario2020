@@ -8,21 +8,21 @@ fundo <- cores_anuario["geral"]
 
 1. Informações e Dados Gerais
 <br>
-*Fundação Universidade de Brasília*  
+**Fundação Universidade de Brasília**  
 Criação: Lei n. 3998/1961, de 15/12/1961, homologada pelo Decreto n. 500, de 15/1/1962.  
 Estatuto da FUB: publicado no Diário Oficial da União de 16/1/1962.  
 Edificação da Pedra Fundamental em 15/12/1961.  
 <br>
-*Universidade de Brasília*  
+**Universidade de Brasília**  
 Criação: prevista no art. 3º da Lei n. 3998/1961, de 15/12/1961.  
 Estatuto em vigor: aprovado pela Resolução do Conselho Diretor n. 13/1993, de 19/10/1993, e publicado no Diário Oficial da União n. 7 de 11/1/1994.  
 <br>
-*Missão da UnB*  
+**Missão da UnB**  
 Ser uma instituição inovadora, comprometida com a excelência acadêmica, científica e tecnológica
 formando cidadãos conscientes do seu papel transformador na sociedade, respeitadas a ética e a
 valorização de identidades e culturas com responsabilidade social.
 <br>
-*Visão de Futuro*  
+**Visão de Futuro**  
 Estar entre as melhores universidades do Brasil, inserida internacionalmente, com excelência em gestão de processos que fortaleça o ensino, pesquisa e extensão.
 <br>
 <br>
@@ -242,9 +242,9 @@ ru %>%
 
 <br>
 
-## Indicadores gerais de desempenho da UnB, 2009 a 2019
+## Indicadores gerais de desempenho da UnB, 2011 a 2019
 ```{r}
-indicadores_gerais <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=15)
+indicadores_gerais <- rio::import("dados_gerais/planilha_1.15_mod.xlsx", sheet=1)
 
 cores <- indicadores_gerais %>% 
   mutate(n = row_number()) %>% 
@@ -263,11 +263,11 @@ cores <- indicadores_gerais %>%
   deframe()
 
 indicadores_gerais %>% 
-  mutate(`2009 A 2019` = ifelse(is.na(`2009 A 2019`) | `2009 A 2019` == "-",
-                                `2009 A 2019`,
-                                paste0(round(100 * as.double(`2009 A 2019`), 2), "%"))) %>% 
+  mutate(`2011 A 2019` = ifelse(is.na(`2011 A 2019`) | `2011 A 2019` == "-",
+                                `2011 A 2019`,
+                                paste0(round(100 * as.double(`2011 A 2019`), 2), "%"))) %>% 
   map_df(~replace_na(., "")) %>%
-  tabela_geral("Indicadores gerais de desempenho da UnB, 2009 a 2019", 
+  tabela_geral("Indicadores gerais de desempenho da UnB, 2011 a 2019", 
                linhatotal = F, 
                tamfonte = 10, 
                fundo = fundo) %>% 
@@ -289,12 +289,12 @@ geral %>%
                colunas = c("Unidades", "Graduação", "Pós-graduação\nMest./Dout.", 
                            "Grad.", "Mestr.", "Dout.", 
                            "Graduação", "Mestrado", "Doutorado")) %>% 
-  add_header_above(c("-", 
+  add_header_above(c("", 
                    "ALUNOS REGULARES\n(DADOS DO 2º SEMESTRE)" = 2,
                    "CURSOS\nMINISTRADOS" = 3,
                    "TÍTULOS\nOUTORGADOS" = 3),
                    color = "white", extra_css = 'vertical-align: middle', background = "#00376f") %>% 
-  footnote(general_title = "Notas: ",
+  footnote(general_title = "",
            general = "Fonte: Sistemas acadêmicos & Censo da Educação Superior 2019")
 ```
 
@@ -320,11 +320,12 @@ evo_pop %>%
 
 <br>
 
-## Gráfico Evolução da população universitária da UnB, 2015 a 2019
+## Gráfico da evolução da população universitária da UnB, 2015 a 2019
+```{r fig.cap='Evolução da população universitária da UnB, 2015 a 2019'}
+include_graphics("graficos/dados_gerais/graf1.png")
 
-<br>
-
-## Gráfico Evolução da população universitária da UnB por categoria, 2015 a 2019
+xfun::embed_file("graficos/dados_gerais/graf1.png")
+```
 
 <br>
 
@@ -346,14 +347,6 @@ evo_alunos %>%
 
 <br>
 
-## Gráfico Evolução da população universitária da UnB, 2015 a 2019 (2º semestre)
-
-<br>
-
-## Gráfico Evolução do número de alunos registrados na pós-graduação Stricto Sensu, 2015 a 2019 (2º semestre)
-
-<br>
-
 ## Alunos formados na graduação e pós-graduação, 1966 a 2019
 ```{r}
 evo_formados <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=18)
@@ -372,7 +365,12 @@ evo_formados %>%
 
 <br>
 
-## Gráfico Total de alunos formados na graduação, na especialização, no mestrado e no doutorado por período, 1966 a 2019
+## Gráfico do total de alunos formados por período, UnB, 1966 a 2019
+```{r fig.cap='Total de alunos formados por período, UnB, 1966 a 2019'}
+include_graphics("graficos/dados_gerais/graf2.png")
+
+xfun::embed_file("graficos/dados_gerais/graf2.png")
+```
 
 <br>
 
@@ -433,4 +431,3 @@ area_hub %>%
 
 <br>
 
-Prêmios, Distinções, Títulos e Honrarias

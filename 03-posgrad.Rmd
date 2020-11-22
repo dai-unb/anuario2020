@@ -29,7 +29,13 @@ tab1 %>%
 
 <br>
 
-## Gráfico Evolução do número de cursos de pós-graduação Stricto Sensu em funcionamento, 1969-2018
+## Gráfico Evolução do número de cursos de pós-graduação Stricto Sensu em funcionamento, 1969-2019
+
+```{r fig.cap='Total de alunos formados por período, UnB, 1969 a 2019'}
+include_graphics("graficos/posgrad/graf1.png")
+
+xfun::embed_file("graficos/posgrad/graf1.png")
+```
 
 <br>
 
@@ -82,7 +88,7 @@ tab4 <- rio::import("dados_posgraduacao/tabelas_posgrad.xlsx",
                     sheet = "tabela41")
 
 tab4 %>% 
-   tabela_geral(titulo ="Conceito CAPES – cursos de pós-graduação Stricto Sensu, por programa – situação atual", 
+   tabela_geral(titulo = "Conceito CAPES – cursos de pós-graduação Stricto Sensu, por programa – situação atual", 
                 linhatotal = FALSE, 
                 colunas = c("N. Ord",	"Conceito",	"Curso",	"Nível"),
                 tamfonte = 12,
@@ -97,12 +103,11 @@ tab4 %>%
 
 ## Conceito CAPES – cursos de pós-graduação Stricto Sensu, por conceito – situação atual
 ```{r}
-
 tab5 <- rio::import("dados_posgraduacao/tabelas_posgrad.xlsx", 
                     sheet = "tabela42")
 
 tab5 %>% 
-   tabela_geral(titulo ="Tabela 42 - Conceito CAPES – cursos de pós-graduação Stricto Sensu, por conceito – situação atual", 
+   tabela_geral(titulo ="Conceito CAPES – cursos de pós-graduação Stricto Sensu, por conceito – situação atual", 
                 linhatotal = FALSE, 
                 colunas = c("Conceito",	"Mest.",	"Mest. Prof",	"Dout."),
                 tamfonte = 12,
@@ -110,100 +115,135 @@ tab5 %>%
    colorir(dados = tab5) %>% 
    footnote(general_title = "Fonte: CAPES - Caderno de indicadores & DPG",
             general = "")
-
 ```
 
 <br>
 
-#Gráfico Percentual por nível de conceito segundo avaliação da CAPES para os cursos de pós-graduação – situação atual
+## Gráfico Percentual por nível de conceito segundo avaliação da CAPES para os cursos de pós-graduação – situação atual
+
+```{r fig.cap='Percentual por nível de conceito segundo avaliação da CAPES para os cursos de pós-graduação – situação atual'}
+include_graphics("graficos/posgrad/graf2.png")
+
+xfun::embed_file("graficos/posgrad/graf2.png")
+```
+
 
 <br>
 
-# Número de alunos regulares registrados nos cursos de pós-graduação Stricto Sensu por sexo, unidade acadêmica e curso, UnB, 2019 (2º semestre)
+## Número de alunos regulares nos cursos de pós-graduação Stricto Sensu por sexo, unidade acadêmica e curso, UnB, 2019 (2º semestre)
 ```{r}
-
 tab6 <- rio::import("dados_posgraduacao/tabelas_posgrad.xlsx", 
                     sheet = "tabela43")
 
 tab6 %>% 
-   tabela_geral(titulo ="Tabela 43 - Número de alunos regulares registrados nos cursos de pós-graduação Stricto Sensu por sexo, unidade acadêmica e curso, UnB, 2019 (2º semestre)", 
+   tabela_geral(titulo ="Número de alunos regulares nos cursos de pós-graduação Stricto Sensu por sexo, unidade acadêmica e curso, UnB, 2019 (2º semestre)", 
                 linhatotal = TRUE, 
                 colunas = c("Nome Curso",	"Fem. M",	"Masc. M",	"Tot. M",	"Fem. D",	"Masc. D",	"Tot. D",	"Total"),
                 tamfonte = 12,
                 fundo = fundo) %>% 
-   colorir(dados = tab6)
-
+   colorir(dados = tab6) %>% 
+   footnote(general_title = "Fonte: Sistemas acadêmicos da UnB, em 14/04/2020",
+            general = "")
 ```
+
 <br>
-Fonte: Sigra 30/07/2020
+
+## Gráfico Número de alunos regulares nos cursos de pós-graduação Stricto Sensu por unidade acadêmica, UnB, 2019 (2º semestre)
+```{r fig.cap='Alunos regulares nos cursos de pós-graduação Stricto Sensu por unidade acadêmica, UnB, 2º semestre de 2019'}
+include_graphics("graficos/posgrad/graf3.png")
+
+xfun::embed_file("graficos/posgrad/graf3.png")
+```
+
 <br>
 
-#Gráfico 22 - Número de alunos regulares registrados nos cursos de pós-graduação Stricto Sensu por unidade acadêmica, UnB, 2019 (2º semestre)
+## Gráfico Número de alunos regulares registrados nos cursos de pós-graduação Stricto Sensu por nível, UnB, 2019 (2º semestre) 
 
-#Gráfico 23 - Número de alunos regulares registrados nos cursos de pós-graduação Stricto Sensu por nível, UnB, 2019 (2º semestre)
+```{r fig.cap='Número de alunos regulares registrados nos cursos de pós-graduação Stricto Sensu por nível, UnB, 2019 (2º semestre) '}
+include_graphics("graficos/posgrad/graf4.png")
 
-# Tabela 44 - Número de cursos e alunos regulares registrados nos cursos de pós-graduação Stricto Sensu por unidade acadêmica e curso, UnB, 2019 (2º semestre)
+xfun::embed_file("graficos/posgrad/graf4.png")
+```
+
+<br>
+
+## Número de cursos e alunos regulares nos cursos de pós-graduação Stricto Sensu por unidade acadêmica e curso, UnB, 2019 (2º semestre)
 ```{r}
 tab7 <- rio::import("dados_posgraduacao/tabelas_posgrad.xlsx", 
                     sheet = "tabela44")
 
-# xfun::embed_file("dados_doutorado/EvoForD.csv")
-
 tab7 %>% 
-   tabela_geral(titulo ="Tabela 44 - Número de cursos e alunos regulares registrados nos cursos de pós-graduação Stricto Sensu por unidade acadêmica e curso, UnB, 2019 (2º semestre)", 
+   tabela_geral(titulo ="Número de cursos e alunos regulares na pós-graduação Stricto Sensu por unidade acadêmica e curso, UnB, 2019 (2º semestre)", 
                 linhatotal = TRUE, 
                 colunas = c("Nome Curso",	"Cur. Mest.",	"Al. Mest.", "Cur. Dout.",	"Al. Dout.",	"Tot. Al."),
                 tamfonte = 12,
                 fundo = fundo) %>% 
-   colorir(dados = tab7)
+   footnote(general_title = "Fonte: Sistemas acadêmicos da UnB, em 14/04/2020",
+            general = "")
 ```
-<br>
-Fonte: Sigra 30/07/2020
+
 <br>
 
-# Tabela 45 - Alunos estrangeiros regulares registrados nos cursos de pós-graduação Stricto Sensu, por unidade acadêmica, continente e país, UnB, 2018 (2º Semestre)
+## Alunos estrangeiros regulares nos cursos de pós-graduação Stricto Sensu por continente e país, UnB, 2º semestre de 2019
 ```{r}
 tab8 <- rio::import("dados_posgraduacao/tabelas_posgrad.xlsx", 
                     sheet = "tabela45")
 
-# xfun::embed_file("dados_doutorado/EvoForD.csv")
-
 tab8 %>% 
-   tabela_geral(titulo ="Tabela 45 - Alunos estrangeiros regulares registrados nos cursos de pós-graduação Stricto Sensu, por unidade acadêmica, continente e país, UnB, 2018 (2º Semestre)", 
+   select(`unidades/País / Continente`, Total) %>% 
+   tabela_geral(titulo = "Alunos estrangeiros regulares nos cursos de pós-graduação Stricto Sensu por continente e país, UnB, 2º semestre de 2019", 
                 linhatotal = TRUE, 
-                colunas = c("unidades/País/Continente","CDS","CDT","CEAM","CET","FAC","FACE","FAU","FAV","FCE","FCI","FD","FE","FEF","FGA","FM","FS","FT","FUP","IB","ICS","IdA","IE",	"IF","IG","IH","IL","IP","IQ","IREL","Total"),
-                tamfonte = 12,
-                fundo = fundo) %>% 
-   colorir(dados = tab8)
-
+                colunas = c("País/Continente", "Total"),
+                tamfonte = 14,
+                fundo = fundo) %>%
+   footnote(general_title = "Fonte: Sistemas acadêmicos da UnB, em 14/04/2020",
+            general = "")
 ```
+
 <br>
-Fonte: Sigra 30/07/2020
+
+## Gráfico Alunos estrangeiros regulares nos cursos de pós-graduação Stricto Sensu, por continente, UnB, 2019 (2º semestre)
+```{r fig.cap='Alunos estrangeiros regulares nos cursos de pós-graduação Stricto Sensu por continente, UnB, 2º semestre de 2019'}
+include_graphics("graficos/posgrad/graf5.png")
+
+xfun::embed_file("graficos/posgrad/graf5.png")
+```
+
 <br>
 
-#Gráfico 24 - Alunos estrangeiros regulares registrados nos cursos de pós-graduação Stricto Sensu, por continente, UnB, 2019 (2º semestre)
+## Gráfico Alunos estrangeiros regulares nos cursos de pós-graduação Stricto Sensu, por unidade acadêmica, UnB, 2019 (2º semestre)
+```{r fig.cap='Alunos estrangeiros regulares nos cursos de pós-graduação Stricto Sensu por unidade acadêmica, UnB, 2º semestre de 2019'}
+include_graphics("graficos/posgrad/graf6.png")
 
-#Gráfico 25 -Alunos estrangeiros regulares registrados nos cursos de pós-graduação Stricto Sensu, por unidade acadêmica, UnB, 2019 (2º semestre)
+xfun::embed_file("graficos/posgrad/graf6.png")
+```
 
+<br>
 
-#Tabela 46 - Programas de bolsas de pós-graduação e de pesquisa, 2015 a 2019
+## Gráfico Países com maior número de alunos regulares nos cursos de pós-graduação Stricto Sensu, UnB, 2º semestre de 2019
+```{r fig.cap='Países com maior número de alunos regulares nos cursos de pós-graduação Stricto Sensu, UnB, 2º semestre de 2019'}
+include_graphics("graficos/posgrad/graf7.png")
+
+xfun::embed_file("graficos/posgrad/graf7.png")
+```
+
+<br>
+
+## Programas de bolsas de pós-graduação e pesquisa, 2015 a 2019
 ```{r}
-
 tab9 <- rio::import("dados_posgraduacao/tabelas_posgrad.xlsx", 
                     sheet = "tabela46")
 
 tab9 %>% 
-   tabela_geral(titulo ="Tabela 46 - Programas de bolsas de pós-graduação e de pesquisa, 2015 a 2019", 
-                linhatotal = TRUE, 
+   map_df(~replace_na(., "")) %>% 
+   tabela_geral(titulo ="Programas de bolsas de pós-graduação e pesquisa, 2015 a 2019", 
+                linhatotal = FALSE, 
                 colunas = c("Órgãos/Programas",	"2015 1S",	"2015 2S",	"2016 1S",	"2016 2S",	"2017 1S",	"2017 2S",	"2018 1S",	"2018 2S",	"2019 1S",	"2019-2S"),
                 tamfonte = 12,
                 fundo = fundo) %>% 
-   colorir(dados = tab9)
-
+   footnote(general_title = "Fonte: DPG & Geocapes (dados Estatísticos da CAPES)",
+            general = c("Notas:\n(1) A concessão de bolsas para o Programa PEC/PG é feita uma vez ao ano, sempre no primeiro semestre",
+                        "(2) Cota CAPES",
+                        "(3) Bolsas de Iniciação Científica",
+                        "(*) Não houve bolsa monitoria em 2019"))
 ```
-<br>
-Fonte: DPG e Geocapes (dados Estatísticos da CAPES)
-<br>
-Notas:
-1) A concessão de bolsas para o Programa PEC/PG é feita uma vez ao ano, sempre no primeiro semestre.
-2) Cota CAPES;

@@ -75,6 +75,7 @@ tab2 %>%
 
 <br>
 
+## Gráfico do ingresso de alunos nos cursos de graduação por forma de ingresso, UnB, 2019
 ```{r fig.cap='Ingresso de alunos nos cursos de graduação por forma de ingresso, UnB, 2019'}
 include_graphics("graficos/graduacao/graf1.png")
 
@@ -103,6 +104,7 @@ tab3 %>%
 
 <br>
 
+## Gráfico dos ingressantes e formados nos cursos de graduação, por unidade acadêmica, UnB, 2019
 ```{r fig.cap='Ingressantes e formados nos cursos de graduação, por unidade acadêmica, UnB, 2019'}
 include_graphics("graficos/graduacao/graf2.png")
 
@@ -127,6 +129,7 @@ tab4 %>%
 
 <br>
 
+## Gráfico do ingresso de alunos nos cursos de graduação por faixa etária e sexo, UnB, 2019
 ```{r fig.cap='Ingresso de alunos nos cursos de graduação por faixa etária e sexo, UnB, 2019'}
 include_graphics("graficos/graduacao/graf3.png")
 
@@ -159,6 +162,7 @@ tab5 %>%
 
 <br>
 
+## Gráfico dos alunos regulares nos cursos de graduação por turno e unidade acadêmica, UnB, 2º semestre de 2019
 ```{r fig.cap='Alunos regulares nos cursos de graduação por turno e unidade acadêmica, UnB, 2º semestre de 2019'}
 include_graphics("graficos/graduacao/graf4.png")
 
@@ -187,6 +191,7 @@ tab6 %>%
 
 <br>
 
+## Gráfico dos alunos regulares nos cursos de graduação por sexo e unidade acadêmica, UnB, 2º semestre de 2019
 ```{r fig.cap='Alunos regulares nos cursos de graduação por sexo e unidade acadêmica, UnB, 2º semestre de 2019'}
 include_graphics("graficos/graduacao/graf5.png")
 
@@ -252,6 +257,7 @@ tab8 %>%
 
 <br>
 
+## Gráfico dos alunos regulares nos cursos de graduação por faixa etária e sexo, UnB, 2º semestre de 2019
 ```{r fig.cap='Alunos regulares nos cursos de graduação por faixa etária e sexo, UnB, 2º semestre de 2019'}
 include_graphics("graficos/graduacao/graf6.png")
 
@@ -354,6 +360,7 @@ tab11 %>%
 
 <br>
 
+## Gráfico dos alunos regulares nos cursos de graduação por raça/cor autodeclarada, UnB, 2º semestre de 2019
 ```{r fig.cap='Alunos regulares nos cursos de graduação por raça/cor autodeclarada, UnB, 2º semestre de 2019'}
 include_graphics("graficos/graduacao/graf7.png")
 
@@ -378,6 +385,7 @@ tab12 %>%
 
 <br>
 
+## Gráfico dos alunos regulares nos cursos de graduação por raça/cor autodeclarada e sexo, UnB, 2º semestre de 2019
 ```{r fig.cap='Alunos regulares nos cursos de graduação por raça/cor autodeclarada e sexo, UnB, 2º semestre de 2019'}
 include_graphics("graficos/graduacao/graf8.png")
 
@@ -450,6 +458,7 @@ tab15 %>%
 
 <br>
 
+## Gráfico dos alunos estrangeiros regulares nos cursos de graduação por continente, UnB, 2º semestre de 2019
 ```{r fig.cap='Alunos estrangeiros regulares nos cursos de graduação por continente, UnB, 2º semestre de 2019'}
 
 include_graphics("graficos/graduacao/graf9.png")
@@ -459,6 +468,7 @@ xfun::embed_file("graficos/graduacao/graf9.png")
 
 <br>
 
+## Gráfico dos alunos estrangeiros regulares nos cursos de graduação por país (10 maiores), UnB, 2º semestre de 2019
 ```{r fig.cap='Alunos estrangeiros regulares nos cursos de graduação por país (10 maiores), UnB, 2º semestre de 2019'}
 include_graphics("graficos/graduacao/graf10.png")
 
@@ -691,6 +701,7 @@ tab26 %>%
 
 <br>
 
+## Gráfico da evolução do número de alunos de graduação matriculados, ingressantes e formados, UnB, 2015 a 2019
 ```{r fig.cap='Evolução do número de alunos de graduação matriculados, ingressantes e formados, UnB, 2015 a 2019'}
 include_graphics("graficos/graduacao/graf11.png")
 
@@ -699,18 +710,9 @@ xfun::embed_file("graficos/graduacao/graf11.png")
 
 <br>
 
+## Gráfico da evolução do número de alunos de graduação formados, por década, UnB, 2015 a 2019
 ```{r fig.cap='Evolução do número de alunos de graduação formados, por década, UnB, 2015 a 2019'}
 include_graphics("graficos/graduacao/graf12.png")
 
 xfun::embed_file("graficos/graduacao/graf12.png")
 ```
-
-<br>
-
-```{r}
-tabelas_grad <- list(tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9,
-                     tab10, tab11, tab12, tab13, tab14, tab15, tab16, tab17,
-                     tab18, tab19, tab20, tab21, tab22, tab23, tab24, tab25, tab26)
-rio::export(tabelas_grad, "dados_graduacao/tabelas_graduacao_semtitulo.xlsx")
-```
-

@@ -20,9 +20,14 @@ knitr::opts_chunk$set(
   warning = FALSE,
   cache = FALSE
 )
+
 library(tidyverse)
 library(knitr)
 library(kableExtra)
+library(rio)
+library(bookdown)
+
+options(OutDec = ",")
 
 load("labels/Label_Unidades_pos.RData")
 ```
@@ -38,11 +43,11 @@ cores_anuario <- c("geral" = "#00427E",
                    "rh"    = "#FFCB06",
                    "comu"  = "#00ADEE",
                    "org"   = "#A8A791",
-                   "dpo"   = "#00AAAD")
+                   "dpo"   = "#00AAAD",
+                   "plan" = "#00AAAD")
 ```
 
 ```{r functions}
-
 # insere a coluna de unidade etc nas tabelas que não têm
 # serve só pra graduação por enquanto
 # insere_descricao <- function(tabela, nome){
@@ -53,7 +58,7 @@ cores_anuario <- c("geral" = "#00427E",
 # }
 
 # acha as linhas que devem ser coloridas
-colorir <- function(tabela, dados, alpha = 0.2){
+colorir <- function(tabela, dados, alpha = 0.5){
   
   unidades <- label_unidade %>% 
     select(Unidade) %>% 

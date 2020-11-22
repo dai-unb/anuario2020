@@ -1,43 +1,62 @@
 # Extensão {#ext}
 
-
 ```{r}
-options(scipen = 9)
+# define o fundo desta seção
+fundo <- cores_anuario["ext"]
+```
+
+Faça o download de todas as tabelas desta seção: `r xfun::embed_file("dados_extensao/extensao.xlsx")`
+
+<br>
+
+## Cursos, minicursos e eventos de extensão, 2019
+```{r}
 cursos_extensao <- rio::import("dados_extensao/extensao.xlsx", sheet=1)
 
+cursos_extensao %>% map_df(~replace_na(., 0)) %>% tabela_geral("Cursos, minicursos e eventos de extensão, 2019", linhatotal = FALSE, colunas = c("Tipo",	"Espécie",	"Eventos",	"Participantes",	"Certificados Emitidos"), tamfonte = 14, fundo = fundo) %>% colorir(dados = cursos_extensao) %>% footnote(general = "", general_title = "Fonte: SIEX/DEX")
+
 ```
 
-```{r cursos_extensao}
-#xfun::embed_file("")
-cursos_extensao %>% 
-  map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Cursos, minicursos e eventos de extensão, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#828065") %>% footnote(general = c("SIEX/DEX"),
-           general_title = "Fonte:")
-```
+<br>
 
-
+## Ações de extensão por centro de custo, 2019
 ```{r}
 unidades_extensao <- rio::import("dados_extensao/extensao.xlsx", sheet=2)
 
+unidades_extensao %>% map_df(~replace_na(., 0)) %>% tabela_geral("Ações de extensão por centro de custo, 2019", linhatotal = FALSE, colunas = c("Sigla",	"Unidade",	"Qtde. ações"), tamfonte = 14, fundo = fundo) %>% colorir(dados = unidades_extensao) %>% footnote(general = "", general_title = "Fonte: SIEX/DEX")
+
 ```
 
-```{r unidades_extensao}
-#xfun::embed_file("")
-unidades_extensao %>% 
-  map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Ações de extensão por centro de custo, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#828065") %>% footnote(general = c("SIEX/DEX"),
-           general_title = "Fonte:")
-```
+<br>
 
+##  Projeto de extensão de ação contínua: impactos acadêmico e social, 2015 a 2019
 ```{r}
 publico_extensao <- rio::import("dados_extensao/extensao.xlsx", sheet=3)
 
+publico_extensao$`Unidade / Ano` <- c("2015", "2016", "2017", "2018", "2019")
+
+publico_extensao %>%  map_df(~replace_na(., 0)) %>% tabela_geral(" Projeto de extensão de ação contínua: impactos acadêmico e social, 2015 a 2019", linhatotal = FALSE, colunas = c("Ano",	"Público Atendido",	"Participantes (UnB), - Docentes",	"Participantes (UnB) - Discentes",	"Participantes (UnB) - Técnicos Administrativos",	"Participantes Externos"), tamfonte = 14, fundo = fundo) %>% colorir(dados = publico_extensao) %>% footnote(general = "", general_title = "Fonte: SIEX/DEX")
+
 ```
 
-```{r publico_extensao}
-#xfun::embed_file("")
-publico_extensao %>% 
-  map_df(~replace_na(., 0)) %>% 
-  tabela_geral("Ações de extensão por centro de custo, 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#828065") %>% footnote(number = c("ND : Não Disponível"),general = c("SIEX/DEX"),
-           general_title = "Fonte:")
+<br>
+
+##  Evolução de projetos e programas de extensão de ação contínua, por unidade, 2015 a 2019
+```{r}
+evo_extensao <- rio::import("dados_extensao/extensao.xlsx", sheet=4)
+
+evo_extensao %>%  map_df(~replace_na(., 0)) %>% tabela_geral("Evolução de projetos e programas de extensão de ação contínua, por unidade, 2015 a 2019", linhatotal = FALSE, colunas = c("Espécie",	"Eventos",	"Ano",	"Sigla",	"Unidade"), tamfonte = 14, fundo = fundo) %>% colorir(dados = evo_extensao) %>% footnote(general = "", general_title = "Fonte: SIEX/DEX")
+
 ```
+
+<br>
+
+##  Eventos do Programa de Atividades da Semana Universitária, UnB, 2019
+```{r}
+sem_univ <- rio::import("dados_extensao/extensao.xlsx", sheet=5)
+
+sem_univ %>%  map_df(~replace_na(., 0)) %>% tabela_geral("Eventos do Programa de Atividades da Semana Universitária, UnB, 2019", linhatotal = FALSE, colunas = c("Tipo",	"Espécie",	"Participantes"), tamfonte = 14, fundo = fundo) %>% colorir(dados = sem_univ) %>% footnote(general = "", general_title = "Fonte: SIEX/DEX")
+
+```
+
+<br>

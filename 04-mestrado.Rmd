@@ -26,6 +26,7 @@ tab1 %>%
 
 <br>
 
+## Gráfico dos ingressantes e concluintes nos cursos de mestrado por unidade acadêmica, UnB, 2019
 ```{r fig.cap='Ingressantes e concluintes nos cursos de mestrado por unidade acadêmica, UnB, 2019'}
 include_graphics("graficos/mestrado/graf1.png")
 
@@ -50,6 +51,7 @@ tab2 %>%
 
 <br>
 
+## Gráfico do ingresso de alunos nos cursos de mestrado por faixa etária e sexo, UnB, 2019
 ```{r fig.cap='Ingresso de alunos nos cursos de mestrado por faixa etária e sexo, UnB, 2019'}
 include_graphics("graficos/mestrado/graf2.png")
 
@@ -58,6 +60,7 @@ xfun::embed_file("graficos/mestrado/graf2.png")
 
 <br>
 
+## Gráfico da formatura de alunos nos cursos de mestrado por faixa etária e sexo, UnB, 2019
 ```{r fig.cap='Formatura de alunos nos cursos de mestrado por faixa etária e sexo, UnB, 2019'}
 include_graphics("graficos/mestrado/graf3.png")
 
@@ -83,6 +86,7 @@ tab3 %>%
 
 <br>
 
+## Gráfico dos alunos regulares nos cursos de mestrado por faixa etária e sexo, UnB, 2019
 ```{r fig.cap='Alunos regulares nos cursos de mestrado por faixa etária e sexo, UnB, 2019'}
 include_graphics("graficos/mestrado/graf4.png")
 
@@ -109,6 +113,7 @@ tab4 %>%
 
 <br>
 
+## Gráfico dos alunos regulares nos cursos de mestrado por unidade e sexo, UnB, 2º semestre de 2019
 ```{r fig.cap='Alunos regulares nos cursos de mestrado por unidade e sexo, UnB, 2º semestre de 2019'}
 include_graphics("graficos/mestrado/graf5.png")
 
@@ -226,6 +231,7 @@ tab10 %>%
 
 <br>
 
+## Gráfico da evolução do número de alunos de mestrado matriculados, ingressantes e formados, UnB, 2015 a 2019
 ```{r fig.cap='Evolução do número de alunos de mestrado matriculados, ingressantes e formados, UnB, 2015 a 2019'}
 include_graphics("graficos/mestrado/graf6.png")
 
@@ -234,6 +240,7 @@ xfun::embed_file("graficos/mestrado/graf6.png")
 
 <br>
 
+## Gráfico da evolução do número de alunos com dissertações homologadas nos cursos de mestrado por década, 1976 a 2019
 ```{r fig.cap='Evolução do número de alunos com dissertações homologadas nos cursos de mestrado por década, 1976 a 2019'}
 include_graphics("graficos/mestrado/graf7.png")
 
