@@ -242,9 +242,9 @@ ru %>%
 
 <br>
 
-## Indicadores gerais de desempenho da UnB, 2009 a 2019
+## Indicadores gerais de desempenho da UnB, 2011 a 2019
 ```{r}
-indicadores_gerais <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=15)
+indicadores_gerais <- rio::import("dados_gerais/planilha_1.15_mod.xlsx", sheet=1)
 
 cores <- indicadores_gerais %>% 
   mutate(n = row_number()) %>% 
@@ -263,11 +263,11 @@ cores <- indicadores_gerais %>%
   deframe()
 
 indicadores_gerais %>% 
-  mutate(`2009 A 2019` = ifelse(is.na(`2009 A 2019`) | `2009 A 2019` == "-",
-                                `2009 A 2019`,
-                                paste0(round(100 * as.double(`2009 A 2019`), 2), "%"))) %>% 
+  mutate(`2011 A 2019` = ifelse(is.na(`2011 A 2019`) | `2011 A 2019` == "-",
+                                `2011 A 2019`,
+                                paste0(round(100 * as.double(`2011 A 2019`), 2), "%"))) %>% 
   map_df(~replace_na(., "")) %>%
-  tabela_geral("Indicadores gerais de desempenho da UnB, 2009 a 2019", 
+  tabela_geral("Indicadores gerais de desempenho da UnB, 2011 a 2019", 
                linhatotal = F, 
                tamfonte = 10, 
                fundo = fundo) %>% 
@@ -289,12 +289,12 @@ geral %>%
                colunas = c("Unidades", "Graduação", "Pós-graduação\nMest./Dout.", 
                            "Grad.", "Mestr.", "Dout.", 
                            "Graduação", "Mestrado", "Doutorado")) %>% 
-  add_header_above(c("-", 
+  add_header_above(c("", 
                    "ALUNOS REGULARES\n(DADOS DO 2º SEMESTRE)" = 2,
                    "CURSOS\nMINISTRADOS" = 3,
                    "TÍTULOS\nOUTORGADOS" = 3),
                    color = "white", extra_css = 'vertical-align: middle', background = "#00376f") %>% 
-  footnote(general_title = "Notas: ",
+  footnote(general_title = "",
            general = "Fonte: Sistemas acadêmicos & Censo da Educação Superior 2019")
 ```
 
@@ -431,4 +431,3 @@ area_hub %>%
 
 <br>
 
-Prêmios, Distinções, Títulos e Honrarias

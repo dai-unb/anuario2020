@@ -29,7 +29,13 @@ tab1 %>%
 
 <br>
 
-## Gráfico Evolução do número de cursos de pós-graduação Stricto Sensu em funcionamento, 1969-2018
+## Gráfico Evolução do número de cursos de pós-graduação Stricto Sensu em funcionamento, 1969-2019
+
+```{r fig.cap='Total de alunos formados por período, UnB, 1969 a 2019'}
+include_graphics("graficos/posgrad/graf1.png")
+
+xfun::embed_file("graficos/posgrad/graf1.png")
+```
 
 <br>
 
@@ -115,6 +121,13 @@ tab5 %>%
 
 ## Gráfico Percentual por nível de conceito segundo avaliação da CAPES para os cursos de pós-graduação – situação atual
 
+```{r fig.cap='Percentual por nível de conceito segundo avaliação da CAPES para os cursos de pós-graduação – situação atual'}
+include_graphics("graficos/posgrad/graf2.png")
+
+xfun::embed_file("graficos/posgrad/graf2.png")
+```
+
+
 <br>
 
 ## Número de alunos regulares nos cursos de pós-graduação Stricto Sensu por sexo, unidade acadêmica e curso, UnB, 2019 (2º semestre)
@@ -137,9 +150,19 @@ tab6 %>%
 
 ## Gráfico Número de alunos regulares nos cursos de pós-graduação Stricto Sensu por unidade acadêmica, UnB, 2019 (2º semestre)
 ```{r fig.cap='Alunos regulares nos cursos de pós-graduação Stricto Sensu por unidade acadêmica, UnB, 2º semestre de 2019'}
-include_graphics("graficos/posgrad/graf1.png")
+include_graphics("graficos/posgrad/graf3.png")
 
-xfun::embed_file("graficos/posgrad/graf1.png")
+xfun::embed_file("graficos/posgrad/graf3.png")
+```
+
+<br>
+
+## Gráfico Número de alunos regulares registrados nos cursos de pós-graduação Stricto Sensu por nível, UnB, 2019 (2º semestre) 
+
+```{r fig.cap='Número de alunos regulares registrados nos cursos de pós-graduação Stricto Sensu por nível, UnB, 2019 (2º semestre) '}
+include_graphics("graficos/posgrad/graf4.png")
+
+xfun::embed_file("graficos/posgrad/graf4.png")
 ```
 
 <br>
@@ -181,27 +204,27 @@ tab8 %>%
 
 ## Gráfico Alunos estrangeiros regulares nos cursos de pós-graduação Stricto Sensu, por continente, UnB, 2019 (2º semestre)
 ```{r fig.cap='Alunos estrangeiros regulares nos cursos de pós-graduação Stricto Sensu por continente, UnB, 2º semestre de 2019'}
-include_graphics("graficos/posgrad/graf2.png")
+include_graphics("graficos/posgrad/graf5.png")
 
-xfun::embed_file("graficos/posgrad/graf2.png")
+xfun::embed_file("graficos/posgrad/graf5.png")
 ```
 
 <br>
 
 ## Gráfico Alunos estrangeiros regulares nos cursos de pós-graduação Stricto Sensu, por unidade acadêmica, UnB, 2019 (2º semestre)
 ```{r fig.cap='Alunos estrangeiros regulares nos cursos de pós-graduação Stricto Sensu por unidade acadêmica, UnB, 2º semestre de 2019'}
-include_graphics("graficos/posgrad/graf2.png")
+include_graphics("graficos/posgrad/graf6.png")
 
-xfun::embed_file("graficos/posgrad/graf2.png")
+xfun::embed_file("graficos/posgrad/graf6.png")
 ```
 
 <br>
 
-## Gráfico Países com maior número de alunos regulares nos cursos de\npós-graduação Stricto Sensu, UnB, 2º semestre de 2019
+## Gráfico Países com maior número de alunos regulares nos cursos de pós-graduação Stricto Sensu, UnB, 2º semestre de 2019
 ```{r fig.cap='Países com maior número de alunos regulares nos cursos de pós-graduação Stricto Sensu, UnB, 2º semestre de 2019'}
-include_graphics("graficos/posgrad/graf2.png")
+include_graphics("graficos/posgrad/graf7.png")
 
-xfun::embed_file("graficos/posgrad/graf2.png")
+xfun::embed_file("graficos/posgrad/graf7.png")
 ```
 
 <br>
