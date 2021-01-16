@@ -58,7 +58,7 @@ cores_anuario <- c("geral" = "#00427E",
 # }
 
 # acha as linhas que devem ser coloridas
-colorir <- function(tabela, dados, alpha = 0.5){
+colorir <- function(tabela, dados, alpha = 0.7){
   
   unidades <- label_unidade %>% 
     select(Unidade) %>% 
@@ -75,7 +75,7 @@ colorir <- function(tabela, dados, alpha = 0.5){
   
   tabela %>% 
     row_spec(
-      row = colorir, background = alpha(fundo, alpha)
+      row = colorir, background = colorspace::lighten(fundo, alpha)
       )
 }
 

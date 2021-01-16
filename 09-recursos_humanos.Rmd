@@ -1,0 +1,275 @@
+# Recursos Humanos {#rh}
+
+```{r}
+# define o fundo desta seção
+fundo <- cores_anuario["rh"]
+```
+
+Faça o download de todas as tabelas desta seção: `r xfun::embed_file("dados_recursos_humanos/recursos_humanos.xlsx")`
+
+<br>
+
+## Docentes 
+
+<br>
+
+### Docentes ativos, por classe, regime de trabalho e titulação, 2019
+```{r}
+docentes_ativos <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=1)
+
+docentes_ativos %>% map_df(~replace_na(., 0)) %>% tabela_geral("Docentes ativos, por classe, regime de trabalho e titulação, 2019", linhatotal =  TRUE, colunas = c("Classe",	"Regime",	"Graduação",	"Especialização",	"Mestrado",	"Doutorado",	"Total"), tamfonte = 14, fundo = fundo) %>% colorir(dados = docentes_ativos) %>%  footnote(general = "", general_title = "Fonte: Extrator de Dados - SIAPE/DGP/UnB")
+
+```
+
+<br>
+
+### Gráfico de Percentual de docentes ativos por classe, 2019
+```{r fig.cap='Percentual de docentes ativos por classe, 2019'}
+include_graphics("graficos/RH/graf1.png")
+
+xfun::embed_file("graficos/RH/graf1.png")
+```
+
+<br>
+
+### Gráfico de Percentual de docentes ativos por regime de trabalho, 2019
+```{r fig.cap='Percentual de docentes ativos por regime de trabalho, 2019'}
+include_graphics("graficos/RH/graf2.png")
+
+xfun::embed_file("graficos/RH/graf2.png")
+```
+
+<br>
+
+### Docentes substitutos, temporários e visitantes, por regime de trabalho e titulação, 2019
+```{r}
+docentes_sub <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=2)
+
+docentes_sub %>% map_df(~replace_na(., 0)) %>% tabela_geral("Docentes substitutos, temporários e visitantes, por regime de trabalho e titulação, 2019", colunas = c("Titulação",	"Regime 20 horas",	"Regime 40 horas",	"Regime DE",	"Total"), linhatotal =  TRUE, tamfonte = 14, fundo = fundo) %>% colorir(dados = docentes_sub) %>%  footnote(general = "", general_title = "Fonte: Extrator de Dados - SIAPE/DGP/UnB")
+
+```
+
+<br>
+
+### Número de docentes ativos, por classe e faixa etária, 2019
+```{r}
+docentes_idade <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=3)
+
+docentes_idade %>% map_df(~replace_na(., 0)) %>% tabela_geral("Número de docentes ativos, por classe e faixa etária, 2019", linhatotal =  TRUE, colunas = c("Classe",	"Até 25 anos",	"26 a 35 anos",	"36 a 45 anos",	"46 a 55 anos",	"56 a 65 anos",	"Acima de 66 anos",	"Total"), tamfonte = 14, fundo = fundo) %>% colorir(dados = docentes_idade) %>%  footnote(general = "", general_title = "Fonte: Extrator de Dados - SIAPE/DGP/UnB")
+
+```
+<br>
+
+### Gráfico de Evolução do número de docentes ativos, 2015 a 2019
+```{r fig.cap='Evolução do número de docentes ativos, 2015 a 2019'}
+include_graphics("graficos/RH/graf3.png")
+
+xfun::embed_file("graficos/RH/graf3.png")
+```
+
+<br>
+
+### Evolução do número de docentes ativos, por titulação, 2015 a 2019
+```{r}
+docentes_tit <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=4)
+
+docentes_tit %>% map_df(~replace_na(., 0)) %>% tabela_geral("Evolução do número de docentes ativos, por titulação, 2015 a 2019", linhatotal =  TRUE, colunas = c("Titulação",	"2015",	"2016",	"2017",	"2018",	"2019"), tamfonte = 14, fundo = fundo) %>% colorir(dados = docentes_tit) %>% footnote(general = "", general_title = "Fonte: Extrator de Dados - SIAPE/DGP/UnB")
+
+```
+
+<br>
+
+### Evolução do número de docentes ativos, por classe, 2015 a 2019
+```{r}
+docentes_classe <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=5)
+
+docentes_classe %>% map_df(~replace_na(., 0)) %>% tabela_geral("Evolução do número de docentes ativos, por classe, 2015 a 2019", linhatotal =  TRUE, colunas = c("Classe",	"2015",	"2016",	"2017",	"2018",	"2019"), tamfonte = 14, fundo = fundo) %>% colorir (dados = docentes_classe) %>%  footnote(general = "", general_title = "Fonte: Extrator de Dados - SIAPE/DGP/UnB")
+
+```
+<br> 
+
+### Gráfico de Evolução do número de docentes ativos por classe, 2015 a 2019
+```{r fig.cap='Evolução do número de docentes ativos por classe, 2015 a 2019'}
+include_graphics("graficos/RH/graf4.png")
+
+xfun::embed_file("graficos/RH/graf4.png")
+```
+
+<br>
+
+### Gráfico de Evolução do número de docentes ativos por regime de trabalho, 2015 a 2019
+```{r fig.cap='Evolução do número de docentes ativos por regime de trabalho, 2015 a 2019'}
+include_graphics("graficos/RH/graf5.png")
+
+xfun::embed_file("graficos/RH/graf5.png")
+```
+
+<br>
+
+### Evolução do número de docentes ativos por regime de trabalho, 2015 a 2019
+```{r}
+docentes_reg <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=6)
+docentes_reg$`Unidade / Ano` <- as.character(docentes_reg$`Unidade / Ano`)
+
+docentes_reg %>% map_df(~replace_na(., 0)) %>% tabela_geral("Evolução do número de docentes ativos por regime de trabalho, 2015 a 2019", linhatotal =  FALSE, colunas = c("Ano",	"20 horas",	"40 horas",	"Dedicação Exclusiva",	"Total"), tamfonte = 14, fundo = fundo) %>% colorir(dados = docentes_reg) %>% footnote(general = "", general_title = "Fonte: Extrator de Dados - SIAPE/DGP/UnB")
+
+```
+
+<br>
+
+### Evolução do número de docentes inativos, por titulação,  2015 a 2019
+```{r}
+docentes_inativos <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=7)
+
+docentes_inativos %>% map_df(~replace_na(., 0)) %>% tabela_geral("Evolução do número de docentes inativos, por titulação,  2015 a 2019", linhatotal =  TRUE,  colunas = c("Titulação",	"2015",	"2016",	"2017",	"2018",	"2019"), tamfonte = 14, fundo = fundo) %>% colorir(dados = docentes_inativos) %>%  footnote(general = "", general_title = "Fonte: Extrator de Dados - SIAPE/DGP/UnB")
+
+```
+### Gráfico de Evolução do número de docentes inativos, 2015 a 2019
+```{r fig.cap='Evolução do número de docentes inativos, 2015 a 2019'}
+include_graphics("graficos/RH/graf6.png")
+
+xfun::embed_file("graficos/RH/graf6.png")
+```
+
+<br>
+
+### Evolução do número de docentes inativos por classe,  2015 a 2019
+```{r}
+docentes_inativos_classe <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=8)
+
+docentes_inativos_classe %>% map_df(~replace_na(., 0)) %>% tabela_geral("Evolução do número de docentes inativos por classe,  2015 a 2019", linhatotal =  TRUE, colunas = c("Classe", "2015", "2016", "2017", "2018", "2019"), tamfonte = 14, fundo = fundo) %>% colorir(dados = docentes_inativos_classe) %>% footnote(general = "", general_title = "Fonte: Extrator de Dados - SIAPE/DGP/UnB")
+
+```
+
+<br>
+
+### Gráfico de Evolução do número de docentes inativos por classe,  2015 a 2019
+```{r fig.cap='Evolução do número de docentes inativos por classe, 2015 a 2019'}
+include_graphics("graficos/RH/graf7.png")
+
+xfun::embed_file("graficos/RH/graf7.png")
+```
+
+<br>
+
+### Evolução do número de docentes inativos por regime de trabalho,  2015 a 2019
+```{r}
+docentes_inativos_regime <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=9)
+docentes_inativos_regime$`Unidade / Ano` <- as.character(docentes_inativos_regime$`Unidade / Ano`)
+
+docentes_inativos_regime %>% map_df(~replace_na(., 0)) %>%  tabela_geral("Evolução do número de docentes inativos por regime de trabalho, 2015 a 2019", linhatotal =  FALSE, colunas = c("Ano",	"Regime de Trabalho - 12 horas",	"Regime de Trabalho - 20 horas",	"Regime de Trabalho - 40 horas",	"Regime de Trabalho - Dedicação Exclusiva",	"Total"), tamfonte = 14, fundo = fundo) %>% colorir(dados = docentes_inativos_regime)  %>% footnote(general = "", general_title = "Fonte: Extrator de Dados - SIAPE/DGP/UnB")
+
+```
+
+<br>
+
+### Gráfico de Evolução do número de docentes inativos por regime de trabalho,  2015 a 2019
+```{r fig.cap='Evolução do número de docentes inativos por regime de trabalho, 2015 a 2019'}
+include_graphics("graficos/RH/graf8.png")
+
+xfun::embed_file("graficos/RH/graf8.png")
+```
+
+<br>
+
+## Corpo Técnico-Administrativo 
+
+<br>
+
+### Evolução do número de técnico-administrativos ativos, por nível, 2015 a 2019
+```{r}
+tecnicos_ativos <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=10)
+
+tecnicos_ativos %>% map_df(~replace_na(., 0)) %>% tabela_geral("Evolução do número de técnico-administrativos ativos, por nível, 2015 a 2019", linhatotal =  TRUE, colunas = c("Nível",	"2015",	"2016",	"2017",	"2018",	"2019"), tamfonte = 14, fundo = fundo) %>% colorir (dados = tecnicos_ativos) %>% footnote(general = "", general_title = "Fonte: Extrator de Dados - SIAPE/DGP/UnB")
+
+```
+
+<br>
+
+### Gráfico de Evolução do número de técnico-administrativos ativos, 2015 a 2019
+```{r fig.cap='Evolução do número de técnico-administrativos ativos, 2015 a 2019'}
+include_graphics("graficos/RH/graf9.png")
+
+xfun::embed_file("graficos/RH/graf9.png")
+```
+
+<br>
+
+### Gráfico de Evolução do número de técnico-administrativos ativos, por nível, 2015 a 2019
+```{r fig.cap='Evolução do número de técnico-administrativos ativos, por nível, 2015 a 2019'}
+include_graphics("graficos/RH/graf10.png")
+
+xfun::embed_file("graficos/RH/graf10.png")
+```
+
+<br>
+
+### Número de técnico-administrativos ativos por nível e faixa etária, 2019
+```{r}
+tecnicos_idade <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=11)
+
+tecnicos_idade %>% map_df(~replace_na(., 0)) %>% tabela_geral("Número de técnico-administrativos ativos por nível e faixa etária, 2019", linhatotal =  TRUE, colunas = c("Nível",	"Até 25 anos",	"26 a 35 anos",	"36 a 45 anos",	"46 a 55 anos",	"56 a 65 anos",	"Acima de 66 anos",	"Total"), tamfonte = 14, fundo = fundo) %>% colorir(dados = tecnicos_idade) %>%  footnote(general = "", general_title = "Fonte: Extrator de Dados - SIAPE/DGP/UnB")
+
+```
+
+<br>
+
+### Evolução do número de técnico-administrativos inativos, por nível, 2015 a 2019
+```{r}
+tecnicos_inativos <-rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=12)
+
+tecnicos_inativos %>% map_df(~replace_na(., 0)) %>% tabela_geral("Evolução do número de técnico-administrativos inativos, por nível, 2015 a 2019", linhatotal =  TRUE, colunas = c("Nível",	"2015",	"2016",	"2017",	"2018",	"2019"), tamfonte = 14, fundo = fundo) %>% colorir(dados = tecnicos_inativos) %>% footnote(general = "", general_title = "Fonte: Extrator de Dados - SIAPE/DGP/UnB")
+
+```
+
+<br>
+
+### Gráfico de Evolução do número de técnico-administrativos ativos, 2015 a 2019
+```{r fig.cap='Evolução do número de técnico-administrativos ativos, 2015 a 2019'}
+include_graphics("graficos/RH/graf11.png")
+
+xfun::embed_file("graficos/RH/graf11.png")
+```
+
+<br>
+
+### Gráfico de Evolução do número de técnico-administrativos ativos, por nível, 2015 a 2019
+```{r fig.cap='Evolução do número de técnico-administrativos ativos, por nível, 2015 a 2019'}
+include_graphics("graficos/RH/graf12.png")
+
+xfun::embed_file("graficos/RH/graf12.png")
+```
+
+
+### Relação de afastamento de técnicos para capacitação, 2018-2019
+```{r}
+afastamentos <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=13)
+afastamentos$`Unidade / Ano` <- as.character(afastamentos$`Unidade / Ano`)
+
+afastamentos %>% map_df(~replace_na(., 0)) %>%  tabela_geral("Relação de afastamento de técnicos para capacitação, 2018-2019", linhatotal =  FALSE, colunas = c("Ano",	"Afastados"), tamfonte = 14, fundo = fundo) %>% colorir(dados = afastamentos) %>% footnote(general = "",  general_title = "Fonte: PROCAP/SRH")
+
+```
+
+<br>
+
+### Evolução do número de atividades de capacitação de pessoal, 2015 a 2019
+```{r}
+capacitacao <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=14)
+capacitacao$`Unidade / Ano` <- as.character(capacitacao$`Unidade / Ano`)
+
+capacitacao %>% map_df(~replace_na(., 0)) %>% tabela_geral("Evolução do número de atividades de capacitação de pessoal, 2015 a 2019", linhatotal =  FALSE, colunas = c("Ano",	"Cursos/Outras Ações",	"Instrutores",	"Treinados"), tamfonte = 14, fundo = fundo) %>% colorir(dados = capacitacao) %>%  footnote(general = "", general_title = "Fonte: PROCAP/SRH")
+
+```
+
+<br>
+
+
+### Serviços de atendimento de saúde a servidores, 2019
+```{r}
+saude_serv <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=15)
+
+saude_serv %>% map_df(~replace_na(., 0)) %>% tabela_geral("Serviços de atendimento de saúde a servidores, 2019", linhatotal =  TRUE, colunas = c("Indicadores",	"2019"), tamfonte = 14, fundo = fundo) %>% colorir(dados = saude_serv) %>% footnote(general = "", general_title = "Fonte: DSQVT/DGP") 
+
+```
+
+<br>

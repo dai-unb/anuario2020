@@ -1,0 +1,433 @@
+
+```{r}
+options(scipen = 9)
+fundo <- cores_anuario["geral"]
+```
+
+# Dados gerais {#geral}
+
+1. Informações e Dados Gerais
+<br>
+**Fundação Universidade de Brasília**  
+Criação: Lei n. 3998/1961, de 15/12/1961, homologada pelo Decreto n. 500, de 15/1/1962.  
+Estatuto da FUB: publicado no Diário Oficial da União de 16/1/1962.  
+Edificação da Pedra Fundamental em 15/12/1961.  
+<br>
+**Universidade de Brasília**  
+Criação: prevista no art. 3º da Lei n. 3998/1961, de 15/12/1961.  
+Estatuto em vigor: aprovado pela Resolução do Conselho Diretor n. 13/1993, de 19/10/1993, e publicado no Diário Oficial da União n. 7 de 11/1/1994.  
+<br>
+**Missão da UnB**  
+Ser uma instituição inovadora, comprometida com a excelência acadêmica, científica e tecnológica
+formando cidadãos conscientes do seu papel transformador na sociedade, respeitadas a ética e a
+valorização de identidades e culturas com responsabilidade social.
+<br>
+**Visão de Futuro**  
+Estar entre as melhores universidades do Brasil, inserida internacionalmente, com excelência em gestão de processos que fortaleça o ensino, pesquisa e extensão.
+<br>
+<br>
+
+## Componentes institucionais da UnB
+```{r}
+comp_inst <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=1)
+
+comp_inst %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Componentes Institucionais", 
+               linhatotal = FALSE, 
+               fundo = "#00376f",
+               colunas = c("Componentes Institucionais", "Total"))
+```
+
+<br>
+
+## Vagas oferecidas nos processos de seleção primários da UnB, 2019
+```{r}
+vagas_oferecidas <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=2)
+
+vagas_oferecidas %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Vagas oferecidas nos processos de seleção primários da UnB, 2019", 
+               linhatotal = TRUE,
+               tamfonte = 14, 
+               fundo = "#00376f",
+               colunas = c("FORMA DE INGRESSO", "1º SEM","2º SEM","TOTAL ANUAL"))
+```
+
+<br>
+
+## Inscritos nos processos de seleção primários da UnB, 2019
+```{r}
+inscritos <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=3)
+
+inscritos %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Inscritos nos processos de seleção primários da UnB, 2019", 
+               linhatotal = TRUE, 
+               tamfonte = 14, 
+               fundo = "#00376f",
+               colunas = c("FORMA DE INGRESSO", "1º SEM","2º SEM","TOTAL ANUAL"))
+```
+
+<br>
+
+## Relação candidato x vaga nos processos de seleção primários da UnB, 2019
+```{r}
+demanda <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=4)
+demanda$`1º semestre` <- round(demanda$`1º semestre`, digits = 2)
+demanda$`2º semestre` <- round(demanda$`2º semestre`, digits = 2)
+demanda$`Total Anual` <- round(demanda$`Total Anual`, digits = 2)
+
+demanda %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Relação candidato x vaga nos processos de seleção primários da UnB, 2019", 
+               linhatotal = FALSE, 
+               tamfonte = 14, 
+               fundo = "#00376f",
+               colunas = c("FORMA DE INGRESSO", "1º SEM","2º SEM","TOTAL ANUAL")) %>% 
+  footnote(general_title = "Notas: ",
+           general = c("(1) O Sistema de Seleção Unificada (Sisu) é o sistema informatizado, gerenciado pelo Ministério da Educação (MEC), no qual instituições públicas de ensino superior oferecem vagas a candidatos participantes do Exame Nacional do Ensino Médio (Enem)",
+                       "(2) O Programa de Avaliação Seriada (PAS) é uma das modalidade de acesso ao ensino superior, de iniciativa da UnB. Trata-se de um sistema de avaliação gradual e progressiva, com provas realizadas ao final de cada um dos três anos regulares do ensino médio. Tem por objetivo a ampliação do processo de interação da universidade com o ensino médio e a redução do impacto da passagem dos estudantes para o ensino superior"))
+```
+
+<br>
+
+## Ingressantes pelos processos de seleção da UnB, 2019
+```{r}
+ingressantes <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet = 5)
+
+ingressantes %>% 
+  tabela_geral("Ingressantes pelos processos de seleção da UnB, 2019", 
+               linhatotal = TRUE, 
+               tamfonte = 14, 
+               fundo = "#00376f",
+               colunas = c("FORMA DE INGRESSO", "1º SEM","2º SEM","TOTAL ANUAL")) %>% 
+  footnote(general_title = "Nota: ",
+           general = "(*) Transferência Obrigatória, Transferência Facultativa, Programas Especiais e Convênio PEC")
+```
+
+<br>
+
+## Total de cursos da UnB por grau, 2019
+```{r}
+Cursos <-  rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet = 6)
+
+Cursos %>% 
+  filter(!str_detect(Curso, "Especialização")) %>% 
+  tabela_geral("Total de cursos da UnB por grau, 2019", 
+               linhatotal =   FALSE, 
+               colunas = c("GRAU", "QUANTIDADE"),
+               fundo = "#00376f") %>% 
+  footnote(general_title = "Notas: ",
+           general = "O total refere-se a todos os cursos de graduação, por habilitação e turno, que ainda tenham alunos matriculados; os cursos de graduação ativos referem-se aos cursos que tiveram ingressantes no ano base, também diferenciando por habilitação e turno")
+```
+
+<br>
+
+## Total de formados da UnB por grau, 2019
+```{r}
+Formados <-  rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet = 7)
+
+Formados %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Total de formados da UnB por grau, 2019", 
+               linhatotal =   FALSE, 
+               tamfonte = 14, 
+               fundo = "#00376f",
+               colunas = c("GRAU", "1º SEM","2º SEM", "TOTAL")) %>% 
+  footnote(general_title =  "Nota: ",
+           general = "(*) Dados anuais")
+```
+
+<br>
+
+## Total de docentes ativos da UnB por grau de titulação, 2019
+```{r}
+docente_ativo <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=8)
+
+docente_ativo %>% 
+  tabela_geral("Total de docentes ativos da UnB por grau de titulação, 2019", 
+               linhatotal =  FALSE, 
+               colunas = c("TITULAÇÃO", "DEDICAÇÃO EXCLUSIVA", "40 HORAS", "20 HORAS", "TOTAL"), 
+               fundo = "#00376f")
+```
+
+<br>
+
+## Número de técnico-administrativos do quadro, por cargo, 2019
+```{r}
+escolaridade_tecnico <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=9)
+
+escolaridade_tecnico %>% 
+  tabela_geral("Número de técnico-administrativos do quadro, por cargo, 2019", 
+               linhatotal = TRUE,
+               fundo = "#00376f",
+               colunas = c("CARGO OCUPADO","QUANTIDADE"))
+```
+
+<br>
+
+## Área física dos campi da Universidade de Brasília, 2019
+```{r}
+area_fisica <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=10)
+
+area_fisica %>%
+  mutate(`m²` = format(round(`m²`, 0), big.mark = "."),
+         `m²` = ifelse(str_detect(`m²`, "NA"),
+                       "",
+                       `m²`)) %>% 
+  # map_df(~replace_na(., " ")) %>%
+  tabela_geral("Área física dos campi da Universidade de Brasília, 2019", 
+               colunas = c("Campus", "Metragem (m²)"),
+               linhatotal = FALSE, 
+               fundo = "#00376f")
+```
+
+<br>
+
+## Números da Biblioteca Central (BCE) da UnB, 2019
+```{r}
+bce <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=11)
+
+bce %>% 
+  tabela_geral("Números da Biblioteca Central (BCE) da UnB, 2019", 
+               linhatotal = FALSE, 
+               fundo = "#00376f",
+               colunas = c("CATEGORIA","QUANTIDADE"))
+```
+
+<br>
+
+## Números da Editora Universidade de Brasília (EDU), 2019
+```{r}
+edu <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=12)
+
+edu %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Números da Editora Universidade de Brasília (EDU), 2019", 
+               linhatotal = FALSE, 
+               tamfonte = 14, 
+               fundo = "#00376f",
+               colunas = c("CATEGORIA","QUANTIDADE"))
+```
+
+<br>
+
+## Números da extensão da UnB, 2019
+```{r}
+extensao <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=13)
+
+extensao %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Números da extensão da UnB, 2019", 
+               linhatotal = FALSE, 
+               fundo = "#00376f",
+               colunas = c("CATEGORIA","QUANTIDADE"))
+```
+
+<br>
+
+## Números do Restaurante Universitário (RU) da UnB, 2019
+```{r}
+ru <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=14)
+
+# tá estranha a tabela
+ru %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Números do Restaurante Universitário (RU) da UnB, 2019", 
+               linhatotal = FALSE, 
+               fundo = "#00376f",
+               colunas = c("RESTAURANTE UNIVERSITÁRIO – RU",""))
+```
+
+<br>
+
+## Indicadores gerais de desempenho da UnB, 2011 a 2019
+```{r}
+indicadores_gerais <- rio::import("dados_gerais/planilha_1.15_mod.xlsx", sheet=1)
+
+cores <- indicadores_gerais %>% 
+  mutate(n = row_number()) %>% 
+  filter(CATEGORIA %in% c("ATIVIDADES DE ENSINO",
+                          "GRADUAÇÃO",
+                          "PÓS-GRADUAÇÃO",
+                          "Número de cursos",
+                          "Alunos registrados (2º semestre)",
+                          "Títulos outorgados",
+                          "SERVIÇOS À COMUNIDADE",
+                          "EDITORA UnB",
+                          "BIBLIOTECA",
+                          "QUADRO DE PESSOAL",
+                          "COOPERAÇÃO NACIONAL E INTERNACIONAL")) %>% 
+  select(n) %>% 
+  deframe()
+
+indicadores_gerais %>% 
+  mutate(`2011 A 2019` = ifelse(is.na(`2011 A 2019`) | `2011 A 2019` == "-",
+                                `2011 A 2019`,
+                                paste0(round(100 * as.double(`2011 A 2019`), 2), "%"))) %>% 
+  map_df(~replace_na(., "")) %>%
+  tabela_geral("Indicadores gerais de desempenho da UnB, 2011 a 2019", 
+               linhatotal = F, 
+               tamfonte = 10, 
+               fundo = fundo) %>% 
+  row_spec(row = cores, background = fundo, color = "white") %>% 
+  footnote(general_title = "Notas: ",
+           general = c("ND: dado não disponível", "(1): os dados dos programas Sisu e Enem só puderam ser computados a partir de 2014"))
+```
+
+<br>
+
+## Dados gerais por unidade da UnB, 2019
+```{r}
+geral <- rio::import("dados_gerais/Tabela_1.03.xlsx")
+
+geral %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Dados gerais por unidade da UnB, 2019", 
+               linhatotal = TRUE, tamfonte = 14, fundo = "#00376f",
+               colunas = c("Unidades", "Graduação", "Pós-graduação\nMest./Dout.", 
+                           "Grad.", "Mestr.", "Dout.", 
+                           "Graduação", "Mestrado", "Doutorado")) %>% 
+  add_header_above(c("", 
+                   "ALUNOS REGULARES\n(DADOS DO 2º SEMESTRE)" = 2,
+                   "CURSOS\nMINISTRADOS" = 3,
+                   "TÍTULOS\nOUTORGADOS" = 3),
+                   color = "white", extra_css = 'vertical-align: middle', background = "#00376f") %>% 
+  footnote(general_title = "",
+           general = "Fonte: Sistemas acadêmicos & Censo da Educação Superior 2019")
+```
+
+<br>
+
+## População universitária da UnB, 2015 a 2019
+```{r}
+evo_pop <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=16)
+evo_pop$Ano <- as.character(evo_pop$Ano)
+
+# precisa desses números subescritos?
+evo_pop %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("População universitária da UnB, 2015 a 2019",
+               linhatotal = FALSE, 
+               fundo = "#00376f",
+               colunas = c("Ano","Alunos de Graduação¹","Alunos de Pós-Graduação¹","Docentes²","Técnicos-Administrativos","Total")) %>% 
+  footnote(general_title = "Notas: ",
+           general = c("(1) dados do 2º semestre",
+                       "(2) inclui os docentes ativos permanentes, substitutos, temporários e visitantes",
+                       "OBS: Na pós-graduação foram computados os alunos dos cursos de Mestrado e Doutorado"))
+```
+
+<br>
+
+## Gráfico da evolução da população universitária da UnB, 2015 a 2019
+```{r fig.cap='Evolução da população universitária da UnB, 2015 a 2019'}
+include_graphics("graficos/dados_gerais/graf1.png")
+
+xfun::embed_file("graficos/dados_gerais/graf1.png")
+```
+
+<br>
+
+## Alunos regulares na graduação e na pós-graduação Stricto Sensu, 2015 a 2019 (2º semestre)
+```{r}
+evo_alunos <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=17)
+evo_alunos$Ano <- as.character(evo_alunos$Ano)
+
+evo_alunos %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Alunos regulares na graduação e na pós-graduação Stricto Sensu, 2015 a 2019 (2º semestre)",
+               tamfonte = 14, 
+               fundo = "#00376f", 
+               linhatotal = FALSE,
+               colunas = c("Ano","Graduação","Mestrado","Doutorado","Residência Médica","Total da Pós-Graduação","Total Geral")) %>% 
+  footnote(general_title = "Fonte: Sistemas acadêmicos & Censo da Educação Superior",
+           general = "")
+```
+
+<br>
+
+## Alunos formados na graduação e pós-graduação, 1966 a 2019
+```{r}
+evo_formados <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=18)
+
+evo_formados %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Alunos formados na graduação e pós-graduação, 1966 a 2019", 
+               linhatotal = TRUE, 
+               tamfonte = 14, 
+               fundo = "#00376f",
+               colunas = c("Ano","Graduação","Especialização¹","Formados com Especialização²","Mestrado","Doutorado","Total")) %>% 
+  footnote(general_title = "Fonte: Sistemas acadêmicos & Censo da Educação Superior",
+           general = c("Notas:\n(1) dados de 2010 a 2018 não disponíveis",
+                       "(2) alunos de mestrado que não apresentaram a dissertação"))
+```
+
+<br>
+
+## Gráfico do total de alunos formados por período, UnB, 1966 a 2019
+```{r fig.cap='Total de alunos formados por período, UnB, 1966 a 2019'}
+include_graphics("graficos/dados_gerais/graf2.png")
+
+xfun::embed_file("graficos/dados_gerais/graf2.png")
+```
+
+<br>
+
+## Área física do Campus Universitário Darcy Ribeiro, 2019
+```{r}
+area_darcy <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=19)
+
+area_darcy %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Área física do Campus Universitário Darcy Ribeiro, 2019", 
+               linhatotal = FALSE, 
+               tamfonte = 14, 
+               fundo = "#00376f") %>% 
+  footnote(general_title = "Fonte: Prefeitura do Campus (PRC)",
+           general = "")
+```
+
+<br>
+
+## Área física dos Campi UnB Planaltina, UnB Gama e UnB Ceilândia, 2019
+```{r}
+area_outros <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=20)
+
+area_outros %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Área física dos Campi UnB Planaltina, UnB Gama e UnB Ceilândia, 2019", 
+               linhatotal = TRUE,
+               fundo = "#00376f") %>% 
+  footnote(general_title = "Fonte: FUP, FGA & FCE",
+           general = "")
+```
+
+<br>
+
+## Área física da Fazenda Água Limpa (FAL), 2019
+```{r}
+area_fal <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=21)
+
+area_fal %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Área física da Fazenda Água Limpa (FAL), 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#00376f") %>% 
+  footnote(general_title = "Fonte: FAL/PRC",
+           general = "")
+```
+
+<br>
+
+## Área física do Hospital Universitário de Brasília (HUB), 2019
+```{r}
+area_hub <- rio::import("dados_gerais/dados_gerais_tabelas.xlsx", sheet=22)
+
+area_hub %>% 
+  map_df(~replace_na(., 0)) %>% 
+  tabela_geral("Área física do Hospital Universitário de Brasília (HUB), 2019", linhatotal = FALSE, tamfonte = 14, fundo = "#00376f") %>% 
+  footnote(general_title = "Fonte: Divisão de Infraestrututura Hospitalar e Logistica - DLH/HUB/UnB",
+           general = "")
+```
+
+<br>
+
