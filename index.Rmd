@@ -370,7 +370,7 @@ CEAM	    Centro de Estudos Avançados Multidisciplinares
 
 **FGA     Faculdade do Gama**
 
-**FACE**     **Direção da Faculdade de Economia, Administração, Contabilidade e Gestão de Políticas Públicas**
+**FACE**     **Faculdade de Economia, Administração, Contabilidade e Gestão de Políticas Públicas**
 
 GPP        Departamento de Gestão de Políticas Públicas  
 ADM        Departamento de Administração  

@@ -628,7 +628,9 @@ ceam_eventos %>% map_df(~replace_na(., 0)) %>% tabela_geral("Atividades desenvol
 
 ## Centro de Excelência em Turismo (CET) 
 
-### Cursos, palestras e eventos eealizados pelo CET, 2019
+<br>
+
+### Cursos, palestras e eventos realizados pelo CET, 2019
 ```{r}
 
 cet_cursos<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=49)
@@ -698,7 +700,9 @@ cpce %>% map_df(~replace_na(., 0)) %>% tabela_geral("Principais atividades do CP
 
 ## Assessoria de Assuntos Internacionais (INT) 
 
-### Visitas de cortesia, delegações e eventos por continente e países - África, 2015 a 2019"
+<br>
+
+### Visitas de cortesia, delegações e eventos por continente e países - África, 2015 a 2019
 ```{r}
 
 int_africa<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=55)
@@ -709,7 +713,7 @@ int_africa %>% map_df(~replace_na(., 0)) %>% tabela_geral("Visitas de cortesia, 
 
 <br>
 
-### Visitas de cortesia, delegações e eventos por continente e países - América, 2015 a 2019"
+### Visitas de cortesia, delegações e eventos por continente e países - América, 2015 a 2019
 ```{r}
 
 int_america<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=56)
@@ -720,7 +724,7 @@ int_america %>% map_df(~replace_na(., 0)) %>% tabela_geral("Visitas de cortesia,
 
 <br>
 
-### Visitas de cortesia, delegações e eventos por continente e países - Ásia, 2015 a 2019"
+### Visitas de cortesia, delegações e eventos por continente e países - Ásia, 2015 a 2019
 ```{r}
 
 int_asia<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=57)
@@ -731,7 +735,7 @@ int_asia %>% map_df(~replace_na(., 0)) %>% tabela_geral("Visitas de cortesia, de
 
 <br>
 
-### Visitas de cortesia, delegações e eventos por continente e países - Europa, 2015 a 2019"
+### Visitas de cortesia, delegações e eventos por continente e países - Europa, 2015 a 2019
 ```{r}
 
 int_europa<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=58)
