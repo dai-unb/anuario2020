@@ -11,8 +11,6 @@ Faça o download de todas as tabelas desta seção:`r xfun::embed_file("dados_pl
 
 ## Hospital Universitário de Brasília (HUB) 
 
-<br>
-
 ### Indicadores de produtividade, 2015 a 2019
 ```{r}
 options(scipen = 9)
@@ -25,7 +23,7 @@ indicadores_prod %>% map_df(~replace_na(., 0)) %>% tabela_geral("Indicadores de 
 <br>
 
 ### Gráfico de Evolução do número de servidores, 2015 a 2019
-```{r fig.cap='Evolução do número de servidores, 2015 a 2019'}
+```{r fig.cap='Evolução do número de servidores, 2015 a 2019', out.width='100%'}
 include_graphics("graficos/org_comp/graf1.png")
 
 xfun::embed_file("graficos/org_comp/graf1.png")
@@ -34,7 +32,7 @@ xfun::embed_file("graficos/org_comp/graf1.png")
 <br>
 
 ### Gráfico de Evolução do número de internações, 2015 a 2019
-```{r fig.cap='Evolução do número de internações, 2015 a 2019'}
+```{r fig.cap='Evolução do número de internações, 2015 a 2019', out.width='100%'}
 include_graphics("graficos/org_comp/graf2.png")
 
 xfun::embed_file("graficos/org_comp/graf2.png")
@@ -43,7 +41,7 @@ xfun::embed_file("graficos/org_comp/graf2.png")
 <br>
 
 ### Gráfico de Evolução do número de cirurgias, 2015 a 2019
-```{r fig.cap='Evolução do número de cirurgias, 2015 a 2019'}
+```{r fig.cap='Evolução do número de cirurgias, 2015 a 2019', out.width='100%'}
 include_graphics("graficos/org_comp/graf3.png")
 
 xfun::embed_file("graficos/org_comp/graf3.png")
@@ -52,7 +50,7 @@ xfun::embed_file("graficos/org_comp/graf3.png")
 <br>
 
 ### Gráfico de Evolução do número de exames complementares, 2015 a 2019
-```{r fig.cap='Evolução do número de exames complementares, 2015 a 2019'}
+```{r fig.cap='Evolução do número de exames complementares, 2015 a 2019', out.width='100%'}
 include_graphics("graficos/org_comp/graf4.png")
 
 xfun::embed_file("graficos/org_comp/graf4.png")
@@ -61,7 +59,7 @@ xfun::embed_file("graficos/org_comp/graf4.png")
 <br>
 
 ### Gráfico de Evolução do número de consultas, 2015 a 2019
-```{r fig.cap='Evolução do número de consultas, 2015 a 2019'}
+```{r fig.cap='Evolução do número de consultas, 2015 a 2019', out.width='100%'}
 include_graphics("graficos/org_comp/graf5.png")
 
 xfun::embed_file("graficos/org_comp/graf5.png")
@@ -80,7 +78,7 @@ despesas_hub %>% map_df(~replace_na(., 0)) %>%  tabela_geral("Despesas realizada
 <br>
 
 ### Gráfico de despesas realizadas pelo HUB por natureza, 2019
-```{r fig.cap='Despesas realizadas pelo HUB por natureza, 2019'}
+```{r fig.cap='Despesas realizadas pelo HUB por natureza, 2019', out.width='100%'}
 include_graphics("graficos/org_comp/graf6.png")
 
 xfun::embed_file("graficos/org_comp/graf6.png")
@@ -99,8 +97,6 @@ programa_residencia %>% map_df(~replace_na(., 0)) %>% tabela_geral("Programa de 
 <br>
 
 ## Hospital Veterinário (HVET) 
-
-<br>
 
 ### Atividades realizadas pelo HVET - Setor de Grandes Animais, 2019
 ```{r}
@@ -124,8 +120,6 @@ hvetinho %>% map_df(~replace_na(., 0)) %>% tabela_geral("Atividades realizadas p
 <br>
 
 ## Arquivo Central (ACE) 
-
-<br>
 
 ### Custos (em reais), 2015 a 2019
 ```{r}
@@ -155,9 +149,7 @@ documentos_ace %>% map_df(~replace_na(., 0)) %>% tabela_geral("Documentos tratad
 
 <br>
 
-## Biblioteca Central (BCE) 
-
-<br>
+## Biblioteca Central (BCE)
 
 ### Evolução dos serviços prestados pela BCE - empréstimo por tipo de material, 2015 a 2019
 ```{r}
@@ -306,7 +298,6 @@ acervo_bce7 %>% map_df(~replace_na(., 0)) %>% tabela_geral("Acervo da BCE - Bibl
            general_title = "Fonte: BCE")
 ```
 
-
 <br>
 
 ### Acervo da BCE - Aquisição BCE, 2019
@@ -344,8 +335,6 @@ acervo_bce14 %>% map_df(~replace_na(., 0)) %>% tabela_geral("Acervo da BCE - Per
 
 ## Editora Universidade de Brasília (EDU) 
 
-<br>
-
 ### Serviços executados, 2019
 ```{r}
 
@@ -358,8 +347,6 @@ servicos_edu %>% map_df(~replace_na(., 0)) %>% tabela_geral("Serviços executado
 <br>
 
 ## Fazenda Água Limpa (FAL) 
-
-<br>
 
 ### Frequentadores da FAL, 2019
 ```{r}
@@ -396,8 +383,6 @@ producao_fal %>% map_df(~replace_na(., 0)) %>% tabela_geral("Produção anual co
 
 ## Parque Científico e Tecnológico (PCTec) 
 
-<br>
-
 ### Parque Científico e Tecnológico, 2019
 ```{r}
 
@@ -422,8 +407,6 @@ eventos_pctec %>% map_df(~replace_na(., 0)) %>% tabela_geral("Eventos Acadêmico
 
 ## Centro de Informática (CPD) 
 
-<br>
-
 ### Resumo Estatístico de Desempenho - Utilização dos Sistemas Administrativos/Acadêmicos Legados (VB e JAVA, em produção), 2019
 ```{r}
 
@@ -447,8 +430,6 @@ sistemas_cpd1 %>% map_df(~replace_na(., 0)) %>% tabela_geral("Resumo Estatístic
 <br>
 
 ## Centro de Seleção e Promoção de Eventos (CESPE) 
-
-<br>
 
 ### Inscritos no Programa de Avaliação Seriada – PAS, por tipos de escolas, 2019
 ```{r}
@@ -503,8 +484,6 @@ xfun::embed_file("graficos/org_comp/graf7.png")
 
 <br>
 ## Centro de Apoio ao Desenvolvimento Tecnológico (CDT) 
-
-<br>
 
 ### Ações de ensino e extensão promovidas pelo CDT - Ensino na Graduação, 2019
 ```{r}
@@ -603,9 +582,7 @@ cdt_incubacao %>% map_df(~replace_na(., 0)) %>% tabela_geral("Incubação de emp
 
 ## Centro de Estudos Avançados e Multidisciplinares (CEAM) 
 
-<br>
-
-###Atividades desenvolvidas pelo CEAM por meio dos Núcleos Temáticos -  eventos de extensão realizados: cursos, minicursos e oficinas, 2019
+### Atividades desenvolvidas pelo CEAM por meio dos Núcleos Temáticos -  eventos de extensão realizados: cursos, minicursos e oficinas, 2019
 ```{r}
 
 ceam_extensao<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=45)
@@ -651,8 +628,6 @@ ceam_eventos %>% map_df(~replace_na(., 0)) %>% tabela_geral("Atividades desenvol
 
 ## Centro de Excelência em Turismo (CET) 
 
-<br>
-
 ### Cursos, palestras e eventos eealizados pelo CET, 2019
 ```{r}
 
@@ -687,8 +662,6 @@ cet_producao %>% map_df(~replace_na(., 0)) %>% tabela_geral("Produção científ
 
 ## Centro de Educação a Distância (CEAD) 
 
-<br>
-
 ### Atividades de extensão desenvolvidas pelo CEAD - cursos de extensão, 2019
 ```{r}
 cead_extensao<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=52)
@@ -712,8 +685,6 @@ cead_especializacao %>% map_df(~replace_na(., 0)) %>% tabela_geral("Atividades d
 
 ## Centro de Produção Cultural e Educativa (CPCE) 
 
-<br>
-
 ### Principais atividades do CPCE por mês, 2019
 ```{r}
 
@@ -726,8 +697,6 @@ cpce %>% map_df(~replace_na(., 0)) %>% tabela_geral("Principais atividades do CP
 <br>
 
 ## Assessoria de Assuntos Internacionais (INT) 
-
-<br>
 
 ### Visitas de cortesia, delegações e eventos por continente e países - África, 2015 a 2019"
 ```{r}
@@ -804,16 +773,14 @@ xfun::embed_file("graficos/org_comp/graf8.png")
 
 <br>
 
-## Secretaria de Gestão Patrimonial (SGP) 
-
-<br>
+## Secretaria de Patrimônio Imobiliário (SPI) 
 
 ### Arrecadação com aluguéis (R$ 1,00), 2015 a 2019
 ```{r}
 
 sgp_arrecadacoes<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=61)
 
-sgp_arrecadacoes %>% map_df(~replace_na(., 0)) %>% tabela_geral("Arrecadação com aluguéis (R$ 1,00), 2015 a 2019", linhatotal = TRUE, colunas = c("Arrecadação",	"2015",	"2016",	"2017",	"2018",	"2019"), tamfonte = 14, fundo = fundo) %>% colorir (dados = sgp_arrecadacoes) %>% footnote (general = "", general_title = "Fonte: SGP")
+sgp_arrecadacoes %>% map_df(~replace_na(., 0)) %>% tabela_geral("Arrecadação com aluguéis (R$ 1,00), 2015 a 2019", linhatotal = TRUE, colunas = c("Arrecadação",	"2015",	"2016",	"2017",	"2018",	"2019"), tamfonte = 14, fundo = fundo) %>% colorir (dados = sgp_arrecadacoes) %>% footnote (general = "", general_title = "Fonte: SPI")
 
 ```
 
@@ -824,7 +791,7 @@ sgp_arrecadacoes %>% map_df(~replace_na(., 0)) %>% tabela_geral("Arrecadação c
 
 sgp_imoveis<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=62)
 
-sgp_imoveis %>% map_df(~replace_na(., 0)) %>% tabela_geral("Imóveis da FUB para locação, 2015 a 2019", linhatotal = TRUE, colunas = c("Imóveis",	"2015",	"2016",	"2017",	"2018",	"2019"), tamfonte = 14, fundo = fundo) %>% colorir (dados = sgp_imoveis) %>% footnote (general = "", general_title = "Fonte: SGP")
+sgp_imoveis %>% map_df(~replace_na(., 0)) %>% tabela_geral("Imóveis da FUB para locação, 2015 a 2019", linhatotal = TRUE, colunas = c("Imóveis",	"2015",	"2016",	"2017",	"2018",	"2019"), tamfonte = 14, fundo = fundo) %>% colorir (dados = sgp_imoveis) %>% footnote (general = "", general_title = "Fonte: SPI")
 
 ```
 
@@ -835,15 +802,13 @@ sgp_imoveis %>% map_df(~replace_na(., 0)) %>% tabela_geral("Imóveis da FUB para
 
 sgp_outros<- rio::import("dados_orgaos_complementares_e_outros/orgaos_complementares_e_outros.xlsx", sheet=63)
 
-sgp_outros %>% map_df(~replace_na(., 0)) %>% tabela_geral("Outros imóveis, 2019", linhatotal = TRUE, colunas = c("Especificação",	"2019"), tamfonte = 14, fundo = fundo) %>% colorir (dados = sgp_outros) %>% footnote (general = "", general_title = "Fonte: SGP")
+sgp_outros %>% map_df(~replace_na(., 0)) %>% tabela_geral("Outros imóveis, 2019", linhatotal = TRUE, colunas = c("Especificação",	"2019"), tamfonte = 14, fundo = fundo) %>% colorir (dados = sgp_outros) %>% footnote (general = "", general_title = "Fonte: SPI")
 
 ```
 
 <br>
 
 ## Secretaria de Infraestrutura (INFRA) 
-
-<br>
 
 ### Atividades desenvolvidas pela INFRA, 2019
 ```{r}
@@ -891,8 +856,6 @@ infra_obras2 %>% tabela_geral("Relatório de Obras - Atividades realizadas pela 
 
 ## Prefeitura do Campus (PRC) 
 
-<br>
-
 ### Manutenção: ordens de serviço executadas, 2015 a 2019
 ```{r}
 
@@ -926,7 +889,6 @@ prc3 %>%   map_df(~replace_na(., 0)) %>% tabela_geral("Atividades realizadas pel
 <br>
 
 ## Observatório Sismológico (SIS) 
-<br>
 
 ### Evolução do número anual de sismos brasileiros com magnitude maior ou igual a 3,0, 2015 a 2019
 ```{r}
@@ -951,7 +913,7 @@ sis2 %>% map_df(~replace_na(., 0)) %>% tabela_geral("Visitantes da mostra sismol
 <br>
 
 ### Gráfico de Evolução do número anual de sismos brasileiros com magnitude maior ou igual a 3.0, 2015 a 2019 
-```{r fig.cap='Evolução do número anual de sismos brasileiros com magnitude maior ou igual a 3.0, 2015 a 2019'}
+```{r fig.cap='Evolução do número anual de sismos brasileiros com magnitude maior ou igual a 3.0, 2015 a 2019', out.width='100%'}
 
 include_graphics("graficos/org_comp/graf9.png")
 

@@ -12,8 +12,6 @@ Faça o download de todas as tabelas desta seção:`r xfun::embed_file("dados_at
 
 ## Decanato de Assuntos Comunitários (DAC) 
 
-<br>
-
 ### Evolução da assistência estudantil, 2015 a 2019
 ```{r}
 assistencia <- rio::import("dados_atividades_comunitarias/atividades_comunitarias.xlsx", sheet=1)
@@ -47,8 +45,6 @@ atividade_comunitaria %>% map_df(~replace_na(., 0)) %>% tabela_geral("Atividades
 
 ## Restaurante Universitário (RU) 
 
-<br>
-
 ### Recursos humanos, serviços e custos, Jan. – Dez. de 2019
 ```{r}
 
@@ -74,7 +70,7 @@ ru2 %>% map_df(~replace_na(., 0)) %>% tabela_geral("Número de refeições servi
 <br>
 
 ### Gráfico de Número de Refeições Servidas no Restaurante Universitário por Mês, Jan.-Dez. 2019
-```{r fig.cap='Número de Refeições Servidas no Restaurante Universitário por Mês, Jan.-Dez. 2019'}
+```{r fig.cap='Número de Refeições Servidas no Restaurante Universitário por Mês, Jan.-Dez. 2019', out.width='100%'}
 include_graphics("graficos/at_comu/graf1.png")
 
 xfun::embed_file("graficos/at_comu/graf1.png")
@@ -83,8 +79,6 @@ xfun::embed_file("graficos/at_comu/graf1.png")
 <br>
 
 ### Núcleo de Práticas Jurídicas da Faculdade de Direito (NPJ/FD) {-}
-
-<br>
 
 ### Evolução dos atendimentos sociais à população do Distrito Federal e de sua região de influência, 2015 a 2019
 ```{r}
@@ -106,9 +100,7 @@ xfun::embed_file("graficos/at_comu/graf2.png")
 <br>
 
 
-## Centro de Atendimento e Estudos Psicológicos (CAEP/IP) 
-
-<br>
+## Centro de Atendimento e Estudos Psicológicos (CAEP/IP)
 
 ### Atendimentos psicoterápicos à população do Distrito Federal e de sua região de influência por Mês, Jan. – Dez. 2019"
 ```{r}
@@ -121,8 +113,6 @@ caep %>% map_df(~replace_na(., 0)) %>% tabela_geral("Atendimentos psicoterápico
 <br>
 
 ## Núcleo de apoio Psicopedagógico e Bem Estar do Estudante de Medicina (NAPEM/FM)
-
-<br>
 
 ### Atendimentos psicopedagógicos aos estudantes de medicina da Universidade de Brasília por mês, Jan – Dez. de 2019
 ```{r}

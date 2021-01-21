@@ -11,8 +11,6 @@ Faça o download de todas as tabelas desta seção: `r xfun::embed_file("dados_r
 
 ## Docentes 
 
-<br>
-
 ### Docentes ativos, por classe, regime de trabalho e titulação, 2019
 ```{r}
 docentes_ativos <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=1)
@@ -24,7 +22,7 @@ docentes_ativos %>% map_df(~replace_na(., 0)) %>% tabela_geral("Docentes ativos,
 <br>
 
 ### Gráfico de Percentual de docentes ativos por classe, 2019
-```{r fig.cap='Percentual de docentes ativos por classe, 2019'}
+```{r fig.cap='Percentual de docentes ativos por classe, 2019', out.width='100%'}
 include_graphics("graficos/RH/graf1.png")
 
 xfun::embed_file("graficos/RH/graf1.png")
@@ -33,7 +31,7 @@ xfun::embed_file("graficos/RH/graf1.png")
 <br>
 
 ### Gráfico de Percentual de docentes ativos por regime de trabalho, 2019
-```{r fig.cap='Percentual de docentes ativos por regime de trabalho, 2019'}
+```{r fig.cap='Percentual de docentes ativos por regime de trabalho, 2019', out.width='100%'}
 include_graphics("graficos/RH/graf2.png")
 
 xfun::embed_file("graficos/RH/graf2.png")
@@ -61,7 +59,7 @@ docentes_idade %>% map_df(~replace_na(., 0)) %>% tabela_geral("Número de docent
 <br>
 
 ### Gráfico de Evolução do número de docentes ativos, 2015 a 2019
-```{r fig.cap='Evolução do número de docentes ativos, 2015 a 2019'}
+```{r fig.cap='Evolução do número de docentes ativos, 2015 a 2019', out.width='100%'}
 include_graphics("graficos/RH/graf3.png")
 
 xfun::embed_file("graficos/RH/graf3.png")
@@ -89,7 +87,7 @@ docentes_classe %>% map_df(~replace_na(., 0)) %>% tabela_geral("Evolução do n�
 <br> 
 
 ### Gráfico de Evolução do número de docentes ativos por classe, 2015 a 2019
-```{r fig.cap='Evolução do número de docentes ativos por classe, 2015 a 2019'}
+```{r fig.cap='Evolução do número de docentes ativos por classe, 2015 a 2019', out.width='100%'}
 include_graphics("graficos/RH/graf4.png")
 
 xfun::embed_file("graficos/RH/graf4.png")
@@ -98,7 +96,7 @@ xfun::embed_file("graficos/RH/graf4.png")
 <br>
 
 ### Gráfico de Evolução do número de docentes ativos por regime de trabalho, 2015 a 2019
-```{r fig.cap='Evolução do número de docentes ativos por regime de trabalho, 2015 a 2019'}
+```{r fig.cap='Evolução do número de docentes ativos por regime de trabalho, 2015 a 2019', out.width='100%'}
 include_graphics("graficos/RH/graf5.png")
 
 xfun::embed_file("graficos/RH/graf5.png")
@@ -124,8 +122,11 @@ docentes_inativos <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx",
 docentes_inativos %>% map_df(~replace_na(., 0)) %>% tabela_geral("Evolução do número de docentes inativos, por titulação,  2015 a 2019", linhatotal =  TRUE,  colunas = c("Titulação",	"2015",	"2016",	"2017",	"2018",	"2019"), tamfonte = 14, fundo = fundo) %>% colorir(dados = docentes_inativos) %>%  footnote(general = "", general_title = "Fonte: Extrator de Dados - SIAPE/DGP/UnB")
 
 ```
+
+<br>
+
 ### Gráfico de Evolução do número de docentes inativos, 2015 a 2019
-```{r fig.cap='Evolução do número de docentes inativos, 2015 a 2019'}
+```{r fig.cap='Evolução do número de docentes inativos, 2015 a 2019', out.width='100%'}
 include_graphics("graficos/RH/graf6.png")
 
 xfun::embed_file("graficos/RH/graf6.png")
@@ -144,7 +145,7 @@ docentes_inativos_classe %>% map_df(~replace_na(., 0)) %>% tabela_geral("Evoluç
 <br>
 
 ### Gráfico de Evolução do número de docentes inativos por classe,  2015 a 2019
-```{r fig.cap='Evolução do número de docentes inativos por classe, 2015 a 2019'}
+```{r fig.cap='Evolução do número de docentes inativos por classe, 2015 a 2019', out.width='100%'}
 include_graphics("graficos/RH/graf7.png")
 
 xfun::embed_file("graficos/RH/graf7.png")
@@ -174,8 +175,6 @@ xfun::embed_file("graficos/RH/graf8.png")
 
 ## Corpo Técnico-Administrativo 
 
-<br>
-
 ### Evolução do número de técnico-administrativos ativos, por nível, 2015 a 2019
 ```{r}
 tecnicos_ativos <- rio::import("dados_recursos_humanos/recursos_humanos.xlsx", sheet=10)
@@ -187,7 +186,7 @@ tecnicos_ativos %>% map_df(~replace_na(., 0)) %>% tabela_geral("Evolução do n�
 <br>
 
 ### Gráfico de Evolução do número de técnico-administrativos ativos, 2015 a 2019
-```{r fig.cap='Evolução do número de técnico-administrativos ativos, 2015 a 2019'}
+```{r fig.cap='Evolução do número de técnico-administrativos ativos, 2015 a 2019', out.width='100%'}
 include_graphics("graficos/RH/graf9.png")
 
 xfun::embed_file("graficos/RH/graf9.png")
@@ -196,7 +195,7 @@ xfun::embed_file("graficos/RH/graf9.png")
 <br>
 
 ### Gráfico de Evolução do número de técnico-administrativos ativos, por nível, 2015 a 2019
-```{r fig.cap='Evolução do número de técnico-administrativos ativos, por nível, 2015 a 2019'}
+```{r fig.cap='Evolução do número de técnico-administrativos ativos, por nível, 2015 a 2019', out.width='100%'}
 include_graphics("graficos/RH/graf10.png")
 
 xfun::embed_file("graficos/RH/graf10.png")
@@ -225,7 +224,7 @@ tecnicos_inativos %>% map_df(~replace_na(., 0)) %>% tabela_geral("Evolução do 
 <br>
 
 ### Gráfico de Evolução do número de técnico-administrativos ativos, 2015 a 2019
-```{r fig.cap='Evolução do número de técnico-administrativos ativos, 2015 a 2019'}
+```{r fig.cap='Evolução do número de técnico-administrativos ativos, 2015 a 2019', out.width='100%'}
 include_graphics("graficos/RH/graf11.png")
 
 xfun::embed_file("graficos/RH/graf11.png")
@@ -234,7 +233,7 @@ xfun::embed_file("graficos/RH/graf11.png")
 <br>
 
 ### Gráfico de Evolução do número de técnico-administrativos ativos, por nível, 2015 a 2019
-```{r fig.cap='Evolução do número de técnico-administrativos ativos, por nível, 2015 a 2019'}
+```{r fig.cap='Evolução do número de técnico-administrativos ativos, por nível, 2015 a 2019', out.width='100%'}
 include_graphics("graficos/RH/graf12.png")
 
 xfun::embed_file("graficos/RH/graf12.png")

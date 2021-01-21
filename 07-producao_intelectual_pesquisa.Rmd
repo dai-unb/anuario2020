@@ -20,7 +20,7 @@ prod_bibliografica %>%  map_df(~replace_na(., 0)) %>% tabela_geral("Produção i
 <br>
 
 ## Gráfico de Produção intelectual bibliográfica, técnica e artística da UnB, 2019
-```{r fig.cap='Produção intelectual bibliográfica, técnica e artística da UnB, 2019'}
+```{r fig.cap='Produção intelectual bibliográfica, técnica e artística da UnB, 2019', out.width='100%'}
 include_graphics("graficos/prod_int/graf1.png")
 
 xfun::embed_file("graficos/prod_int/graf1.png")

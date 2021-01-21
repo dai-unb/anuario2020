@@ -27,7 +27,7 @@ graf <- graf1 %>%
   labs(y = "Forma de ingresso",
        title = "Ingresso de alunos nos cursos de graduação pelo vestibular,\nPAS, ENEM e outras vias, UnB, 2019",
        caption = "Fonte: Censo da Educação Superior 2019")
-
+graf
 ggsave("graficos/graduacao/graf1.pdf", device = cairo_pdf)
 pdftools::pdf_convert(pdf = "graficos/graduacao/graf1.pdf", 
                       filenames = "graficos/graduacao/graf1.png", 

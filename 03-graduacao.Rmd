@@ -451,7 +451,7 @@ tab15 %>%
     fundo = fundo,
     tamfonte = 14
   ) %>% 
-  row_spec(cor, background = alpha(fundo, 0.2)) %>% 
+  row_spec(row = cor, background = colorspace::lighten(fundo, 0.8)) %>% 
   footnote(general_title = "Fonte: Censo da Educação Superior 2019", 
            general = "")
 ```
