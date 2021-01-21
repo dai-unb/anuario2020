@@ -1,10 +1,11 @@
-
+# Dados gerais {#geral}
 ```{r}
 options(scipen = 9)
 fundo <- cores_anuario["geral"]
 ```
 
-# Dados gerais {#geral}
+Faça o download de todas as tabelas desta seção: `r xfun::embed_file("dados_gerais/dados_gerais_tabelas.xlsx")`
+<br>
 
 1. Informações e Dados Gerais
 <br>
@@ -51,7 +52,10 @@ vagas_oferecidas %>%
                linhatotal = TRUE,
                tamfonte = 14, 
                fundo = "#00376f",
-               colunas = c("FORMA DE INGRESSO", "1º SEM","2º SEM","TOTAL ANUAL"))
+               colunas = c("FORMA DE INGRESSO", "1º SEM","2º SEM","TOTAL ANUAL")) %>% 
+   footnote(general_title = "Notas: ",
+           general = c("(1) O Sistema de Seleção Unificada (Sisu) é o sistema informatizado, gerenciado pelo Ministério da Educação (MEC), no qual instituições públicas de ensino superior oferecem vagas a candidatos participantes do Exame Nacional do Ensino Médio (Enem)",
+                       "(2) O Programa de Avaliação Seriada (PAS) é uma das modalidade de acesso ao ensino superior, de iniciativa da UnB. Trata-se de um sistema de avaliação gradual e progressiva, com provas realizadas ao final de cada um dos três anos regulares do ensino médio. Tem por objetivo a ampliação do processo de interação da universidade com o ensino médio e a redução do impacto da passagem dos estudantes para o ensino superior"))
 ```
 
 <br>
@@ -66,7 +70,10 @@ inscritos %>%
                linhatotal = TRUE, 
                tamfonte = 14, 
                fundo = "#00376f",
-               colunas = c("FORMA DE INGRESSO", "1º SEM","2º SEM","TOTAL ANUAL"))
+               colunas = c("FORMA DE INGRESSO", "1º SEM","2º SEM","TOTAL ANUAL")) %>% 
+   footnote(general_title = "Notas: ",
+           general = c("(1) O Sistema de Seleção Unificada (Sisu) é o sistema informatizado, gerenciado pelo Ministério da Educação (MEC), no qual instituições públicas de ensino superior oferecem vagas a candidatos participantes do Exame Nacional do Ensino Médio (Enem)",
+                       "(2) O Programa de Avaliação Seriada (PAS) é uma das modalidade de acesso ao ensino superior, de iniciativa da UnB. Trata-se de um sistema de avaliação gradual e progressiva, com provas realizadas ao final de cada um dos três anos regulares do ensino médio. Tem por objetivo a ampliação do processo de interação da universidade com o ensino médio e a redução do impacto da passagem dos estudantes para o ensino superior"))
 ```
 
 <br>
@@ -289,7 +296,7 @@ geral %>%
                colunas = c("Unidades", "Graduação", "Pós-graduação\nMest./Dout.", 
                            "Grad.", "Mestr.", "Dout.", 
                            "Graduação", "Mestrado", "Doutorado")) %>% 
-  add_header_above(c("", 
+  add_header_above(c("-", 
                    "ALUNOS REGULARES\n(DADOS DO 2º SEMESTRE)" = 2,
                    "CURSOS\nMINISTRADOS" = 3,
                    "TÍTULOS\nOUTORGADOS" = 3),

@@ -19,7 +19,7 @@ tab1 %>%
   tabela_geral("Ingresso de alunos e número de dissertações homologadas nos cursos de mestrado, por unidade acadêmica e curso, UnB, 2019", 
                linhatotal = TRUE, 
                tamfonte = 10,
-               colunas = c("Unidade Acadêmica/Curso","Ing. Fem. 1S","Ing. Masc. 1S", "Ing. Totais 1S", "Ing. Fem. 2S","Ing. Masc. 2S", "Ing. Totais 2S", "Ing. 2019", "Teses Hom. Fem. 1S", "Teses Hom. Masc. 1S", "Teses Hom. Totais 1S", "Teses Hom. Fem. 2S", "Teses Hom. Masc. 2S", "Teses Hom.Totais 2S", "Teses Hom. Totais 2019"),
+               colunas = c("Unidade Acadêmica/Curso","Ing. Fem. 1S","Ing. Masc. 1S", "Ing. Totais 1S", "Ing. Fem. 2S","Ing. Masc. 2S", "Ing. Totais 2S", "Ing. 2019", "Teses Hom. Fem. 1S", "Teses Hom. Masc. 1S", "Diss. Hom. Totais 1S", "Diss. Hom. Fem. 2S", "Diss. Hom. Masc. 2S", "Diss. Hom.Totais 2S", "Diss. Hom. Totais 2019"),
                fundo = fundo) %>% 
   colorir(dados = tab1)
 ```

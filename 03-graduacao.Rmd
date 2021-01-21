@@ -57,7 +57,7 @@ tab2 %>%
                            "1º SEM", "2º SEM",
                            "TOTAL GERAL"),
                fundo = fundo,
-               tamfonte = 8) %>% 
+               tamfonte = 7) %>% 
   colorir(dados = tab2) %>% 
   add_header_above(c("-", 
                      "VESTIBULAR" = 2,
@@ -248,7 +248,7 @@ tab8 <- rio::import("dados_graduacao/Tabela2.09.xlsx")
 
 tab8 %>% 
   tabela_geral(
-    titulo = "Alunos regulares ativos registrados nos cursos de graduação, por unidade acadêmica e sexo, UnB, 2019",
+    titulo = "Alunos regulares registrados nos cursos de graduação, por unidade acadêmica e sexo, UnB, 2019",
     fundo = fundo,
     tamfonte = 14
   ) %>% 
@@ -449,8 +449,7 @@ tab15 %>%
   tabela_geral(
     titulo = "Alunos estrangeiros regulares registrados nos cursos de graduação, por continente e país, UnB, 2019 (2º semestre)",
     fundo = fundo,
-    tamfonte = 14
-  ) %>% 
+    tamfonte = 14)  %>% 
   row_spec(cor, background = alpha(fundo, 0.2)) %>% 
   footnote(general_title = "Fonte: Censo da Educação Superior 2019", 
            general = "")
