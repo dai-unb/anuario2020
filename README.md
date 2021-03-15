@@ -2,7 +2,7 @@
 Arquivos para gerar o Anuário Estatístico da unB 2020
 
 
-PILOTO PUBLICADO -- https://laughing-hermann-8aad29.netlify.app/
+VERSÃO FINAL -- https://anuario-estatistico-unb-2020.netlify.app/
 
 
 # How To Create a Pull Request
